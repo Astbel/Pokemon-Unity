@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Animator animator;
-
+    public LayerMask solidObjectsLayer;
+    public LayerMask grassLayer;
     public float move_speed;
     private bool isMoving;
     private Vector2 input;
@@ -42,8 +43,10 @@ public class PlayerController : MonoBehaviour
                 var targetPos = transform.position;
                 targetPos.x += input.x;
                 targetPos.y += input.y;
-
-                StartCoroutine(Move(targetPos));
+                if (IsWalkable(targetPos))
+                {
+                    StartCoroutine(Move(targetPos));
+                }
             }
         }
 
@@ -62,5 +65,30 @@ public class PlayerController : MonoBehaviour
         transform.position = targetPos;
 
         isMoving = false;
+
+        checkForEncounters();
+    }
+
+    /*確認是否可走過去*/
+    private bool IsWalkable(Vector3 targetPos)
+    {
+
+        if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer) != null)
+        {
+            return false;
+        }
+        return true;
+    }
+    //遇敵 Random 1~100 當小於10則遇到敵人
+    private void checkForEncounters()
+    {
+         if (Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
+        {
+            if (Random.Range(1,101) <=10)
+            {
+                Debug.Log("Encounter a wild pokemon");
+            }
+        }
+        
     }
 }
