@@ -26,6 +26,12 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
+    /*
+    Describe: Moving method
+    確認使否可以移動GetAxisRaw會回傳-1,0,1且由Horizontal&Vertical來判斷上下左右
+    當輸入區域不為0,0且Vector2.zero 為Vector2(0,0),Animator 配置BlendTree隨著 input來控制移動動畫
+    IsWalkable 傳入Player Position 到Physics2D.OverlapCircle確認是否可走入該區域
+    */
     void Update()
     {
         if (!isMoving)
@@ -69,7 +75,7 @@ public class PlayerController : MonoBehaviour
         checkForEncounters();
     }
 
-    /*確認是否可走過去*/
+    /*OverlapCircle 三組參數1.Vector座標 2.Radius 3.LayerMask  根據Vector位置創建Radius一樣大的圓如果再layer範圍內則回傳*/
     private bool IsWalkable(Vector3 targetPos)
     {
 

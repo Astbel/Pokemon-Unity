@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+1.CreateAssetMenu 在unity 上建立菜單,
+2.fileName 文件名稱,menuName 在object 上面建立菜單名,order為按鈕順序
+3.原式 [CreateAssetMenu(fileName = "Move", menuName = "Pokemon/Create new Move"),order=1]
+*/
 [CreateAssetMenu(fileName = "Move", menuName = "Pokemon/Create new Move")]
 public class MoveBase : ScriptableObject
 {

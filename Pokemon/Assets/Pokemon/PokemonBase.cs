@@ -93,6 +93,9 @@ public class PokemonBase : ScriptableObject
 
 
 }
+/*
+為了在inspectior上配置幾等學習技能所以要新增System.Serializable
+*/
 [System.Serializable]
 public class LearnableMove
 {
