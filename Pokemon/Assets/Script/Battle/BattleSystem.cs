@@ -63,15 +63,20 @@ public class BattleSystem : MonoBehaviour
 
         var move = playerUnit.Pokemon.Moves[currentMove];
         yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} used {move.Base.Name}");
-
+        /*攻擊動畫以及敵人受傷動畫*/
+        playerUnit.PlayAttackAnimation();
+        yield return new WaitForSeconds(1f);
+        enemyUnit.PlayHitAnimation();
+        /*計算傷害*/
         var damageDetails = enemyUnit.Pokemon.TakeDamage(move, playerUnit.Pokemon);
-
+        /*跟新Hp*/
         yield return enemyHud.UpdateHP();
         yield return ShowDamageDetails(damageDetails);
-
+        /*判定是否陣亡*/
         if (damageDetails.Fainted)
         {
             yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} Fainted");
+            enemyUnit.PlayFaintAnimation();
         }
         else
         {
@@ -86,15 +91,20 @@ public class BattleSystem : MonoBehaviour
         var move = enemyUnit.Pokemon.GetRandomMove();
 
         yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} used {move.Base.Name}");
-
+        /*攻擊動畫以及玩家受傷動畫*/
+        enemyUnit.PlayAttackAnimation();
+        yield return new WaitForSeconds(1f);
+        playerUnit.PlayHitAnimation();
+        /*計算傷害*/
         var damageDetails = playerUnit.Pokemon.TakeDamage(move, enemyUnit.Pokemon);
-
+        /*跟新Hp*/
         yield return playerHud.UpdateHP();
         yield return ShowDamageDetails(damageDetails);
 
         if (damageDetails.Fainted)
         {
             yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} Fainted");
+            playerUnit.PlayFaintAnimation();
         }
         else
         {

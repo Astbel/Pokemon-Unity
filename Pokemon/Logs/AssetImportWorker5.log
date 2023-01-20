@@ -1,0 +1,1247 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'zh' Physical Memory: 16085 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Uinty2019\2021.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+C:/Users/Astbel/Desktop/Poke_unity/Pokemon
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+62824
+Successfully changed project path to: C:/Users/Astbel/Desktop/Poke_unity/Pokemon
+C:/Users/Astbel/Desktop/Poke_unity/Pokemon
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [22292] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 2170091295 [EditorId] 2170091295 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [22292] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 2170091295 [EditorId] 2170091295 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 112.46 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path D:/Uinty2019/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Astbel/Desktop/Poke_unity/Pokemon/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6023 MB
+    Driver:   30.0.14.9709
+Initialize mono
+Mono path[0] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56084
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Uinty2019/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002986 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 96.51 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.549 seconds
+Domain Reload Profiling:
+	ReloadAssembly (549ms)
+		BeginReloadAssembly (61ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (394ms)
+			LoadAssemblies (60ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (104ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (227ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (97ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (92ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006338 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 109.69 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.092 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1093ms)
+		BeginReloadAssembly (79ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (16ms)
+		EndReloadAssembly (925ms)
+			LoadAssemblies (65ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (232ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (510ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (110ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (263ms)
+				ProcessInitializeOnLoadMethodAttributes (33ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.86 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4055 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (228.8 KB). Loaded Objects now: 4506.
+Memory consumption went from 155.6 MB to 155.4 MB.
+Total: 3.031500 ms (FindLiveObjects: 0.267300 ms CreateObjectMapping: 0.094100 ms MarkObjects: 2.487400 ms  DeleteObjects: 0.181700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 63938.003681 seconds.
+  path: Assets/Sprite/items/dream-world/amulet-coin.png
+  artifactKey: Guid(d63c13d0408c11549ad97ad2c68bb1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/amulet-coin.png using Guid(d63c13d0408c11549ad97ad2c68bb1ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10c60ddecd222804f9123e2340ac5878') in 0.093077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/items/dream-world/dragon-scale.png
+  artifactKey: Guid(6d615ef54a3b9b744a0eed5c0e87b0be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/dragon-scale.png using Guid(6d615ef54a3b9b744a0eed5c0e87b0be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69fee5729b9c2a8e8d3d16e5558b1887') in 0.009256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/dream-world/cover-fossil.png
+  artifactKey: Guid(f387f8fff87b5db4284619474d91530c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/cover-fossil.png using Guid(f387f8fff87b5db4284619474d91530c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f0282f8cd73b026eee7abc974f5f8b') in 0.007665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprite/items/dream-world/dire-hit.png
+  artifactKey: Guid(b5bb8d9fdc40b3641bce3ce4258e948d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/dire-hit.png using Guid(b5bb8d9fdc40b3641bce3ce4258e948d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f09d94d99e555ee61d7d2f88622410f') in 0.009183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/dream-world/cornn-berry.png
+  artifactKey: Guid(7f9f48a4c0ad42841b41ca6b46f274d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/cornn-berry.png using Guid(7f9f48a4c0ad42841b41ca6b46f274d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89084e71c2a04de1f285b086f1a68daf') in 0.008901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/dream-world/bug-gem.png
+  artifactKey: Guid(b9fe320d841b3fe459678827f51782be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/bug-gem.png using Guid(b9fe320d841b3fe459678827f51782be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ae79c5b43c0667e4b5de518e9496937') in 0.007141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/dream-world/durin-berry.png
+  artifactKey: Guid(e636f896d9001094aa5c41d1f849c841) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/durin-berry.png using Guid(e636f896d9001094aa5c41d1f849c841) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f2e56339d6bf561eb2e049cd418a863') in 0.007864 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/dream-world/custap-berry.png
+  artifactKey: Guid(70747dcd9312a7446b92c27fd13936d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/custap-berry.png using Guid(70747dcd9312a7446b92c27fd13936d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f82a2db4a4462e2a21fec7f68ad553a4') in 0.011447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/dream-world/charcoal.png
+  artifactKey: Guid(462aaa0d90b7c204cbedb978ecdf5ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/charcoal.png using Guid(462aaa0d90b7c204cbedb978ecdf5ed2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5cc11f349239ecf4e1c81b18c24e519') in 0.007407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/dream-world/flame-plate.png
+  artifactKey: Guid(bfad5cf1f47dbe24582ea6d6038c55ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/flame-plate.png using Guid(bfad5cf1f47dbe24582ea6d6038c55ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5571d8168d5012751c6023f90289d1ef') in 0.008300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/dream-world/energy-powder.png
+  artifactKey: Guid(56eca2f3a4d60d6419fb7493872cbcd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/energy-powder.png using Guid(56eca2f3a4d60d6419fb7493872cbcd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd0554fd6e4715582951bf212411d0fb') in 0.007291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite/items/dream-world/ether.png
+  artifactKey: Guid(55f2ec2a5ec5dcf429cd49709e2079b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/ether.png using Guid(55f2ec2a5ec5dcf429cd49709e2079b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d1a530d8bd56dc014b99f1e9f7b4aab') in 0.008695 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/dream-world/babiri-berry.png
+  artifactKey: Guid(d410902ea02f8b147bae99ae8ce75451) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/babiri-berry.png using Guid(d410902ea02f8b147bae99ae8ce75451) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e728b9bd09583f18bfe78bd40138e6ce') in 0.008910 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/dream-world/coba-berry.png
+  artifactKey: Guid(79284d866a439c34ba7e9d11305e78bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/coba-berry.png using Guid(79284d866a439c34ba7e9d11305e78bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '974b0285b9125b138580dad4561f4413') in 0.008995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/dream-world/dome-fossil.png
+  artifactKey: Guid(a1819054e32eb904dbeaf70bff08a6f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/dome-fossil.png using Guid(a1819054e32eb904dbeaf70bff08a6f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f1e68cfd8769ddd164a959aa46afda4') in 0.010137 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/dream-world/cleanse-tag.png
+  artifactKey: Guid(b0e250307af597d4e8f870bbe6d8df81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/cleanse-tag.png using Guid(b0e250307af597d4e8f870bbe6d8df81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26deb9ad688193ccb0c399ec18ff57b8') in 0.007718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/dream-world/flame-orb.png
+  artifactKey: Guid(b0e5ba28fa667b641994d19e0af4a667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/flame-orb.png using Guid(b0e5ba28fa667b641994d19e0af4a667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78900ee45defefbe39c2dec42bdc8d05') in 0.007696 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/dream-world/dusk-stone.png
+  artifactKey: Guid(aafa3f2155682ed439e7621656b8eb4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/dusk-stone.png using Guid(aafa3f2155682ed439e7621656b8eb4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a6235e09b56e003e68a923aafad0409') in 0.008045 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/items/dream-world/bright-powder.png
+  artifactKey: Guid(78524496a2fc1e44d8e704687a2508e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dream-world/bright-powder.png using Guid(78524496a2fc1e44d8e704687a2508e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '106127014bfef4d1e16461c8d464b3c3') in 0.009742 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.615153 seconds.
+  path: Assets/Sprite/items/gen3/storage-key.png
+  artifactKey: Guid(3616822d689458b4b8d48c5ff3135a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/gen3/storage-key.png using Guid(3616822d689458b4b8d48c5ff3135a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1416255c037f6cbfcf741e86a7daa4e') in 0.009211 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.941439 seconds.
+  path: Assets/Sprite/items/underground/blue-sphere.png
+  artifactKey: Guid(8de1bb3ec3c0f5a47a4a562bd991a1b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/blue-sphere.png using Guid(8de1bb3ec3c0f5a47a4a562bd991a1b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9072ca38ef8b3a11227244ebe5e9c69') in 0.037735 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/underground/rare-bone.png
+  artifactKey: Guid(31959729e525ae447b7d56ec4b588542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/rare-bone.png using Guid(31959729e525ae447b7d56ec4b588542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aa9d761f2033561c6fb1f07f411d3a9') in 0.079834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/items/underground/helix-fossil-270.png
+  artifactKey: Guid(5e441db72de7dde408d3e1da40433b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/helix-fossil-270.png using Guid(5e441db72de7dde408d3e1da40433b5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79e3b1fd2d17fe0a5f5958c4f9c0e628') in 0.029165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/underground/claw-fossil-180.png
+  artifactKey: Guid(f8a85e7f19254c644aadd9cdfc601383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/claw-fossil-180.png using Guid(f8a85e7f19254c644aadd9cdfc601383) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '774ddb55d3e31444f2e92c009a1d074d') in 0.008540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite/items/underground/skull-fossil.png
+  artifactKey: Guid(90fa715fbe88c0b43b138c1fe2dd4baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/skull-fossil.png using Guid(90fa715fbe88c0b43b138c1fe2dd4baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '484c0349d592d2f23dbd1a77dd8b25be') in 0.007387 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/underground/heat-rock.png
+  artifactKey: Guid(7766c8410ad2d9441a7ffc0c3d6995fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/heat-rock.png using Guid(7766c8410ad2d9441a7ffc0c3d6995fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c50ee158459725a1f893da7e88efb1db') in 0.010022 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/underground/iron-ball.png
+  artifactKey: Guid(1cec56df6c144364ebf1a71375ecc8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/iron-ball.png using Guid(1cec56df6c144364ebf1a71375ecc8f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c63dfcdf64bf2426ef5783d31a15f9e8') in 0.008743 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/underground/meadow-plate.png
+  artifactKey: Guid(12efef07c9962c445be1db50a3944e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/meadow-plate.png using Guid(12efef07c9962c445be1db50a3944e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d97e2d58b61623e92fc648d548a1f7b') in 0.006931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/underground/everstone.png
+  artifactKey: Guid(2881a7b39dffba8489bf1970e7c6736b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/everstone.png using Guid(2881a7b39dffba8489bf1970e7c6736b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a66bd03429ff20bba03f316d6510c2c6') in 0.007508 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/items/underground/iron-plate.png
+  artifactKey: Guid(c9ac5e808af881745920edc1dd994638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/iron-plate.png using Guid(c9ac5e808af881745920edc1dd994638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34914568bf391a0d494eaabce1dc0a90') in 0.007914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprite/items/underground/old-amber-90.png
+  artifactKey: Guid(be1ec2d2229e7524898339b970fe1fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/old-amber-90.png using Guid(be1ec2d2229e7524898339b970fe1fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8a77cab8e727c56e2c045da1c6e03e3') in 0.007557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/underground/root-fossil-90.png
+  artifactKey: Guid(4313156784438a84b96e4f5a01da5af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/root-fossil-90.png using Guid(4313156784438a84b96e4f5a01da5af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09fa7dfc1865e4a69dfc6183ac76cfbb') in 0.007631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/items/underground/root-fossil.png
+  artifactKey: Guid(51ab274f981a75a498ba6fee29a92ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/root-fossil.png using Guid(51ab274f981a75a498ba6fee29a92ec2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e4cb95da59d46eb2e6d1fc50538a17') in 0.007397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprite/items/underground/root-fossil-180.png
+  artifactKey: Guid(c939be4bff83a644c9d6d002ae66cb9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/root-fossil-180.png using Guid(c939be4bff83a644c9d6d002ae66cb9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '554e85f54a03613d50e0278bf13d4227') in 0.008031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/underground/leaf-stone.png
+  artifactKey: Guid(b7f69f146c2ed6f4593589b2cc498f55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/leaf-stone.png using Guid(b7f69f146c2ed6f4593589b2cc498f55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '713d1935861cf68de9a8371f57f26868') in 0.008116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/underground/moon-stone.png
+  artifactKey: Guid(6d807774f646bf642b568e24cb023500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/moon-stone.png using Guid(6d807774f646bf642b568e24cb023500) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fefc98044e6209a0bd836a08db4911b') in 0.007628 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/underground/claw-fossil-270.png
+  artifactKey: Guid(9ae42ee1dd9938c479de4818a7e03702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/claw-fossil-270.png using Guid(9ae42ee1dd9938c479de4818a7e03702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba461da30c73dd3184d290db2d0d98d') in 0.009255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/underground/rock-s.png
+  artifactKey: Guid(2e0b0c0aefb48e046b5475e372094ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/rock-s.png using Guid(2e0b0c0aefb48e046b5475e372094ac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4722860875d2be1cb9f2cd9290a75a28') in 0.007992 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/underground/rock-t-180.png
+  artifactKey: Guid(f626a4205bac9d8488f27dd69acd3a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/rock-t-180.png using Guid(f626a4205bac9d8488f27dd69acd3a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd9a0800f358084d6ad98361fdee5b9c') in 0.007751 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/underground/rock-i-90.png
+  artifactKey: Guid(72650f7ad661d784b9ba2d2b082e1bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/rock-i-90.png using Guid(72650f7ad661d784b9ba2d2b082e1bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d528b3eba7f965e1d6e49d6de788173') in 0.008944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite/items/underground/rock-z.png
+  artifactKey: Guid(3faf78f004d261a43b21eb9d252e7ec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/underground/rock-z.png using Guid(3faf78f004d261a43b21eb9d252e7ec7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8d84f38becae0f68d1f663eedb8df52') in 0.007954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.791082 seconds.
+  path: Assets/Sprite/items/claw-fossil.png
+  artifactKey: Guid(ae12fcc8f768473498c0ea55fbe04543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/claw-fossil.png using Guid(ae12fcc8f768473498c0ea55fbe04543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b92a081bd9b4661c5cc751f4acabfc11') in 0.007622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/colbur-berry.png
+  artifactKey: Guid(8bb803e4db0b6334eab222a74c16a688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/colbur-berry.png using Guid(8bb803e4db0b6334eab222a74c16a688) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fb9d738eb602d240554a982a2c4d7bf') in 0.008246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/coupon-2.png
+  artifactKey: Guid(0132c5bfe3de4094ea2b8097127ae608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/coupon-2.png using Guid(0132c5bfe3de4094ea2b8097127ae608) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d25d21ebb20c313948da07abee973df') in 0.006914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/cleanse-tag.png
+  artifactKey: Guid(73ff0c22919633640adf8d72e4e11a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/cleanse-tag.png using Guid(73ff0c22919633640adf8d72e4e11a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c11802e275b7f95272d28575b28f3413') in 0.008758 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.192464 seconds.
+  path: Assets/Sprite/items/damp-rock.png
+  artifactKey: Guid(610f05fde1fc59a4c90f32645caa1bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/damp-rock.png using Guid(610f05fde1fc59a4c90f32645caa1bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da2da94dfb1b0db5a01d7edc6874f24f') in 0.038822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/dragon-scale.png
+  artifactKey: Guid(1bec1a63f0cfb7e46b6f31fdcef35376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dragon-scale.png using Guid(1bec1a63f0cfb7e46b6f31fdcef35376) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c53e1b0351c79efd8ac052c9afd6061') in 0.036455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/items/enigma-berry.png
+  artifactKey: Guid(888396162ff38244fb28c5dfa3120bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/enigma-berry.png using Guid(888396162ff38244fb28c5dfa3120bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52b7917442629e4e57ab12e69c592cbf') in 0.040243 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/items/fire-stone.png
+  artifactKey: Guid(133c0d46a6e7c754c8f1652b382c84ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/fire-stone.png using Guid(133c0d46a6e7c754c8f1652b382c84ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50729ccd6de879df0cfd908ae151e536') in 0.010070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/dropped-item.png
+  artifactKey: Guid(75d8b6cbf6cc1814ea95ca7d58086310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dropped-item.png using Guid(75d8b6cbf6cc1814ea95ca7d58086310) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb4ef34d6e87801818489e2119185d2d') in 0.007300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/float-stone.png
+  artifactKey: Guid(2e2f843fb54ce25479115fc95cce1edc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/float-stone.png using Guid(2e2f843fb54ce25479115fc95cce1edc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7191b55de1c2d1ae9c995fa28e1ca11') in 0.015297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/dusk-stone.png
+  artifactKey: Guid(c326c929d9c35de428a711671cb824e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dusk-stone.png using Guid(c326c929d9c35de428a711671cb824e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7164f2f30633e1e7f77da0b82d63d9f9') in 0.007785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/enigma-stone.png
+  artifactKey: Guid(43425ac0e9068e7409d61e2d43900a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/enigma-stone.png using Guid(43425ac0e9068e7409d61e2d43900a34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1111bf331997b67720f3634f59ca38c') in 0.011880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/items/destiny-knot.png
+  artifactKey: Guid(32d38e5d6b47c52408ce441fef35f7c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/destiny-knot.png using Guid(32d38e5d6b47c52408ce441fef35f7c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed819cadabb78c3793f3d1b5c037a603') in 0.008632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/fighting-gem.png
+  artifactKey: Guid(00a1519a576aaf243aa473b5a5abe548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/fighting-gem.png using Guid(00a1519a576aaf243aa473b5a5abe548) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29089eed11046eb188f33992f8165580') in 0.013764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite/items/favored-mail.png
+  artifactKey: Guid(d7654089e15e9ae40a9853b5013d3af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/favored-mail.png using Guid(d7654089e15e9ae40a9853b5013d3af0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a4e1a34be79efd9318ebdb52df42cb8') in 0.015694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/items/explorer-kit.png
+  artifactKey: Guid(a06a0eb806c665d459d59096204bf0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/explorer-kit.png using Guid(a06a0eb806c665d459d59096204bf0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '601a8cb56896ac540ded8ee51173ae5d') in 0.009877 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/elixir.png
+  artifactKey: Guid(3128b1d575f2469498a12e40064dfb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/elixir.png using Guid(3128b1d575f2469498a12e40064dfb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72f0ecdfc476c1aa8574bcf3b96de1ec') in 0.016061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/data-card.png
+  artifactKey: Guid(3bc94762bcef3f745ba613526025fc79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/data-card.png using Guid(3bc94762bcef3f745ba613526025fc79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68af0964c5bb8bbd17beac74bd79e9c3') in 0.016253 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/durin-berry.png
+  artifactKey: Guid(7742fc891b0c0ec428c7be20f11b291f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/durin-berry.png using Guid(7742fc891b0c0ec428c7be20f11b291f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e0d4288464af269902c6398255447e6') in 0.012934 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/dragon-skull.png
+  artifactKey: Guid(11dff11404052b44c925c8a68e416119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dragon-skull.png using Guid(11dff11404052b44c925c8a68e416119) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64623de78aebfe9e55f4184b6a52a162') in 0.008070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite/items/energy-powder.png
+  artifactKey: Guid(94a771674ebc89240b4e6189aca1f0ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/energy-powder.png using Guid(94a771674ebc89240b4e6189aca1f0ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a2ffd6619d1dce50ed673708e3e869b') in 0.006405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/dread-plate.png
+  artifactKey: Guid(e909c849975ce4541a6dc3c733094187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/dread-plate.png using Guid(e909c849975ce4541a6dc3c733094187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e90c2c74558bd78847fb6aa0fedc2d0') in 0.006851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.026797 seconds.
+  path: Assets/Sprite/items/friend-ball.png
+  artifactKey: Guid(5935c7f454e051141afefc4e5eabd9db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/friend-ball.png using Guid(5935c7f454e051141afefc4e5eabd9db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd85ebc727177ef38752d0c6b98ca9277') in 0.006669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/ghost-gem.png
+  artifactKey: Guid(18feb902b98437446ab5fff1f32ed64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/ghost-gem.png using Guid(18feb902b98437446ab5fff1f32ed64b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50a0ae9fb2626bf225eaef3f8016e1c2') in 0.007982 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/items/full-restore.png
+  artifactKey: Guid(6ac8e29c42ee09a4aa115b8a9533d3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/full-restore.png using Guid(6ac8e29c42ee09a4aa115b8a9533d3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d00707f23471a299ff5b48ef7050a4') in 0.006732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite/items/gram-2.png
+  artifactKey: Guid(a42dc5eb143e48f4b87166cd61671a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/gram-2.png using Guid(a42dc5eb143e48f4b87166cd61671a36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8988670508dc76a2611147139b1b4c7') in 0.006800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/grepa-berry.png
+  artifactKey: Guid(fa7056161c194714d9595ce0280282f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/grepa-berry.png using Guid(fa7056161c194714d9595ce0280282f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f34d067d5070291f95d8a019b7b7a38') in 0.007090 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/heart-mail.png
+  artifactKey: Guid(60f4282a2dcf29143a638f9fd7387da1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/heart-mail.png using Guid(60f4282a2dcf29143a638f9fd7387da1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '462df8be96523643bd62ecaffa337703') in 0.007091 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/iapapa-berry.png
+  artifactKey: Guid(5e37e063c04066e4ab2e5c14bc10dbf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/iapapa-berry.png using Guid(5e37e063c04066e4ab2e5c14bc10dbf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4ded149ffb4cb70435661dad781a267') in 0.007571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/hm-water.png
+  artifactKey: Guid(2502252fdde3be64780dd02bc4d716e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/hm-water.png using Guid(2502252fdde3be64780dd02bc4d716e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9526f860b32e534ca45b90543d34bcba') in 0.007254 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/icy-rock.png
+  artifactKey: Guid(bf50d704e62734c4c981793d704f7f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/icy-rock.png using Guid(bf50d704e62734c4c981793d704f7f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6987f92babe399d5b9629f02a9fd878c') in 0.006575 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/heart-scale.png
+  artifactKey: Guid(939230c71cfaf864f92beabddbd2651b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/heart-scale.png using Guid(939230c71cfaf864f92beabddbd2651b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f2492d27a6451b0156bfc1931331682') in 0.007135 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/green-scarf.png
+  artifactKey: Guid(0ed1e44be80bedd46a983d2f61d28b09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/green-scarf.png using Guid(0ed1e44be80bedd46a983d2f61d28b09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '305d2582cbc26b00557cc1b0e840dbb9') in 0.007195 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/houndoominite.png
+  artifactKey: Guid(e3ab21110cd0f6441ae1e21f4990dca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/houndoominite.png using Guid(e3ab21110cd0f6441ae1e21f4990dca1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcaed8e14b6d60cae8b988cff168cdb8') in 0.007827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/heavy-ball.png
+  artifactKey: Guid(427bf95ef7a241148b771a842e9216bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/heavy-ball.png using Guid(427bf95ef7a241148b771a842e9216bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd37e733e8a94e2102e58edac4991757c') in 0.007621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprite/items/green-apricorn.png
+  artifactKey: Guid(cf22674c0f94f0a4c8421309fa70d334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/green-apricorn.png using Guid(cf22674c0f94f0a4c8421309fa70d334) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5af7126e5cfe60630e31f7fee932e2f') in 0.007275 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/gooey-mulch.png
+  artifactKey: Guid(a4864e6cf3914e44a8b0759b71795748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/gooey-mulch.png using Guid(a4864e6cf3914e44a8b0759b71795748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f45556e127810590345e4e35b08ce9b') in 0.008492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/ice-gem.png
+  artifactKey: Guid(67685016e26cf1749892beddeaee9557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/ice-gem.png using Guid(67685016e26cf1749892beddeaee9557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8ec7190a629b0063913caf45fbb6396') in 0.006415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/haban-berry.png
+  artifactKey: Guid(4b84a03d8ee0cb3409f1057518153206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/haban-berry.png using Guid(4b84a03d8ee0cb3409f1057518153206) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7da822935c13bbcfd1e344edf64a70d9') in 0.006941 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/gengarite.png
+  artifactKey: Guid(3a0b951ba806f9143b869cb9fcb565cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/gengarite.png using Guid(3a0b951ba806f9143b869cb9fcb565cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd59a00d441598c2dfa30b4bb0e11d8a') in 0.006447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.140732 seconds.
+  path: Assets/Sprite/items/iron.png
+  artifactKey: Guid(83d27f894d3959d41aa3c75c26d99632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/iron.png using Guid(83d27f894d3959d41aa3c75c26d99632) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc5b97a4b627bb56ee2f174c58e63b1b') in 0.007581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/kings-rock.png
+  artifactKey: Guid(60159a7f6cd00a246ad72ef0d2c0d63d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/kings-rock.png using Guid(60159a7f6cd00a246ad72ef0d2c0d63d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c5a107625277119c00bbab03fa2f96c') in 0.007435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/kasib-berry.png
+  artifactKey: Guid(b5513c5313991db40ab3e0ad9b69ce5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/kasib-berry.png using Guid(b5513c5313991db40ab3e0ad9b69ce5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd577faa005dd6cb7f64079433df3be41') in 0.008011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/life-orb.png
+  artifactKey: Guid(515e67f8a718b0040a039cf41696f754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/life-orb.png using Guid(515e67f8a718b0040a039cf41696f754) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7492385de2034db5a046c7cf26939b22') in 0.007394 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/lum-berry.png
+  artifactKey: Guid(dba570a9d8a767f4a993794809bfcdb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/lum-berry.png using Guid(dba570a9d8a767f4a993794809bfcdb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cfe8c1459fee7421a0ddb52b232e897') in 0.006505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/light-stone.png
+  artifactKey: Guid(55d33d3b9ffb0be449ef3a21203c660a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/light-stone.png using Guid(55d33d3b9ffb0be449ef3a21203c660a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb1b025d7d35b6005a762513620315c') in 0.008222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/lucarionite.png
+  artifactKey: Guid(b39ecf80d7965624fa2720ed74ee473a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/lucarionite.png using Guid(b39ecf80d7965624fa2720ed74ee473a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f86c77de6d5777a87df5bf9f1739305') in 0.006627 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/magmarizer.png
+  artifactKey: Guid(280f98ff79768f640a901c898ccdd0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/magmarizer.png using Guid(280f98ff79768f640a901c898ccdd0ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2f05bfb4e1f0b0ed1a39ad547b51577') in 0.007817 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/mago-berry.png
+  artifactKey: Guid(142d4b9c0d4800c4498cabb5de4cef32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/mago-berry.png using Guid(142d4b9c0d4800c4498cabb5de4cef32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaf57c4e8b7ef05d12a2a759a9d19c22') in 0.006784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/lure-ball.png
+  artifactKey: Guid(363e7417eeb6d7147a5a9e19c59b848c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/lure-ball.png using Guid(363e7417eeb6d7147a5a9e19c59b848c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3f5073a5eb93854c7a13d63782becc') in 0.008424 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/kee-berry.png
+  artifactKey: Guid(60a3985389ae4ea45a4824be9d9512e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/kee-berry.png using Guid(60a3985389ae4ea45a4824be9d9512e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87d48d982446e2746a69529fc7d4ddb4') in 0.006480 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprite/items/macho-brace.png
+  artifactKey: Guid(107499b59191599418dc0566d0803ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/macho-brace.png using Guid(107499b59191599418dc0566d0803ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '800fed9bb68462f98fe9f956a438dc3f') in 0.006778 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/items/magnet.png
+  artifactKey: Guid(9da8085e82550c043bb160a8c32e7de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/magnet.png using Guid(9da8085e82550c043bb160a8c32e7de2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '107bd3033a876e0ac1889c574ffddce4') in 0.006732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/manectite.png
+  artifactKey: Guid(0a3448b7bb6dd754d98503bf445be94b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/manectite.png using Guid(0a3448b7bb6dd754d98503bf445be94b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c883c11760119cadaea34fb803d04802') in 0.006560 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/magma-stone.png
+  artifactKey: Guid(324b9c91d8c4f9748b8f219affca0ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/magma-stone.png using Guid(324b9c91d8c4f9748b8f219affca0ce4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391e3fdef0064dca6644fff827c9e8f6') in 0.009563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/lumiose-galette.png
+  artifactKey: Guid(1848bdb69e5427145b77394923170ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/lumiose-galette.png using Guid(1848bdb69e5427145b77394923170ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac8e513ffae99c9f0e25ad05566e11eb') in 0.006771 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/items/max-potion.png
+  artifactKey: Guid(f34ae9a50d4c7a348ba9bce36738a894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/max-potion.png using Guid(f34ae9a50d4c7a348ba9bce36738a894) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a32215ea2a4fb736314759e9ccdd66f') in 0.007057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Sprite/items/liechi-berry.png
+  artifactKey: Guid(8cd5c3f8957df4a43a93404e7b85a6b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/liechi-berry.png using Guid(8cd5c3f8957df4a43a93404e7b85a6b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11c3d735afd5fa2b25a9ad17a6397593') in 0.008638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.158300 seconds.
+  path: Assets/Sprite/items/mental-herb.png
+  artifactKey: Guid(7a7b019c8ef25cf40a9af77a9d83759a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/mental-herb.png using Guid(7a7b019c8ef25cf40a9af77a9d83759a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdd77aebbf434a11430600100bb9d943') in 0.008026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/miracle-seed.png
+  artifactKey: Guid(96870bb939a91ef4cbe08d69d7fb23bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/miracle-seed.png using Guid(96870bb939a91ef4cbe08d69d7fb23bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb28f195996d55960f4e03064f282d06') in 0.007319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/items/metal-powder.png
+  artifactKey: Guid(e4e26819dc1ff854b9af48111a37e0bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/metal-powder.png using Guid(e4e26819dc1ff854b9af48111a37e0bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fa8a57a079389f47aeade9c997d052c') in 0.007373 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/metal-coat.png
+  artifactKey: Guid(12571393839ca6c4db43f7c58b542c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/metal-coat.png using Guid(12571393839ca6c4db43f7c58b542c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f70b1f68ecee89306aac8d475d6e0cd8') in 0.006657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite/items/odd-keystone.png
+  artifactKey: Guid(b5bf508f9d9611c4385acdba6362e1c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/odd-keystone.png using Guid(b5bf508f9d9611c4385acdba6362e1c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3642d5001a95886e5866a8dd75eb7f8') in 0.007231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/parcel.png
+  artifactKey: Guid(5c2882a4dc4b1c440b4286046e9f370b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/parcel.png using Guid(5c2882a4dc4b1c440b4286046e9f370b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc4ae84f514caf27a2a8f41b737f787b') in 0.008711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/oval-charm.png
+  artifactKey: Guid(483dec807eea715439e69812cfb6d482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/oval-charm.png using Guid(483dec807eea715439e69812cfb6d482) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80d7fe92240d263198a6098a69cd3501') in 0.007450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/poison-gem.png
+  artifactKey: Guid(3da7a0deaafa9dd4394e960b8d99e2a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/poison-gem.png using Guid(3da7a0deaafa9dd4394e960b8d99e2a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35029dc0d880f5db314355ac5b08de37') in 0.006724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/muscle-wing.png
+  artifactKey: Guid(402611071a3c31442a4c4fbef4ce5f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/muscle-wing.png using Guid(402611071a3c31442a4c4fbef4ce5f82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '400d5d3b14d39eb8253b2906056ef9e4') in 0.007023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/orange-mail.png
+  artifactKey: Guid(2cecee69d779ac0429945e1a1075014b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/orange-mail.png using Guid(2cecee69d779ac0429945e1a1075014b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a54434c2ea9bbb48476e1d5dada980b') in 0.006576 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/items/pixie-plate.png
+  artifactKey: Guid(f78e9e1722a2bd54a9bdf89e1fcb883c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/pixie-plate.png using Guid(f78e9e1722a2bd54a9bdf89e1fcb883c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb0fdf2d699c2081c85b50465f23c6c8') in 0.007581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/net-ball.png
+  artifactKey: Guid(dccdaa08ef83b834b9239479aa531ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/net-ball.png using Guid(dccdaa08ef83b834b9239479aa531ef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3641186565d863d87a1920fcfdd7c8d') in 0.007251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/items/pamtre-berry.png
+  artifactKey: Guid(dc0a16eb48fc2c9428cbfb75d49152db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/pamtre-berry.png using Guid(dc0a16eb48fc2c9428cbfb75d49152db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b08586514aaddcea22d8cbb1d083216') in 0.007492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/mystery-egg.png
+  artifactKey: Guid(caf89a714fdcd7741a57a8ecbd568348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/mystery-egg.png using Guid(caf89a714fdcd7741a57a8ecbd568348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b02d95d8b602b2534a86f7fcb6c8ff93') in 0.009235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/odd-incense.png
+  artifactKey: Guid(4b9aef9e7154dfd458743521f4e31bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/odd-incense.png using Guid(4b9aef9e7154dfd458743521f4e31bf2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd76bb66885bbe0350f91d50a9f718465') in 0.008799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/old-charm.png
+  artifactKey: Guid(71f137f8a231a5e44bd0f6f701d330a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/old-charm.png using Guid(71f137f8a231a5e44bd0f6f701d330a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e65ae0ecf0a75d6b88e1c4a3f8750b84') in 0.008400 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/pecha-berry.png
+  artifactKey: Guid(f5e153d9b0a3e02409287937c7d7cc3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/pecha-berry.png using Guid(f5e153d9b0a3e02409287937c7d7cc3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e022282bd84ed61877ec2cf4709f3027') in 0.006709 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/old-sea-map.png
+  artifactKey: Guid(636f2041fddc6884ca81662d72c63703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/old-sea-map.png using Guid(636f2041fddc6884ca81662d72c63703) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '964c90a619c42a352967ab950851d8c3') in 0.006666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.546135 seconds.
+  path: Assets/Sprite/items/pokeblock-case.png
+  artifactKey: Guid(a4a617d59b9e6de478aa4ad7884a6a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/pokeblock-case.png using Guid(a4a617d59b9e6de478aa4ad7884a6a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f27d7d1794efe52aaf5cc2e74609c61d') in 0.007319 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprite/items/pp-max.png
+  artifactKey: Guid(9ed3b248788756744a9e3fc5b9176136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/pp-max.png using Guid(9ed3b248788756744a9e3fc5b9176136) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9ea73cd2cb5b5fc5b08ef29beef60f7') in 0.006811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/power-anklet.png
+  artifactKey: Guid(a9f87396071cb3d4095339c604287268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/power-anklet.png using Guid(a9f87396071cb3d4095339c604287268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0623dfc267185b15964871310717a236') in 0.007345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/power-weight.png
+  artifactKey: Guid(23d8209dbde468a4aa9541b348c28874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/power-weight.png using Guid(23d8209dbde468a4aa9541b348c28874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '262859db3d9793ad81e52debc85bb43c') in 0.007922 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/pure-incense.png
+  artifactKey: Guid(9153d4b140d0f1b4ab5bc8bdc83e6aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/pure-incense.png using Guid(9153d4b140d0f1b4ab5bc8bdc83e6aa0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e5c2c80e64e8417bbf727f08c41bbf9') in 0.008275 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/rawst-berry.png
+  artifactKey: Guid(1c2bfe1245399ac44abf34bcb86c1ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/rawst-berry.png using Guid(1c2bfe1245399ac44abf34bcb86c1ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc8a3757994ee5c7c02d0d59e5be7895') in 0.009225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/razor-fang.png
+  artifactKey: Guid(47ad4bac374ec3148b455e12fe726c4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/razor-fang.png using Guid(47ad4bac374ec3148b455e12fe726c4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65828b2b413406669ae6922cad17ed45') in 0.008209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/red-orb.png
+  artifactKey: Guid(09719fd8cd8fb20479f732559ac26bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/red-orb.png using Guid(09719fd8cd8fb20479f732559ac26bc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e688269755eeb1391365941125ccdfb3') in 0.007052 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/items/rainbow-pass.png
+  artifactKey: Guid(d58ebca3355427f4abfa18393aeefb03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/rainbow-pass.png using Guid(d58ebca3355427f4abfa18393aeefb03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6bae90fa00011270f53b724c2e93c24') in 0.007488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/items/rainbow-wing.png
+  artifactKey: Guid(1bb5c09ad7ac8234bbe7c4e5049303bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/rainbow-wing.png using Guid(1bb5c09ad7ac8234bbe7c4e5049303bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39d79632c2b80075950be7230ca1b323') in 0.006998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/items/relic-copper.png
+  artifactKey: Guid(8cc889da9c9c1a946861f88e4f920d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/relic-copper.png using Guid(8cc889da9c9c1a946861f88e4f920d15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae2fc3707d5b9865434974f9e881867f') in 0.007716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/profs-letter.png
+  artifactKey: Guid(049873bb1d065e843bac2875ac3abfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/profs-letter.png using Guid(049873bb1d065e843bac2875ac3abfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98289ea7914fc2a2a894a70e2f3dc5a0') in 0.007151 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/power-herb.png
+  artifactKey: Guid(8799868e7ccd83e4e9f6a75acbc3a138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/power-herb.png using Guid(8799868e7ccd83e4e9f6a75acbc3a138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc63c299d6c9f33877d6ee8ba3ef9dcf') in 0.006944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.253039 seconds.
+  path: Assets/Sprite/items/repel.png
+  artifactKey: Guid(bffbdb71a01cab840b86dd15511dc82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/repel.png using Guid(bffbdb71a01cab840b86dd15511dc82e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed1b2551ddc84bfc9df45b3f8bdd5ec') in 0.008230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprite/items/rm-1-key.png
+  artifactKey: Guid(d63886fde812b0c418807f0f1e1e4349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/rm-1-key.png using Guid(d63886fde812b0c418807f0f1e1e4349) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '098480499aeb64e8af99fb9853bf0aa9') in 0.010886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/items/ring-target.png
+  artifactKey: Guid(b0b3feb8fff79ee4587ff2111340f7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/ring-target.png using Guid(b0b3feb8fff79ee4587ff2111340f7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a19a7a88eaf577ffe35d047a13ff146') in 0.006896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/reply-mail.png
+  artifactKey: Guid(cb331b2eff290d34b8ed3e08d29992a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/reply-mail.png using Guid(cb331b2eff290d34b8ed3e08d29992a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ce2111d8e04588749d3e72a6657712c') in 0.008156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/reveal-glass.png
+  artifactKey: Guid(d5609a9d662ad49468f7a3223c2ea871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/reveal-glass.png using Guid(d5609a9d662ad49468f7a3223c2ea871) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e453ce254a6e7e9f00af09c32227f42') in 0.007376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.010635 seconds.
+  path: Assets/Sprite/items/roller-skates.png
+  artifactKey: Guid(777f278aa6e30454f9db9cc2a263b20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/roller-skates.png using Guid(777f278aa6e30454f9db9cc2a263b20d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83102a1ac2598a8e5b66215bf6728204') in 0.007213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprite/items/salac-berry.png
+  artifactKey: Guid(0addc3a4f22054d4c9576103d05d732e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/salac-berry.png using Guid(0addc3a4f22054d4c9576103d05d732e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75404620694960be376cb9ed037eedee') in 0.006856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/items/roseli-berry.png
+  artifactKey: Guid(f3226291b81449247a0afa111ae2a204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/roseli-berry.png using Guid(f3226291b81449247a0afa111ae2a204) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '875547030b1fc9af235f482914deae92') in 0.007134 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/sail-fossil.png
+  artifactKey: Guid(a339ef6e6b0c7f340a4eaadbe1b6e8a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/sail-fossil.png using Guid(a339ef6e6b0c7f340a4eaadbe1b6e8a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01a4237034b0f23b217a041ff0ff365a') in 0.008127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/secret-potion.png
+  artifactKey: Guid(6fe30b1425802e343bb531927340860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/secret-potion.png using Guid(6fe30b1425802e343bb531927340860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c547f53a990fa6cbb9e2d9525c33f934') in 0.010703 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/items/seal-bag.png
+  artifactKey: Guid(417f684143942544cbdc95673d5e4299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/seal-bag.png using Guid(417f684143942544cbdc95673d5e4299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f2d905d083525036cc64cf41bbdad98') in 0.013897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/items/safari-ball.png
+  artifactKey: Guid(db4f5134a6435ca42acaac2ebece9785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/safari-ball.png using Guid(db4f5134a6435ca42acaac2ebece9785) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a04ba77139c82cf0bd2cf3caaaba619') in 0.013366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/sachet.png
+  artifactKey: Guid(ad05c8d391946f445ab5923339d2d7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/sachet.png using Guid(ad05c8d391946f445ab5923339d2d7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60171ba377661e25a660763028e13ed9') in 0.008395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/secret-key.png
+  artifactKey: Guid(b023ad2b081025b42969f4f5f4dc2b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/secret-key.png using Guid(b023ad2b081025b42969f4f5f4dc2b50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3aa2806c108444bc097bc416d14db89') in 0.009687 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.267339 seconds.
+  path: Assets/Sprite/items/silver-powder.png
+  artifactKey: Guid(315ee29ca73ccbb42823ce1dca089a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/silver-powder.png using Guid(315ee29ca73ccbb42823ce1dca089a64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f0ecd94183fb03e627d8d38d132e7cd') in 0.008422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/soul-dew.png
+  artifactKey: Guid(4aa9262c7511c6843bb8770f44ff8379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/soul-dew.png using Guid(4aa9262c7511c6843bb8770f44ff8379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '216c7a5bf13520dc42ef810cced8b768') in 0.007386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/items/star-piece.png
+  artifactKey: Guid(3e2c9efa8baa15c469a7ccd7361dee0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/star-piece.png using Guid(3e2c9efa8baa15c469a7ccd7361dee0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2b3884d5ead7752016599ff2a50217c') in 0.007312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/spooky-plate.png
+  artifactKey: Guid(a5a7f0d2391a432458b9f015d9ac70f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/spooky-plate.png using Guid(a5a7f0d2391a432458b9f015d9ac70f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '786b88ce4ebdf10adc9f8cd0f021d54b') in 0.006652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/spelon-berry.png
+  artifactKey: Guid(622ca37d628377f479ffce3be85600bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/spelon-berry.png using Guid(622ca37d628377f479ffce3be85600bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4846e59801388c8ae1d3581d8e8db79') in 0.006977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/soot-sack.png
+  artifactKey: Guid(92079f2ab92a066498ea1dfc89e34978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/soot-sack.png using Guid(92079f2ab92a066498ea1dfc89e34978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2569cdab8b79ff913582276a695cb47') in 0.007835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/tea.png
+  artifactKey: Guid(5a05df945c02db843af21fd402fa4c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tea.png using Guid(5a05df945c02db843af21fd402fa4c11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fab1100f8d90f9a6dfb6cb8bfa494a91') in 0.007047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite/items/thanks-mail.png
+  artifactKey: Guid(d7a02b31b8397b147ae8dadba02336dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/thanks-mail.png using Guid(d7a02b31b8397b147ae8dadba02336dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2433febd880aa8ddec93ec570e70ae58') in 0.007633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/tm-electric.png
+  artifactKey: Guid(dce965850c227e047a0edba748859d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tm-electric.png using Guid(dce965850c227e047a0edba748859d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bffb90cb14291db944fd89d3fb191183') in 0.008773 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/items/stick.png
+  artifactKey: Guid(3c1097c0e843999478378d413fc1f966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/stick.png using Guid(3c1097c0e843999478378d413fc1f966) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b9dd7089b91a24367ec90deca33266') in 0.009312 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/tm-grass.png
+  artifactKey: Guid(634fd13b8ea2c5445985a38fa2357709) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tm-grass.png using Guid(634fd13b8ea2c5445985a38fa2357709) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfc08153118dd325e1a6268de0aaa3df') in 0.008284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/tm-fighting.png
+  artifactKey: Guid(f78a0e08e6dbdb14dbb1808281d5a380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tm-fighting.png using Guid(f78a0e08e6dbdb14dbb1808281d5a380) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd97f989937268f32d2fd406f9cedd459') in 0.009533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/steel-gem.png
+  artifactKey: Guid(bd72736fe5982704291e164489148897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/steel-gem.png using Guid(bd72736fe5982704291e164489148897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3255c4f476b999399d4731a57efe1385') in 0.007286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/tanga-berry.png
+  artifactKey: Guid(0ede29ef2cc212e4a9fdb8db23af1963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tanga-berry.png using Guid(0ede29ef2cc212e4a9fdb8db23af1963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6742b1d393e10d3730d534b5219ad3c') in 0.007303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/items/soothe-bell.png
+  artifactKey: Guid(f8ebf038621b2c14bbf1aa1dbebe860b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/soothe-bell.png using Guid(f8ebf038621b2c14bbf1aa1dbebe860b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cff900fd8a2128cd058cffe8fe6ba91a') in 0.007554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/items/tm-case.png
+  artifactKey: Guid(83b5b50c37f6d834ca074f879bb33a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tm-case.png using Guid(83b5b50c37f6d834ca074f879bb33a1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ac9afcabef901ecc88aa7ef7bd04b1d') in 0.008948 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/items/tm-fire.png
+  artifactKey: Guid(ac5dca413d938cb4788f8b81e8db7de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tm-fire.png using Guid(ac5dca413d938cb4788f8b81e8db7de4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '130d5228a22617a28d4ded47249ec332') in 0.010365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/items/squirt-bottle.png
+  artifactKey: Guid(c27f8a86215c47a4bb35719da187a1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/squirt-bottle.png using Guid(c27f8a86215c47a4bb35719da187a1a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78f74e1aa712926b1a535dd0c53e4744') in 0.008219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.605806 seconds.
+  path: Assets/Sprite/items/tm-water.png
+  artifactKey: Guid(65ea0c927a0236d4290b026cb4cde03c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tm-water.png using Guid(65ea0c927a0236d4290b026cb4cde03c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17e13c9e872642a8fe2a33e04eebf2d8') in 0.007705 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/tri-pass.png
+  artifactKey: Guid(fba63fd2e6d149b4cb7a9e1dbc1524a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tri-pass.png using Guid(fba63fd2e6d149b4cb7a9e1dbc1524a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e79abd93e5d2643989711e440363bef6') in 0.011862 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite/items/wave-incense.png
+  artifactKey: Guid(dbab75dcf9695274f891d198a0932c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/wave-incense.png using Guid(dbab75dcf9695274f891d198a0932c07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baeed1a74b5956df115fde0cb712c721') in 0.009491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/toxic-plate.png
+  artifactKey: Guid(f7b57e8f4f19ac94187659dcf4d7b6b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/toxic-plate.png using Guid(f7b57e8f4f19ac94187659dcf4d7b6b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '042773d541ca4cea7a2282fb7bd3101e') in 0.009658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite/items/wise-glasses.png
+  artifactKey: Guid(f39dcd9de4879fe4d9fcd80071f5d088) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/wise-glasses.png using Guid(f39dcd9de4879fe4d9fcd80071f5d088) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17f0cf6e29972d9bf84ab4ac061d0230') in 0.008386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite/items/x-accuracy-3.png
+  artifactKey: Guid(f570ffa4e3afb504cb2198411a55bdbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/x-accuracy-3.png using Guid(f570ffa4e3afb504cb2198411a55bdbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1abd92c0192990d63b168d692f6689ef') in 0.007948 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/items/toxic-orb.png
+  artifactKey: Guid(d793a6f00fe16884787b3f1f46107889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/toxic-orb.png using Guid(d793a6f00fe16884787b3f1f46107889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30267746326f564b8c62412ef8beec8e') in 0.008851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/x-speed-3.png
+  artifactKey: Guid(b1c22ed921f73d14396e7058a46fb034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/x-speed-3.png using Guid(b1c22ed921f73d14396e7058a46fb034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9349585ef1977116e623789eda59206d') in 0.008566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/x-sp-def-6.png
+  artifactKey: Guid(4421eb7b8e8559f42be9dde6a676fe1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/x-sp-def-6.png using Guid(4421eb7b8e8559f42be9dde6a676fe1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e9559e8c204af426d8c13fc3a04946f') in 0.007493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/wacan-berry.png
+  artifactKey: Guid(9f8dc0a14e20f614fa68afa55d72c6f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/wacan-berry.png using Guid(9f8dc0a14e20f614fa68afa55d72c6f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea1f37a684aac1578d01901aa44e32a9') in 0.007171 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/items/town-map.png
+  artifactKey: Guid(2560038f2b155754ea2ea2de9761e46e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/town-map.png using Guid(2560038f2b155754ea2ea2de9761e46e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80038f8e6a974cb4eb687825b8ede691') in 0.008813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/items/vs-recorder.png
+  artifactKey: Guid(e122bda3f9179de42858f51d09c2b66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/vs-recorder.png using Guid(e122bda3f9179de42858f51d09c2b66b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75a06aa3b4bec807fe6184de6c6a9784') in 0.007018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/wide-lens.png
+  artifactKey: Guid(3257a2c8c141a164b887b14925f0ee48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/wide-lens.png using Guid(3257a2c8c141a164b887b14925f0ee48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dcd21946c6b428af2f184a23c319f91') in 0.008380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprite/items/white-flute.png
+  artifactKey: Guid(ac185eba9fbe0c54493f82acbc09a9ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/white-flute.png using Guid(ac185eba9fbe0c54493f82acbc09a9ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '230017e7272b89b22b9113893c4a4cdd') in 0.011851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/xtransceiver-yellow.png
+  artifactKey: Guid(2b5cafcc1db19ea42b6724cf37476613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/xtransceiver-yellow.png using Guid(2b5cafcc1db19ea42b6724cf37476613) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4d817945a1cc87f69558ed850edd3db') in 0.008651 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/items/wave-mail.png
+  artifactKey: Guid(d6bda5de0f3b0b445a4e2c3a1085d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/wave-mail.png using Guid(d6bda5de0f3b0b445a4e2c3a1085d5ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cef9a36a30c91cf0406e09630c855f7') in 0.009940 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/tunnel-mail.png
+  artifactKey: Guid(70b1084bd647bcb4cb9fc03c51edf6f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/tunnel-mail.png using Guid(70b1084bd647bcb4cb9fc03c51edf6f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8c8e64b575ed9f2712c76c9a2d91975') in 0.007534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/items/x-attack-2.png
+  artifactKey: Guid(2f8abeeafa138514b8c9c31ba8b4e323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/items/x-attack-2.png using Guid(2f8abeeafa138514b8c9c31ba8b4e323) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a96a6dbdd0c1bcfd458324eb2136fe79') in 0.008031 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
