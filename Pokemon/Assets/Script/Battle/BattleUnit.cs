@@ -26,6 +26,7 @@ public class BattleUnit : MonoBehaviour
         orginalColor = image.color;
     }
 
+    /*color在每一場後重製否則戰鬥結束後顏色會一直透明*/
     public void Setup()
     {
         Pokemon = new Pokemon(_base, level);
@@ -33,6 +34,8 @@ public class BattleUnit : MonoBehaviour
             image.sprite = Pokemon.Base.BackSprite;
         else
             image.sprite = Pokemon.Base.FrontSprite;
+
+        image.color =orginalColor;
         EnterAnimation();
     }
     /*開場進場import DG函數 讓開場進場有緩慢的效果*/

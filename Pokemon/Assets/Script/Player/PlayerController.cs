@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,9 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     public LayerMask solidObjectsLayer;
     public LayerMask grassLayer;
+
+    public event Action OnEncountered;
+
     public float move_speed;
     private bool isMoving;
     private Vector2 input;
@@ -32,7 +36,7 @@ public class PlayerController : MonoBehaviour
     當輸入區域不為0,0且Vector2.zero 為Vector2(0,0),Animator 配置BlendTree隨著 input來控制移動動畫
     IsWalkable 傳入Player Position 到Physics2D.OverlapCircle確認是否可走入該區域
     */
-    void Update()
+    public void HandleUpdate()
     {
         if (!isMoving)
         {
@@ -85,16 +89,17 @@ public class PlayerController : MonoBehaviour
         }
         return true;
     }
-    //遇敵 Random 1~100 當小於10則遇到敵人
+    //遇敵 Random 1~100 當小於10則遇到敵人,新增在遇敵後取消腳色動畫
     private void checkForEncounters()
     {
-         if (Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
+        if (Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
         {
-            if (Random.Range(1,101) <=10)
+            if (UnityEngine.Random.Range(1, 101) <= 10)
             {
-                Debug.Log("Encounter a wild pokemon");
+                animator.SetBool("isMoving", false);
+                OnEncountered();
             }
         }
-        
+
     }
 }
