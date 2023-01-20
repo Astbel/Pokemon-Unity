@@ -11,7 +11,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] BattleUnit enemyUnit;
     [SerializeField] BattleHud enemyHud;
     [SerializeField] BattleDialogBox dialogBox;
-
+    [SerializeField] PartyScreen partyScreen;
     public event Action<bool> OnBattleOver;
 
     BattleState state;  //回合制狀態機
@@ -40,6 +40,8 @@ public class BattleSystem : MonoBehaviour
         enemyUnit.Setup(wildPokemon);
         enemyHud.SetData(enemyUnit.Pokemon);
 
+        partyScreen.Init();
+
         dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
 
         yield return dialogBox.TypeDialog($"A wild {enemyUnit.Pokemon.Base.Name}  appeared.");
@@ -51,9 +53,17 @@ public class BattleSystem : MonoBehaviour
     void PlayAction()
     {
         state = BattleState.PlayAction;
-        StartCoroutine(dialogBox.TypeDialog("Choose an action"));
+        dialogBox.SetDialog("Choose an action");
         dialogBox.EnableActionSelector(true);
     }
+    //選單選擇戰鬥中其他Pokemon
+    void OpenPartyScreen()
+    {
+        /*回傳player的pokemon list*/
+        partyScreen.SetPartyData(playerParty.Pokemons);
+        partyScreen.gameObject.SetActive(true);
+    }
+
     /*選技能階段*/
     void PlayerMove()
     {
@@ -121,7 +131,7 @@ public class BattleSystem : MonoBehaviour
 
             yield return new WaitForSeconds(2f);
             /*檢查玩家是否還有其他能用的Pokemon,如果有責設置下一隻的資料並顯示在對話框上*/
-           var nextPokemon = playerParty.GetHealthyPokemon();
+            var nextPokemon = playerParty.GetHealthyPokemon();
             if (nextPokemon != null)
             {
                 playerUnit.Setup(nextPokemon);
@@ -172,16 +182,24 @@ public class BattleSystem : MonoBehaviour
     /*Player 選擇動作*/
     void HandleActionSelection()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if (currentAction < 1)
-                ++currentAction;
+            ++currentAction;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            --currentAction;
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            currentAction += 2;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (currentAction > 0)
-                --currentAction;
+            currentAction -= 2;
         }
+        /*限制選單賦值0~3*/
+        currentAction = Math.Clamp(currentAction, 0, 3);
 
         dialogBox.UpdateActionSelection(currentAction);
         if (Input.GetKeyDown(KeyCode.Z))
@@ -192,6 +210,15 @@ public class BattleSystem : MonoBehaviour
                 PlayerMove();
             }
             else if (currentAction == 1)
+            {
+                //Bag
+            }
+            else if (currentAction == 2)
+            {
+                //Party
+                OpenPartyScreen();
+            }
+            else if (currentAction == 3)
             {
                 //run
             }
@@ -209,24 +236,22 @@ public class BattleSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if (currentMove < playerUnit.Pokemon.Moves.Count - 1)
-                ++currentMove;
+            ++currentMove;
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if (currentMove > 0)
-                --currentMove;
+            --currentMove;
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if (currentMove < playerUnit.Pokemon.Moves.Count - 2)
-                currentMove += 2;
+            currentMove += 2;
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (currentMove > 1)
-                currentMove -= 2;
+            currentMove -= 2;
         }
+        /*限制選單賦值由於限制跟腳色技能樹有關所以參照玩家pokemon擁有技能上線做定義*/
+        currentMove = Math.Clamp(currentMove, 0, playerUnit.Pokemon.Moves.Count - 1);
         //Debug.Log(currentMove);
         dialogBox.UpdateMoveSelection(currentMove, playerUnit.Pokemon.Moves[currentMove]);
         /*當選擇技能時*/
@@ -236,7 +261,13 @@ public class BattleSystem : MonoBehaviour
             dialogBox.EnableDialogText(true);
             StartCoroutine(PerformPlayerMove());
         }
-
+        /*退出案件*/
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            dialogBox.EnableMoveSelector(false);
+            dialogBox.EnableDialogText(true);
+            PlayAction();
+        }
     }
 
 

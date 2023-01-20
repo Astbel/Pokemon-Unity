@@ -7,6 +7,8 @@ using UnityEngine;
 public class PokemonParty : MonoBehaviour
 {
     [SerializeField] List<Pokemon> pokemons;
+    //回傳至給Party UI 來顯示
+    public List<Pokemon> Pokemons{get{return pokemons;}}
 
     /*開始時為所有pokemon初始化狀態 初始化招式以及血量*/
     private void Start()
