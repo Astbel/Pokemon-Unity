@@ -334,8 +334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12, y: -4}
-  m_SizeDelta: {x: 111.565, y: 43.247}
+  m_AnchoredPosition: {x: 9.936, y: 1.978}
+  m_SizeDelta: {x: 107.437, y: 31.291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &304037861
 GameObject:
@@ -434,7 +434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &519420029
 AudioListener:
   m_ObjectHideFlags: 0
@@ -22527,7 +22527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -87, y: 17}
+  m_AnchoredPosition: {x: 48, y: 18}
   m_SizeDelta: {x: 65.826, y: 32.601}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &756930051
@@ -23768,7 +23768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   letterPerSecond: 30
-  highlightedColor: {r: 0, g: 0, b: 1, a: 0}
+  highlightedColor: {r: 0, g: 0, b: 1, a: 1}
   dialogText: {fileID: 2144930032}
   actionSelector: {fileID: 1664673294}
   moveSelector: {fileID: 1672724389}

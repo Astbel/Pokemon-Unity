@@ -32,6 +32,8 @@ public class BattleDialogBox : MonoBehaviour
             dialogText.text += letter;
             yield return new WaitForSeconds(1f / letterPerSecond);
         }
+
+        yield return new WaitForSeconds(1f); //wait fot 1sec
     }
     /*智能選單介面*/
     public void EnableDialogText(bool enabled)

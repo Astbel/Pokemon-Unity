@@ -64,9 +64,23 @@ public class Pokemon
         get { return Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5; }
     }
     /*pokemon 傷害公式*/
-    public bool TakeDamage(Move move, Pokemon attacker)
+    public DamageDetails TakeDamage(Move move, Pokemon attacker)
     {
-        float modifiers = Random.Range(0.85f, 1f);
+        /*Crit hit*/
+        float critical = 1f;
+        if (Random.value * 100f <= 6.25f)
+            critical = 2f;
+        /*Effect type method*/
+        float type = TypeChart.GetEffectivenss(move.Base.Type, this.Base.Type1) * TypeChart.GetEffectivenss(move.Base.Type, this.Base.Type2);
+       
+        var damageDetails = new DamageDetails()
+        {
+            TypeEffectiveness = type,
+            Critical = critical,
+            Fainted = false
+        };
+        /*damage formula*/
+        float modifiers = Random.Range(0.85f, 1f) * type * critical;
         float a = (2 * attacker.Level + 10) / 250f;
         float d = a * move.Base.Power * ((float)attacker.Attack / Defense) + 2;
         int damage = Mathf.FloorToInt(d * modifiers);
@@ -75,9 +89,9 @@ public class Pokemon
         if (HP < 0)
         {
             HP = 0;
-            return true;
+            damageDetails.Fainted=true;
         }
-        return false;
+        return damageDetails;
     }
 
     /*隨機技能*/
@@ -87,3 +101,15 @@ public class Pokemon
         return Moves[r];
     }
 }
+
+
+public class DamageDetails
+{
+    public bool Fainted { get; set; }
+    public float Critical { get; set; }
+    public float TypeEffectiveness { get; set; }
+
+}
+
+
+
