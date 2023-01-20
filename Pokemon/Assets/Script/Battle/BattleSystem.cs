@@ -17,23 +17,27 @@ public class BattleSystem : MonoBehaviour
     BattleState state;  //回合制狀態機
     int currentAction; //選單變數偵測
     int currentMove; //技能選單變數偵測
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
-    public void StartBattle()
+
+    /*物件畫 玩家以及野生*/
+    PokemonParty playerParty;
+    Pokemon wildPokemon;
+
+    public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
     {
+        this.playerParty = playerParty;
+        this.wildPokemon = wildPokemon;
         StartCoroutine(SetUpBattle());
     }
     /*
     修正為 IEnumerator經過顯示遇敵資訊後,再載入選單界面窗
+    player端檢測Pokemon是否HP還大於0
     */
     public IEnumerator SetUpBattle()
     {
-        playerUnit.Setup();
+        playerUnit.Setup(playerParty.GetHealthyPokemon());
         playerHud.SetData(playerUnit.Pokemon);
 
-        enemyUnit.Setup();
+        enemyUnit.Setup(wildPokemon);
         enemyHud.SetData(enemyUnit.Pokemon);
 
         dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
@@ -65,6 +69,8 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.Busy; //避免腳色在這時候可以選技能
 
         var move = playerUnit.Pokemon.Moves[currentMove];
+        //當使用技能時要減少PP
+        move.PP--;
         yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} used {move.Base.Name}");
         /*攻擊動畫以及敵人受傷動畫*/
         playerUnit.PlayAttackAnimation();
@@ -95,7 +101,8 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.EnemyMove;
 
         var move = enemyUnit.Pokemon.GetRandomMove();
-
+        //當使用技能時要減少PP
+        move.PP--;
         yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} used {move.Base.Name}");
         /*攻擊動畫以及玩家受傷動畫*/
         enemyUnit.PlayAttackAnimation();
@@ -113,7 +120,21 @@ public class BattleSystem : MonoBehaviour
             playerUnit.PlayFaintAnimation();
 
             yield return new WaitForSeconds(2f);
-            OnBattleOver(false);
+            /*檢查玩家是否還有其他能用的Pokemon,如果有責設置下一隻的資料並顯示在對話框上*/
+           var nextPokemon = playerParty.GetHealthyPokemon();
+            if (nextPokemon != null)
+            {
+                playerUnit.Setup(nextPokemon);
+                playerHud.SetData(nextPokemon);
+                dialogBox.SetMoveNames(nextPokemon.Moves);
+                yield return dialogBox.TypeDialog($"I Chose you {nextPokemon.Base.Name}!.");
+
+                PlayAction(); /*初始狀態*/
+            }
+            else
+            {
+                OnBattleOver(false);
+            }
         }
         else
         {

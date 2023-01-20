@@ -7,8 +7,6 @@ using DG.Tweening;
 
 public class BattleUnit : MonoBehaviour
 {
-    [SerializeField] PokemonBase _base;
-    [SerializeField] int level;
     [SerializeField] bool isPlayerUnit;
 
     Image image;
@@ -27,9 +25,9 @@ public class BattleUnit : MonoBehaviour
     }
 
     /*color在每一場後重製否則戰鬥結束後顏色會一直透明*/
-    public void Setup()
+    public void Setup(Pokemon pokemon)
     {
-        Pokemon = new Pokemon(_base, level);
+        Pokemon = pokemon;
         if (isPlayerUnit)
             image.sprite = Pokemon.Base.BackSprite;
         else

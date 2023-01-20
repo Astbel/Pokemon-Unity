@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask solidObjectsLayer;
     public LayerMask grassLayer;
 
+    /*產生一個委派 事件同於C# delegate*/
+    /*Delegate就是 C++ pointer function*/
     public event Action OnEncountered;
 
     public float move_speed;
