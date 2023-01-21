@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 'Squirtle '
   description: 
-  frontSprite: {fileID: 21300000, guid: c96a3e501f10d1c46be28b952f285fce, type: 3}
-  backSprite: {fileID: 21300000, guid: 24dd085e4041d814391e6cee58d3442f, type: 3}
+  frontSprite: {fileID: 21300000, guid: ebf508427105fa64a8b3caf60dc29040, type: 3}
+  backSprite: {fileID: 21300000, guid: dda303a048e9d114394991e4cc22bd8f, type: 3}
   type1: 3
   type2: 0
   maxHp: 44

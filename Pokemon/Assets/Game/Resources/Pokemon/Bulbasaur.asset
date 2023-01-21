@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bulbasaur
   description: 
-  frontSprite: {fileID: 21300000, guid: 17dbcc50f14a83b43b59a10ef3fa080d, type: 3}
-  backSprite: {fileID: 21300000, guid: a9e26fcff6b2be24da37785ed3302da3, type: 3}
+  frontSprite: {fileID: 21300000, guid: 0179dde9b569e9042abf2b06a749f691, type: 3}
+  backSprite: {fileID: 21300000, guid: 8c9bc06bc44b4fd40bace2cdec89d716, type: 3}
   type1: 5
   type2: 8
   maxHp: 45
