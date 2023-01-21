@@ -8,7 +8,7 @@ public class BattleSystem : MonoBehaviour
 {
     [SerializeField] BattleUnit playerUnit;
     [SerializeField] BattleUnit enemyUnit;
- 
+
     [SerializeField] BattleDialogBox dialogBox;
     [SerializeField] PartyScreen partyScreen;
 
@@ -35,9 +35,9 @@ public class BattleSystem : MonoBehaviour
     public IEnumerator SetUpBattle()
     {
         playerUnit.Setup(playerParty.GetHealthyPokemon());
-      
+
         enemyUnit.Setup(wildPokemon);
-        
+
         partyScreen.Init();
 
         dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
@@ -114,13 +114,29 @@ public class BattleSystem : MonoBehaviour
         sourceUnit.PlayAttackAnimation();
         yield return new WaitForSeconds(1f);
         targetUnit.PlayHitAnimation();
-        /*計算傷害*/
-        var damageDetails = targetUnit.Pokemon.TakeDamage(move, sourceUnit.Pokemon);
-        /*跟新Hp*/
-        yield return targetUnit.Hud.UpdateHP();
-        yield return ShowDamageDetails(damageDetails);
+        /*判斷是否是status技能還是傷害技能*/
+        if (move.Base.Category == MoveCategory.Status)
+        {
+            /*狀態技能*/
+            var effcts =move.Base.Effects;
+            if (effcts.Boosts !=null)  //確認是否有提升或降低能力
+            {
+                if(move.Base.Targetget==MoveTarget.Self)
+                    sourceUnit.Pokemon.ApplyBoost(effcts.Boosts);  //提升我方
+                else
+                    targetUnit.Pokemon.ApplyBoost(effcts.Boosts);  //降低敵方
+            }
+        }
+        else  /*傷害技能*/
+        {
+            /*計算傷害*/
+            var damageDetails = targetUnit.Pokemon.TakeDamage(move, sourceUnit.Pokemon);
+            /*跟新Hp*/
+            yield return targetUnit.Hud.UpdateHP();
+            yield return ShowDamageDetails(damageDetails);
+        }
         /*判定是否陣亡,如果陣亡等待兩秒執行結束戰鬥回合*/
-        if (damageDetails.Fainted)
+        if (targetUnit.Pokemon.HP <= 0)
         {
             yield return dialogBox.TypeDialog($"{targetUnit.Pokemon.Base.Name} Fainted");
             targetUnit.PlayFaintAnimation();

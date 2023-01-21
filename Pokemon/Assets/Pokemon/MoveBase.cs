@@ -10,14 +10,15 @@ using UnityEngine;
 public class MoveBase : ScriptableObject
 {
     [SerializeField] string name;
-
     [TextArea]
     [SerializeField] string description;
     [SerializeField] PokemonType type;
     [SerializeField] int power;
     [SerializeField] int accuracy;
     [SerializeField] int pp;
-
+    [SerializeField] MoveCategory category;
+    [SerializeField] MoveEffects effects;
+    [SerializeField] MoveTarget target;
 
     public string Name
     {
@@ -43,21 +44,45 @@ public class MoveBase : ScriptableObject
     {
         get { return pp; }
     }
-    /*Special Move*/
-    public bool IsSpecial
-    {
-        get{
-            if (type==PokemonType.FIre||type==PokemonType.Water||type==PokemonType.Grass||type==PokemonType.Ice||type==PokemonType.Electric
-                ||type==PokemonType.Dragon)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-    }
 
+    public MoveEffects Effects { get { return effects; } }
+
+    public MoveTarget Targetget { get { return target; } }
+
+
+    public MoveCategory Category { get { return category; } }
+}
+
+public enum MoveTarget
+{
+    Enemy, Self
+}
+
+
+public enum MoveCategory
+{
+    Physical, Special, Status
+}
+
+[System.Serializable]
+public class MoveEffects
+{
+    [SerializeField] List<StatBoost> boosts;
+
+    public List<StatBoost> Boosts { get { return boosts; } }
 
 }
+
+[System.Serializable]
+public class StatBoost
+{
+    public Stat stat;
+    public int boost;
+}
+
+
+
+
+
+
+

@@ -133,6 +133,16 @@ public enum PokemonType
     Ghost,
     Dragon
 }
+/*Status*/
+public enum Stat
+{
+    Attack,
+    Defense,
+    SpAttack,
+    SpDefense,
+    Speed
+}
+
 /*屬性克制*/
 public class TypeChart
 {

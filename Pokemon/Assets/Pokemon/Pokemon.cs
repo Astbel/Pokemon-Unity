@@ -8,17 +8,18 @@ public class Pokemon
     [SerializeField] PokemonBase _base;
     [SerializeField] int level;
 
-    public PokemonBase Base { get{return _base;} }
-    public int Level { get{return level;} }
+    public PokemonBase Base { get { return _base; } }
+    public int Level { get { return level; } }
 
     public int HP { get; set; }
 
     public List<Move> Moves { get; set; }
-
+    //預設狀態
+    public Dictionary<Stat, int> Stats { get; private set; }
+    //狀態提升
+    public Dictionary<Stat, int> StatsBoost { get; private set; }
     public void Init()
     {
-        HP = MaxHp;
-
         /*學習技能檢查是否有在該腳色List中*/
         Moves = new List<Move>();
         foreach (var move in Base.LearnableMoves)
@@ -33,37 +34,96 @@ public class Pokemon
                 break;
             }
         }
+        CalculateStat();
+        HP = MaxHp;
+
+        /*開場清除提升狀態*/
+        StatsBoost = new Dictionary<Stat, int>()
+        {
+            {Stat.Attack,0},
+            {Stat.Defense,0},
+            {Stat.SpAttack,0},
+            {Stat.SpDefense,0},
+            {Stat.Speed,0},
+        };
 
     }
+    /*inital 初始狀態IV數值計算*/
+    void CalculateStat()
+    {
+        Stats = new Dictionary<Stat, int>();
+        Stats.Add(Stat.Attack, Mathf.FloorToInt((Base.Attack * Level) / 100f) + 5);
+        Stats.Add(Stat.Defense, Mathf.FloorToInt((Base.Defense * Level) / 100f) + 5);
+        Stats.Add(Stat.SpAttack, Mathf.FloorToInt((Base.SpAttack * Level) / 100f) + 5);
+        Stats.Add(Stat.SpDefense, Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5);
+        Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
+
+        MaxHp = Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5;
+
+    }
+
+    /*計算提升數值技能*/
+    int GetStat(Stat stat)
+    {
+        int statVal = Stats[stat];
+        //取得目前提升狀態
+        int boost = StatsBoost[stat];
+        var boostValue = new float[] { 1f, 1.5f, 2f, 2.5f, 3f, 3.5f, 4f };
+
+        //確認是提升還是遞減
+        if (boost >= 0)
+            statVal = Mathf.FloorToInt(statVal * boostValue[boost]);
+        else
+            statVal = Mathf.FloorToInt(statVal / boostValue[-boost]);
+
+        return statVal;
+    }
+
+    public void ApplyBoost(List<StatBoost> statBoosts)
+    {
+        foreach (var value in statBoosts)
+        {
+            var stat = value.stat;
+            var boost = value.boost;
+
+            /*提升狀態 clamp狀態最多上下是6倍*/
+            StatsBoost[stat] =Mathf.Clamp(StatsBoost[stat]+boost,-6,6);
+            
+            /*Debug 訊息來確認是否有提升跟降低狀態*/
+            Debug.Log($"{stat}has been boosted to{StatsBoost[stat]}");
+        }
+    }
+
 
     public int Attack
     {
-        get { return Mathf.FloorToInt((Base.Attack * Level) / 100f) + 5; }
-    }
-
-    public int MaxHp
-    {
-        get { return Mathf.FloorToInt((Base.MaxHp * Level) / 100f) + 5; }
+        get { return GetStat(Stat.Attack); }
     }
 
     public int Defense
     {
-        get { return Mathf.FloorToInt((Base.Defense * Level) / 100f) + 5; }
+        get { return GetStat(Stat.Defense); }
     }
 
     public int SpAttack
     {
-        get { return Mathf.FloorToInt((Base.SpAttack * Level) / 100f) + 5; }
+        get { return GetStat(Stat.SpAttack); }
     }
 
     public int SpDefense
     {
-        get { return Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5; }
+        get { return GetStat(Stat.SpDefense); }
     }
 
     public int Speed
     {
-        get { return Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5; }
+        get { return GetStat(Stat.Speed); }
+    }
+
+    public int MaxHp
+    {
+        get;
+        private set;
     }
     /*pokemon 傷害公式*/
     public DamageDetails TakeDamage(Move move, Pokemon attacker)
@@ -82,9 +142,9 @@ public class Pokemon
             Fainted = false
         };
         /*判斷是否為特攻或是物攻,如果是true就用SP attack*/
-        float attack = (move.Base.IsSpecial) ? attacker.SpAttack : attacker.Attack;
+        float attack = (move.Base.Category == MoveCategory.Special) ? attacker.SpAttack : attacker.Attack;
         /*判斷是否為特防*/
-        float defense = (move.Base.IsSpecial) ? SpDefense : Defense;
+        float defense = (move.Base.Category == MoveCategory.Special) ? SpDefense : Defense;
         /*damage formula*/
         float modifiers = Random.Range(0.85f, 1f) * type * critical;
         float a = (2 * attacker.Level + 10) / 250f;
