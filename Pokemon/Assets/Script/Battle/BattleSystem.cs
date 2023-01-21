@@ -110,6 +110,15 @@ public class BattleSystem : MonoBehaviour
     /*Move function for player and enemy*/
     IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move)
     {
+        /*檢測是否種異常狀態 冰凍 麻痺 睡眠 如果回false則直接從協程break出來*/
+        bool canRunMove=sourceUnit.Pokemon.OnBeforeMove();
+        if (!canRunMove)
+        {
+            yield return ShowStatusChanges(sourceUnit.Pokemon);
+            yield break;
+        }
+        /*狀態異常例如麻痺有可能可以放技能但還是要打印訊息出來*/
+        yield return ShowStatusChanges(sourceUnit.Pokemon);
         //當使用技能時要減少PP
         move.PP--;
         yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} used {move.Base.Name}");

@@ -22,7 +22,10 @@ public class Pokemon
     public Condition Status { get; private set; }
     //用於顯示腳色Buff
     public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
+    //計算傷害後 呼叫bool
     public bool HpChanged { get; set; }
+    //睡眠異常狀態計數
+    public int StatusTime { get; set; }
     public void Init()
     {
         /*學習技能檢查是否有在該腳色List中*/
@@ -174,10 +177,25 @@ public class Pokemon
         HP = Mathf.Clamp(HP - damage, 0, MaxHp);
         HpChanged = true;
     }
-
+    /*中毒燒傷呼叫使用語法需要再查明*/
     public void OnAfterTurn()
     {
         Status?.OnAfterTurn?.Invoke(this);
+    }
+    /*狀態異常回復所以清除狀態*/
+    public void CureStatus()
+    {
+        Status = null;
+    }
+
+    public bool OnBeforeMove()
+    {
+        if (Status?.OnBeforeTurn != null)
+        {
+            return Status.OnBeforeTurn(this);
+        }
+
+        return true;
     }
 
     /*隨機技能*/
@@ -197,6 +215,7 @@ public class Pokemon
     public void SetStatus(ConditionID conditionID)
     {
         Status = ConditionDB.Conditions[conditionID];
+        Status?.OnStart?.Invoke(this);
         StatusChanges.Enqueue($"{Base.Name}{Status.StartMessage}");
     }
 

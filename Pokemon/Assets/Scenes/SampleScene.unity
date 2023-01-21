@@ -25320,11 +25320,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pokemons:
-  - _base: {fileID: 11400000, guid: f7f66d56ae92a24469a08e101413d01b, type: 2}
+  - _base: {fileID: 11400000, guid: 192f6dc8ed9c0df40a7b1d54503d70d2, type: 2}
     level: 10
   - _base: {fileID: 11400000, guid: 47a1375f21420e64289bc864261ac388, type: 2}
     level: 10
-  - _base: {fileID: 11400000, guid: 192f6dc8ed9c0df40a7b1d54503d70d2, type: 2}
+  - _base: {fileID: 11400000, guid: f7f66d56ae92a24469a08e101413d01b, type: 2}
     level: 10
 --- !u!82 &1579422386
 AudioSource:

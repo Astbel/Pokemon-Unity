@@ -154,7 +154,7 @@ public class TypeChart
         //                  nor   Fir   Wat   Ele   Gra    Ice   Fig   Poi   Gro   Fly   Psy   Bug    Roc   Gho     Dra   Dar   Ste     Far 
         /*Nor*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,  0.5f,  1f,   1f,   1f,   0.5f,   1f,    1f,   1f,   0.5f,   1f },
         /*Fir*/ new float[] {1f, 0.5f, 0.5f,  1f,   2f,    2f,   1f,   1f,  0.5f,  1f,   1f,   2f,   0.5f,   1f,   0.5f,  1f,    2f,    1f },
-        /*Wat*/ new float[] {1f,  2f,  0.5f,  2f,  0.5f,   1f,   1f,   1f,   2f,   1f,   1f,   1f,    2f,    1f,   0.5f,  1f,    1f,    1f },
+        /*Wat*/ new float[] {1f,  2f,  0.5f,  1f,  0.5f,   1f,   1f,   1f,   2f,   1f,   1f,   1f,    2f,    1f,   0.5f,  1f,    1f,    1f },
         /*Ele*/ new float[] {1f,  1f,   2f,  0.5f, 0.5f,   1f,   1f,   1f,   1f,   2f,   1f,   1f,    0f,    1f,   0.5f,  1f,   0.5f,   1f },
         /*Gra*/ new float[] {1f, 0.5f,  2f,   2f,  0.5f,   1f,   1f,  0.5f,  2f,  0.5f,  1f,   0.5f,  2f,    1f,   0.5f,  1f,    1f,    1f },
         /*Ice*/ new float[] {1f, 0.5f, 0.5f,  1f,   2f,   0.5f,  1f,   1f,   2f,   2f,   1f,   1f,    1f,    1f,    2f,   1f,    1f,    1f },
