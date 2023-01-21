@@ -8,11 +8,16 @@ using DG.Tweening;
 public class BattleUnit : MonoBehaviour
 {
     [SerializeField] bool isPlayerUnit;
+    [SerializeField] BattleHud hud;
+    //確認是否為玩家單位
+    public bool IsPlayerUnit { get { return isPlayerUnit; } }
 
     Image image;
     Vector3 orginalPosition;
     Color orginalColor;
     public Pokemon Pokemon { get; set; }
+
+    public BattleHud Hud { get { return hud; } }
 
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -32,8 +37,10 @@ public class BattleUnit : MonoBehaviour
             image.sprite = Pokemon.Base.BackSprite;
         else
             image.sprite = Pokemon.Base.FrontSprite;
+        
+        hud.SetData(pokemon);
 
-        image.color =orginalColor;
+        image.color = orginalColor;
         EnterAnimation();
     }
     /*開場進場import DG函數 讓開場進場有緩慢的效果*/
@@ -67,9 +74,9 @@ public class BattleUnit : MonoBehaviour
     /*擊敗動畫讓image 移動Y軸並且讓圖片變透明*/
     public void PlayFaintAnimation()
     {
-        var sequence =DOTween.Sequence();
-        sequence.Append(image.transform.DOLocalMoveY(orginalPosition.y -150f, 0.5f));
-        sequence.Join(image.DOFade(0f,0.5f));
+        var sequence = DOTween.Sequence();
+        sequence.Append(image.transform.DOLocalMoveY(orginalPosition.y - 150f, 0.5f));
+        sequence.Join(image.DOFade(0f, 0.5f));
     }
 
 

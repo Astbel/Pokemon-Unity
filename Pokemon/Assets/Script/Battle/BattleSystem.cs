@@ -3,17 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BattleState { Start, PlayAction, PlayerMove, EnemyMove, Busy, Party }
+public enum BattleState { Start, ActionSelection, MoveSelection, PerformMove, Busy, PartySelection, BattleOver }
 public class BattleSystem : MonoBehaviour
 {
     [SerializeField] BattleUnit playerUnit;
-    [SerializeField] BattleHud playerHud;
     [SerializeField] BattleUnit enemyUnit;
-    [SerializeField] BattleHud enemyHud;
+ 
     [SerializeField] BattleDialogBox dialogBox;
     [SerializeField] PartyScreen partyScreen;
-    public event Action<bool> OnBattleOver;
 
+    public event Action<bool> OnBattleOver;
     BattleState state;  //回合制狀態機
     int currentAction; //選單變數偵測
     int currentMove; //技能選單變數偵測
@@ -36,118 +35,114 @@ public class BattleSystem : MonoBehaviour
     public IEnumerator SetUpBattle()
     {
         playerUnit.Setup(playerParty.GetHealthyPokemon());
-        playerHud.SetData(playerUnit.Pokemon);
-
+      
         enemyUnit.Setup(wildPokemon);
-        enemyHud.SetData(enemyUnit.Pokemon);
-
+        
         partyScreen.Init();
 
         dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
 
         yield return dialogBox.TypeDialog($"A wild {enemyUnit.Pokemon.Base.Name}  appeared.");
 
-        PlayAction(); /*初始狀態*/
+        ActionSelection(); /*初始狀態*/
 
     }
-    /*玩家狀態 回合制設定*/
-    void PlayAction()
+    /*確認戰鬥是否結束*/
+    void BattleOver(bool won)
     {
-        state = BattleState.PlayAction;
+        state = BattleState.BattleOver;
+        OnBattleOver(won);
+    }
+
+    /*玩家狀態 回合制設定*/
+    void ActionSelection()
+    {
+        state = BattleState.ActionSelection;
         dialogBox.SetDialog("Choose an action");
         dialogBox.EnableActionSelector(true);
     }
     //選單選擇戰鬥中其他Pokemon
     void OpenPartyScreen()
     {
-        state = BattleState.Party;
+        state = BattleState.PartySelection;
         /*回傳player的pokemon list*/
         partyScreen.SetPartyData(playerParty.Pokemons);
         partyScreen.gameObject.SetActive(true);
     }
 
     /*選技能階段*/
-    void PlayerMove()
+    void MoveSelection()
     {
-        state = BattleState.PlayerMove;
+        state = BattleState.MoveSelection;
         dialogBox.EnableActionSelector(false);
         dialogBox.EnableDialogText(false);
         dialogBox.EnableMoveSelector(true);
     }
 
     /*對話介面顯示玩家技能*/
-    IEnumerator PerformPlayerMove()
+    IEnumerator PlayerMove()
     {
-        state = BattleState.Busy; //避免腳色在這時候可以選技能
+        state = BattleState.PerformMove; //避免腳色在這時候可以選技能
 
         var move = playerUnit.Pokemon.Moves[currentMove];
-        //當使用技能時要減少PP
-        move.PP--;
-        yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} used {move.Base.Name}");
-        /*攻擊動畫以及敵人受傷動畫*/
-        playerUnit.PlayAttackAnimation();
-        yield return new WaitForSeconds(1f);
-        enemyUnit.PlayHitAnimation();
-        /*計算傷害*/
-        var damageDetails = enemyUnit.Pokemon.TakeDamage(move, playerUnit.Pokemon);
-        /*跟新Hp*/
-        yield return enemyHud.UpdateHP();
-        yield return ShowDamageDetails(damageDetails);
-        /*判定是否陣亡,如果陣亡等待兩秒執行結束戰鬥回合*/
-        if (damageDetails.Fainted)
-        {
-            yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} Fainted");
-            enemyUnit.PlayFaintAnimation();
 
-            yield return new WaitForSeconds(2f);
-            OnBattleOver(true);
-        }
-        else
-        {
+        yield return RunMove(playerUnit, enemyUnit, move);
+        /*檢查狀態是否為戰鬥狀態是否被RunMove跟換,如果還在戰鬥階段則繼續回合制下一輪*/
+        if (state == BattleState.PerformMove)
             StartCoroutine(EnemyMove());
-        }
+
     }
     /*敵人動作*/
     IEnumerator EnemyMove()
     {
-        state = BattleState.EnemyMove;
+        state = BattleState.PerformMove;
 
         var move = enemyUnit.Pokemon.GetRandomMove();
+
+        yield return RunMove(enemyUnit, playerUnit, move);
+        /*檢查狀態是否為戰鬥狀態是否被RunMove跟換,如果還在戰鬥階段則繼續回合制下一輪*/
+        if (state == BattleState.PerformMove)
+            ActionSelection();
+    }
+    /*Move function for player and enemy*/
+    IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move)
+    {
         //當使用技能時要減少PP
         move.PP--;
-        yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} used {move.Base.Name}");
-        /*攻擊動畫以及玩家受傷動畫*/
-        enemyUnit.PlayAttackAnimation();
+        yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} used {move.Base.Name}");
+        /*攻擊動畫以及敵人受傷動畫*/
+        sourceUnit.PlayAttackAnimation();
         yield return new WaitForSeconds(1f);
-        playerUnit.PlayHitAnimation();
+        targetUnit.PlayHitAnimation();
         /*計算傷害*/
-        var damageDetails = playerUnit.Pokemon.TakeDamage(move, enemyUnit.Pokemon);
+        var damageDetails = targetUnit.Pokemon.TakeDamage(move, sourceUnit.Pokemon);
         /*跟新Hp*/
-        yield return playerHud.UpdateHP();
+        yield return targetUnit.Hud.UpdateHP();
         yield return ShowDamageDetails(damageDetails);
         /*判定是否陣亡,如果陣亡等待兩秒執行結束戰鬥回合*/
         if (damageDetails.Fainted)
         {
-            yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} Fainted");
-            playerUnit.PlayFaintAnimation();
-
+            yield return dialogBox.TypeDialog($"{targetUnit.Pokemon.Base.Name} Fainted");
+            targetUnit.PlayFaintAnimation();
             yield return new WaitForSeconds(2f);
-            /*檢查玩家是否還有其他能用的Pokemon,如果有責設置下一隻的資料並顯示在對話框上*/
+
+            CheckForBattleOver(targetUnit);
+
+        }
+    }
+    /*確認昏厥pokemon是否為玩家如果是玩家在檢測是否還有剩餘pokemon,如果有擇繼續沒有停止場景*/
+    void CheckForBattleOver(BattleUnit faintedUnit)
+    {
+        if (faintedUnit.IsPlayerUnit)
+        {
             var nextPokemon = playerParty.GetHealthyPokemon();
             if (nextPokemon != null)
-            {
                 OpenPartyScreen();
-            }
             else
-            {
-                OnBattleOver(false);
-            }
+                BattleOver(false);
         }
         else
-        {
-            PlayAction();
-        }
-
+            BattleOver(true);
     }
     /*show damage detail*/
     IEnumerator ShowDamageDetails(DamageDetails damageDetails)
@@ -167,15 +162,15 @@ public class BattleSystem : MonoBehaviour
     /// </summary>
     public void HandleUpdate()
     {
-        if (state == BattleState.PlayAction)
+        if (state == BattleState.ActionSelection)
         {
             HandleActionSelection();
         }
-        else if (state == BattleState.PlayerMove)
+        else if (state == BattleState.MoveSelection)
         {
             HandleMoveSelection();
         }
-        else if (state == BattleState.Party)
+        else if (state == BattleState.PartySelection)
         {
             HandlePartySelection();
         }
@@ -209,7 +204,7 @@ public class BattleSystem : MonoBehaviour
             if (currentAction == 0)
             {
                 //Fight
-                PlayerMove();
+                MoveSelection();
             }
             else if (currentAction == 1)
             {
@@ -261,14 +256,14 @@ public class BattleSystem : MonoBehaviour
         {
             dialogBox.EnableMoveSelector(false);
             dialogBox.EnableDialogText(true);
-            StartCoroutine(PerformPlayerMove());
+            StartCoroutine(PlayerMove());
         }
         /*退出案件*/
         else if (Input.GetKeyDown(KeyCode.X))
         {
             dialogBox.EnableMoveSelector(false);
             dialogBox.EnableDialogText(true);
-            PlayAction();
+            ActionSelection();
         }
     }
 
@@ -328,7 +323,7 @@ public class BattleSystem : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.X))
         {
             partyScreen.gameObject.SetActive(false);
-            PlayAction();
+            ActionSelection();
         }
     }
 
@@ -344,7 +339,6 @@ public class BattleSystem : MonoBehaviour
 
         /*替換寶可夢*/
         playerUnit.Setup(newPokemon);
-        playerHud.SetData(newPokemon);
         dialogBox.SetMoveNames(newPokemon.Moves);
         yield return dialogBox.TypeDialog($"I Chose you {newPokemon.Base.Name}!.");
         /*換敵人的回合*/
