@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BattleState { Start, PlayAction, PlayerMove, EnemyMove, Busy }
+public enum BattleState { Start, PlayAction, PlayerMove, EnemyMove, Busy, Party }
 public class BattleSystem : MonoBehaviour
 {
     [SerializeField] BattleUnit playerUnit;
@@ -17,6 +17,7 @@ public class BattleSystem : MonoBehaviour
     BattleState state;  //回合制狀態機
     int currentAction; //選單變數偵測
     int currentMove; //技能選單變數偵測
+    int currentMember;//party 選單中變數
 
     /*物件畫 玩家以及野生*/
     PokemonParty playerParty;
@@ -59,6 +60,7 @@ public class BattleSystem : MonoBehaviour
     //選單選擇戰鬥中其他Pokemon
     void OpenPartyScreen()
     {
+        state = BattleState.Party;
         /*回傳player的pokemon list*/
         partyScreen.SetPartyData(playerParty.Pokemons);
         partyScreen.gameObject.SetActive(true);
@@ -134,12 +136,7 @@ public class BattleSystem : MonoBehaviour
             var nextPokemon = playerParty.GetHealthyPokemon();
             if (nextPokemon != null)
             {
-                playerUnit.Setup(nextPokemon);
-                playerHud.SetData(nextPokemon);
-                dialogBox.SetMoveNames(nextPokemon.Moves);
-                yield return dialogBox.TypeDialog($"I Chose you {nextPokemon.Base.Name}!.");
-
-                PlayAction(); /*初始狀態*/
+                OpenPartyScreen();
             }
             else
             {
@@ -178,6 +175,11 @@ public class BattleSystem : MonoBehaviour
         {
             HandleMoveSelection();
         }
+        else if (state == BattleState.Party)
+        {
+            HandlePartySelection();
+        }
+
     }
     /*Player 選擇動作*/
     void HandleActionSelection()
@@ -270,6 +272,83 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+    /*隊伍選單*/
+    /*陣列如下所以在上下Key則是增加為2
+      0  1
+      2  3
+      4  5
+    */
+    void HandlePartySelection()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            ++currentMember;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            --currentMember;
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            currentMember += 2;
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            currentMember -= 2;
+        }
+        /*限制選單賦值由於限制跟腳色技能樹有關所以參照玩家pokemon擁有技能上線做定義*/
+        currentMember = Math.Clamp(currentMember, 0, playerParty.Pokemons.Count - 1);
 
+        partyScreen.UpdateMemberSelection(currentMember);
+
+        /*選擇腳色*/
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            var selectedMember = playerParty.Pokemons[currentMember];
+            //不能選擇昏厥pokemon
+            if (selectedMember.HP <= 0)
+            {
+                partyScreen.SetMessageText("You can't send a fainted Pokemon");
+                return;
+            }
+            //不能選擇已經出場的pokemon
+            if (selectedMember == playerUnit.Pokemon)
+            {
+                partyScreen.SetMessageText("You can't switch with the same Pokemon");
+                return;
+            }
+            /*當選單結束時關閉選單*/
+            partyScreen.gameObject.SetActive(false);
+            /*狀態改為busy避免玩家一直A造成誤動作*/
+            state = BattleState.Busy;
+            StartCoroutine(SwitchPokemon(selectedMember));
+
+        }
+        /*返回鍵*/
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            partyScreen.gameObject.SetActive(false);
+            PlayAction();
+        }
+    }
+
+    IEnumerator SwitchPokemon(Pokemon newPokemon)
+    {
+        /*確認玩家pokemon是否HP大於0才播放切換*/
+        if (playerUnit.Pokemon.HP > 0)
+        {
+            yield return dialogBox.TypeDialog($"Come back{playerUnit.Pokemon.Base.Name}");
+            playerUnit.PlayFaintAnimation();
+            yield return new WaitForSeconds(2f);
+        }
+
+        /*替換寶可夢*/
+        playerUnit.Setup(newPokemon);
+        playerHud.SetData(newPokemon);
+        dialogBox.SetMoveNames(newPokemon.Moves);
+        yield return dialogBox.TypeDialog($"I Chose you {newPokemon.Base.Name}!.");
+        /*換敵人的回合*/
+        StartCoroutine(EnemyMove());
+    }
 
 }

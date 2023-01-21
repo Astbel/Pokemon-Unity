@@ -1,0 +1,395 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'zh' Physical Memory: 16085 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Uinty2019\2021.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/Astbel/Desktop/Poke_unity/Pokemon
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+55260
+Successfully changed project path to: C:/Users/Astbel/Desktop/Poke_unity/Pokemon
+C:/Users/Astbel/Desktop/Poke_unity/Pokemon
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [29404] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 1363267211 [EditorId] 1363267211 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [29404] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 1363267211 [EditorId] 1363267211 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 132.24 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path D:/Uinty2019/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Astbel/Desktop/Poke_unity/Pokemon/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6023 MB
+    Driver:   30.0.14.9709
+Initialize mono
+Mono path[0] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56780
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Uinty2019/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002520 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 117.00 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.573 seconds
+Domain Reload Profiling:
+	ReloadAssembly (574ms)
+		BeginReloadAssembly (52ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (442ms)
+			LoadAssemblies (52ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (87ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (279ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (117ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (114ms)
+				ProcessInitializeOnLoadMethodAttributes (41ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.008966 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 106.95 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.947 seconds
+Domain Reload Profiling:
+	ReloadAssembly (948ms)
+		BeginReloadAssembly (92ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (770ms)
+			LoadAssemblies (66ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (184ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (437ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (107ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (215ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.20 seconds
+Refreshing native plugins compatible for Editor in 1.03 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4070 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (229.5 KB). Loaded Objects now: 4524.
+Memory consumption went from 160.6 MB to 160.4 MB.
+Total: 3.212400 ms (FindLiveObjects: 0.317600 ms CreateObjectMapping: 0.114600 ms MarkObjects: 2.614200 ms  DeleteObjects: 0.164900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 12227.386851 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/3.png
+  artifactKey: Guid(da71f0003e3e64241a288f04cef78854) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/3.png using Guid(da71f0003e3e64241a288f04cef78854) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2de8ed6f4e24acc62c32cf7e9638244') in 0.111788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/60.png
+  artifactKey: Guid(ec85757400482b54797f2f715870086c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/60.png using Guid(ec85757400482b54797f2f715870086c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e5099ccf236007ed9c5667106da6935') in 0.009712 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/53.png
+  artifactKey: Guid(7a8ef85ba1ea7fd4e80228c7d3b3425a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/53.png using Guid(7a8ef85ba1ea7fd4e80228c7d3b3425a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db5648af97ee748e9ff6640a1e9ca454') in 0.010568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/63.png
+  artifactKey: Guid(6a01e095ad552ab409695d6452221845) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/63.png using Guid(6a01e095ad552ab409695d6452221845) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b9785310750514faed3663e40b30ae7') in 0.009103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/71.png
+  artifactKey: Guid(f5e78566f13029c459344428a54b3158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/71.png using Guid(f5e78566f13029c459344428a54b3158) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa9162918db0a5f99f751b6b29e3e27c') in 0.012658 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/59.png
+  artifactKey: Guid(fd40e293b52bedc46b2a320c2ee7931e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/59.png using Guid(fd40e293b52bedc46b2a320c2ee7931e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b9ffaaea49a3ccfdc6cbd4e9cfdd425') in 0.010715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/29.png
+  artifactKey: Guid(587681a507aa8564ba4147fb7889d6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/29.png using Guid(587681a507aa8564ba4147fb7889d6c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c80b3bf524de341cbd2c0834b6ee6273') in 0.010554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/52.png
+  artifactKey: Guid(fb342af489f8bcb43a4077679a830e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/52.png using Guid(fb342af489f8bcb43a4077679a830e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a56ae6b21979e5d5ce972e13a982649') in 0.009818 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/75.png
+  artifactKey: Guid(0ff4660e10f195143bd81f9f52143d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/75.png using Guid(0ff4660e10f195143bd81f9f52143d92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e5d0bdb53f5d67105030c11a8546002') in 0.012142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/84.png
+  artifactKey: Guid(c514694acd1434643a2988bdb9f64cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/84.png using Guid(c514694acd1434643a2988bdb9f64cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a375d4fb02b007c4919bd55ce9e200ab') in 0.012035 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/49.png
+  artifactKey: Guid(5ec79e0b4e560c84bada19973d83f05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/49.png using Guid(5ec79e0b4e560c84bada19973d83f05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7de499007454d72fbf39f84921fecf3d') in 0.012872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/58.png
+  artifactKey: Guid(0dbba2ea3cd97cf4fbc69587843d2611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/58.png using Guid(0dbba2ea3cd97cf4fbc69587843d2611) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fc69947c951be46ba269603d6947161') in 0.011440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/67.png
+  artifactKey: Guid(d8d1dae1f5b2a5c4196ab44dda96c68b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/67.png using Guid(d8d1dae1f5b2a5c4196ab44dda96c68b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c65eec8577bd98ae3bf4852a2c1ee3cd') in 0.011350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/12.png
+  artifactKey: Guid(fba2acb469d546042aa90f3ab596ec36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/12.png using Guid(fba2acb469d546042aa90f3ab596ec36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b730acbb2399726bafe2d94b9cc4d690') in 0.009335 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/48.png
+  artifactKey: Guid(d7d473c303f366b458bce3606d408c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/48.png using Guid(d7d473c303f366b458bce3606d408c3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccf12c07ac1ca729c38fd8a4b9f172e0') in 0.008410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/39.png
+  artifactKey: Guid(3c2982524cff0fe44b2e0c6a7c831d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/39.png using Guid(3c2982524cff0fe44b2e0c6a7c831d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c70d20286f72a6eb0e5970c6a5265b93') in 0.011512 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.385658 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/3.png
+  artifactKey: Guid(fec2a122f00c70c47bb647dbb5138a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/3.png using Guid(fec2a122f00c70c47bb647dbb5138a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3e74ed3aee0f6167050cb1c3f5cc710') in 0.009614 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/17.png
+  artifactKey: Guid(f9fded4ab14da4546999ad1de1eb7d6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/17.png using Guid(f9fded4ab14da4546999ad1de1eb7d6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30dd6226699018f9bb635092c3be8bf') in 0.009732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/39.png
+  artifactKey: Guid(3f1105dfc20df604ab33e911b2d51bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/39.png using Guid(3f1105dfc20df604ab33e911b2d51bae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cd455d8bf0a3521fe09103a1303ac74') in 0.009297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/20.png
+  artifactKey: Guid(172cf1d79a28dbe47a0e036e9a1b438a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/20.png using Guid(172cf1d79a28dbe47a0e036e9a1b438a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b549068915a671ab962860c2293eeb') in 0.008566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/73.png
+  artifactKey: Guid(c592eaaf119974e4eb0a024eb8aa9f95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/73.png using Guid(c592eaaf119974e4eb0a024eb8aa9f95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf3fc44e88befb4a45c40525e67619ef') in 0.008439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/50.png
+  artifactKey: Guid(b7b9f18a4be6ea7448544a83c992ed67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/50.png using Guid(b7b9f18a4be6ea7448544a83c992ed67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a165c95fe63199bf9ba691ab5aa9e44') in 0.009970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/66.png
+  artifactKey: Guid(2800343bff34d464aa9ad1c973627cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/66.png using Guid(2800343bff34d464aa9ad1c973627cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5334430452cc48188dbbe8d56f3ebe62') in 0.009142 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/59.png
+  artifactKey: Guid(f0afa2cdf6961704292576ca732a3bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/59.png using Guid(f0afa2cdf6961704292576ca732a3bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '643abbcd6dd360474ee7ee9fc79275c3') in 0.009331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/70.png
+  artifactKey: Guid(4de18157342daf742a1b8e071240414c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/70.png using Guid(4de18157342daf742a1b8e071240414c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0af6e1dd524a8c70995240c1253415a9') in 0.010184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/77.png
+  artifactKey: Guid(0ded37c9e44c0f74386d6fe0d02ee382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/77.png using Guid(0ded37c9e44c0f74386d6fe0d02ee382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afe15ac69962592e5f565fd83d28c1d4') in 0.009449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/35.png
+  artifactKey: Guid(37d6c723d245fe341b9fed0ad2dcb07d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/35.png using Guid(37d6c723d245fe341b9fed0ad2dcb07d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ea5aadaced9d7f0cf9857c392ee4070') in 0.011485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/82.png
+  artifactKey: Guid(588a2227e3cb20b468e173cc0b5b1bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/82.png using Guid(588a2227e3cb20b468e173cc0b5b1bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f10d35f1ed7f004b2aba7c84d72c555b') in 0.012492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/41.png
+  artifactKey: Guid(625acb2b77f3b254cbaef85fc0f51d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/41.png using Guid(625acb2b77f3b254cbaef85fc0f51d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce44c72012ee5c6e677ab2c7b5d43075') in 0.010302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/31.png
+  artifactKey: Guid(42ff2e50df8c59947b19016e9f435d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/31.png using Guid(42ff2e50df8c59947b19016e9f435d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9887e9be71b3abc3de59e7f47c47391a') in 0.012538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/81.png
+  artifactKey: Guid(524a389a95bb4894aa8f667b99bfbcbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/81.png using Guid(524a389a95bb4894aa8f667b99bfbcbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5713a25fdb092be83baade0564183f76') in 0.014222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/44.png
+  artifactKey: Guid(464fb4efa2b50ae43a2a7e95071582b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/44.png using Guid(464fb4efa2b50ae43a2a7e95071582b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15e0624662e290e3625217a3a3039c94') in 0.010785 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/60.png
+  artifactKey: Guid(cfebaecba52ad7b49aee382e481e61ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/60.png using Guid(cfebaecba52ad7b49aee382e481e61ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c755f20ba82f09c0c4ff852b53d3f2e') in 0.012445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/36.png
+  artifactKey: Guid(a3a397fb33ac3d64091638822f1a7c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/36.png using Guid(a3a397fb33ac3d64091638822f1a7c28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3940e699f44f454a574aaff19e9f49c5') in 0.012927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/18.png
+  artifactKey: Guid(c7d6e611734f59a45a1d6bf24bb0cce7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/18.png using Guid(c7d6e611734f59a45a1d6bf24bb0cce7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d08859661006f02bb1dd3229f72ae9') in 0.009937 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/85.png
+  artifactKey: Guid(1572a167fb5fe4649ba657848854263e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/85.png using Guid(1572a167fb5fe4649ba657848854263e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3301981600970093a4cb7e1a24361fdb') in 0.009728 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/29.png
+  artifactKey: Guid(0229a33c2340bb2499114157071f9226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/29.png using Guid(0229a33c2340bb2499114157071f9226) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69ec4ece1d0ec81dfb9d423afa9ce5a1') in 0.010443 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/24.png
+  artifactKey: Guid(ad756a671f7ddfc4682f35c0a4ef88cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-5/pokemon/main-sprites/black-white/back/24.png using Guid(ad756a671f7ddfc4682f35c0a4ef88cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c964d2349ce99f630af047c059c36857') in 0.008943 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

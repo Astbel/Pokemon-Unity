@@ -25321,6 +25321,8 @@ MonoBehaviour:
     level: 7
   - _base: {fileID: 11400000, guid: 8d97211cbf627dd41ae2f182903a5d43, type: 2}
     level: 10
+  - _base: {fileID: 11400000, guid: c7044a703a4b82741b0cdb71ce06dfdd, type: 2}
+    level: 13
 --- !u!1 &1580720452
 GameObject:
   m_ObjectHideFlags: 0
@@ -25385,7 +25387,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 300, y: 110}
-  m_Spacing: {x: 0, y: 0}
+  m_Spacing: {x: 10, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &1588468938
