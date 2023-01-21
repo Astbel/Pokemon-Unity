@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253c925b536bf9e4f9cb7197a774a73a, type: 3}
+  m_Name: Nidoking
+  m_EditorClassIdentifier: 
+  name: Nidoking
+  description: 
+  frontSprite: {fileID: 21300000, guid: d05c126638c35c645a8650991d25f221, type: 3}
+  backSprite: {fileID: 21300000, guid: 5d0c22bdb70072b428ebbf5a67ca2d9e, type: 3}
+  type1: 8
+  type2: 9
+  maxHp: 81
+  attack: 92
+  defense: 77
+  spAttack: 85
+  spDefense: 75
+  speed: 85
+  learnableMoves:
+  - moveBase: {fileID: 11400000, guid: e2063f3280c0d7d4f8e4c93e8d27aef8, type: 2}
+    level: 1
+  - moveBase: {fileID: 11400000, guid: 8fc6c232af2afe342ad4d61a43b7afd0, type: 2}
+    level: 5
+  - moveBase: {fileID: 11400000, guid: 257ef56714ee0b84389daaf20a194a29, type: 2}
+    level: 7

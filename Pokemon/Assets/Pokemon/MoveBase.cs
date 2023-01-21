@@ -68,8 +68,11 @@ public enum MoveCategory
 public class MoveEffects
 {
     [SerializeField] List<StatBoost> boosts;
-
+    [SerializeField] ConditionID status;
     public List<StatBoost> Boosts { get { return boosts; } }
+
+    public ConditionID Status { get { return status; } }
+
 
 }
 

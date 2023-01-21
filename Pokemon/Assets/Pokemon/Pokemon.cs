@@ -18,9 +18,11 @@ public class Pokemon
     public Dictionary<Stat, int> Stats { get; private set; }
     //狀態提升
     public Dictionary<Stat, int> StatsBoost { get; private set; }
+    //用來顯示特殊異常狀態
+    public Condition Status { get; private set; }
     //用於顯示腳色Buff
     public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
-
+    public bool HpChanged { get; set; }
     public void Init()
     {
         /*學習技能檢查是否有在該腳色List中*/
@@ -162,13 +164,20 @@ public class Pokemon
         float d = a * move.Base.Power * ((float)attack / defense) + 2;
         int damage = Mathf.FloorToInt(d * modifiers);
 
-        HP -= damage;
-        if (HP < 0)
-        {
-            HP = 0;
-            damageDetails.Fainted = true;
-        }
+        UpdateHP(damage);
+
         return damageDetails;
+    }
+    /*跟新HP*/
+    public void UpdateHP(int damage)
+    {
+        HP = Mathf.Clamp(HP - damage, 0, MaxHp);
+        HpChanged = true;
+    }
+
+    public void OnAfterTurn()
+    {
+        Status?.OnAfterTurn?.Invoke(this);
     }
 
     /*隨機技能*/
@@ -183,6 +192,14 @@ public class Pokemon
     {
         ResetStatBoost();
     }
+
+    /*狀態異常顯示*/
+    public void SetStatus(ConditionID conditionID)
+    {
+        Status = ConditionDB.Conditions[conditionID];
+        StatusChanges.Enqueue($"{Base.Name}{Status.StartMessage}");
+    }
+
 }
 
 

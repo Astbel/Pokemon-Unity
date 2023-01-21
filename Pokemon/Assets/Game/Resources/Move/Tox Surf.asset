@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f706d07381aa15349ab74322794ee7cf, type: 3}
-  m_Name: Tackle
+  m_Name: Tox Surf
   m_EditorClassIdentifier: 
-  name: Tackle
+  name: Tox Surf
   description: 
-  type: 1
-  power: 0
+  type: 8
+  power: 80
   accuracy: 100
-  pp: 10
-  category: 2
+  pp: 20
+  category: 1
   effects:
     boosts: []
+    status: 0
   target: 0

@@ -131,7 +131,10 @@ public enum PokemonType
     Bug,
     Rock,
     Ghost,
-    Dragon
+    Dragon,
+    Dark,
+    Steel,
+    Fairy
 }
 /*Status*/
 public enum Stat
@@ -148,14 +151,25 @@ public class TypeChart
 {
     static float[][] chart =
      {
-        //                  nor   Fir  Wat  Ele   Gra    Ice  Fig   Poi
-        /*Nor*/ new float[] {1f,  1f,   1f,  1f,  1f,    1f,  1f,   1f},
-        /*Fir*/ new float[] {1f, 0.5f,0.5f,  1f,  2f,    2f,  1f,   1f},
-        /*Wat*/ new float[] {1f,  2f, 0.5f,  2f,  0.5f,   1f,  1f,  1f},
-        /*Ele*/ new float[] {1f,  1f,  2f,  0.5f, 0.5f,  1f,  1f,   1f},
-        /*Gra*/ new float[] {1f, 0.5f, 2f,  2f,   0.5f,  1f,  1f,  0.5f},
-        /*Poi*/ new float[] {1f,  1f,  1f,  1f,   2f,    1f,  1f,   1f},
-
+        //                  nor   Fir   Wat   Ele   Gra    Ice   Fig   Poi   Gro   Fly   Psy   Bug    Roc   Gho     Dra   Dar   Ste     Far 
+        /*Nor*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,  0.5f,  1f,   1f,   1f,   0.5f,   1f,    1f,   1f,   0.5f,   1f },
+        /*Fir*/ new float[] {1f, 0.5f, 0.5f,  1f,   2f,    2f,   1f,   1f,  0.5f,  1f,   1f,   2f,   0.5f,   1f,   0.5f,  1f,    2f,    1f },
+        /*Wat*/ new float[] {1f,  2f,  0.5f,  2f,  0.5f,   1f,   1f,   1f,   2f,   1f,   1f,   1f,    2f,    1f,   0.5f,  1f,    1f,    1f },
+        /*Ele*/ new float[] {1f,  1f,   2f,  0.5f, 0.5f,   1f,   1f,   1f,   1f,   2f,   1f,   1f,    0f,    1f,   0.5f,  1f,   0.5f,   1f },
+        /*Gra*/ new float[] {1f, 0.5f,  2f,   2f,  0.5f,   1f,   1f,  0.5f,  2f,  0.5f,  1f,   0.5f,  2f,    1f,   0.5f,  1f,    1f,    1f },
+        /*Ice*/ new float[] {1f, 0.5f, 0.5f,  1f,   2f,   0.5f,  1f,   1f,   2f,   2f,   1f,   1f,    1f,    1f,    2f,   1f,    1f,    1f },
+        /*Fig*/ new float[] {1f,  1f,   1f,   1f,   2f,    1f,   1f,   1f,   2f,  0.5f,  0.5f, 1f,    2f,    0f,    1f,   2f,    2f,    2f },
+        /*Poi*/ new float[] {1f,  1f,   1f,   1f,   2f,    1f,   1f,   1f,   1f,   1f,   2f,   1f,    1f,    1f,    1f,   1f,    0f,    2f },
+        /*Gro*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,   0f,   1f,   1f,    2f,    1f,    1f,   1f,    2f,    1f },
+        /*Fly*/ new float[] {1f,  1f,   1f,   1f,   2f,    1f,   1f,   1f,  0.5f,  1f,   1f,   2f,   0.5f,   1f,    1f,   1f,   0.5f,   1f },
+        /*Psy*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,   1f,  0.5f, 0.5f,   1f,    2f,    1f,   0f,    1f,   0.5f},
+        /*Bug*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,  0.5f,  2f,   1f,    1f,    1f,    1f,   1f,   0.5f,   1f },
+        /*Roc*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,   2f,   1f,   1f,    1f,    1f,    1f,   1f,    1f,    1f },
+        /*Gho*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,   1f,   2f,   1f,    1f,    1f,    1f,   1f,    1f,   0.5f},
+        /*Dra*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,   1f,   1f,   1f,    1f,    1f,    2f,   1f,    1f,    1f },
+        /*Dar*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,  0.5f,  1f,   1f,   1f,   2f,   1f,    1f,    1f,    1f,   1f,    1f,    2f },
+        /*Ste*/ new float[] {1f,  1f,   1f,   1f,  0.5f,   2f,   1f,   1f,   2f,   1f,   1f,   1f,    1f,    1f,    1f,   1f,    1f,    2f },
+        /*Far*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,   1f,   1f,   1f,    1f,    1f,    2f,  0.5f,  0.5f,   1f },
     };
 
     public static float GetEffectivenss(PokemonType attackType, PokemonType defenseType)

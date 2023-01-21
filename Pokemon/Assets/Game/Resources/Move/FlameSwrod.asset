@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f706d07381aa15349ab74322794ee7cf, type: 3}
-  m_Name: Tackle
+  m_Name: FlameSwrod
   m_EditorClassIdentifier: 
-  name: Tackle
+  name: FlameSwrod
   description: 
-  type: 1
+  type: 2
   power: 0
   accuracy: 100
   pp: 10
   category: 2
   effects:
     boosts: []
+    status: 2
   target: 0

@@ -353,3 +353,659 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006688 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.991 seconds
+Domain Reload Profiling:
+	ReloadAssembly (992ms)
+		BeginReloadAssembly (166ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (57ms)
+		EndReloadAssembly (696ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (248ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (281ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (169ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4065 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (196.0 KB). Loaded Objects now: 4537.
+Memory consumption went from 160.7 MB to 160.5 MB.
+Total: 3.548100 ms (FindLiveObjects: 0.258900 ms CreateObjectMapping: 0.107500 ms MarkObjects: 2.973900 ms  DeleteObjects: 0.206800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007360 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.874 seconds
+Domain Reload Profiling:
+	ReloadAssembly (875ms)
+		BeginReloadAssembly (108ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (679ms)
+			LoadAssemblies (73ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (215ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (303ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (187ms)
+				ProcessInitializeOnLoadMethodAttributes (34ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.10 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4065 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 33 unused Assets / (196.9 KB). Loaded Objects now: 4540.
+Memory consumption went from 160.7 MB to 160.5 MB.
+Total: 2.813300 ms (FindLiveObjects: 0.249300 ms CreateObjectMapping: 0.100200 ms MarkObjects: 2.303700 ms  DeleteObjects: 0.159300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1231.962825 seconds.
+  path: Assets/Game/Resources/Move/Tox Surf.asset
+  artifactKey: Guid(8fc6c232af2afe342ad4d61a43b7afd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Resources/Move/Tox Surf.asset using Guid(8fc6c232af2afe342ad4d61a43b7afd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '450e8303d0bcf1fd5b9785c93d026ac0') in 0.015210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.053784 seconds.
+  path: Assets/Game/Resources/Move/FlameSwrod.asset
+  artifactKey: Guid(257ef56714ee0b84389daaf20a194a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Resources/Move/FlameSwrod.asset using Guid(257ef56714ee0b84389daaf20a194a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f5d3b6cab3685a7389629573e9e59df') in 0.002553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.989397 seconds.
+  path: Assets/Game/Resources/Move/FlameSwrod.asset
+  artifactKey: Guid(257ef56714ee0b84389daaf20a194a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Resources/Move/FlameSwrod.asset using Guid(257ef56714ee0b84389daaf20a194a29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4636438b97ffa1582fe33d915931cfd') in 0.001757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.978292 seconds.
+  path: Assets/Resources
+  artifactKey: Guid(8cd12fd952f3e2c43b7b479f52e9c904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources using Guid(8cd12fd952f3e2c43b7b479f52e9c904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '552f88840b097c5dfeecbf292134a0d7') in 0.002057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.985514 seconds.
+  path: Assets/Game/Resources/Pokemon/Pokemon.asset
+  artifactKey: Guid(f7f66d56ae92a24469a08e101413d01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Resources/Pokemon/Pokemon.asset using Guid(f7f66d56ae92a24469a08e101413d01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b7ba55536ad410fb090a1d17ea55ceb') in 0.002495 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.539810 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/8.png
+  artifactKey: Guid(27eb6a669c9a79740b682130d2d0c39c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/8.png using Guid(27eb6a669c9a79740b682130d2d0c39c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3284785962f25df91ecfc359fc6a4879') in 0.520693 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.092708 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/9.png
+  artifactKey: Guid(eb050db807b09c74b8d50f6a42de40fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/9.png using Guid(eb050db807b09c74b8d50f6a42de40fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee85e08bf0efc764f0f922e133968e61') in 0.009513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009524 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/9.png
+  artifactKey: Guid(4c35c9de07563864f8e8e3fdc3b9da44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/9.png using Guid(4c35c9de07563864f8e8e3fdc3b9da44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bdd9b8fb3a4d1b61bbc68b0a2343a2a') in 0.008760 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.015930 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/10.png
+  artifactKey: Guid(4eb19517f29123c4e92cd64bb44a762f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/10.png using Guid(4eb19517f29123c4e92cd64bb44a762f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3344966b936aa5fb2d430f663459b60c') in 0.008453 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/10.png
+  artifactKey: Guid(f08902210be554f45a819ec4b1969ff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/10.png using Guid(f08902210be554f45a819ec4b1969ff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b649572b9f2af4691d8bdb7696286ae3') in 0.011980 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.292955 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/11.png
+  artifactKey: Guid(5c5f4ea5c5419534ba3df68851d3871f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/11.png using Guid(5c5f4ea5c5419534ba3df68851d3871f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5344e04b84eb2f08415628bef08e8d00') in 0.008575 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/12.png
+  artifactKey: Guid(61cc2f6f31a20684492c4fe16440ce81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/12.png using Guid(61cc2f6f31a20684492c4fe16440ce81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39a8c8aee3970468d5df71db8b6eb864') in 0.012006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009440 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/12.png
+  artifactKey: Guid(882f65e67f2cc3340838cb2d09ed0b9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/12.png using Guid(882f65e67f2cc3340838cb2d09ed0b9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c07ef28e481a0f238851c5caa618a3da') in 0.009932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.288877 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/12.png
+  artifactKey: Guid(a3b9f01853a2b0747b144f30a15e9138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/12.png using Guid(a3b9f01853a2b0747b144f30a15e9138) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a0c86e74eaf7b5fb913d1e0201a3dd9') in 0.008984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008153 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/13.png
+  artifactKey: Guid(2ad03f52395e34b4ca20f61dbc7301a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/13.png using Guid(2ad03f52395e34b4ca20f61dbc7301a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48c1aba0fdae8a1ec5765081861fd1e3') in 0.016316 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/13.png
+  artifactKey: Guid(39a53f1c638e6dc49b3ccc69f75badb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/13.png using Guid(39a53f1c638e6dc49b3ccc69f75badb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aaecc239922e50bc465c2bc0b579a7d') in 0.017141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008536 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/14.png
+  artifactKey: Guid(97d05fc4d929ad74594135fa75b99fc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/14.png using Guid(97d05fc4d929ad74594135fa75b99fc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03d6d04ae259d74b7ce4dcbd88e34648') in 0.009255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.246371 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/14.png
+  artifactKey: Guid(35fb57f1a74c829419ae53f6d7e4b1a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/14.png using Guid(35fb57f1a74c829419ae53f6d7e4b1a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd05b1ba1047b4bd0b9947eb9454c03a2') in 0.015338 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/15.png
+  artifactKey: Guid(2f17de82562cf90438b98ffc7989fa55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/15.png using Guid(2f17de82562cf90438b98ffc7989fa55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dda52ffd0c22a559979a068c80899f69') in 0.021732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.319758 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/15.png
+  artifactKey: Guid(b196e4f9ee274274eaa67c5d8378deed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/15.png using Guid(b196e4f9ee274274eaa67c5d8378deed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3dcd586a1fff44c117e55006788f81b') in 0.009422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011284 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/16.png
+  artifactKey: Guid(870757af32f6eaf408c9251780d706e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/16.png using Guid(870757af32f6eaf408c9251780d706e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aa605830cbb92eaa6171e9cd0e109a5') in 0.008280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.010930 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/16.png
+  artifactKey: Guid(346831d68f05c6e459bbd3a361ba82d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/16.png using Guid(346831d68f05c6e459bbd3a361ba82d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc920b2bfd17556d84a2b2b905320957') in 0.008958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.406497 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/17.png
+  artifactKey: Guid(9c87bd8c007def7498ba327f8376874e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/17.png using Guid(9c87bd8c007def7498ba327f8376874e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17a6f84859594316aaa858bdd56a0ab2') in 0.009147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014645 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/17.png
+  artifactKey: Guid(df102cfe13484564d97c677199165795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/17.png using Guid(df102cfe13484564d97c677199165795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fa644c6886a4af05505752a32fcba3b') in 0.008320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.313608 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/18.png
+  artifactKey: Guid(0b683dbec89b36e40a044ff3acdd2658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/18.png using Guid(0b683dbec89b36e40a044ff3acdd2658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89a50c8d15c1f6f07fad3c00eec24d02') in 0.009410 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014268 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/18.png
+  artifactKey: Guid(4c9e0568f0a4b66468fd2e4a0a2bdcec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/18.png using Guid(4c9e0568f0a4b66468fd2e4a0a2bdcec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fde42cb4194822e783c645fedcb46daf') in 0.008574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014540 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/19.png
+  artifactKey: Guid(fb11649658d386e42aa89d642ab70391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/19.png using Guid(fb11649658d386e42aa89d642ab70391) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2bd808ad6b9b997e4acdd2cda17f224') in 0.007736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.321790 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/19.png
+  artifactKey: Guid(a6ef29f1047b6304792b4775acbc733c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/19.png using Guid(a6ef29f1047b6304792b4775acbc733c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af2a5c534e0a256fc3cbe57549a45d13') in 0.008227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.017583 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/20.png
+  artifactKey: Guid(a4d2a49d10a5d4e47b933f61930e128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/20.png using Guid(a4d2a49d10a5d4e47b933f61930e128f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbde0af7ac33f49c853e4402b56d8316') in 0.008482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007732 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/20.png
+  artifactKey: Guid(dfbd426a765d8114e845011652cce963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/20.png using Guid(dfbd426a765d8114e845011652cce963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '293f7c30aa01c3a2110ae60ea4033e19') in 0.010583 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.256996 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/21.png
+  artifactKey: Guid(6b96004a268e1bb4897fe065fefcbbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/21.png using Guid(6b96004a268e1bb4897fe065fefcbbbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94fab431f71e737f2e54e6db94a1bbfc') in 0.008358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/21.png
+  artifactKey: Guid(2e2588d5cee61b34e95f6acae2f21ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/21.png using Guid(2e2588d5cee61b34e95f6acae2f21ee4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecaad99333da5553b58c682a7acd68bc') in 0.007685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.016783 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/22.png
+  artifactKey: Guid(99eebabac43cd1e47bf898079aeb2690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/22.png using Guid(99eebabac43cd1e47bf898079aeb2690) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0c7369a2b8c0a89dd6f57381076f527') in 0.008323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.271724 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/22.png
+  artifactKey: Guid(cc15641a7cb0ae14c9b32b5bdb0ac23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/22.png using Guid(cc15641a7cb0ae14c9b32b5bdb0ac23d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c1cfd505e65b6114b02c6eef567db64') in 0.010843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/23.png
+  artifactKey: Guid(b5ffe18c10cdd0a4b9e232c41e72d379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/23.png using Guid(b5ffe18c10cdd0a4b9e232c41e72d379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5420f8e436b0f951ad5aa82cecf9f534') in 0.010231 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.013629 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/23.png
+  artifactKey: Guid(aa473582b0bf4c447bc6afdea8b66cdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/23.png using Guid(aa473582b0bf4c447bc6afdea8b66cdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1f3f5695db6d32b3392f27dd08ff3d7') in 0.010132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/24.png
+  artifactKey: Guid(7609ec5a77c91394ca58d92c141b6ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/24.png using Guid(7609ec5a77c91394ca58d92c141b6ddb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3166fd54183918f35a0ef74ded080a1') in 0.010004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.235326 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/24.png
+  artifactKey: Guid(6b70f8be94b6fa844ad2e089bd3c15b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/24.png using Guid(6b70f8be94b6fa844ad2e089bd3c15b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a345636edc3fee853e953351bded02d') in 0.007538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007650 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/25.png
+  artifactKey: Guid(b689780a849f52149a213d46ea7fb34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/25.png using Guid(b689780a849f52149a213d46ea7fb34a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a0ad434996054ae7d5769e694646c39') in 0.008135 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.011924 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/25.png
+  artifactKey: Guid(bbb8f13d40818e84080918eb593ea135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/25.png using Guid(bbb8f13d40818e84080918eb593ea135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f6118cebae3141be89f5efc09643abe') in 0.007587 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/26.png
+  artifactKey: Guid(3b439b33f97404c4a876593e47ba24c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/26.png using Guid(3b439b33f97404c4a876593e47ba24c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69aaae1204de09ef986ef1aea113eee8') in 0.010251 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.218115 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/26.png
+  artifactKey: Guid(4993518badf28ee449cd0c625b34adce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/26.png using Guid(4993518badf28ee449cd0c625b34adce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e7793b5a6b280a693c8ed405232ccb9') in 0.009094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007649 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/27.png
+  artifactKey: Guid(2c2606fc5e771ea4a95c9959d662cb3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/27.png using Guid(2c2606fc5e771ea4a95c9959d662cb3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efba95c5771d8493e39f7e658db6b0a3') in 0.008146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.006383 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/27.png
+  artifactKey: Guid(29b0b9b2cecde414f8a8a59c4ed517cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/27.png using Guid(29b0b9b2cecde414f8a8a59c4ed517cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37847043b7aef50770b078d45b063e6a') in 0.007756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.023314 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/28.png
+  artifactKey: Guid(aceec62a6a5677149ad1e4bdc4a30898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/28.png using Guid(aceec62a6a5677149ad1e4bdc4a30898) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c65580bed946457345f0ead404f9e365') in 0.008201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.228396 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/28.png
+  artifactKey: Guid(2553bf32f055f8244b3a6068a179d0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/28.png using Guid(2553bf32f055f8244b3a6068a179d0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbacdbd80bd988de1587d400ed317821') in 0.007972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.017070 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/29.png
+  artifactKey: Guid(500a4ac40d861a04b8feef011c1c6a8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/29.png using Guid(500a4ac40d861a04b8feef011c1c6a8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f55a011a33e5456f18f540b7a5888f2f') in 0.008453 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/30.png
+  artifactKey: Guid(5f5ed6577e0f8db4db731f334fbeeb40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/30.png using Guid(5f5ed6577e0f8db4db731f334fbeeb40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf28c00f435293b3bcd4282f0c67f849') in 0.010293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.246031 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/30.png
+  artifactKey: Guid(cdb386d80e92c244a979f728007e9bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/30.png using Guid(cdb386d80e92c244a979f728007e9bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7669ff2e372cd6fa7fb83d55ce59109') in 0.009567 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008821 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/30.png
+  artifactKey: Guid(907a65f8c3960e346be0eaf5f09940f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/30.png using Guid(907a65f8c3960e346be0eaf5f09940f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26f26aa6e5a384c483093ac8a47b7473') in 0.007615 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.016793 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/31.png
+  artifactKey: Guid(b4ec4ea50ee90a444ba98bb1ab185b8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/31.png using Guid(b4ec4ea50ee90a444ba98bb1ab185b8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac9c03bbf5fd5b6b58ea5416d84a31b') in 0.008481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/31.png
+  artifactKey: Guid(9a57e21544e23d947be2ec94b05d9a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/31.png using Guid(9a57e21544e23d947be2ec94b05d9a31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea25bbae408fe1db42f22528d0767907') in 0.009248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.279447 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/32.png
+  artifactKey: Guid(29544ccdf6d938f4d9c9edacde219705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/32.png using Guid(29544ccdf6d938f4d9c9edacde219705) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa7b50fcfc17b74ee1095e4a1b238b82') in 0.008051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.014409 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/32.png
+  artifactKey: Guid(54adce407f1cca141be67c963091c1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/32.png using Guid(54adce407f1cca141be67c963091c1d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c46cc4d3e550fedf05eaeaf0ae977025') in 0.008169 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.008378 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/33.png
+  artifactKey: Guid(d3a70fe14b962f245bbd2e786b95a1a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/33.png using Guid(d3a70fe14b962f245bbd2e786b95a1a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '841d49e7c79a164cb976fb74df5c8a0e') in 0.007954 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.302915 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/33.png
+  artifactKey: Guid(e29aac0c352c28440bfbd8014b7f3b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/33.png using Guid(e29aac0c352c28440bfbd8014b7f3b88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90be1ef986f284a58aad8ac995bcb4a9') in 0.008482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/34.png
+  artifactKey: Guid(e74f41aacb1b74142aebdc36b088c674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/34.png using Guid(e74f41aacb1b74142aebdc36b088c674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95294961dafec8f9d7d6931b45106d94') in 0.011893 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.010948 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/34.png
+  artifactKey: Guid(943c5493df749754781d83f1d7779a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/34.png using Guid(943c5493df749754781d83f1d7779a15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1b5222f0317e33d2ed62f0b2f4ceb48') in 0.008113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007045 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/35.png
+  artifactKey: Guid(1f005b3527b78ff4b9d1b8ab9ae94be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/shiny/35.png using Guid(1f005b3527b78ff4b9d1b8ab9ae94be9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2b86028c05dd65c52e1a69a6b30b2af') in 0.012491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.276948 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/35.png
+  artifactKey: Guid(ad9f927e8d6b2fb408e9b4787486a023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/35.png using Guid(ad9f927e8d6b2fb408e9b4787486a023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d7c87ddecc1b0f6253e9bc456d3bf03') in 0.008009 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/36.png
+  artifactKey: Guid(02b67ebdad5e7a2448ddd9627a96cd21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/shiny/36.png using Guid(02b67ebdad5e7a2448ddd9627a96cd21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a5ed2440e9c95eda22dc3296d441457') in 0.016752 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.012978 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/36.png
+  artifactKey: Guid(b6b2c3fdbc8eeaa428ff4de6b751c6c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/36.png using Guid(b6b2c3fdbc8eeaa428ff4de6b751c6c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecf357e1fd21f7140c0f82d475e7a1ab') in 0.007872 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.816392 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/134.png
+  artifactKey: Guid(f3412e929e36137478c9c0d2ace7a487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/134.png using Guid(f3412e929e36137478c9c0d2ace7a487) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d011330af23381fe679d7a92c0fba60') in 0.012759 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/134.png
+  artifactKey: Guid(86da14e43a1d1ad44833471fa299b416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/134.png using Guid(86da14e43a1d1ad44833471fa299b416) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1a588c8b9ea4e325a9fa4708d68c7cb') in 0.013494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.173667 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/37.png
+  artifactKey: Guid(ba4aa75864df92b4fa6b85f2b8a9af20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/37.png using Guid(ba4aa75864df92b4fa6b85f2b8a9af20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c9d4d18b0c208ea7d838a81f3b4b7d7') in 0.011732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/40.png
+  artifactKey: Guid(4ca4d6e1aaff5884ca69c13eb92fb3c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/40.png using Guid(4ca4d6e1aaff5884ca69c13eb92fb3c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5bdf0fd13cd1e8801d8989310f7330a') in 0.023717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/72.png
+  artifactKey: Guid(168c349e1b98888419fbab93b2470984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/72.png using Guid(168c349e1b98888419fbab93b2470984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96b865f52598903d4ff95525a24f15b6') in 0.009816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/78.png
+  artifactKey: Guid(138e67c6966da014ab953335970b22e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/78.png using Guid(138e67c6966da014ab953335970b22e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e1b656d04d67de128043d120c2199d5') in 0.008140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/43.png
+  artifactKey: Guid(cb476c767dee70f48b901b5ab229956f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/43.png using Guid(cb476c767dee70f48b901b5ab229956f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4dbf9755e5338c62e9c6f4331c5a53d') in 0.008821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/60.png
+  artifactKey: Guid(8df58a44c0b37ef42b573c6613d130b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/60.png using Guid(8df58a44c0b37ef42b573c6613d130b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57650d0567956a0dddbddb0741941c64') in 0.014392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/67.png
+  artifactKey: Guid(287619b4df459784b8d0f3cb94bc50a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/67.png using Guid(287619b4df459784b8d0f3cb94bc50a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c1bc2bf44e38c06009614a8c36de1fe') in 0.024334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/63.png
+  artifactKey: Guid(1335c732ba09e2f4bb9931dbaf6160e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/63.png using Guid(1335c732ba09e2f4bb9931dbaf6160e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36900150536c954889476e0ada6ffac4') in 0.008924 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/83.png
+  artifactKey: Guid(defb86bc93d4d134a99cbda81f15170e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/83.png using Guid(defb86bc93d4d134a99cbda81f15170e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ef4d43c5b2cab96bd0286f5ec9f1ca4') in 0.007846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/52.png
+  artifactKey: Guid(f59e9daabf82bf249b097aa5c1b95c20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/52.png using Guid(f59e9daabf82bf249b097aa5c1b95c20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4491485dc6f4c89370873d30211ed5ec') in 0.008061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/47.png
+  artifactKey: Guid(30c29cf5359860448b94197843e5ea85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/47.png using Guid(30c29cf5359860448b94197843e5ea85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58ba2cdb4fca9ac0fc2c18b62c50df42') in 0.010731 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/66.png
+  artifactKey: Guid(72ede003efde37242a1888a9f82f8e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/66.png using Guid(72ede003efde37242a1888a9f82f8e79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f831fedc817a505941b7daa05b940fe') in 0.008551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/87.png
+  artifactKey: Guid(a1ccae36e78da8a42ae1af12ce8da63c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/87.png using Guid(a1ccae36e78da8a42ae1af12ce8da63c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adab9644d9bc90a50e833763603adc6c') in 0.008800 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/44.png
+  artifactKey: Guid(9ff6a3a5d51f7674aa874a496320c23f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/44.png using Guid(9ff6a3a5d51f7674aa874a496320c23f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c2e9966ad6212caae3932bd0fa3a31e') in 0.009418 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/54.png
+  artifactKey: Guid(9f9cc1461425894409725cdd799bb99f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/54.png using Guid(9f9cc1461425894409725cdd799bb99f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afff3053b63dd80fbbed1a5e2cacafc6') in 0.008619 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/61.png
+  artifactKey: Guid(0f204369b01ae7540b49fd7f3db6bbed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/61.png using Guid(0f204369b01ae7540b49fd7f3db6bbed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ca5f5ff2b7d8662c6ded4bf181cfb7a') in 0.008448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/56.png
+  artifactKey: Guid(9bd98e16f99e7ae43ae26dc351fb37c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/56.png using Guid(9bd98e16f99e7ae43ae26dc351fb37c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb1cf4e850c181f202f2ce388d112a86') in 0.009973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/49.png
+  artifactKey: Guid(53625513071ec0243ad4f13924009f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/49.png using Guid(53625513071ec0243ad4f13924009f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6abcce9569093f1cadb27fff089200ed') in 0.014836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/59.png
+  artifactKey: Guid(86cd6247c6e55bc49a5d563997ecbea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/59.png using Guid(86cd6247c6e55bc49a5d563997ecbea3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce8a679de36386c818c5dfe96e3f4aa1') in 0.011639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/45.png
+  artifactKey: Guid(433d9dcea92f8264b9a10eedbcf4f0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/45.png using Guid(433d9dcea92f8264b9a10eedbcf4f0e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08bcf1028ae84d9dd3bd8a7f92e3c253') in 0.011513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/70.png
+  artifactKey: Guid(644478c713eb9ac49a7a9a81196f0aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/70.png using Guid(644478c713eb9ac49a7a9a81196f0aa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cca5d64b6cd73e77cc9fb0d1e1c1b95e') in 0.012313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/55.png
+  artifactKey: Guid(83896883d0945b24d9e81dd7ed488b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/55.png using Guid(83896883d0945b24d9e81dd7ed488b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce20983e67ba78d6c1b2e5fa88b8eba3') in 0.010502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/51.png
+  artifactKey: Guid(3c9ea0c9133135e4b91b0ae6cb59809b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/51.png using Guid(3c9ea0c9133135e4b91b0ae6cb59809b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1bb3264e3161a848bbe0f980773ee39') in 0.009938 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/58.png
+  artifactKey: Guid(f07d96ffa3624df4aa835721510faf50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/58.png using Guid(f07d96ffa3624df4aa835721510faf50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a99439f2dce9bf38f43d10b433992aa7') in 0.009397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/81.png
+  artifactKey: Guid(cd90eca8970608349b00c53a62403a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/81.png using Guid(cd90eca8970608349b00c53a62403a7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed5ef53d6b639fb38465ad2a33baad7a') in 0.009222 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/71.png
+  artifactKey: Guid(3d3e381c494be1e4c85e1a064b8d2cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Pokemons/generation-3/pokemon/main-sprites/ruby-sapphire/back/71.png using Guid(3d3e381c494be1e4c85e1a064b8d2cb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e0c9798e4588caab4d315ce6caeced1') in 0.009100 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

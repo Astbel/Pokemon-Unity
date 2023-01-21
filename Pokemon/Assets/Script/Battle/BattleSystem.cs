@@ -140,18 +140,37 @@ public class BattleSystem : MonoBehaviour
             CheckForBattleOver(targetUnit);
 
         }
+        //中毒 燒傷會在每一回合觸發然後種異常狀態的pokemon有可能昏厥
+        sourceUnit.Pokemon.OnAfterTurn();
+        yield return ShowStatusChanges(sourceUnit.Pokemon);
+        yield return sourceUnit.Hud.UpdateHP();
+        if (sourceUnit.Pokemon.HP <= 0)
+        {
+            yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} Fainted");
+            sourceUnit.PlayFaintAnimation();
+            yield return new WaitForSeconds(2f);
+
+            CheckForBattleOver(sourceUnit);
+
+        }
     }
     /*狀態Buff*/
     IEnumerator RunMoveEffects(Move move, Pokemon source, Pokemon target)
     {
         /*狀態技能*/
         var effcts = move.Base.Effects;
-        if (effcts.Boosts != null)  //確認是否有提升或降低能力
+        //確認是否有提升或降低能力
+        if (effcts.Boosts != null)
         {
             if (move.Base.Targetget == MoveTarget.Self)
                 source.ApplyBoost(effcts.Boosts);  //提升我方
             else
                 target.ApplyBoost(effcts.Boosts);  //降低敵方
+        }
+        //異常狀態
+        if (effcts.Status != ConditionID.none)
+        {
+            target.SetStatus(effcts.Status);
         }
         yield return ShowStatusChanges(source);
         yield return ShowStatusChanges(target);
