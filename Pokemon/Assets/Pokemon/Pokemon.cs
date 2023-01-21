@@ -18,6 +18,9 @@ public class Pokemon
     public Dictionary<Stat, int> Stats { get; private set; }
     //狀態提升
     public Dictionary<Stat, int> StatsBoost { get; private set; }
+    //用於顯示腳色Buff
+    public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
+
     public void Init()
     {
         /*學習技能檢查是否有在該腳色List中*/
@@ -36,17 +39,7 @@ public class Pokemon
         }
         CalculateStat();
         HP = MaxHp;
-
-        /*開場清除提升狀態*/
-        StatsBoost = new Dictionary<Stat, int>()
-        {
-            {Stat.Attack,0},
-            {Stat.Defense,0},
-            {Stat.SpAttack,0},
-            {Stat.SpDefense,0},
-            {Stat.Speed,0},
-        };
-
+        ResetStatBoost();
     }
     /*inital 初始狀態IV數值計算*/
     void CalculateStat()
@@ -58,8 +51,21 @@ public class Pokemon
         Stats.Add(Stat.SpDefense, Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5);
         Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
 
-        MaxHp = Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5;
+        MaxHp = Mathf.FloorToInt((Base.Speed * Level) / 100f) + 10;
 
+    }
+    /*清除狀態*/
+    void ResetStatBoost()
+    {
+        /*開場清除提升狀態*/
+        StatsBoost = new Dictionary<Stat, int>()
+        {
+            {Stat.Attack,0},
+            {Stat.Defense,0},
+            {Stat.SpAttack,0},
+            {Stat.SpDefense,0},
+            {Stat.Speed,0},
+        };
     }
 
     /*計算提升數值技能*/
@@ -87,8 +93,13 @@ public class Pokemon
             var boost = value.boost;
 
             /*提升狀態 clamp狀態最多上下是6倍*/
-            StatsBoost[stat] =Mathf.Clamp(StatsBoost[stat]+boost,-6,6);
-            
+            StatsBoost[stat] = Mathf.Clamp(StatsBoost[stat] + boost, -6, 6);
+
+            /*顯示腳色提升或降低狀態Buff訊息*/
+            if (boost > 0)
+                StatusChanges.Enqueue($"{Base.Name}'s{stat} rose!");
+            else
+                StatusChanges.Enqueue($"{Base.Name}'s{stat} fell!");
             /*Debug 訊息來確認是否有提升跟降低狀態*/
             Debug.Log($"{stat}has been boosted to{StatsBoost[stat]}");
         }
@@ -165,6 +176,12 @@ public class Pokemon
     {
         int r = Random.Range(0, Moves.Count);
         return Moves[r];
+    }
+
+    /*戰鬥結束後清除buff提升或降低效果*/
+    public void OnBattleOver()
+    {
+        ResetStatBoost();
     }
 }
 

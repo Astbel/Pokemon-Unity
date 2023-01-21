@@ -6,6 +6,7 @@ using UnityEngine;
 public enum BattleState { Start, ActionSelection, MoveSelection, PerformMove, Busy, PartySelection, BattleOver }
 public class BattleSystem : MonoBehaviour
 {
+
     [SerializeField] BattleUnit playerUnit;
     [SerializeField] BattleUnit enemyUnit;
 
@@ -43,14 +44,16 @@ public class BattleSystem : MonoBehaviour
         dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
 
         yield return dialogBox.TypeDialog($"A wild {enemyUnit.Pokemon.Base.Name}  appeared.");
-
-        ActionSelection(); /*初始狀態*/
+        /*確認誰先攻*/
+        ChooseFirstTurn();
 
     }
     /*確認戰鬥是否結束*/
     void BattleOver(bool won)
     {
         state = BattleState.BattleOver;
+        //使用link來指向玩家所有pokemon來進行清除reset buff
+        playerParty.Pokemons.ForEach(p => p.OnBattleOver());
         OnBattleOver(won);
     }
 
@@ -58,7 +61,7 @@ public class BattleSystem : MonoBehaviour
     void ActionSelection()
     {
         state = BattleState.ActionSelection;
-        dialogBox.SetDialog("Choose an action");
+        dialogBox.SetDialog($"What will {playerUnit.Pokemon.Base.Name} do now");
         dialogBox.EnableActionSelector(true);
     }
     //選單選擇戰鬥中其他Pokemon
@@ -117,15 +120,7 @@ public class BattleSystem : MonoBehaviour
         /*判斷是否是status技能還是傷害技能*/
         if (move.Base.Category == MoveCategory.Status)
         {
-            /*狀態技能*/
-            var effcts =move.Base.Effects;
-            if (effcts.Boosts !=null)  //確認是否有提升或降低能力
-            {
-                if(move.Base.Targetget==MoveTarget.Self)
-                    sourceUnit.Pokemon.ApplyBoost(effcts.Boosts);  //提升我方
-                else
-                    targetUnit.Pokemon.ApplyBoost(effcts.Boosts);  //降低敵方
-            }
+            yield return RunMoveEffects(move, sourceUnit.Pokemon, targetUnit.Pokemon);
         }
         else  /*傷害技能*/
         {
@@ -146,6 +141,23 @@ public class BattleSystem : MonoBehaviour
 
         }
     }
+    /*狀態Buff*/
+    IEnumerator RunMoveEffects(Move move, Pokemon source, Pokemon target)
+    {
+        /*狀態技能*/
+        var effcts = move.Base.Effects;
+        if (effcts.Boosts != null)  //確認是否有提升或降低能力
+        {
+            if (move.Base.Targetget == MoveTarget.Self)
+                source.ApplyBoost(effcts.Boosts);  //提升我方
+            else
+                target.ApplyBoost(effcts.Boosts);  //降低敵方
+        }
+        yield return ShowStatusChanges(source);
+        yield return ShowStatusChanges(target);
+    }
+
+
     /*確認昏厥pokemon是否為玩家如果是玩家在檢測是否還有剩餘pokemon,如果有擇繼續沒有停止場景*/
     void CheckForBattleOver(BattleUnit faintedUnit)
     {
@@ -342,12 +354,17 @@ public class BattleSystem : MonoBehaviour
             ActionSelection();
         }
     }
-
+    /*切換部分
+    1.只有HP>0才可以切換
+    2.如果昏厥的話要再次比較哪知pokemon的基礎速度點高才決定誰先攻
+    */
     IEnumerator SwitchPokemon(Pokemon newPokemon)
     {
+        bool currentPokemonFainted = true;
         /*確認玩家pokemon是否HP大於0才播放切換*/
         if (playerUnit.Pokemon.HP > 0)
         {
+            currentPokemonFainted = false;
             yield return dialogBox.TypeDialog($"Come back{playerUnit.Pokemon.Base.Name}");
             playerUnit.PlayFaintAnimation();
             yield return new WaitForSeconds(2f);
@@ -357,8 +374,33 @@ public class BattleSystem : MonoBehaviour
         playerUnit.Setup(newPokemon);
         dialogBox.SetMoveNames(newPokemon.Moves);
         yield return dialogBox.TypeDialog($"I Chose you {newPokemon.Base.Name}!.");
-        /*換敵人的回合*/
-        StartCoroutine(EnemyMove());
+
+        if (currentPokemonFainted)
+            ChooseFirstTurn();
+        else
+            StartCoroutine(EnemyMove());
+    }
+
+    /*提升降低狀態Buff訊息*/
+    IEnumerator ShowStatusChanges(Pokemon pokemon)
+    {
+        //檢查queue裡面的訊息
+        while (pokemon.StatusChanges.Count > 0)
+        {
+            /*Dequeue來顯示訊息*/
+            var message = pokemon.StatusChanges.Dequeue();
+            /*顯示該訊息*/
+            yield return dialogBox.TypeDialog(message);
+
+        }
+    }
+    /*檢查速度來決定誰的pokemon先動*/
+    void ChooseFirstTurn()
+    {
+        if (playerUnit.Pokemon.Speed >= enemyUnit.Pokemon.Speed)
+            ActionSelection();
+        else
+            StartCoroutine(EnemyMove());
     }
 
 }

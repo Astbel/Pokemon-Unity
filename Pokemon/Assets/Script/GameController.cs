@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
+
+    /*Audio Source */
+    
     GameState state;
 
     /// <summary>
