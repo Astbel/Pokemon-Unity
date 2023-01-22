@@ -7,12 +7,9 @@ public class Pokemon
 {
     [SerializeField] PokemonBase _base;
     [SerializeField] int level;
-
     public PokemonBase Base { get { return _base; } }
     public int Level { get { return level; } }
-
     public int HP { get; set; }
-
     public List<Move> Moves { get; set; }
     //預設狀態
     public Dictionary<Stat, int> Stats { get; private set; }
@@ -20,12 +17,22 @@ public class Pokemon
     public Dictionary<Stat, int> StatsBoost { get; private set; }
     //用來顯示特殊異常狀態
     public Condition Status { get; private set; }
+    //用於混亂狀態
+    public Condition VolatileStatus { get; private set; }
     //用於顯示腳色Buff
     public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
     //計算傷害後 呼叫bool
     public bool HpChanged { get; set; }
     //睡眠異常狀態計數
     public int StatusTime { get; set; }
+    //混亂回合計數
+    public int VolatileStatusTime { get; set; }
+    public event System.Action OnStatusChanged;
+
+
+
+
+
     public void Init()
     {
         /*學習技能檢查是否有在該腳色List中*/
@@ -45,6 +52,9 @@ public class Pokemon
         CalculateStat();
         HP = MaxHp;
         ResetStatBoost();
+        /*清除所有異常狀態*/
+        Status = null;
+        VolatileStatus = null;
     }
     /*inital 初始狀態IV數值計算*/
     void CalculateStat()
@@ -56,7 +66,7 @@ public class Pokemon
         Stats.Add(Stat.SpDefense, Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5);
         Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
 
-        MaxHp = Mathf.FloorToInt((Base.Speed * Level) / 100f) + 10;
+        MaxHp = Mathf.FloorToInt((Base.Speed * Level) / 100f) + 10 + Level;
 
     }
     /*清除狀態*/
@@ -181,21 +191,31 @@ public class Pokemon
     public void OnAfterTurn()
     {
         Status?.OnAfterTurn?.Invoke(this);
+        VolatileStatus?.OnAfterTurn?.Invoke(this);
     }
     /*狀態異常回復所以清除狀態*/
     public void CureStatus()
     {
         Status = null;
+        OnStatusChanged?.Invoke();
     }
 
     public bool OnBeforeMove()
     {
+        bool canPerformMove = true;
         if (Status?.OnBeforeTurn != null)
         {
-            return Status.OnBeforeTurn(this);
+            if (Status.OnBeforeTurn(this))
+                canPerformMove = false;
         }
 
-        return true;
+        if (VolatileStatus?.OnBeforeTurn != null)
+        {
+            if (!VolatileStatus.OnBeforeTurn(this))
+                canPerformMove = false;
+        }
+
+        return canPerformMove;
     }
 
     /*隨機技能*/
@@ -208,16 +228,36 @@ public class Pokemon
     /*戰鬥結束後清除buff提升或降低效果*/
     public void OnBattleOver()
     {
+        VolatileStatus = null;
         ResetStatBoost();
     }
 
-    /*狀態異常顯示*/
+    /*狀態異常顯示,修正當中了異常狀態不能再中其他異常*/
     public void SetStatus(ConditionID conditionID)
     {
+        if (Status != null) return;
         Status = ConditionDB.Conditions[conditionID];
         Status?.OnStart?.Invoke(this);
         StatusChanges.Enqueue($"{Base.Name}{Status.StartMessage}");
+        OnStatusChanged?.Invoke();
     }
+    /*混亂狀態*/
+    public void SetVolatileStatus(ConditionID conditionID)
+    {
+        if (VolatileStatus != null) return;
+        VolatileStatus = ConditionDB.Conditions[conditionID];
+        VolatileStatus?.OnStart?.Invoke(this);
+        StatusChanges.Enqueue($"{Base.Name}{VolatileStatus.StartMessage}");
+    }
+    /*解除混亂狀態*/
+    public void CureVolatileStatus()
+    {
+        VolatileStatus = null;
+    }
+
+
+
+
 
 }
 

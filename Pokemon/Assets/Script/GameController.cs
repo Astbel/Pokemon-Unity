@@ -14,13 +14,13 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera worldCamera;
 
     /*Audio Source */
-    
     GameState state;
+    /*Game start init*/
+    private void Awake()
+    {
+        ConditionDB.Init();
+    }
 
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
     private void Start()
     {
         playerController.OnEncountered += StartBattle;
@@ -33,10 +33,10 @@ public class GameController : MonoBehaviour
         battleSystem.gameObject.SetActive(true);
         worldCamera.gameObject.SetActive(false);
 
-        var playerParty=playerController.GetComponent<PokemonParty>();
-        var wildPokemon=FindObjectOfType<MapArea>().GetComponent<MapArea>().GetRandomWildPokemon();
+        var playerParty = playerController.GetComponent<PokemonParty>();
+        var wildPokemon = FindObjectOfType<MapArea>().GetComponent<MapArea>().GetRandomWildPokemon();
 
-        battleSystem.StartBattle(playerParty,wildPokemon);
+        battleSystem.StartBattle(playerParty, wildPokemon);
 
     }
 

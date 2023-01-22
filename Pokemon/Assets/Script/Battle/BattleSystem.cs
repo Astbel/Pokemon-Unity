@@ -111,10 +111,11 @@ public class BattleSystem : MonoBehaviour
     IEnumerator RunMove(BattleUnit sourceUnit, BattleUnit targetUnit, Move move)
     {
         /*檢測是否種異常狀態 冰凍 麻痺 睡眠 如果回false則直接從協程break出來*/
-        bool canRunMove=sourceUnit.Pokemon.OnBeforeMove();
+        bool canRunMove = sourceUnit.Pokemon.OnBeforeMove();
         if (!canRunMove)
         {
             yield return ShowStatusChanges(sourceUnit.Pokemon);
+            yield return sourceUnit.Hud.UpdateHP();
             yield break;
         }
         /*狀態異常例如麻痺有可能可以放技能但還是要打印訊息出來*/
@@ -180,6 +181,11 @@ public class BattleSystem : MonoBehaviour
         if (effcts.Status != ConditionID.none)
         {
             target.SetStatus(effcts.Status);
+        }
+        //混亂狀態
+        if (effcts.VolatileStatus != ConditionID.none)
+        {
+            target.SetVolatileStatus(effcts.VolatileStatus);
         }
         yield return ShowStatusChanges(source);
         yield return ShowStatusChanges(target);
