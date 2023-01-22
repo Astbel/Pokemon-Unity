@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -11,6 +12,7 @@ public class Pokemon
     public int Level { get { return level; } }
     public int HP { get; set; }
     public List<Move> Moves { get; set; }
+    public Move CurrentMove { get; set; }
     //預設狀態
     public Dictionary<Stat, int> Stats { get; private set; }
     //狀態提升
@@ -66,7 +68,7 @@ public class Pokemon
         Stats.Add(Stat.SpDefense, Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5);
         Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
 
-        MaxHp = Mathf.FloorToInt((Base.Speed * Level) / 100f) + 10 + Level;
+        MaxHp = Mathf.FloorToInt((Base.MaxHp * Level) / 100f) + 10 + Level;
 
     }
     /*清除狀態*/
@@ -223,8 +225,11 @@ public class Pokemon
     /*隨機技能*/
     public Move GetRandomMove()
     {
-        int r = Random.Range(0, Moves.Count);
-        return Moves[r];
+        /*紀錄pokemon剩餘技能,避免敵人PP用完還使用該技能*/
+        var moveWithPP =Moves.Where(x=>x.PP>0).ToList();
+
+        int r = Random.Range(0, moveWithPP.Count);
+        return moveWithPP[r];
     }
 
     /*戰鬥結束後清除buff提升或降低效果*/

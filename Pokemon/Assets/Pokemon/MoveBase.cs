@@ -17,6 +17,7 @@ public class MoveBase : ScriptableObject
     [SerializeField] int accuracy;     //命中率
     [SerializeField] bool alwaysHits;  //必中技能
     [SerializeField] int pp;
+    [SerializeField] int priority;
     [SerializeField] MoveCategory category;
     [SerializeField] MoveEffects effects;
     [SerializeField] MoveTarget target;
@@ -49,6 +50,11 @@ public class MoveBase : ScriptableObject
     {
         get { return pp; }
     }
+    public int Priority
+    {
+        get { return priority; }
+    }
+
     public List<SecondaryEffects> SecondaryEffects { get { return secondaryEffects; } }
     public MoveEffects Effects { get { return effects; } }
     public MoveTarget Target { get { return target; } }

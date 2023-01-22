@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BattleState { Start, ActionSelection, MoveSelection, PerformMove, Busy, PartySelection, BattleOver }
+public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartySelection, BattleOver }
+public enum BattleAction { Move, SwitchPokemon, UseItem, Run }
 public class BattleSystem : MonoBehaviour
 {
 
@@ -15,6 +16,7 @@ public class BattleSystem : MonoBehaviour
 
     public event Action<bool> OnBattleOver;
     BattleState state;  //回合制狀態機
+    BattleState? prevState;  //回合制狀態機
     int currentAction; //選單變數偵測
     int currentMove; //技能選單變數偵測
     int currentMember;//party 選單中變數
@@ -45,7 +47,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return dialogBox.TypeDialog($"A wild {enemyUnit.Pokemon.Base.Name}  appeared.");
         /*確認誰先攻*/
-        ChooseFirstTurn();
+        ActionSelection();
 
     }
     /*確認戰鬥是否結束*/
@@ -81,30 +83,63 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableDialogText(false);
         dialogBox.EnableMoveSelector(true);
     }
-
-    /*對話介面顯示玩家技能*/
-    IEnumerator PlayerMove()
+    IEnumerator RunTurns(BattleAction playerAction)
     {
-        state = BattleState.PerformMove; //避免腳色在這時候可以選技能
+        state = BattleState.RunningTurn;
 
-        var move = playerUnit.Pokemon.Moves[currentMove];
+        if (playerAction == BattleAction.Move)
+        {
+            playerUnit.Pokemon.CurrentMove = playerUnit.Pokemon.Moves[currentMove];
+            enemyUnit.Pokemon.CurrentMove = enemyUnit.Pokemon.GetRandomMove();
+            /*設置優先權*/
+            int playerMovePriority = playerUnit.Pokemon.CurrentMove.Base.Priority;
+            int enemyMovePriority = enemyUnit.Pokemon.CurrentMove.Base.Priority;
+            //確認哪隻先
+            bool playerGoesFirst = true;
+            if (enemyMovePriority > playerMovePriority)
+                playerGoesFirst = false;
+            else if (enemyMovePriority == playerMovePriority)
+                playerGoesFirst = playerUnit.Pokemon.Speed >= enemyUnit.Pokemon.Speed;
 
-        yield return RunMove(playerUnit, enemyUnit, move);
-        /*檢查狀態是否為戰鬥狀態是否被RunMove跟換,如果還在戰鬥階段則繼續回合制下一輪*/
-        if (state == BattleState.PerformMove)
-            StartCoroutine(EnemyMove());
 
-    }
-    /*敵人動作*/
-    IEnumerator EnemyMove()
-    {
-        state = BattleState.PerformMove;
+            //回傳誰先
+            var firstUnit = (playerGoesFirst) ? playerUnit : enemyUnit;
+            var secondUnit = (playerGoesFirst) ? enemyUnit : playerUnit;
 
-        var move = enemyUnit.Pokemon.GetRandomMove();
+            var secondaryPokemon = secondUnit.Pokemon;
 
-        yield return RunMove(enemyUnit, playerUnit, move);
-        /*檢查狀態是否為戰鬥狀態是否被RunMove跟換,如果還在戰鬥階段則繼續回合制下一輪*/
-        if (state == BattleState.PerformMove)
+            //第一回合先動的人
+            yield return RunMove(firstUnit, secondUnit, firstUnit.Pokemon.CurrentMove);
+            yield return RunAfterTurn(firstUnit);
+            //確保整個回合結束當State整個結束才算是這個回合結束
+            if (state == BattleState.BattleOver) yield break;
+
+            if (secondaryPokemon.HP > 0)
+            {
+                //第一回合後面動作
+                yield return RunMove(secondUnit, firstUnit, secondUnit.Pokemon.CurrentMove);
+                yield return RunAfterTurn(secondUnit);
+                //確保整個回合結束當State整個結束才算是這個回合結束
+                if (state == BattleState.BattleOver) yield break;
+            }
+        }
+        /*如果玩家切換*/
+        else
+        {
+            if (playerAction == BattleAction.SwitchPokemon)
+            {
+                var selectedMember = playerParty.Pokemons[currentMember];
+                state = BattleState.Busy;    /*狀態改為busy避免玩家一直A造成誤動作*/
+                yield return SwitchPokemon(selectedMember);
+            }
+            //Enemy Turn
+            var enemyMove = enemyUnit.Pokemon.GetRandomMove();
+            yield return RunMove(enemyUnit, playerUnit, enemyMove);
+            yield return RunAfterTurn(enemyUnit);
+            //確保整個回合結束當State整個結束才算是這個回合結束
+            if (state == BattleState.BattleOver) yield break;
+        }
+        if (state != BattleState.BattleOver)
             ActionSelection();
     }
     /*Move function for player and enemy*/
@@ -133,7 +168,7 @@ public class BattleSystem : MonoBehaviour
             /*判斷是否是status技能還是傷害技能*/
             if (move.Base.Category == MoveCategory.Status)
             {
-                yield return RunMoveEffects(move.Base.Effects, sourceUnit.Pokemon, targetUnit.Pokemon,move.Base.Target);
+                yield return RunMoveEffects(move.Base.Effects, sourceUnit.Pokemon, targetUnit.Pokemon, move.Base.Target);
             }
             else  /*傷害技能*/
             {
@@ -150,7 +185,7 @@ public class BattleSystem : MonoBehaviour
                 {
                     var rnd = UnityEngine.Random.Range(1, 101);
                     if (rnd <= secondary.Chance)
-                        yield return RunMoveEffects(secondary, sourceUnit.Pokemon, targetUnit.Pokemon,secondary.Target);
+                        yield return RunMoveEffects(secondary, sourceUnit.Pokemon, targetUnit.Pokemon, secondary.Target);
                 }
             }
             /*判定是否陣亡,如果陣亡等待兩秒執行結束戰鬥回合*/
@@ -167,19 +202,6 @@ public class BattleSystem : MonoBehaviour
         else
         {
             yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name}'s attack missed");
-        }
-        //中毒 燒傷會在每一回合觸發然後種異常狀態的pokemon有可能昏厥
-        sourceUnit.Pokemon.OnAfterTurn();
-        yield return ShowStatusChanges(sourceUnit.Pokemon);
-        yield return sourceUnit.Hud.UpdateHP();
-        if (sourceUnit.Pokemon.HP <= 0)
-        {
-            yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} Fainted");
-            sourceUnit.PlayFaintAnimation();
-            yield return new WaitForSeconds(2f);
-
-            CheckForBattleOver(sourceUnit);
-
         }
     }
     /*狀態Buff*/
@@ -206,6 +228,30 @@ public class BattleSystem : MonoBehaviour
         yield return ShowStatusChanges(source);
         yield return ShowStatusChanges(target);
     }
+    /*狀態異常在回合結束後才執行*/
+    IEnumerator RunAfterTurn(BattleUnit sourceUnit)
+    {
+        /*戰鬥結束後不執行*/
+        if (state == BattleState.BattleOver) yield break;
+        /*避免在選單過程中狀態機位切換回去敵人又動作,等待狀態機再切回RunningTurn*/
+        yield return new WaitUntil(() => state == BattleState.RunningTurn);
+        //中毒 燒傷會在每一回合觸發然後種異常狀態的pokemon有可能昏厥
+        sourceUnit.Pokemon.OnAfterTurn();
+        yield return ShowStatusChanges(sourceUnit.Pokemon);
+        yield return sourceUnit.Hud.UpdateHP();
+        if (sourceUnit.Pokemon.HP <= 0)
+        {
+            yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} Fainted");
+            sourceUnit.PlayFaintAnimation();
+            yield return new WaitForSeconds(2f);
+
+            CheckForBattleOver(sourceUnit);
+
+        }
+    }
+
+
+
 
     /*招式命中率*/
     bool CheckIfMoveHits(Move move, Pokemon source, Pokemon target)
@@ -317,6 +363,7 @@ public class BattleSystem : MonoBehaviour
             else if (currentAction == 2)
             {
                 //Party
+                prevState = state;
                 OpenPartyScreen();
             }
             else if (currentAction == 3)
@@ -358,9 +405,13 @@ public class BattleSystem : MonoBehaviour
         /*當選擇技能時*/
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            //當pp等於0無法使用技能
+            var move = playerUnit.Pokemon.Moves[currentMove];
+            if (move.PP == 0) return;
+
             dialogBox.EnableMoveSelector(false);
             dialogBox.EnableDialogText(true);
-            StartCoroutine(PlayerMove());
+            StartCoroutine(RunTurns(BattleAction.Move));
         }
         /*退出案件*/
         else if (Input.GetKeyDown(KeyCode.X))
@@ -418,10 +469,18 @@ public class BattleSystem : MonoBehaviour
             }
             /*當選單結束時關閉選單*/
             partyScreen.gameObject.SetActive(false);
-            /*狀態改為busy避免玩家一直A造成誤動作*/
-            state = BattleState.Busy;
-            StartCoroutine(SwitchPokemon(selectedMember));
 
+            if (prevState == BattleState.ActionSelection)
+            {
+                prevState = null;
+                StartCoroutine(RunTurns(BattleAction.SwitchPokemon));
+            }
+            else
+            {
+                /*狀態改為busy避免玩家一直A造成誤動作*/
+                state = BattleState.Busy;
+                StartCoroutine(SwitchPokemon(selectedMember));
+            }
         }
         /*返回鍵*/
         else if (Input.GetKeyDown(KeyCode.X))
@@ -436,25 +495,19 @@ public class BattleSystem : MonoBehaviour
     */
     IEnumerator SwitchPokemon(Pokemon newPokemon)
     {
-        bool currentPokemonFainted = true;
         /*確認玩家pokemon是否HP大於0才播放切換*/
         if (playerUnit.Pokemon.HP > 0)
         {
-            currentPokemonFainted = false;
             yield return dialogBox.TypeDialog($"Come back{playerUnit.Pokemon.Base.Name}");
             playerUnit.PlayFaintAnimation();
             yield return new WaitForSeconds(2f);
         }
-
         /*替換寶可夢*/
         playerUnit.Setup(newPokemon);
         dialogBox.SetMoveNames(newPokemon.Moves);
         yield return dialogBox.TypeDialog($"I Chose you {newPokemon.Base.Name}!.");
-
-        if (currentPokemonFainted)
-            ChooseFirstTurn();
-        else
-            StartCoroutine(EnemyMove());
+        /*把狀態在此轉回RunningTurn,讓RunningTurn來決定誰是這回合先動作*/
+        state = BattleState.RunningTurn;
     }
 
     /*提升降低狀態Buff訊息*/
@@ -470,13 +523,6 @@ public class BattleSystem : MonoBehaviour
 
         }
     }
-    /*檢查速度來決定誰的pokemon先動*/
-    void ChooseFirstTurn()
-    {
-        if (playerUnit.Pokemon.Speed >= enemyUnit.Pokemon.Speed)
-            ActionSelection();
-        else
-            StartCoroutine(EnemyMove());
-    }
+
 
 }

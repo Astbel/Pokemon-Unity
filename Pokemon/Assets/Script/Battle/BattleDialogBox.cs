@@ -65,7 +65,7 @@ public class BattleDialogBox : MonoBehaviour
     }
 
     /*技能選擇選單顏色提示*/
-    public void UpdateMoveSelection(int selectedMove,Move move)
+    public void UpdateMoveSelection(int selectedMove, Move move)
     {
         for (int i = 0; i < moveTexts.Count; ++i)
         {
@@ -74,9 +74,23 @@ public class BattleDialogBox : MonoBehaviour
             else
                 moveTexts[i].color = Color.black;
         }
-         /*顯示技能PP / Type*/
+        /*顯示技能PP / Type*/
         ppText.text = $"PP {move.PP}/{move.Base.PP} ";
         typeText.text = move.Base.Type.ToString();
+
+        /*如果PP為0,如果是MAX的一半變為黃色*/
+        if (move.PP == 0)
+        {
+            ppText.color = Color.red;
+        }
+        else if (move.PP <= move.Base.PP/2)
+        {
+            ppText.color = Color.yellow;
+        }
+        else
+        {
+            ppText.color = Color.black;
+        }
     }
 
     /*Pokemon 技能顯示如果檢測技能是否少於4個如果比較少則顯示"-"*/
