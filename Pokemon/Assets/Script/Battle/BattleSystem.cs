@@ -123,32 +123,50 @@ public class BattleSystem : MonoBehaviour
         //當使用技能時要減少PP
         move.PP--;
         yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} used {move.Base.Name}");
-        /*攻擊動畫以及敵人受傷動畫*/
-        sourceUnit.PlayAttackAnimation();
-        yield return new WaitForSeconds(1f);
-        targetUnit.PlayHitAnimation();
-        /*判斷是否是status技能還是傷害技能*/
-        if (move.Base.Category == MoveCategory.Status)
+        //確認招式是否命中
+        if (CheckIfMoveHits(move, sourceUnit.Pokemon, targetUnit.Pokemon))
         {
-            yield return RunMoveEffects(move, sourceUnit.Pokemon, targetUnit.Pokemon);
-        }
-        else  /*傷害技能*/
-        {
-            /*計算傷害*/
-            var damageDetails = targetUnit.Pokemon.TakeDamage(move, sourceUnit.Pokemon);
-            /*跟新Hp*/
-            yield return targetUnit.Hud.UpdateHP();
-            yield return ShowDamageDetails(damageDetails);
-        }
-        /*判定是否陣亡,如果陣亡等待兩秒執行結束戰鬥回合*/
-        if (targetUnit.Pokemon.HP <= 0)
-        {
-            yield return dialogBox.TypeDialog($"{targetUnit.Pokemon.Base.Name} Fainted");
-            targetUnit.PlayFaintAnimation();
-            yield return new WaitForSeconds(2f);
+            /*攻擊動畫以及敵人受傷動畫*/
+            sourceUnit.PlayAttackAnimation();
+            yield return new WaitForSeconds(1f);
+            targetUnit.PlayHitAnimation();
+            /*判斷是否是status技能還是傷害技能*/
+            if (move.Base.Category == MoveCategory.Status)
+            {
+                yield return RunMoveEffects(move.Base.Effects, sourceUnit.Pokemon, targetUnit.Pokemon,move.Base.Target);
+            }
+            else  /*傷害技能*/
+            {
+                /*計算傷害*/
+                var damageDetails = targetUnit.Pokemon.TakeDamage(move, sourceUnit.Pokemon);
+                /*跟新Hp*/
+                yield return targetUnit.Hud.UpdateHP();
+                yield return ShowDamageDetails(damageDetails);
+            }
+            /*招式異常狀態檢測,確認招式屬性是否大於0*/
+            if (move.Base.SecondaryEffects != null && move.Base.SecondaryEffects.Count > 0 && targetUnit.Pokemon.HP > 0)
+            {
+                foreach (var secondary in move.Base.SecondaryEffects)
+                {
+                    var rnd = UnityEngine.Random.Range(1, 101);
+                    if (rnd <= secondary.Chance)
+                        yield return RunMoveEffects(secondary, sourceUnit.Pokemon, targetUnit.Pokemon,secondary.Target);
+                }
+            }
+            /*判定是否陣亡,如果陣亡等待兩秒執行結束戰鬥回合*/
+            if (targetUnit.Pokemon.HP <= 0)
+            {
+                yield return dialogBox.TypeDialog($"{targetUnit.Pokemon.Base.Name} Fainted");
+                targetUnit.PlayFaintAnimation();
+                yield return new WaitForSeconds(2f);
 
-            CheckForBattleOver(targetUnit);
+                CheckForBattleOver(targetUnit);
 
+            }
+        }
+        else
+        {
+            yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name}'s attack missed");
         }
         //中毒 燒傷會在每一回合觸發然後種異常狀態的pokemon有可能昏厥
         sourceUnit.Pokemon.OnAfterTurn();
@@ -165,32 +183,56 @@ public class BattleSystem : MonoBehaviour
         }
     }
     /*狀態Buff*/
-    IEnumerator RunMoveEffects(Move move, Pokemon source, Pokemon target)
+    IEnumerator RunMoveEffects(MoveEffects effects, Pokemon source, Pokemon target, MoveTarget moveTarget)
     {
-        /*狀態技能*/
-        var effcts = move.Base.Effects;
         //確認是否有提升或降低能力
-        if (effcts.Boosts != null)
+        if (effects.Boosts != null)
         {
-            if (move.Base.Targetget == MoveTarget.Self)
-                source.ApplyBoost(effcts.Boosts);  //提升我方
+            if (moveTarget == MoveTarget.Self)
+                source.ApplyBoost(effects.Boosts);  //提升我方
             else
-                target.ApplyBoost(effcts.Boosts);  //降低敵方
+                target.ApplyBoost(effects.Boosts);  //降低敵方
         }
         //異常狀態
-        if (effcts.Status != ConditionID.none)
+        if (effects.Status != ConditionID.none)
         {
-            target.SetStatus(effcts.Status);
+            target.SetStatus(effects.Status);
         }
         //混亂狀態
-        if (effcts.VolatileStatus != ConditionID.none)
+        if (effects.VolatileStatus != ConditionID.none)
         {
-            target.SetVolatileStatus(effcts.VolatileStatus);
+            target.SetVolatileStatus(effects.VolatileStatus);
         }
         yield return ShowStatusChanges(source);
         yield return ShowStatusChanges(target);
     }
 
+    /*招式命中率*/
+    bool CheckIfMoveHits(Move move, Pokemon source, Pokemon target)
+    {
+        /*必中技能直接回傳true不計算命中迴避*/
+        if (move.Base.AlwaysHits)
+            return true;
+        /*計算命中率*/
+        float moveAccuracy = move.Base.Accuracy;
+
+        int accuracy = source.StatsBoost[Stat.Accuracy];
+        int evasion = source.StatsBoost[Stat.Evasion];
+
+        var boostValue = new float[] { 1f, 4f / 3f, 5f / 3f, 2f, 7f / 3f, 8f / 3f, 3f };
+        //提升或降低命中
+        if (accuracy > 0)
+            moveAccuracy *= boostValue[accuracy];
+        else
+            moveAccuracy /= boostValue[-accuracy];
+        //提升或降低迴避
+        if (evasion > 0)
+            moveAccuracy /= boostValue[evasion];
+        else
+            moveAccuracy *= boostValue[-evasion];
+
+        return UnityEngine.Random.Range(1, 101) <= moveAccuracy;
+    }
 
     /*確認昏厥pokemon是否為玩家如果是玩家在檢測是否還有剩餘pokemon,如果有擇繼續沒有停止場景*/
     void CheckForBattleOver(BattleUnit faintedUnit)

@@ -143,7 +143,11 @@ public enum Stat
     Defense,
     SpAttack,
     SpDefense,
-    Speed
+    Speed,
+
+    /*命中迴避率*/
+    Accuracy,
+    Evasion
 }
 
 /*屬性克制*/

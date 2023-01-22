@@ -15,11 +15,19 @@ MonoBehaviour:
   name: Ice Wind
   description: 
   type: 6
-  power: 0
+  power: 50
   accuracy: 100
+  alwaysHits: 0
   pp: 10
-  category: 2
+  category: 0
   effects:
     boosts: []
     status: 5
+    volatileStatus: 0
   target: 0
+  secondaryEffects:
+  - boosts: []
+    status: 5
+    volatileStatus: 0
+    chance: 50
+    target: 0

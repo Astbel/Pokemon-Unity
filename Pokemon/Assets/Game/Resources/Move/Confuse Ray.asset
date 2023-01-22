@@ -12,15 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f706d07381aa15349ab74322794ee7cf, type: 3}
   m_Name: Confuse Ray
   m_EditorClassIdentifier: 
-  name: 
+  name: Confuse Ray
   description: 
-  type: 0
+  type: 11
   power: 0
-  accuracy: 0
-  pp: 0
-  category: 0
+  accuracy: 50
+  alwaysHits: 0
+  pp: 20
+  category: 2
   effects:
     boosts: []
     status: 0
-    volatileStatus: 0
+    volatileStatus: 6
   target: 0

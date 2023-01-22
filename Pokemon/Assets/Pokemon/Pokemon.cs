@@ -80,6 +80,8 @@ public class Pokemon
             {Stat.SpAttack,0},
             {Stat.SpDefense,0},
             {Stat.Speed,0},
+            {Stat.Accuracy,0},
+            {Stat.Evasion,0},
         };
     }
 
@@ -112,11 +114,11 @@ public class Pokemon
 
             /*顯示腳色提升或降低狀態Buff訊息*/
             if (boost > 0)
-                StatusChanges.Enqueue($"{Base.Name}'s{stat} rose!");
+                StatusChanges.Enqueue($"{Base.Name}'s {stat}  rose!");
             else
-                StatusChanges.Enqueue($"{Base.Name}'s{stat} fell!");
+                StatusChanges.Enqueue($"{Base.Name}'s {stat}  fell!");
             /*Debug 訊息來確認是否有提升跟降低狀態*/
-            Debug.Log($"{stat}has been boosted to{StatsBoost[stat]}");
+            Debug.Log($"{stat} has been boosted to {StatsBoost[stat]}");
         }
     }
 

@@ -14,11 +14,13 @@ public class MoveBase : ScriptableObject
     [SerializeField] string description;
     [SerializeField] PokemonType type;
     [SerializeField] int power;
-    [SerializeField] int accuracy;
+    [SerializeField] int accuracy;     //命中率
+    [SerializeField] bool alwaysHits;  //必中技能
     [SerializeField] int pp;
     [SerializeField] MoveCategory category;
     [SerializeField] MoveEffects effects;
     [SerializeField] MoveTarget target;
+    [SerializeField] List<SecondaryEffects> secondaryEffects;
 
     public string Name
     {
@@ -39,17 +41,17 @@ public class MoveBase : ScriptableObject
     {
         get { return accuracy; }
     }
-
+    public bool AlwaysHits
+    {
+        get { return alwaysHits; }
+    }
     public int PP
     {
         get { return pp; }
     }
-
+    public List<SecondaryEffects> SecondaryEffects { get { return secondaryEffects; } }
     public MoveEffects Effects { get { return effects; } }
-
-    public MoveTarget Targetget { get { return target; } }
-
-
+    public MoveTarget Target { get { return target; } }
     public MoveCategory Category { get { return category; } }
 }
 
@@ -83,6 +85,19 @@ public class StatBoost
     public Stat stat;
     public int boost;
 }
+
+/*招式第二效果應用在十萬伏特  極凍光線  噴射火焰 有機率造成異常狀態*/
+[System.Serializable]
+public class SecondaryEffects : MoveEffects
+{
+    [SerializeField] int chance;
+    [SerializeField] MoveTarget target;
+
+    public int Chance { get { return chance; } }
+    public MoveTarget Target { get { return target; } }
+
+}
+
 
 
 
