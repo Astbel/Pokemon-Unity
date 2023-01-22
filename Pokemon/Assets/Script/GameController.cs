@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle }
+public enum GameState { FreeRoam, Battle, Dialog }
 
 /*
 判斷遊戲狀態目前為誰控制避免同時腳色移動
@@ -25,6 +25,21 @@ public class GameController : MonoBehaviour
     {
         playerController.OnEncountered += StartBattle;
         battleSystem.OnBattleOver += EndBattle;
+
+        /*Lamda function*/
+        DialogManger.Instance.OnShowDialog += () =>
+        {
+            state = GameState.Dialog;
+        };
+        
+        DialogManger.Instance.OnCloseDialog += () =>
+        {
+            if(state==GameState.Dialog)
+            state = GameState.FreeRoam;
+        };
+
+
+
     }
 
     void StartBattle()
@@ -60,5 +75,10 @@ public class GameController : MonoBehaviour
         {
             battleSystem.HandleUpdate();
         }
+        else if (state == GameState.Dialog)
+        {
+            DialogManger.Instance.HandleUpdate();
+        }
+
     }
 }

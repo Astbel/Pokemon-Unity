@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     private Animator animator;
     public LayerMask solidObjectsLayer;
+    public LayerMask InteractableLayer;
     public LayerMask grassLayer;
 
     /*產生一個委派 事件同於C# delegate*/
@@ -63,6 +64,23 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("isMoving", isMoving);
+
+        if (Input.GetKeyDown(KeyCode.Z))
+            Interact();
+    }
+
+    void Interact()
+    {
+        var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        var interacPos = transform.position + facingDir;
+
+        //Debug.DrawLine(transform.position, interacPos, Color.red, 0.5f);
+        /*檢測附近半圓內是否有InteractableLayer*/
+        var collider = Physics2D.OverlapCircle(interacPos, 0.3f, InteractableLayer);
+        if (collider != null)
+        {
+            collider.GetComponent<Interactable>()?.Interact();
+        }
     }
 
     IEnumerator Move(Vector3 targetPos)
@@ -85,7 +103,7 @@ public class PlayerController : MonoBehaviour
     private bool IsWalkable(Vector3 targetPos)
     {
 
-        if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer) != null)
+        if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer | InteractableLayer) != null)
         {
             return false;
         }
