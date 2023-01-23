@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Animator animator;
+    // private Animator animator;
+    private CharacterAnim animator;
     public LayerMask solidObjectsLayer;
     public LayerMask InteractableLayer;
     public LayerMask grassLayer;
-
+    private Character character;
     /*產生一個委派 事件同於C# delegate*/
     /*Delegate就是 C++ pointer function*/
     public event Action OnEncountered;
@@ -18,18 +19,14 @@ public class PlayerController : MonoBehaviour
     private bool isMoving;
     private Vector2 input;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// </summary>
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        // animator = GetComponent<Animator>();
+        animator = GetComponent<CharacterAnim>();
+      //  character = GetComponent<Character>();
     }
 
     // Update is called once per frame
@@ -51,8 +48,10 @@ public class PlayerController : MonoBehaviour
 
             if (input != Vector2.zero)
             {
-                animator.SetFloat("moveX", input.x);
-                animator.SetFloat("moveY", input.y);
+                animator.MoveX = input.x;
+                animator.MoveY = input.y;
+                // animator.SetFloat("moveX", input.x);
+                // animator.SetFloat("moveY", input.y);
                 var targetPos = transform.position;
                 targetPos.x += input.x;
                 targetPos.y += input.y;
@@ -60,18 +59,20 @@ public class PlayerController : MonoBehaviour
                 {
                     StartCoroutine(Move(targetPos));
                 }
+                // character.Move(input);
             }
         }
 
-        animator.SetBool("isMoving", isMoving);
-
+        //   animator.SetBool("isMoving", isMoving);
+        animator.IsMoving =isMoving;
         if (Input.GetKeyDown(KeyCode.Z))
             Interact();
     }
 
     void Interact()
     {
-        var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        // var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+        var facingDir = new Vector3(animator.MoveX, animator.MoveY);
         var interacPos = transform.position + facingDir;
 
         //Debug.DrawLine(transform.position, interacPos, Color.red, 0.5f);
@@ -116,7 +117,8 @@ public class PlayerController : MonoBehaviour
         {
             if (UnityEngine.Random.Range(1, 101) <= 10)
             {
-                animator.SetBool("isMoving", false);
+                // animator.SetBool("isMoving", false);
+                animator.IsMoving = false;
                 OnEncountered();
             }
         }
