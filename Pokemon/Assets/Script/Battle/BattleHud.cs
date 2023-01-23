@@ -52,7 +52,6 @@ public class BattleHud : MonoBehaviour
         }
     }
 
-
     //HP Bar Update
     public IEnumerator UpdateHP()
     {

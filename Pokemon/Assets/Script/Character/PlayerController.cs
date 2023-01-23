@@ -5,12 +5,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] string name;
+    [SerializeField] Sprite sprite;
     private Character character;
     /*產生一個委派 事件同於C# delegate*/
     /*Delegate就是 C++ pointer function*/
     public event Action OnEncountered;      //草叢事件
     public event Action<Collider2D> OnEnterTrainerView;//訓練家事件
     private Vector2 input;
+
+    public Sprite Sprite { get => sprite; }
+
+    public string Name { get => name; }
+
 
     private void Awake()
     {

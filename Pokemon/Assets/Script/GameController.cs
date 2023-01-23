@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog,Cutscene }
+public enum GameState { FreeRoam, Battle, Dialog, Cutscene }
 
 /*
 判斷遊戲狀態目前為誰控制避免同時腳色移動
 */
 public class GameController : MonoBehaviour
 {
+    public static GameController Instance { get; private set; }
+
     [SerializeField] PlayerController playerController;
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
@@ -18,6 +20,7 @@ public class GameController : MonoBehaviour
     /*Game start init*/
     private void Awake()
     {
+        Instance = this;
         ConditionDB.Init();
     }
 
@@ -30,10 +33,10 @@ public class GameController : MonoBehaviour
         playerController.OnEnterTrainerView += (Collider2D trainerCollider) =>
         {
             var tranier = trainerCollider.GetComponentInParent<TrainerController>();
-            if(tranier!=null)
+            if (tranier != null)
             {
-                state=GameState.Cutscene;
-             StartCoroutine(tranier.TriggerTrainerBattle(playerController));
+                state = GameState.Cutscene;
+                StartCoroutine(tranier.TriggerTrainerBattle(playerController));
             }
         };
 
@@ -65,6 +68,20 @@ public class GameController : MonoBehaviour
         battleSystem.StartBattle(playerParty, wildPokemon);
 
     }
+    /*Trainer Battle*/
+    public void StartTrainerBattle(TrainerController trainer)
+    {
+        state = GameState.Battle;
+        battleSystem.gameObject.SetActive(true);
+        worldCamera.gameObject.SetActive(false);
+
+        var playerParty = playerController.GetComponent<PokemonParty>();
+        var trainerParty = trainer.GetComponent<PokemonParty>();
+
+        battleSystem.StartTrainerBattle(playerParty, trainerParty);
+
+    }
+
 
     void EndBattle(bool won)
     {

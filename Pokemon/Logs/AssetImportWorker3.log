@@ -15,7 +15,7 @@ C:/Users/Astbel/Desktop/Poke_unity/Pokemon
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-55094
+50700
 Successfully changed project path to: C:/Users/Astbel/Desktop/Poke_unity/Pokemon
 C:/Users/Astbel/Desktop/Poke_unity/Pokemon
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/Astbel/Desktop/Poke_unity/Pokemon
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [27868] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 3227425860 [EditorId] 3227425860 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [3572] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 3839384600 [EditorId] 3839384600 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [27868] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 3227425860 [EditorId] 3227425860 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [3572] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 3839384600 [EditorId] 3839384600 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 126.19 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 117.42 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path D:/Uinty2019/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -67,89 +67,89 @@ Initialize mono
 Mono path[0] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56864
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56912
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Uinty2019/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002129 seconds.
+Registered in 0.002498 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 105.81 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 108.43 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.508 seconds
+- Completed reload, in  0.572 seconds
 Domain Reload Profiling:
-	ReloadAssembly (509ms)
-		BeginReloadAssembly (52ms)
+	ReloadAssembly (572ms)
+		BeginReloadAssembly (59ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (379ms)
-			LoadAssemblies (51ms)
+		EndReloadAssembly (429ms)
+			LoadAssemblies (58ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (78ms)
+			SetupTypeCache (92ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (20ms)
-			SetupLoadedEditorAssemblies (241ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (275ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (106ms)
+				RefreshPlugins (109ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (94ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
+				ProcessInitializeOnLoadAttributes (116ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007476 seconds.
+Registered in 0.008155 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 115.04 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 113.96 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.983 seconds
+- Completed reload, in  1.064 seconds
 Domain Reload Profiling:
-	ReloadAssembly (984ms)
-		BeginReloadAssembly (106ms)
+	ReloadAssembly (1065ms)
+		BeginReloadAssembly (101ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (779ms)
-			LoadAssemblies (80ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (860ms)
+			LoadAssemblies (77ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (190ms)
+			SetupTypeCache (214ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (56ms)
-			SetupLoadedEditorAssemblies (418ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (483ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (115ms)
-				BeforeProcessingInitializeOnLoad (77ms)
-				ProcessInitializeOnLoadAttributes (188ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				RefreshPlugins (114ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (225ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.21 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.30 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4081 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 46 unused Assets / (229.6 KB). Loaded Objects now: 4535.
-Memory consumption went from 161.0 MB to 160.7 MB.
-Total: 3.061500 ms (FindLiveObjects: 0.274500 ms CreateObjectMapping: 0.106100 ms MarkObjects: 2.535400 ms  DeleteObjects: 0.144700 ms)
+Memory consumption went from 160.9 MB to 160.7 MB.
+Total: 3.510700 ms (FindLiveObjects: 0.425100 ms CreateObjectMapping: 0.187100 ms MarkObjects: 2.743600 ms  DeleteObjects: 0.154200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,82 +163,76 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 14930.576211 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/giovanni.png
-  artifactKey: Guid(0f2dc5e0d45de2a43b07698f83b31348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/giovanni.png using Guid(0f2dc5e0d45de2a43b07698f83b31348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de7b87f44cb1a7b620c20674f9474f62') in 0.157457 seconds 
+  Time since last request: 32671.500650 seconds.
+  path: Assets/Sprite/Trianers/Hgss/chuck3.png
+  artifactKey: Guid(d6f311e18d7e6ac4f9533ff879f996cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/chuck3.png using Guid(d6f311e18d7e6ac4f9533ff879f996cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3ca329a73fac03b3ddc189cadcf9384') in 0.160148 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000019 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/koga2.png
-  artifactKey: Guid(6b40eab3e1cdb7541a38b2ed2b662883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/koga2.png using Guid(6b40eab3e1cdb7541a38b2ed2b662883) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34563dcf5ca6768abc7bda6f10c8d4f2') in 0.097184 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/karen1.png
-  artifactKey: Guid(c92b35e85c9a1064c989385ef8e78f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/karen1.png using Guid(c92b35e85c9a1064c989385ef8e78f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b1d623519d4eefbc3fa44b94b3c2eca') in 0.007807 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.228749 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/loveycouple.png
-  artifactKey: Guid(3694685437503ff4682d6f91db8c0eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/loveycouple.png using Guid(3694685437503ff4682d6f91db8c0eed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73cbcb5505176b690258928b67b3fdf7') in 0.008222 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/male.png
-  artifactKey: Guid(918e9b355dafbfc469e04e5f24dae154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/male.png using Guid(918e9b355dafbfc469e04e5f24dae154) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4baac276f05cb9e33ecdc6958016a1a1') in 0.007803 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.161426 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/morty3.png
-  artifactKey: Guid(83c6de001c8275b42807f27aa83abcc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/morty3.png using Guid(83c6de001c8275b42807f27aa83abcc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90895dddd686fe14f7ad37d616323776') in 0.009721 seconds 
+  path: Assets/Sprite/Trianers/Hgss/bugsy3.png
+  artifactKey: Guid(f8c582e91de2d144d9edd60e11bfa9d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/bugsy3.png using Guid(f8c582e91de2d144d9edd60e11bfa9d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '189232a2349cdf763a4dc511ed1dd908') in 0.025529 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000016 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/pokemaniac.png
-  artifactKey: Guid(29d35a94e54cc974f9455716dc28499c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/pokemaniac.png using Guid(29d35a94e54cc974f9455716dc28499c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48df6cbe9cb0d9effa3c5e97ac554253') in 0.009228 seconds 
+  path: Assets/Sprite/Trianers/Hgss/clair1.png
+  artifactKey: Guid(69451291aa9c2714997460adb8b550e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/clair1.png using Guid(69451291aa9c2714997460adb8b550e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5a2b5f035f589cc85ea8d4b55ad8fb1') in 0.054719 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/pryce3.png
-  artifactKey: Guid(0d2160309880ced4c98e2ce99f2e8a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/pryce3.png using Guid(0d2160309880ced4c98e2ce99f2e8a33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9102531c045f9e0ef82677ca3736b752') in 0.007992 seconds 
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/Trianers/Hgss/erika3.png
+  artifactKey: Guid(008248aa9a942ec4e841840bcdd5c66d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/erika3.png using Guid(008248aa9a942ec4e841840bcdd5c66d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe4e4f37756dc82288bbc75c58b065a7') in 0.035200 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.378139 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/rocketgruntm.png
-  artifactKey: Guid(c2610d1747cae914e8114a596c9b30a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/rocketgruntm.png using Guid(c2610d1747cae914e8114a596c9b30a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22ee035c668f14a5b8d1b6c3734ecd7c') in 0.009923 seconds 
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprite/Trianers/Hgss/falkner2.png
+  artifactKey: Guid(201dcb0b6e23114469b25321287a6ae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/falkner2.png using Guid(201dcb0b6e23114469b25321287a6ae8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b133f91f9eef87de8c74eac57ed5ac9') in 0.063901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/Trianers/Hgss/erika1.png
+  artifactKey: Guid(8dc7348b5df005f4b91a43b647ea13a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/erika1.png using Guid(8dc7348b5df005f4b91a43b647ea13a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da376a9edb6e215aff7ab0b346a04928') in 0.008415 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/Trianers/Hgss/falkner3.png
+  artifactKey: Guid(dc633d7376e6323438f6c9157f87ce30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/falkner3.png using Guid(dc633d7376e6323438f6c9157f87ce30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b73bdb8348a3f22229639936f699584') in 0.007358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/Trianers/Hgss/ash1.png
+  artifactKey: Guid(29abe2c5829b8cf4292cd595a4bd4b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/ash1.png using Guid(29abe2c5829b8cf4292cd595a4bd4b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '849b6535fbe08df8d10a1afb84adfbf5') in 0.007645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite/Trianers/Hgss/brock1.png
+  artifactKey: Guid(b92ec8a43d1b46e4ab92de8cbc5eca86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/brock1.png using Guid(b92ec8a43d1b46e4ab92de8cbc5eca86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11ffd7a6188d5057951597874308c1e6') in 0.007604 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/Trianers/Hgss/clair2.png
+  artifactKey: Guid(46f159c76f3debb47b4777ab6e291b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/clair2.png using Guid(46f159c76f3debb47b4777ab6e291b5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cf80de0f5963aa659db86cbaf8e7bd6') in 0.008520 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/scientist.png
-  artifactKey: Guid(b9978b3646a322348a94636ce42d3dda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/scientist.png using Guid(b9978b3646a322348a94636ce42d3dda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2b20ae14ab46e3ec9317cb4b517c2bb') in 0.011313 seconds 
+  path: Assets/Sprite/Trianers/Hgss/gary1.png
+  artifactKey: Guid(aa313d7427306ed48ad1e0afaac4e6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/gary1.png using Guid(aa313d7427306ed48ad1e0afaac4e6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0e746d629d7604f35851d819b84fee9') in 0.006667 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/sabrina3.png
-  artifactKey: Guid(14c2c98caf91ea24092ffecb492d63b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/sabrina3.png using Guid(14c2c98caf91ea24092ffecb492d63b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b084758c03ed219bf878cc3d7a6443') in 0.011992 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.003038 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/twins.png
-  artifactKey: Guid(631f2ddd011165e4cbd6f7dcd48eaf58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/twins.png using Guid(631f2ddd011165e4cbd6f7dcd48eaf58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce52a92a0f9b68e1168071e9cfc87573') in 0.011680 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Sprite/Trianers/gen4/hgss/will3.png
-  artifactKey: Guid(9bb0167ae00300747bee0053d9695aaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/Trianers/gen4/hgss/will3.png using Guid(9bb0167ae00300747bee0053d9695aaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '515ec4a5462003855d8d79ad415d6620') in 0.012173 seconds 
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite/Trianers/Hgss/bruno2.png
+  artifactKey: Guid(6f71373bbab276f4084a7ec6985401a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/Trianers/Hgss/bruno2.png using Guid(6f71373bbab276f4084a7ec6985401a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88e10fd3442ad47a8d3d11d91fb3e39e') in 0.008037 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
