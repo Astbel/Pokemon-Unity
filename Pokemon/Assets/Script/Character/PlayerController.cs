@@ -5,28 +5,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // private Animator animator;
-    private CharacterAnim animator;
-    public LayerMask solidObjectsLayer;
-    public LayerMask InteractableLayer;
-    public LayerMask grassLayer;
     private Character character;
     /*產生一個委派 事件同於C# delegate*/
     /*Delegate就是 C++ pointer function*/
     public event Action OnEncountered;
 
-    public float move_speed;
-    private bool isMoving;
     private Vector2 input;
 
-    /// <summary>
-    /// Awake is called when the script instance is being loaded.
-    /// </summary>
     private void Awake()
     {
-        // animator = GetComponent<Animator>();
-        animator = GetComponent<CharacterAnim>();
-      //  character = GetComponent<Character>();
+        character = GetComponent<Character>();
     }
 
     // Update is called once per frame
@@ -38,7 +26,7 @@ public class PlayerController : MonoBehaviour
     */
     public void HandleUpdate()
     {
-        if (!isMoving)
+        if (!character.IsMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
@@ -48,77 +36,36 @@ public class PlayerController : MonoBehaviour
 
             if (input != Vector2.zero)
             {
-                animator.MoveX = input.x;
-                animator.MoveY = input.y;
-                // animator.SetFloat("moveX", input.x);
-                // animator.SetFloat("moveY", input.y);
-                var targetPos = transform.position;
-                targetPos.x += input.x;
-                targetPos.y += input.y;
-                if (IsWalkable(targetPos))
-                {
-                    StartCoroutine(Move(targetPos));
-                }
-                // character.Move(input);
+                StartCoroutine(character.Move(input, checkForEncounters));
             }
         }
-
-        //   animator.SetBool("isMoving", isMoving);
-        animator.IsMoving =isMoving;
+        character.HandleUpdate();
         if (Input.GetKeyDown(KeyCode.Z))
             Interact();
     }
 
     void Interact()
     {
-        // var facingDir = new Vector3(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
-        var facingDir = new Vector3(animator.MoveX, animator.MoveY);
+        var facingDir = new Vector3(character.Animator.MoveX, character.Animator.MoveY);
         var interacPos = transform.position + facingDir;
 
         //Debug.DrawLine(transform.position, interacPos, Color.red, 0.5f);
         /*檢測附近半圓內是否有InteractableLayer*/
-        var collider = Physics2D.OverlapCircle(interacPos, 0.3f, InteractableLayer);
+        var collider = Physics2D.OverlapCircle(interacPos, 0.3f, GameLayer.Instance.InteractLayer);
         if (collider != null)
         {
             collider.GetComponent<Interactable>()?.Interact();
         }
     }
 
-    IEnumerator Move(Vector3 targetPos)
-    {
-        isMoving = true;
-
-        while ((targetPos - transform.position).sqrMagnitude > Mathf.Epsilon)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, move_speed * Time.deltaTime);
-            yield return null;
-        }
-        transform.position = targetPos;
-
-        isMoving = false;
-
-        checkForEncounters();
-    }
-
-    /*OverlapCircle 三組參數1.Vector座標 2.Radius 3.LayerMask  根據Vector位置創建Radius一樣大的圓如果再layer範圍內則回傳*/
-    private bool IsWalkable(Vector3 targetPos)
-    {
-
-        if (Physics2D.OverlapCircle(targetPos, 0.1f, solidObjectsLayer | InteractableLayer) != null)
-        {
-            return false;
-        }
-        return true;
-    }
     //遇敵 Random 1~100 當小於10則遇到敵人,新增在遇敵後取消腳色動畫
     private void checkForEncounters()
     {
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, grassLayer) != null)
+        if (Physics2D.OverlapCircle(transform.position, 0.2f, GameLayer.Instance.GrassLayer) != null)
         {
             if (UnityEngine.Random.Range(1, 101) <= 10)
             {
-                // animator.SetBool("isMoving", false);
-                animator.IsMoving = false;
+                character.Animator.IsMoving = false;
                 OnEncountered();
             }
         }

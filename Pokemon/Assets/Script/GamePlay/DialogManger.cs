@@ -13,6 +13,7 @@ public class DialogManger : MonoBehaviour
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
     bool isTyping;
+    public bool IsShowing { get; private set; }
     int currentLine = 0; //計算對話比數
     Dialog dialog;
 
@@ -26,6 +27,8 @@ public class DialogManger : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         OnShowDialog?.Invoke();
+
+        IsShowing = true;
         this.dialog = dialog;
         dialogBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));
@@ -45,6 +48,7 @@ public class DialogManger : MonoBehaviour
             else
             {
                 currentLine = 0;
+                IsShowing = false;
                 dialogBox.SetActive(false);
                 OnCloseDialog?.Invoke();
             }
