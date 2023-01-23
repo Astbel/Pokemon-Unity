@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     private Character character;
     /*產生一個委派 事件同於C# delegate*/
     /*Delegate就是 C++ pointer function*/
-    public event Action OnEncountered;
-
+    public event Action OnEncountered;      //草叢事件
+    public event Action<Collider2D> OnEnterTrainerView;//訓練家事件
     private Vector2 input;
 
     private void Awake()
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
             if (input != Vector2.zero)
             {
-                StartCoroutine(character.Move(input, checkForEncounters));
+                StartCoroutine(character.Move(input, OnMoveOver));
             }
         }
         character.HandleUpdate();
@@ -58,6 +58,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnMoveOver()
+    {
+        checkForEncounters();
+        CheckIfInTrainerView();
+    }
+
+
     //遇敵 Random 1~100 當小於10則遇到敵人,新增在遇敵後取消腳色動畫
     private void checkForEncounters()
     {
@@ -71,4 +78,16 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+
+    private void CheckIfInTrainerView()
+    {
+        var collider = Physics2D.OverlapCircle(transform.position, 0.2f, GameLayer.Instance.FovLayer);
+
+        if (collider != null)
+        {
+            character.Animator.IsMoving = false;
+            OnEnterTrainerView?.Invoke(collider);
+        }
+    }
+
 }

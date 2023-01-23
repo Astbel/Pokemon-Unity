@@ -2,6 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+public enum FacingDirection
+{
+    Up, Down, Right, Left
+}
+
+
 public class CharacterAnim : MonoBehaviour
 {
     //Sprite
@@ -9,7 +17,7 @@ public class CharacterAnim : MonoBehaviour
     [SerializeField] List<Sprite> walkUpSprite;
     [SerializeField] List<Sprite> walkRightSprite;
     [SerializeField] List<Sprite> walkLeftSprite;
-
+    [SerializeField] FacingDirection defaultDirection = FacingDirection.Down;
     //Parameters
     public float MoveX { get; set; }
     public float MoveY { get; set; }
@@ -34,8 +42,8 @@ public class CharacterAnim : MonoBehaviour
         walkUpAnim = new SpriteAnimator(walkUpSprite, spriteRenderer);
         walkRightAnim = new SpriteAnimator(walkRightSprite, spriteRenderer);
         walkLeftAnim = new SpriteAnimator(walkLeftSprite, spriteRenderer);
-
-        currentAnim = walkDownAnim;
+        SetFacingDirection(defaultDirection);
+        // currentAnim = walkDownAnim;
     }
 
     /*判斷腳色是否移動,如果沒有設置default為腳色預設動作*/
@@ -64,6 +72,18 @@ public class CharacterAnim : MonoBehaviour
         wasPreviouslyMoving = IsMoving;
     }
 
+    public void SetFacingDirection(FacingDirection dir)
+    {
+        if (dir == FacingDirection.Right)
+            MoveX = 1;
+        else if (dir == FacingDirection.Left)
+            MoveX = -1;
+        else if (dir == FacingDirection.Down)
+            MoveY = -1;
+        else if (dir == FacingDirection.Up)
+            MoveY = 1;
+    }
 
+    public FacingDirection DefaultDirection { get => defaultDirection; }
 
 }
