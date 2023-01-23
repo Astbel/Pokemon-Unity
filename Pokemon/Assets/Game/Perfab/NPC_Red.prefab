@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7480524230311994406}
   - component: {fileID: 7480524230311994457}
   - component: {fileID: 7480524230311994405}
+  - component: {fileID: 1297741097}
+  - component: {fileID: 1297741098}
   m_Layer: 8
   m_Name: NPC_Red
   m_TagString: Untagged
@@ -150,3 +152,54 @@ MonoBehaviour:
     lines:
     - When eyes catch now is for battle
     - ......
+  movementPattern:
+  - {x: 2, y: 0}
+  - {x: 0, y: -2}
+  - {x: -2, y: 0}
+  - {x: 0, y: 2}
+  timeBetweenPattern: 3
+--- !u!114 &1297741097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480524230311994456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027e83c0fbcf9914894daef6823ab27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkDownSprite:
+  - {fileID: 137142025, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: 1480486023, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: 909152591, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: 137142025, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  walkUpSprite:
+  - {fileID: -894192460, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: 2069686624, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: 1708200604, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: -894192460, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  walkRightSprite:
+  - {fileID: 389496894, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: 1019181206, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: -1453783851, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: 389496894, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  walkLeftSprite:
+  - {fileID: 929046891, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: -168163349, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: -1756518585, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+  - {fileID: 929046891, guid: 42a8367b7f3d8e14b9f0edcdc019810a, type: 3}
+--- !u!114 &1297741098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480524230311994456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8501a84cd42bd2479b6ae9fbed5c59c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  move_speed: 5

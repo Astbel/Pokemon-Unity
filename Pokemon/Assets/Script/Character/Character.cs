@@ -27,7 +27,7 @@ public class Character : MonoBehaviour
         targetPos.y += moveVec.y;
 
         /*如果不能走過從協程break出來*/
-        if (!IsWalkable(targetPos))
+        if (!IsPathClear(targetPos))
             yield break;
 
         IsMoving = true;
@@ -49,6 +49,19 @@ public class Character : MonoBehaviour
         animator.IsMoving = IsMoving;
     }
 
+    /*檢測腳色走過是否為合法能走的區域*/
+    private bool IsPathClear(Vector3 targetPos)
+    {
+        var diff = targetPos - transform.position;/*計算距離*/
+        var direction = diff.normalized;/*向量位置*/
+
+        if (Physics2D.BoxCast(transform.position + direction, new Vector2(0.2f, 0.2f), 0f, direction, diff.magnitude - 1,
+            GameLayer.Instance.SolidLayer | GameLayer.Instance.InteractLayer | GameLayer.Instance.PlayerLayer) == true)
+            return false;
+        else
+            return true;
+    }
+
     /*確認是否為可走動區域*/
     /*OverlapCircle 三組參數1.Vector座標 2.Radius 3.LayerMask  根據Vector位置創建Radius一樣大的圓如果再layer範圍內則回傳*/
     private bool IsWalkable(Vector3 targetPos)
@@ -60,4 +73,24 @@ public class Character : MonoBehaviour
         }
         return true;
     }
+
+    /*NPC 對話轉向玩家檢測X和Y軸*/
+    /*                                1      */
+    /*NPC方向只能看四個軸其中一種  -1   0   1  */
+    /*                               -1      */
+    public void LookTowards(Vector3 target)
+    {
+        var xdiff = Mathf.Floor(target.x) - Mathf.Floor(transform.position.x);
+        var ydiff = Mathf.Floor(target.y) - Mathf.Floor(transform.position.y);
+
+        if (xdiff == 0 || ydiff == 0)  //當腳色面向其中一個X或是Y一定不會變動
+        {
+            animator.MoveX = Mathf.Clamp(xdiff, -1f, 1f);
+            animator.MoveY = Mathf.Clamp(ydiff, -1f, 1f);
+        }
+        else
+            Debug.Log("Error in look Towards:You cant ask the character to look diagonally. ");
+
+    }
+
 }

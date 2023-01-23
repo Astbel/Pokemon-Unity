@@ -16,12 +16,12 @@ public class DialogManger : MonoBehaviour
     public bool IsShowing { get; private set; }
     int currentLine = 0; //計算對話比數
     Dialog dialog;
-
+    Action onDialogFinish;
     private void Awake()
     {
         Instance = this;
     }
-    public IEnumerator ShowDialog(Dialog dialog)
+    public IEnumerator ShowDialog(Dialog dialog, Action onFinished = null)
     {
         /*等待對話框結束*/
         yield return new WaitForEndOfFrame();
@@ -30,6 +30,9 @@ public class DialogManger : MonoBehaviour
 
         IsShowing = true;
         this.dialog = dialog;
+
+        onDialogFinish=onFinished;/*判斷對話是否結束*/
+
         dialogBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));
     }
@@ -50,6 +53,7 @@ public class DialogManger : MonoBehaviour
                 currentLine = 0;
                 IsShowing = false;
                 dialogBox.SetActive(false);
+                onDialogFinish?.Invoke();
                 OnCloseDialog?.Invoke();
             }
         }

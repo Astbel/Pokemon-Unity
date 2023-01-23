@@ -10,24 +10,32 @@ public class NpcController : MonoBehaviour, Interactable
     Character character;
     int currentPattern = 0;
     float idleTimer = 0f;
-    public enum NpcState { Idle, Walking }
+    public enum NpcState { Idle, Walking, Dialog }
     NpcState state;
     private void Awake()
     {
         character = GetComponent<Character>();
     }
 
-    public void Interact()
+    public void Interact(Transform initiator)
     {
         if (state == NpcState.Idle)
-            StartCoroutine(DialogManger.Instance.ShowDialog(dialog));
+        {
+            state = NpcState.Dialog;
+            character.LookTowards(initiator.position);
+
+            StartCoroutine(DialogManger.Instance.ShowDialog(dialog, () =>
+            {
+                /*對話執行結束重製時間以及狀態*/
+                idleTimer = 0f;
+                state = NpcState.Idle;
+            }));
+        }
+
     }
 
     private void Update()
     {
-        /*如果對話正在執行,NPC停下走動*/
-        if (DialogManger.Instance.IsShowing) return;
-
         if (state == NpcState.Idle)
         {
             idleTimer += Time.deltaTime;
@@ -44,8 +52,12 @@ public class NpcController : MonoBehaviour, Interactable
     IEnumerator Walk()
     {
         state = NpcState.Walking;
+
+        var oldPos = transform.position;
+
         yield return character.Move(movementPattern[currentPattern]);
-        currentPattern = (currentPattern + 1) % movementPattern.Count;
+        if (transform.position != oldPos)
+            currentPattern = (currentPattern + 1) % movementPattern.Count;
 
         state = NpcState.Idle;
     }
