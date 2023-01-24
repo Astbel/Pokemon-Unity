@@ -1092,3 +1092,25 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2059.603701 seconds.
+  path: Assets/Game/Resources/Pokemon/Blastoise.asset
+  artifactKey: Guid(c08830702136df04cb3e4109a3eae11c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Resources/Pokemon/Blastoise.asset using Guid(c08830702136df04cb3e4109a3eae11c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7775e76b5f1c6426ddfcd034ec1f7f99') in 0.014607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Game/Resources/Pokemon/Pikachu.asset
+  artifactKey: Guid(07dbb54323f6167448fe694264bec773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Resources/Pokemon/Pikachu.asset using Guid(07dbb54323f6167448fe694264bec773) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b84133a31eb8b7d6015b95ee88cdbc3') in 0.002716 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Game/Resources/Pokemon/Snorlax.asset
+  artifactKey: Guid(11cc9c452f032f34e8413ad844177cee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Resources/Pokemon/Snorlax.asset using Guid(11cc9c452f032f34e8413ad844177cee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0f2a29bacf4902773976a445676fffe') in 0.001718 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

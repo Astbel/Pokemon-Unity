@@ -12,12 +12,15 @@ public class BattleDialogBox : MonoBehaviour
     [SerializeField] GameObject actionSelector;
     [SerializeField] GameObject moveSelector;
     [SerializeField] GameObject moveDetails;
+    [SerializeField] GameObject choiceBox;
     /*動作以及招式*/
     [SerializeField] List<Text> actionTexts;
     [SerializeField] List<Text> moveTexts;
     /*屬性以及次數*/
     [SerializeField] Text ppText;
     [SerializeField] Text typeText;
+    [SerializeField] Text yesText;
+    [SerializeField] Text noText;
 
     public void SetDialog(string dialog)
     {
@@ -46,10 +49,29 @@ public class BattleDialogBox : MonoBehaviour
         actionSelector.SetActive(enabled);
     }
 
+    public void EnableChoiceBox(bool enabled)
+    {
+        choiceBox.SetActive(enabled);
+    }
+
     public void EnableMoveSelector(bool enabled)
     {
         moveSelector.SetActive(enabled);
         moveDetails.SetActive(enabled);
+    }
+
+    public void UpdateChoiceBox(bool yesSelect)
+    {
+        if (yesSelect)
+        {
+            yesText.color = highlightedColor;
+            noText.color = Color.black;
+        }
+        else
+        {
+            yesText.color = Color.black;
+            noText.color = highlightedColor;
+        }
     }
 
     /*偵測選單選擇的項目,如果有選擇則顯示選項顏色否則皆為黑色*/
@@ -83,7 +105,7 @@ public class BattleDialogBox : MonoBehaviour
         {
             ppText.color = Color.red;
         }
-        else if (move.PP <= move.Base.PP/2)
+        else if (move.PP <= move.Base.PP / 2)
         {
             ppText.color = Color.yellow;
         }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartySelection, BattleOver }
+public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartySelection, AboutToUse, BattleOver }
 public enum BattleAction { Move, SwitchPokemon, UseItem, Run }
 public class BattleSystem : MonoBehaviour
 {
@@ -25,7 +25,7 @@ public class BattleSystem : MonoBehaviour
     int currentMember;//party 選單中變數
     /*確認是否為戰鬥狀態*/
     bool isTrainerBattle = false;
-
+    bool aboutToUseChoice = true;
     /*物件畫 玩家以及野生*/
     PokemonParty playerParty;
     PokemonParty trainerParty;
@@ -140,6 +140,16 @@ public class BattleSystem : MonoBehaviour
         dialogBox.EnableDialogText(false);
         dialogBox.EnableMoveSelector(true);
     }
+    /*是否替換pokemon*/
+    IEnumerator AboutToUse(Pokemon newPokemon)
+    {
+        state = BattleState.Busy;
+        yield return dialogBox.TypeDialog($"{trainer.Name} is about to use {newPokemon.Base.Name}. Do you want to change Pokemon ? ");
+        state = BattleState.AboutToUse;
+        dialogBox.EnableChoiceBox(true);
+
+    }
+
     IEnumerator RunTurns(BattleAction playerAction)
     {
         state = BattleState.RunningTurn;
@@ -231,6 +241,7 @@ public class BattleSystem : MonoBehaviour
             {
                 /*計算傷害*/
                 var damageDetails = targetUnit.Pokemon.TakeDamage(move, sourceUnit.Pokemon);
+
                 /*跟新Hp*/
                 yield return targetUnit.Hud.UpdateHP();
                 yield return ShowDamageDetails(damageDetails);
@@ -303,7 +314,7 @@ public class BattleSystem : MonoBehaviour
             yield return new WaitForSeconds(2f);
 
             CheckForBattleOver(sourceUnit);
-
+            yield return new WaitUntil(() => state == BattleState.RunningTurn);
         }
     }
 
@@ -356,14 +367,14 @@ public class BattleSystem : MonoBehaviour
             }
             else
             {
-                var nextPokemon =trainerParty.GetHealthyPokemon();
-                if(nextPokemon != null)
-                    StartCoroutine(SendNextPokemon(nextPokemon));
+                var nextPokemon = trainerParty.GetHealthyPokemon();
+                if (nextPokemon != null)
+                    StartCoroutine(AboutToUse(nextPokemon));
                 else
-                   BattleOver(true);
+                    BattleOver(true);
             }
         }
-            
+
     }
     /*show damage detail*/
     IEnumerator ShowDamageDetails(DamageDetails damageDetails)
@@ -395,7 +406,10 @@ public class BattleSystem : MonoBehaviour
         {
             HandlePartySelection();
         }
-
+        else if (state == BattleState.AboutToUse)
+        {
+            HandleAboutToUse();
+        }
     }
     /*Player 選擇動作*/
     void HandleActionSelection()
@@ -556,10 +570,57 @@ public class BattleSystem : MonoBehaviour
         /*返回鍵*/
         else if (Input.GetKeyDown(KeyCode.X))
         {
+            if (playerUnit.Pokemon.HP <= 0)
+            {
+                partyScreen.SetMessageText("You have to choose a Pokemon to continue ");
+                return;
+            }
             partyScreen.gameObject.SetActive(false);
-            ActionSelection();
+
+            if (prevState == BattleState.AboutToUse)
+            {
+                prevState = null;
+                StartCoroutine(SendNextPokemon());
+            }
+            else
+                ActionSelection();
         }
     }
+
+    /*替換pokemon*/
+    void HandleAboutToUse()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+            aboutToUseChoice = !aboutToUseChoice;
+
+        dialogBox.UpdateChoiceBox(aboutToUseChoice);
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            /*Yes 進入選擇畫面*/
+            if (aboutToUseChoice == true)
+            {
+                prevState = BattleState.AboutToUse;
+                OpenPartyScreen();
+            }
+            /*NO 繼續戰鬥畫面*/
+            else
+            {
+                dialogBox.EnableChoiceBox(false);
+                StartCoroutine(SendNextPokemon());
+            }
+
+        }
+        /*取消切換 Trainer直接送pkemon*/
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            dialogBox.EnableChoiceBox(false);
+            StartCoroutine(SendNextPokemon());
+        }
+    }
+
+
+
     /*切換部分
     1.只有HP>0才可以切換
     2.如果昏厥的話要再次比較哪知pokemon的基礎速度點高才決定誰先攻
@@ -578,7 +639,16 @@ public class BattleSystem : MonoBehaviour
         dialogBox.SetMoveNames(newPokemon.Moves);
         yield return dialogBox.TypeDialog($"I Chose you {newPokemon.Base.Name}!.");
         /*把狀態在此轉回RunningTurn,讓RunningTurn來決定誰是這回合先動作*/
-        state = BattleState.RunningTurn;
+        if (prevState == null)
+        {
+            state = BattleState.RunningTurn;
+        }
+        else if (prevState == BattleState.AboutToUse)
+        {
+            prevState = null;
+            StartCoroutine(SendNextPokemon());
+        }
+
     }
 
     /*提升降低狀態Buff訊息*/
@@ -595,16 +665,17 @@ public class BattleSystem : MonoBehaviour
         }
     }
     /*Trainer send pokemon*/
-    IEnumerator SendNextPokemon(Pokemon nextPokemon)
+    IEnumerator SendNextPokemon()
     {
         /*等待trainer替換*/
         state = BattleState.Busy;
 
+        var nextPokemon = trainerParty.GetHealthyPokemon();
         enemyUnit.Setup(nextPokemon);
 
         yield return dialogBox.TypeDialog($"{trainer.Name} send out {nextPokemon.Base.Name} ");
         /*回到戰鬥階段*/
-        state=BattleState.RunningTurn;
+        state = BattleState.RunningTurn;
     }
 
 }
