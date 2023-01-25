@@ -214,6 +214,7 @@ public class BattleSystem : MonoBehaviour
     {
         /*檢測是否種異常狀態 冰凍 麻痺 睡眠 如果回false則直接從協程break出來*/
         bool canRunMove = sourceUnit.Pokemon.OnBeforeMove();
+        Debug.Log(canRunMove);
         if (!canRunMove)
         {
             yield return ShowStatusChanges(sourceUnit.Pokemon);
@@ -600,6 +601,7 @@ public class BattleSystem : MonoBehaviour
             /*Yes 進入選擇畫面*/
             if (aboutToUseChoice == true)
             {
+                dialogBox.EnableChoiceBox(false);
                 prevState = BattleState.AboutToUse;
                 OpenPartyScreen();
             }
@@ -630,7 +632,7 @@ public class BattleSystem : MonoBehaviour
         /*確認玩家pokemon是否HP大於0才播放切換*/
         if (playerUnit.Pokemon.HP > 0)
         {
-            yield return dialogBox.TypeDialog($"Come back{playerUnit.Pokemon.Base.Name}");
+            yield return dialogBox.TypeDialog($"Come back {playerUnit.Pokemon.Base.Name}");
             playerUnit.PlayFaintAnimation();
             yield return new WaitForSeconds(2f);
         }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BattleHud : MonoBehaviour
 {
+    [SerializeField] Text ShowHPText;
     [SerializeField] Text nameText;
     [SerializeField] Text levelText;
     [SerializeField] HPBar hpBar;
@@ -25,6 +26,8 @@ public class BattleHud : MonoBehaviour
         nameText.text = pokemon.Base.Name;
         levelText.text = "Lv:" + pokemon.Level;
         hpBar.SetHP((float)pokemon.HP / pokemon.MaxHp);
+        /*顯示Hp*/
+        ShowHPText.text = pokemon.HP.ToString() + "/" + pokemon.MaxHp.ToString();
         /*配置status color*/
         statusColors = new Dictionary<ConditionID, Color>()
         {
@@ -48,7 +51,7 @@ public class BattleHud : MonoBehaviour
         else
         {
             statusText.text = _pokemon.Status.Id.ToString().ToUpper();
-            statusText.color =statusColors[_pokemon.Status.Id];
+            statusText.color = statusColors[_pokemon.Status.Id];
         }
     }
 
@@ -58,6 +61,8 @@ public class BattleHud : MonoBehaviour
         if (_pokemon.HpChanged)
         {
             yield return hpBar.SetHPSmooth((float)_pokemon.HP / _pokemon.MaxHp);
+            /*跟新顯示*/
+            ShowHPText.text = _pokemon.HP.ToString() + "/" + _pokemon.MaxHp.ToString();
             _pokemon.HpChanged = false;
         }
 

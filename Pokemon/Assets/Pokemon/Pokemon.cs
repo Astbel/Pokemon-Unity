@@ -207,18 +207,20 @@ public class Pokemon
     public bool OnBeforeMove()
     {
         bool canPerformMove = true;
+        /*麻痺 冰凍 睡眠*/
         if (Status?.OnBeforeTurn != null)
         {
-            if (Status.OnBeforeTurn(this))
+            /*確認是否為false,由於多一個混亂型別所以直接賦值*/
+            if (!Status.OnBeforeTurn(this))
                 canPerformMove = false;
         }
-
+        /*混亂型別*/
         if (VolatileStatus?.OnBeforeTurn != null)
         {
             if (!VolatileStatus.OnBeforeTurn(this))
                 canPerformMove = false;
         }
-
+        
         return canPerformMove;
     }
 
