@@ -28,11 +28,11 @@ public class BattleSystem : MonoBehaviour
     /*確認是否為戰鬥狀態*/
     bool isTrainerBattle = false;
     bool aboutToUseChoice = true;
+    int escapeAttempt;
     /*物件畫 玩家以及野生*/
     PokemonParty playerParty;
     PokemonParty trainerParty;
     Pokemon wildPokemon;
-
     PlayerController player;
     TrainerController trainer;
 
@@ -105,7 +105,7 @@ public class BattleSystem : MonoBehaviour
             yield return dialogBox.TypeDialog($"Go  {playerPokemon.Base.Name} !");
             dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
         }
-
+        escapeAttempt = 0;
         partyScreen.Init();
         /*確認誰先攻*/
         ActionSelection();
@@ -204,10 +204,16 @@ public class BattleSystem : MonoBehaviour
                 yield return SwitchPokemon(selectedMember);
             }
             //使用道具
-            else if(playerAction==BattleAction.UseItem)
+            else if (playerAction == BattleAction.UseItem)
             {
                 dialogBox.EnableActionSelector(false);
                 yield return ThrowPokeBall();
+            }
+            /*逃跑*/
+            else if (playerAction == BattleAction.Run)
+            {
+                dialogBox.EnableActionSelector(false);
+                yield return TryToEscape();
             }
             //Enemy Turn
             var enemyMove = enemyUnit.Pokemon.GetRandomMove();
@@ -466,6 +472,7 @@ public class BattleSystem : MonoBehaviour
             else if (currentAction == 3)
             {
                 //run
+                StartCoroutine(RunTurns(BattleAction.Run));
             }
         }
 
@@ -751,7 +758,7 @@ public class BattleSystem : MonoBehaviour
             Destroy(pokeball);
             state = BattleState.RunningTurn;
         }
-
+        Debug.Log(shakeCount);
     }
     /*捕捉率來源Wiki*/
     int TryToCatchPokemon(Pokemon pokemon)
@@ -776,4 +783,41 @@ public class BattleSystem : MonoBehaviour
         return shakeCount;
     }
 
+    /*逃跑*/
+    IEnumerator TryToEscape()
+    {
+        state = BattleState.Busy;
+        //訓練家不可以逃跑
+        if (isTrainerBattle)
+        {
+            yield return dialogBox.TypeDialog($"You can't run from trainer battles ! ");
+            state = BattleState.RunningTurn;
+            yield break;
+        }
+        ++escapeAttempt;
+        //野生
+        int playerSpeed = playerUnit.Pokemon.Speed;
+        int enemySpeed = enemyUnit.Pokemon.Speed;
+        if (enemySpeed < playerSpeed)
+        {
+            yield return dialogBox.TypeDialog($"Run away safely ! ");
+            BattleOver(true);
+        }
+        else
+        {
+            float f = (playerSpeed * 128) / enemySpeed + 30 * escapeAttempt;
+            f = f % 256;
+            if (UnityEngine.Random.Range(0, 256) < f)
+            {
+                yield return dialogBox.TypeDialog($"Run away safely ! ");
+                BattleOver(true);
+            }
+            else
+            {
+                yield return dialogBox.TypeDialog($"Can't Escape ! ");
+                state = BattleState.RunningTurn;
+            }
+
+        }
+    }
 }
