@@ -10,12 +10,10 @@ public class PokemonBase : ScriptableObject
 
     [TextArea]
     [SerializeField] string description;
-
     [SerializeField] Sprite frontSprite;
     [SerializeField] Sprite backSprite;
     [SerializeField] PokemonType type1;
     [SerializeField] PokemonType type2;
-
     /*Base Stats*/
     [SerializeField] int maxHp;
     [SerializeField] int attack;
@@ -23,6 +21,9 @@ public class PokemonBase : ScriptableObject
     [SerializeField] int spAttack;
     [SerializeField] int spDefense;
     [SerializeField] int speed;
+
+    [SerializeField] int catchRate;
+
     [SerializeField] List<LearnableMove> learnableMoves;
 
     public string Name
@@ -84,6 +85,11 @@ public class PokemonBase : ScriptableObject
     public int Speed
     {
         get { return speed; }
+    }
+
+    public int CatchRate
+    {
+        get { return catchRate; }
     }
 
     public List<LearnableMove> LearnableMoves

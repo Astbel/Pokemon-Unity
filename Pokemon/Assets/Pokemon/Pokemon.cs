@@ -31,8 +31,13 @@ public class Pokemon
     public int VolatileStatusTime { get; set; }
     public event System.Action OnStatusChanged;
 
+    public Pokemon(PokemonBase pBase, int plevel)
+    {
+        _base = pBase;
+        level = plevel;
 
-
+        Init();
+    }
 
 
     public void Init()
@@ -54,6 +59,9 @@ public class Pokemon
         CalculateStat();
         HP = MaxHp;
         ResetStatBoost();
+
+        StatusChanges = new Queue<string>();
+
         /*清除所有異常狀態*/
         Status = null;
         VolatileStatus = null;
@@ -220,7 +228,7 @@ public class Pokemon
             if (!VolatileStatus.OnBeforeTurn(this))
                 canPerformMove = false;
         }
-        
+
         return canPerformMove;
     }
 
@@ -228,7 +236,7 @@ public class Pokemon
     public Move GetRandomMove()
     {
         /*紀錄pokemon剩餘技能,避免敵人PP用完還使用該技能*/
-        var moveWithPP =Moves.Where(x=>x.PP>0).ToList();
+        var moveWithPP = Moves.Where(x => x.PP > 0).ToList();
 
         int r = Random.Range(0, moveWithPP.Count);
         return moveWithPP[r];

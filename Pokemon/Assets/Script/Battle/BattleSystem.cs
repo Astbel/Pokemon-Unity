@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] BattleUnit enemyUnit;
     [SerializeField] BattleDialogBox dialogBox;
     [SerializeField] PartyScreen partyScreen;
+    [SerializeField] GameObject pokeballSprite;
 
     public event Action<bool> OnBattleOver;
     BattleState state;  //回合制狀態機
@@ -38,6 +40,8 @@ public class BattleSystem : MonoBehaviour
     {
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
+        player = playerParty.GetComponent<PlayerController>();
+
         StartCoroutine(SetUpBattle());
     }
 
@@ -198,6 +202,12 @@ public class BattleSystem : MonoBehaviour
                 var selectedMember = playerParty.Pokemons[currentMember];
                 state = BattleState.Busy;    /*狀態改為busy避免玩家一直A造成誤動作*/
                 yield return SwitchPokemon(selectedMember);
+            }
+            //使用道具
+            else if(playerAction==BattleAction.UseItem)
+            {
+                dialogBox.EnableActionSelector(false);
+                yield return ThrowPokeBall();
             }
             //Enemy Turn
             var enemyMove = enemyUnit.Pokemon.GetRandomMove();
@@ -445,6 +455,7 @@ public class BattleSystem : MonoBehaviour
             else if (currentAction == 1)
             {
                 //Bag
+                StartCoroutine(RunTurns(BattleAction.UseItem));
             }
             else if (currentAction == 2)
             {
@@ -678,6 +689,91 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"{trainer.Name} send out {nextPokemon.Base.Name} ");
         /*回到戰鬥階段*/
         state = BattleState.RunningTurn;
+    }
+
+    /*丟寶貝球*/
+    IEnumerator ThrowPokeBall()
+    {
+        state = BattleState.Busy;
+        /*Trainer Battle 不能捕捉對方pokemon*/
+        if (isTrainerBattle)
+        {
+            yield return dialogBox.TypeDialog($" You can't steal the trainers pokemon ! ");
+            state = BattleState.RunningTurn;
+            yield break;
+        }
+
+        yield return dialogBox.TypeDialog($"{player.Name} used POKEBALL ! ");
+
+        var pokeballObj = Instantiate(pokeballSprite, playerUnit.transform.position - new Vector3(2, 0), Quaternion.identity);
+        var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
+
+        //Pokeball丟動畫
+        yield return pokeball.transform.DOJump(enemyUnit.transform.position + new Vector3(0, 5), 1f, 1, 1f).WaitForCompletion();
+        //呼叫捕捉畫面
+        yield return enemyUnit.PlayCaptureAnimation();
+        //pokeball掉下
+        yield return pokeball.transform.DOMoveY(enemyUnit.transform.position.y - 4f, 0.5f).WaitForCompletion();
+
+        int shakeCount = TryToCatchPokemon(enemyUnit.Pokemon);
+        //pokeball搖動 z軸在2D只會有旋轉的效果運用條動Z軸來達到搖動效果
+        for (int i = 0; i < Mathf.Min(shakeCount, 3); i++)
+        {
+            /*每一次球晃動等待0.5Sec*/
+            yield return new WaitForSeconds(0.5f);
+            yield return pokeball.transform.DOPunchRotation(new Vector3(0, 0, 10f), 0.8f).WaitForCompletion();
+        }
+        /*當搖晃為四次捕捉成功*/
+        if (shakeCount == 4)
+        {
+            //pkemon caught
+            yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} was caught ! ");
+            yield return pokeball.DOFade(0, 1.5f).WaitForCompletion();
+
+            playerParty.AddPokemon(enemyUnit.Pokemon);
+            yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} has been add to your party ! ");
+
+            Destroy(pokeball);
+            BattleOver(true);
+
+        }
+        else
+        {
+            //pokemon broke
+            yield return new WaitForSeconds(1f);
+            pokeball.DOFade(0, 0.2f);
+            yield return enemyUnit.PlayBreakOutAnimation();
+
+            if (shakeCount < 2)
+                yield return dialogBox.TypeDialog($"{enemyUnit.Pokemon.Base.Name} broke free ! ");
+            else
+                yield return dialogBox.TypeDialog($"Almost caught it ! ");
+            Destroy(pokeball);
+            state = BattleState.RunningTurn;
+        }
+
+    }
+    /*捕捉率來源Wiki*/
+    int TryToCatchPokemon(Pokemon pokemon)
+    {
+        float a = (3 * pokemon.MaxHp - 2 * pokemon.HP) * pokemon.Base.CatchRate * ConditionDB.GetStatusBouns(pokemon.Status) / (3 * pokemon.MaxHp);
+
+        if (a >= 255)
+            return 4;
+
+        float b = 1048560 / Mathf.Sqrt(Mathf.Sqrt(16711680 / a));
+
+        int shakeCount = 0;
+
+        while (shakeCount < 4)
+        {
+            if (UnityEngine.Random.Range(0, 65535) >= b)
+                break;
+
+            ++shakeCount;
+
+        }
+        return shakeCount;
     }
 
 }

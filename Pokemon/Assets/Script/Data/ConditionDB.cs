@@ -130,7 +130,7 @@ public class ConditionDB
                         pokemon.CureVolatileStatus();
                         pokemon.StatusChanges.Enqueue($"{pokemon.Base.Name} kicked out of confusion!");
                         return true;
-                    }   
+                    }
                     pokemon.VolatileStatusTime--;
                     /*混亂狀態有機會使出技能 Rate 50%*/
                     if(Random.Range(1,3)==1)
@@ -145,9 +145,22 @@ public class ConditionDB
             }
         }
     };
+    /*異常狀態捕捉獎勵*/
+    public static float GetStatusBouns(Condition condition)
+    {
+        /*沒有異常*/
+        if (condition == null)
+            return 1f;
+        else if (condition.Id == ConditionID.slp || condition.Id == ConditionID.frz)
+            return 2f;
+        else if (condition.Id == ConditionID.par || condition.Id == ConditionID.psn || condition.Id == ConditionID.brn)
+            return 1.5f;
+        return 1f;
+    }
+
 }
 
 public enum ConditionID
 {
-    none, psn, brn, slp, par, frz,confusion
+    none, psn, brn, slp, par, frz, confusion
 }

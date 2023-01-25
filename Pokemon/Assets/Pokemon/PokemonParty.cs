@@ -8,7 +8,7 @@ public class PokemonParty : MonoBehaviour
 {
     [SerializeField] List<Pokemon> pokemons;
     //回傳至給Party UI 來顯示
-    public List<Pokemon> Pokemons{get{return pokemons;}}
+    public List<Pokemon> Pokemons { get { return pokemons; } }
 
     /*開始時為所有pokemon初始化狀態 初始化招式以及血量*/
     private void Start()
@@ -24,6 +24,19 @@ public class PokemonParty : MonoBehaviour
     {
         /*檢查玩家第一支pokemon血量是否大於0*/
         return pokemons.Where(x => x.HP > 0).FirstOrDefault();
+    }
+
+    /*加入寶可夢*/
+    public void AddPokemon(Pokemon newPokemon)
+    {
+        if (pokemons.Count < 6)
+        {
+            pokemons.Add(newPokemon);
+        }
+        else
+        {
+            /*Add a pc for implemented*/
+        }
     }
 
 }

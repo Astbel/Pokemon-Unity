@@ -1897,3 +1897,217 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 66137.052598 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball00_open.png
+  artifactKey: Guid(8d74c62c58175a8488a8c74784f4df1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball00_open.png using Guid(8d74c62c58175a8488a8c74784f4df1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f44ed9db53b3984e9df4232c590595a') in 0.142048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball18.png
+  artifactKey: Guid(ce9816b639643c343ae5a925e9aaf22d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball18.png using Guid(ce9816b639643c343ae5a925e9aaf22d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f3e0fabe1a28fe0690181cfcfc4ac67') in 0.023235 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball05_open.png
+  artifactKey: Guid(fdf4f6b355a541747afb9b1ff4e26aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball05_open.png using Guid(fdf4f6b355a541747afb9b1ff4e26aeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b89a3096ece998ccadbc67e0a2c14541') in 0.019897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball09.png
+  artifactKey: Guid(dc78244898486804cb2ccd4950638181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball09.png using Guid(dc78244898486804cb2ccd4950638181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '508d47c8e65a8d4b5d88bcc457db1e76') in 0.022270 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball20_open.png
+  artifactKey: Guid(76767e6938731be4c9522290080dd412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball20_open.png using Guid(76767e6938731be4c9522290080dd412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '878e8612e2e5626ac679475887278fcc') in 0.022652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball19_open.png
+  artifactKey: Guid(23288e4439f0c0c4c8b305c3b2d65c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball19_open.png using Guid(23288e4439f0c0c4c8b305c3b2d65c73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6bfe790856acd99530bad6b6e72a3aa') in 0.018593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball2.png
+  artifactKey: Guid(ece116bbb68eeb1449e469a349c43acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball2.png using Guid(ece116bbb68eeb1449e469a349c43acc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5c00e87574d4796506222ed8aa50b61') in 0.039041 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball05.png
+  artifactKey: Guid(81060cbef89db2d418df23650f29d58e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball05.png using Guid(81060cbef89db2d418df23650f29d58e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bec3449a0ee55a3b318c0190a17cee12') in 0.028445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball03_open.png
+  artifactKey: Guid(246970b72c5aa48469888e9944b7fe9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball03_open.png using Guid(246970b72c5aa48469888e9944b7fe9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc6cf599f2e3fda5ccbbc2bf018e5fe') in 0.034889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball13.png
+  artifactKey: Guid(46b7bfe82ba9d46469378b730d1d8a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball13.png using Guid(46b7bfe82ba9d46469378b730d1d8a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79eb56267bc5e0613ad64b7d43f87cf1') in 0.042008 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball14_open.png
+  artifactKey: Guid(523fbc1f3c853ae4bb855d6ceb0727c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball14_open.png using Guid(523fbc1f3c853ae4bb855d6ceb0727c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2365ea52aaa3ba866f5abe9dab02001') in 0.018286 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball12_open.png
+  artifactKey: Guid(84bf9d4d6e32a534fbba15bbad37fac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball12_open.png using Guid(84bf9d4d6e32a534fbba15bbad37fac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12d884e0975a9e431060e8575ed75d98') in 0.008072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball1.png
+  artifactKey: Guid(0c82f934788cfad44a5025bb0a398442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball1.png using Guid(0c82f934788cfad44a5025bb0a398442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c32286661bec712c425359516b7cef8') in 0.011057 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball04.png
+  artifactKey: Guid(fbda58ee7a14bdb48a7ea932ca79782e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball04.png using Guid(fbda58ee7a14bdb48a7ea932ca79782e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aacde8588d964edcdbe2698ddd97e6a5') in 0.010027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball16.png
+  artifactKey: Guid(2fc48cf4553865d47b02b4ccf501c486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball16.png using Guid(2fc48cf4553865d47b02b4ccf501c486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afa8e8eb753026c6a4f316301425cd1f') in 0.009116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball04_open.png
+  artifactKey: Guid(cc82ddba9a716814fb9fbee5301eb8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball04_open.png using Guid(cc82ddba9a716814fb9fbee5301eb8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '745d8c14896a05150f50b6e57d31d29f') in 0.010793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball10.png
+  artifactKey: Guid(4a67cd11b6c6e9a449bf1a8c367da1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball10.png using Guid(4a67cd11b6c6e9a449bf1a8c367da1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6adb9170f0b7a3dbff6424505bc14fa4') in 0.008825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball02.png
+  artifactKey: Guid(e51751f2f50a8aa45bb4562d417332ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball02.png using Guid(e51751f2f50a8aa45bb4562d417332ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f1c2b5baca7f35ee148bd0d7e7ed6de') in 0.008993 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball11_open.png
+  artifactKey: Guid(d0f2d32663b78384aa507f4188853de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball11_open.png using Guid(d0f2d32663b78384aa507f4188853de0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5047a29e651c09e90645679e59e7a4d') in 0.009600 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball08_open.png
+  artifactKey: Guid(d6c101044b6553a4694a3f7515960f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball08_open.png using Guid(d6c101044b6553a4694a3f7515960f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5540655d4df7455a629afb0047fcdc2') in 0.011938 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball20.png
+  artifactKey: Guid(b501ecaf55a1a854a9b9aa760b259485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball20.png using Guid(b501ecaf55a1a854a9b9aa760b259485) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf63fc86d0958b13f784c4828f52d908') in 0.008911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball16_open.png
+  artifactKey: Guid(07d4f2af515e30d449d26cbaaaf9aef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball16_open.png using Guid(07d4f2af515e30d449d26cbaaaf9aef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dd3998a6da85c2dc3b1edebdc9ad2f9') in 0.008293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball14.png
+  artifactKey: Guid(facf205d5881c9843a6041692e1117d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball14.png using Guid(facf205d5881c9843a6041692e1117d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '784d52439c8bc4b9536fb8333495795f') in 0.010847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.304058 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball22.png
+  artifactKey: Guid(e692dc1e7e2348d4487d79ae0a4be1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball22.png using Guid(e692dc1e7e2348d4487d79ae0a4be1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2948e0ad2836d6901a18796300dd9572') in 0.011051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball24_open.png
+  artifactKey: Guid(b6d04620003dbe14a8ababd7f0353bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball24_open.png using Guid(b6d04620003dbe14a8ababd7f0353bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97d2f956a88dc8f0af1b72d9ff177a7b') in 0.023332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball23_open.png
+  artifactKey: Guid(0dcdc27ea1c15e94285f3cd69c0d9038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball23_open.png using Guid(0dcdc27ea1c15e94285f3cd69c0d9038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ea969150da89ed4223803828418bbf8') in 0.044316 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball23.png
+  artifactKey: Guid(b9034fcf124efd74287e325d3c1ccb4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball23.png using Guid(b9034fcf124efd74287e325d3c1ccb4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7706137cb8e39fa88d68c7059972076') in 0.060680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.031422 seconds.
+  path: Assets/Sprite/ItemPokeBall/ball27_open.png
+  artifactKey: Guid(fbbdf9254105dab49866f05ef00bedf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/ball27_open.png using Guid(fbbdf9254105dab49866f05ef00bedf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f73182cb44bef6a9c467c8bad515fb74') in 0.020416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/ItemPokeBall/summaryball01.png
+  artifactKey: Guid(ca21aabf2f01efc47ad9c0ba05138b08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/summaryball01.png using Guid(ca21aabf2f01efc47ad9c0ba05138b08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2642ea990e0e266692e76ac3d59787f') in 0.033818 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Sprite/ItemPokeBall/summaryball05.png
+  artifactKey: Guid(16cdb038a56e5084099b8500fe105dc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/summaryball05.png using Guid(16cdb038a56e5084099b8500fe105dc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e42e886f2ddee51d5b3acdd513d31b2') in 0.033551 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.424228 seconds.
+  path: Assets/Sprite/ItemPokeBall/summaryball10.png
+  artifactKey: Guid(ff2227f9af483134fae0aef72be3cc1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/summaryball10.png using Guid(ff2227f9af483134fae0aef72be3cc1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7927c7669c3d43474ee7caf8e3286a5') in 0.008267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/ItemPokeBall/summaryball18.png
+  artifactKey: Guid(acc881f801c153c48bd54d60aa1b6d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/summaryball18.png using Guid(acc881f801c153c48bd54d60aa1b6d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9074046f26d6da882aaf820e4f3c40c6') in 0.007775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/ItemPokeBall/summaryball13.png
+  artifactKey: Guid(b31013c0818699c45b38d39362231f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/summaryball13.png using Guid(b31013c0818699c45b38d39362231f77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41fefb46fd37a70d3e9d0c6dad441688') in 0.008166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.233504 seconds.
+  path: Assets/Sprite/ItemPokeBall/summaryball21.png
+  artifactKey: Guid(6674e5fdc68b43c46bf070f970e82010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/summaryball21.png using Guid(6674e5fdc68b43c46bf070f970e82010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f04bf5a4ed19222628bba97dd8a6f8') in 0.008332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/ItemPokeBall/summaryball25.png
+  artifactKey: Guid(4cbc539dec4d0ec47ab6de4247cab980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/ItemPokeBall/summaryball25.png using Guid(4cbc539dec4d0ec47ab6de4247cab980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '740257ed70272d4b190ec44d13b93bf8') in 0.007843 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
