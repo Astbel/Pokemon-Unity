@@ -21,10 +21,25 @@ public class PokemonBase : ScriptableObject
     [SerializeField] int spAttack;
     [SerializeField] int spDefense;
     [SerializeField] int speed;
-
+    [SerializeField] GrothRate grothRate;
+    [SerializeField] int expYield;
     [SerializeField] int catchRate;
 
     [SerializeField] List<LearnableMove> learnableMoves;
+
+    public int GetExpForLevel(int level)
+    {
+        if (grothRate == GrothRate.Fast)
+        {
+            return 4 * (level * level * level) / 5;
+        }
+        else if (grothRate == GrothRate.MediumFast)
+        {
+            return level * level * level;
+        }
+
+        return -1;
+    }
 
     public string Name
     {
@@ -55,7 +70,6 @@ public class PokemonBase : ScriptableObject
     {
         get { return type2; }
     }
-
 
     public int MaxHp
     {
@@ -92,6 +106,13 @@ public class PokemonBase : ScriptableObject
         get { return catchRate; }
     }
 
+    public int ExpYield
+    {
+        get { return expYield; }
+    }
+
+    public GrothRate GrothRate => grothRate;
+
     public List<LearnableMove> LearnableMoves
     {
         get { return learnableMoves; }
@@ -118,8 +139,11 @@ public class LearnableMove
     }
 
 }
-
-
+/*Exp 成長率*/
+public enum GrothRate
+{
+    Fast, MediumFast
+}
 public enum PokemonType
 {
     None,
@@ -165,12 +189,12 @@ public class TypeChart
         /*Nor*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,  0.5f,  1f,   1f,   1f,   0.5f,   1f,    1f,   1f,   0.5f,   1f },
         /*Fir*/ new float[] {1f, 0.5f, 0.5f,  1f,   2f,    2f,   1f,   1f,  0.5f,  1f,   1f,   2f,   0.5f,   1f,   0.5f,  1f,    2f,    1f },
         /*Wat*/ new float[] {1f,  2f,  0.5f,  1f,  0.5f,   1f,   1f,   1f,   2f,   1f,   1f,   1f,    2f,    1f,   0.5f,  1f,    1f,    1f },
-        /*Ele*/ new float[] {1f,  1f,   2f,  0.5f, 0.5f,   1f,   1f,   1f,   1f,   2f,   1f,   1f,    0f,    1f,   0.5f,  1f,   0.5f,   1f },
+        /*Ele*/ new float[] {1f,  1f,   2f,  0.5f, 0.5f,   1f,   1f,   1f,   0f,   2f,   1f,   1f,    0f,    1f,   0.5f,  1f,   0.5f,   1f },
         /*Gra*/ new float[] {1f, 0.5f,  2f,   2f,  0.5f,   1f,   1f,  0.5f,  2f,  0.5f,  1f,   0.5f,  2f,    1f,   0.5f,  1f,    1f,    1f },
         /*Ice*/ new float[] {1f, 0.5f, 0.5f,  1f,   2f,   0.5f,  1f,   1f,   2f,   2f,   1f,   1f,    1f,    1f,    2f,   1f,    1f,    1f },
         /*Fig*/ new float[] {1f,  1f,   1f,   1f,   2f,    1f,   1f,   1f,   2f,  0.5f,  0.5f, 1f,    2f,    0f,    1f,   2f,    2f,    2f },
         /*Poi*/ new float[] {1f,  1f,   1f,   1f,   2f,    1f,   1f,   1f,   1f,   1f,   2f,   1f,    1f,    1f,    1f,   1f,    0f,    2f },
-        /*Gro*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,   0f,   1f,   1f,    2f,    1f,    1f,   1f,    2f,    1f },
+        /*Gro*/ new float[] {1f,  1f,   1f,   2f,   1f,    1f,   1f,   1f,   1f,   0f,   1f,   1f,    2f,    1f,    1f,   1f,    2f,    1f },
         /*Fly*/ new float[] {1f,  1f,   1f,   1f,   2f,    1f,   1f,   1f,  0.5f,  1f,   1f,   2f,   0.5f,   1f,    1f,   1f,   0.5f,   1f },
         /*Psy*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,   1f,  0.5f, 0.5f,   1f,    2f,    1f,   0f,    1f,   0.5f},
         /*Bug*/ new float[] {1f,  1f,   1f,   1f,   1f,    1f,   1f,   1f,   1f,  0.5f,  2f,   1f,    1f,    1f,    1f,   1f,   0.5f,   1f },

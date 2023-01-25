@@ -9,6 +9,7 @@ public class Pokemon
     [SerializeField] PokemonBase _base;
     [SerializeField] int level;
     public PokemonBase Base { get { return _base; } }
+    public int Exp { get; set; }
     public int Level { get { return level; } }
     public int HP { get; set; }
     public List<Move> Moves { get; set; }
@@ -30,7 +31,6 @@ public class Pokemon
     //混亂回合計數
     public int VolatileStatusTime { get; set; }
     public event System.Action OnStatusChanged;
-
     public Pokemon(PokemonBase pBase, int plevel)
     {
         _base = pBase;
@@ -61,6 +61,8 @@ public class Pokemon
         ResetStatBoost();
 
         StatusChanges = new Queue<string>();
+
+        Exp = Base.GetExpForLevel(Level);
 
         /*清除所有異常狀態*/
         Status = null;
@@ -94,7 +96,16 @@ public class Pokemon
             {Stat.Evasion,0},
         };
     }
-
+    /*確認是否升等*/
+    public bool CheckForLevelUp()
+    {
+        if (Exp > Base.GetExpForLevel(level + 1))
+        {
+            ++level;
+            return true;
+        }
+        return false;
+    }
     /*計算提升數值技能*/
     int GetStat(Stat stat)
     {

@@ -15,7 +15,7 @@ C:/Users/Astbel/Desktop/Poke_unity/Pokemon
 -logFile
 Logs/AssetImportWorker3.log
 -srvPort
-50159
+62883
 Successfully changed project path to: C:/Users/Astbel/Desktop/Poke_unity/Pokemon
 C:/Users/Astbel/Desktop/Poke_unity/Pokemon
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/Astbel/Desktop/Poke_unity/Pokemon
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [29988] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 4279741674 [EditorId] 4279741674 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [9364] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 3157048447 [EditorId] 3157048447 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [29988] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 4279741674 [EditorId] 4279741674 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [9364] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 3157048447 [EditorId] 3157048447 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 125.40 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 166.62 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path D:/Uinty2019/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -67,89 +67,89 @@ Initialize mono
 Mono path[0] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56540
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56616
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Uinty2019/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002024 seconds.
+Registered in 0.002798 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 101.92 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 148.95 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.500 seconds
+- Completed reload, in  0.759 seconds
 Domain Reload Profiling:
-	ReloadAssembly (501ms)
-		BeginReloadAssembly (56ms)
+	ReloadAssembly (760ms)
+		BeginReloadAssembly (92ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (369ms)
-			LoadAssemblies (55ms)
+		EndReloadAssembly (548ms)
+			LoadAssemblies (90ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (79ms)
+			SetupTypeCache (121ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (21ms)
-			SetupLoadedEditorAssemblies (233ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (342ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (102ms)
+				RefreshPlugins (149ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (90ms)
-				ProcessInitializeOnLoadMethodAttributes (35ms)
+				ProcessInitializeOnLoadAttributes (133ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007532 seconds.
+Registered in 0.010933 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 102.57 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 137.16 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.918 seconds
+- Completed reload, in  1.266 seconds
 Domain Reload Profiling:
-	ReloadAssembly (919ms)
-		BeginReloadAssembly (84ms)
+	ReloadAssembly (1267ms)
+		BeginReloadAssembly (121ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (745ms)
-			LoadAssemblies (73ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (1013ms)
+			LoadAssemblies (84ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (188ms)
+			SetupTypeCache (273ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (407ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (536ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (2ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (103ms)
-				BeforeProcessingInitializeOnLoad (77ms)
-				ProcessInitializeOnLoadAttributes (190ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				RefreshPlugins (137ms)
+				BeforeProcessingInitializeOnLoad (101ms)
+				ProcessInitializeOnLoadAttributes (250ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 1.24 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.31 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4081 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 46 unused Assets / (228.9 KB). Loaded Objects now: 4536.
 Memory consumption went from 161.0 MB to 160.7 MB.
-Total: 3.018400 ms (FindLiveObjects: 0.381900 ms CreateObjectMapping: 0.117300 ms MarkObjects: 2.336900 ms  DeleteObjects: 0.181300 ms)
+Total: 3.795900 ms (FindLiveObjects: 0.449400 ms CreateObjectMapping: 0.209600 ms MarkObjects: 2.943300 ms  DeleteObjects: 0.192500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -161,126 +161,6 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 66144.041989 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball22_open.png
-  artifactKey: Guid(2f5ac855898187d4ca295657c73af6e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball22_open.png using Guid(2f5ac855898187d4ca295657c73af6e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '260bb3cec15f617d5051ec24d4039fa8') in 0.108041 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball25_open.png
-  artifactKey: Guid(e52c4aa6fa341c94bb652ac60b7b022f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball25_open.png using Guid(e52c4aa6fa341c94bb652ac60b7b022f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd1f97c43221ba23f7318a753643d80') in 0.059968 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.014583 seconds.
-  path: Assets/Sprite/ItemPokeBall/summaryball00.png
-  artifactKey: Guid(4faea4c9041f2b04e9d250fa00e3366e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/summaryball00.png using Guid(4faea4c9041f2b04e9d250fa00e3366e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdc87592216c8c6ceafd68bec1c552ab') in 0.021258 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Sprite/ItemPokeBall/summaryball03.png
-  artifactKey: Guid(949f0449cea0c1c4bb972c14dec9a203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/summaryball03.png using Guid(949f0449cea0c1c4bb972c14dec9a203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2012ee3aa3b7b21542033a55e88d4c7b') in 0.046043 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Sprite/ItemPokeBall/summaryball06.png
-  artifactKey: Guid(f6033a1023ecdb9498990bea81a7fd9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/summaryball06.png using Guid(f6033a1023ecdb9498990bea81a7fd9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a44ee34a51645f4f5486b71d3ae98c52') in 0.021362 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.423796 seconds.
-  path: Assets/Sprite/ItemPokeBall/summaryball11.png
-  artifactKey: Guid(11ff504cd84e575479417dd6db1b00e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/summaryball11.png using Guid(11ff504cd84e575479417dd6db1b00e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bea794ae20c0bd7b71a7b4b3ea1d9199') in 0.007884 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Sprite/ItemPokeBall/summaryball15.png
-  artifactKey: Guid(238e69f9e76780f4f82d472929785f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/summaryball15.png using Guid(238e69f9e76780f4f82d472929785f1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9bae99f763baafa4d9000252e6926d2') in 0.008370 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Sprite/ItemPokeBall/summaryball17.png
-  artifactKey: Guid(7065fab61a5d6784ca8fe83a25757370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/summaryball17.png using Guid(7065fab61a5d6784ca8fe83a25757370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cf3d8f2a731fcbc39f507717edf2130') in 0.006468 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.236595 seconds.
-  path: Assets/Sprite/ItemPokeBall/summaryball22.png
-  artifactKey: Guid(c05468fb07d2fc64b8192ba31ffa3b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/summaryball22.png using Guid(c05468fb07d2fc64b8192ba31ffa3b43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86fee7ad9b936006b7660df75df178bb') in 0.007971 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprite/ItemPokeBall/summaryball24.png
-  artifactKey: Guid(0063542cc8a35074aa0addc505764a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/summaryball24.png using Guid(0063542cc8a35074aa0addc505764a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '376a444c0ff6fb0c77f66324971de64d') in 0.007235 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Sprite/ItemPokeBall/summaryball23.png
-  artifactKey: Guid(582816cf7f3716e4d9ed2bf199f5a81d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/summaryball23.png using Guid(582816cf7f3716e4d9ed2bf199f5a81d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a95feebc21c55d5d0b0e71b318c6cb3') in 0.006633 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 76.980527 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball00_open.png
-  artifactKey: Guid(8d74c62c58175a8488a8c74784f4df1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball00_open.png using Guid(8d74c62c58175a8488a8c74784f4df1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d14b3ad93b0155561e8673ce2b98927') in 0.023424 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball07_open.png
-  artifactKey: Guid(ed9f2c45aa88b244abf5a82dfd3d60ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball07_open.png using Guid(ed9f2c45aa88b244abf5a82dfd3d60ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d0fa2513638d50f7f7a3e5b72c43c25') in 0.011687 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball05.png
-  artifactKey: Guid(81060cbef89db2d418df23650f29d58e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball05.png using Guid(81060cbef89db2d418df23650f29d58e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af53b1e859b7174a7648a16acc7888d1') in 0.019662 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball06_open.png
-  artifactKey: Guid(25fdd9ea9588b30448b539ecb3da19b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball06_open.png using Guid(25fdd9ea9588b30448b539ecb3da19b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a28c2fd22bc7692417c9d85d63da8117') in 0.042167 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball04_open.png
-  artifactKey: Guid(cc82ddba9a716814fb9fbee5301eb8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball04_open.png using Guid(cc82ddba9a716814fb9fbee5301eb8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9846caf4fff43caa5ef24642013ad155') in 0.012852 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball02.png
-  artifactKey: Guid(e51751f2f50a8aa45bb4562d417332ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball02.png using Guid(e51751f2f50a8aa45bb4562d417332ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfc25b0db499494bb3b247fb2abcc731') in 0.013646 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000096 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball08.png
-  artifactKey: Guid(f56eca2ff79cbe14495d093eac5d4ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball08.png using Guid(f56eca2ff79cbe14495d093eac5d4ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '418b5ca14a45b04d3f55cc2c0457291e') in 0.021140 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball08_open.png
-  artifactKey: Guid(d6c101044b6553a4694a3f7515960f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball08_open.png using Guid(d6c101044b6553a4694a3f7515960f9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06eec55c5db416be4714f784223d26fe') in 0.009893 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Sprite/ItemPokeBall/ball02_open.png
-  artifactKey: Guid(4694e7715c2d99141974f29d2b9cbf55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprite/ItemPokeBall/ball02_open.png using Guid(4694e7715c2d99141974f29d2b9cbf55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bdb303138be4eb9c900213c76b425fa') in 0.014658 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

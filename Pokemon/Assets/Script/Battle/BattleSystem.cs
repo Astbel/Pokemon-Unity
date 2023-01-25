@@ -41,7 +41,8 @@ public class BattleSystem : MonoBehaviour
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
         player = playerParty.GetComponent<PlayerController>();
-
+        isTrainerBattle = false;
+        
         StartCoroutine(SetUpBattle());
     }
 
@@ -276,11 +277,7 @@ public class BattleSystem : MonoBehaviour
             /*判定是否陣亡,如果陣亡等待兩秒執行結束戰鬥回合*/
             if (targetUnit.Pokemon.HP <= 0)
             {
-                yield return dialogBox.TypeDialog($"{targetUnit.Pokemon.Base.Name} Fainted");
-                targetUnit.PlayFaintAnimation();
-                yield return new WaitForSeconds(2f);
-
-                CheckForBattleOver(targetUnit);
+                yield return HandlePokemonFainted(targetUnit);
 
             }
         }
@@ -326,11 +323,7 @@ public class BattleSystem : MonoBehaviour
         yield return sourceUnit.Hud.UpdateHP();
         if (sourceUnit.Pokemon.HP <= 0)
         {
-            yield return dialogBox.TypeDialog($"{sourceUnit.Pokemon.Base.Name} Fainted");
-            sourceUnit.PlayFaintAnimation();
-            yield return new WaitForSeconds(2f);
-
-            CheckForBattleOver(sourceUnit);
+            yield return HandlePokemonFainted(sourceUnit);
             yield return new WaitUntil(() => state == BattleState.RunningTurn);
         }
     }
@@ -364,6 +357,39 @@ public class BattleSystem : MonoBehaviour
 
         return UnityEngine.Random.Range(1, 101) <= moveAccuracy;
     }
+
+    IEnumerator HandlePokemonFainted(BattleUnit faintedUnit)
+    {
+        yield return dialogBox.TypeDialog($"{faintedUnit.Pokemon.Base.Name} Fainted");
+        faintedUnit.PlayFaintAnimation();
+        yield return new WaitForSeconds(2f);
+
+        if (!faintedUnit.IsPlayerUnit)
+        {
+            //Exp Gain
+            int expYield = faintedUnit.Pokemon.Base.ExpYield;
+            int enemyLevel = faintedUnit.Pokemon.Level;
+            /*check 是否為訓練家戰鬥*/
+            float trainerBouns = (isTrainerBattle) ? 1.5f : 1f;
+
+            int expGain = Mathf.FloorToInt((expYield * enemyLevel * trainerBouns) / 7);
+            playerUnit.Pokemon.Exp += expGain;
+            yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} gained {expGain} exp");
+            yield return playerUnit.Hud.SetExpSmooth();
+            //Check level up 用if只會執行一次,用while就能多次升級直到變回false
+            while (playerUnit.Pokemon.CheckForLevelUp())
+            {
+                playerUnit.Hud.SetLevel();
+                yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} grew to {playerUnit.Pokemon.Level} !");
+
+                yield return playerUnit.Hud.SetExpSmooth(true);
+            }
+
+            yield return new WaitForSeconds(1f);
+        }
+        CheckForBattleOver(faintedUnit);
+    }
+
 
     /*確認昏厥pokemon是否為玩家如果是玩家在檢測是否還有剩餘pokemon,如果有擇繼續沒有停止場景*/
     void CheckForBattleOver(BattleUnit faintedUnit)

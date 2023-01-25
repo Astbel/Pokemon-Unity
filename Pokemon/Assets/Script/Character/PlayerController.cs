@@ -17,8 +17,8 @@ public class PlayerController : MonoBehaviour
     public Sprite Sprite { get => sprite; }
 
     public string Name { get => name; }
-
-
+    /*腳色半徑扣除用於遇敵使用*/
+    const float offsetY =2.3f;
     private void Awake()
     {
         character = GetComponent<Character>();
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     //遇敵 Random 1~100 當小於10則遇到敵人,新增在遇敵後取消腳色動畫
     private void checkForEncounters()
     {
-        if (Physics2D.OverlapCircle(transform.position, 0.2f, GameLayer.Instance.GrassLayer) != null)
+        if (Physics2D.OverlapCircle(transform.position-new Vector3(0,offsetY), 0.2f, GameLayer.Instance.GrassLayer) != null)
         {
             if (UnityEngine.Random.Range(1, 101) <= 10)
             {

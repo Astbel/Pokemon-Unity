@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class BattleHud : MonoBehaviour
     [SerializeField] Text nameText;
     [SerializeField] Text levelText;
     [SerializeField] HPBar hpBar;
+    [SerializeField] GameObject expBar;
     [SerializeField] Text statusText;
     [SerializeField] Color psnColor;
     [SerializeField] Color brnColor;
@@ -24,10 +26,11 @@ public class BattleHud : MonoBehaviour
     {
         _pokemon = pokemon;
         nameText.text = pokemon.Base.Name;
-        levelText.text = "Lv:" + pokemon.Level;
+        SetLevel();
         hpBar.SetHP((float)pokemon.HP / pokemon.MaxHp);
         /*顯示Hp*/
         ShowHPText.text = pokemon.HP.ToString() + "/" + pokemon.MaxHp.ToString();
+        SetExp();
         /*配置status color*/
         statusColors = new Dictionary<ConditionID, Color>()
         {
@@ -41,6 +44,11 @@ public class BattleHud : MonoBehaviour
         SetStatusText();
         _pokemon.OnStatusChanged += SetStatusText;
     }
+    /*設定升級*/
+    public void SetLevel()
+    {
+        levelText.text = "Lv:" + _pokemon.Level;
+    }
     //狀態異常標示
     void SetStatusText()
     {
@@ -53,6 +61,30 @@ public class BattleHud : MonoBehaviour
             statusText.text = _pokemon.Status.Id.ToString().ToUpper();
             statusText.color = statusColors[_pokemon.Status.Id];
         }
+    }
+
+    public void SetExp()
+    {
+        if (expBar == null) return; /*敵人使用因為敵人物件為null*/
+        float normalizedExp = GetNormalizedExp();
+        expBar.transform.localScale = new Vector3(normalizedExp, 1, 1);
+    }
+    public IEnumerator SetExpSmooth(bool reset = false)
+    {
+        if (expBar == null) yield break; /*敵人使用因為敵人物件為null*/
+        /*如果有升等則清空EXP Bar*/
+        if (reset)
+            expBar.transform.localScale = new Vector3(0, 1, 1);
+        float normalizedExp = GetNormalizedExp();
+        yield return expBar.transform.DOScaleX(normalizedExp, 1.5f).WaitForCompletion();
+    }
+    float GetNormalizedExp()
+    {
+        int currLevelExp = _pokemon.Base.GetExpForLevel(_pokemon.Level);
+        int nextLevelExp = _pokemon.Base.GetExpForLevel(_pokemon.Level + 1);
+        /*標準化EXP*/
+        float normalizedExp = (float)(_pokemon.Exp - currLevelExp) / (nextLevelExp - currLevelExp);
+        return Mathf.Clamp01(normalizedExp);/*Exp Bar 最大是1所以限制Max為1*/
     }
 
     //HP Bar Update
