@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog, Cutscene }
+public enum GameState { FreeRoam, Battle, Dialog, Cutscene, Paused }
 
 /*
 判斷遊戲狀態目前為誰控制避免同時腳色移動
@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
 
     TrainerController trainer;
 
-    /*Audio Source */
+    GameState stateBeforePause;
     GameState state;
     /*Game start init*/
     private void Awake()
@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-      
+
         battleSystem.OnBattleOver += EndBattle;
 
         /*Lamda function*/
@@ -42,9 +42,20 @@ public class GameController : MonoBehaviour
             if (state == GameState.Dialog)
                 state = GameState.FreeRoam;
         };
+    }
+    /*切換場景停止遊戲控制*/
+    public void PausedGame(bool pause)
+    {
+        if (pause)
+        {
+            stateBeforePause = state;
+            state = GameState.Paused;
+        }
+        else
+        {
+            state = stateBeforePause;
 
-
-
+        }
     }
 
     public void StartBattle()
