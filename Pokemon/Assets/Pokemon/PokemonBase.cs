@@ -24,7 +24,8 @@ public class PokemonBase : ScriptableObject
     [SerializeField] GrothRate grothRate;
     [SerializeField] int expYield;
     [SerializeField] int catchRate;
-
+    /*設定Pokemon學習最多招式數量*/
+    public static int MaxNumOfMoves { get; set; } = 4;
     [SerializeField] List<LearnableMove> learnableMoves;
 
     public int GetExpForLevel(int level)

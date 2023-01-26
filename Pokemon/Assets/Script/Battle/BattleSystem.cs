@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { Start, ActionSelection, MoveSelection, RunningTurn, Busy, PartySelection, AboutToUse, BattleOver }
+public enum BattleState { Start, ActionSelection, MoveSelection, MoveForget, RunningTurn, Busy, PartySelection, AboutToUse, BattleOver }
 public enum BattleAction { Move, SwitchPokemon, UseItem, Run }
 public class BattleSystem : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] BattleDialogBox dialogBox;
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] GameObject pokeballSprite;
-
+    [SerializeField] MoveSelectUI moveSelectUI;
     public event Action<bool> OnBattleOver;
     BattleState state;  //回合制狀態機
     BattleState? prevState;  //回合制狀態機
@@ -35,14 +36,14 @@ public class BattleSystem : MonoBehaviour
     Pokemon wildPokemon;
     PlayerController player;
     TrainerController trainer;
-
+    MoveBase moveToLearn;
     public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
     {
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
         player = playerParty.GetComponent<PlayerController>();
         isTrainerBattle = false;
-        
+
         StartCoroutine(SetUpBattle());
     }
 
@@ -152,8 +153,20 @@ public class BattleSystem : MonoBehaviour
         yield return dialogBox.TypeDialog($"{trainer.Name} is about to use {newPokemon.Base.Name}. Do you want to change Pokemon ? ");
         state = BattleState.AboutToUse;
         dialogBox.EnableChoiceBox(true);
-
     }
+    /*學則招式忘記*/
+    IEnumerator ChooseMoveToForget(Pokemon pokemon, MoveBase newMove)
+    {
+        state = BattleState.Busy;
+        yield return dialogBox.TypeDialog($"Choose a move you wan't to forget");
+        moveSelectUI.gameObject.SetActive(true);
+        /*List move to List move Base method by Linq*/
+        /*UI顯示原來的技能以及要忘記的技能*/
+        moveSelectUI.SetMoveData(pokemon.Moves.Select(x => x.Base).ToList(), newMove);
+        moveToLearn = newMove;
+        state = BattleState.MoveForget;
+    }
+
 
     IEnumerator RunTurns(BattleAction playerAction)
     {
@@ -381,7 +394,27 @@ public class BattleSystem : MonoBehaviour
             {
                 playerUnit.Hud.SetLevel();
                 yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} grew to {playerUnit.Pokemon.Level} !");
-
+                // 學習技能
+                var newMove = playerUnit.Pokemon.GetLearnableMoveAtCurLevel();
+                if (newMove != null)
+                {
+                    if (playerUnit.Pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
+                    {
+                        /*當等級提升學習技能時也需要在招式選擇放入技能*/
+                        playerUnit.Pokemon.LearnMove(newMove);
+                        yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} learned {newMove.MoveBase.Name} !");
+                        dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
+                    }
+                    else  /*Forget moves*/
+                    {
+                        yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} trying to learned {newMove.MoveBase.Name}");
+                        yield return dialogBox.TypeDialog($"But it can't learn more than {PokemonBase.MaxNumOfMoves} moves ");
+                        yield return ChooseMoveToForget(playerUnit.Pokemon, newMove.MoveBase);
+                        /*等待狀態只到forgetMove完成才結束戰鬥*/
+                        yield return new WaitUntil(() => state != BattleState.MoveForget);
+                        yield return new WaitForSeconds(2f);
+                    }
+                }
                 yield return playerUnit.Hud.SetExpSmooth(true);
             }
 
@@ -452,6 +485,31 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.AboutToUse)
         {
             HandleAboutToUse();
+        }
+        else if (state == BattleState.MoveForget)
+        {
+            Action<int> onMoveSelected = (moveIndex) =>
+            {
+                moveSelectUI.gameObject.SetActive(false);
+                if (moveIndex == PokemonBase.MaxNumOfMoves)
+                {
+                    /*不學習招式*/
+                    StartCoroutine(dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} did not learn {moveToLearn.Name}"));
+                }
+                else
+                {
+                    /*忘記招式學新招式*/
+                    var selectedMove = playerUnit.Pokemon.Moves[moveIndex].Base;
+                    StartCoroutine(dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} forget {selectedMove.Name} and learned {moveToLearn.Name}"));
+
+                    playerUnit.Pokemon.Moves[moveIndex] = new Move(moveToLearn);
+                }
+                /*Resset*/
+                moveToLearn = null;
+                state = BattleState.RunningTurn;
+            };
+
+            moveSelectUI.HandleForgetMoves(onMoveSelected);
         }
     }
     /*Player 選擇動作*/

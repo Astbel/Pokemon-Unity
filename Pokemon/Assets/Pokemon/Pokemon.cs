@@ -51,7 +51,7 @@ public class Pokemon
                 Moves.Add(new Move(move.MoveBase));
             }
             /*當技能超過4則break*/
-            if (Moves.Count >= 4)
+            if (Moves.Count >= PokemonBase.MaxNumOfMoves)
             {
                 break;
             }
@@ -106,6 +106,21 @@ public class Pokemon
         }
         return false;
     }
+    /*確認升等要學招式*/
+    public LearnableMove GetLearnableMoveAtCurLevel()
+    {
+        return Base.LearnableMoves.Where(x => x.Level == level).FirstOrDefault();
+    }
+    /*學習招式*/
+    public void LearnMove(LearnableMove moveToLearn)
+    {
+        /*當超過4個時候*/
+        if (Moves.Count > PokemonBase.MaxNumOfMoves)
+            return;
+
+        Moves.Add(new Move(moveToLearn.MoveBase));
+    }
+
     /*計算提升數值技能*/
     int GetStat(Stat stat)
     {
