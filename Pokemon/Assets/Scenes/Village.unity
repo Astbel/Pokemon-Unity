@@ -257,6 +257,7 @@ GameObject:
   - component: {fileID: 1558641113}
   - component: {fileID: 1558641112}
   - component: {fileID: 1558641111}
+  - component: {fileID: 1558641114}
   m_Layer: 7
   m_Name: LongGrass
   m_TagString: Untagged
@@ -15412,7 +15413,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -28968,6 +28969,18 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
+--- !u!114 &1558641114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558641107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3454ab6769ac24bb40d76ad4201885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1738806973
 GameObject:
   m_ObjectHideFlags: 0
@@ -38055,7 +38068,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:

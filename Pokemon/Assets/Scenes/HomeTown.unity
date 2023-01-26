@@ -196,6 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 233543500}
   - component: {fileID: 233543501}
+  - component: {fileID: 233543502}
   m_Layer: 10
   m_Name: Fov
   m_TagString: Untagged
@@ -244,6 +245,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2289734, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &233543502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233543499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac2f47cb9cd488148b2c69e5afc862fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &509972281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261,11 +274,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7480524230311994404, guid: a6fdda4c37ab6984cadb16218341a0ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.04
+      value: 24.12
       objectReference: {fileID: 0}
     - target: {fileID: 7480524230311994404, guid: a6fdda4c37ab6984cadb16218341a0ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.15
+      value: 10.39
       objectReference: {fileID: 0}
     - target: {fileID: 7480524230311994404, guid: a6fdda4c37ab6984cadb16218341a0ef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -62976,6 +62989,7 @@ GameObject:
   - component: {fileID: 910654396}
   - component: {fileID: 910654395}
   - component: {fileID: 910654394}
+  - component: {fileID: 910654399}
   m_Layer: 7
   m_Name: LongGrass
   m_TagString: Untagged
@@ -73185,6 +73199,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &910654399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910654392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3454ab6769ac24bb40d76ad4201885, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &916088383
 GameObject:
   m_ObjectHideFlags: 0

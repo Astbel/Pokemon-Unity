@@ -14,7 +14,7 @@ public class Character : MonoBehaviour
         animator = GetComponent<CharacterAnim>();
         SetPositionAndSnapToTile(transform.position);
     }
-    public float offsetY { get; private set; } = 0.5f;
+    public float offsetY { get; private set; } = 0.0f;
     public CharacterAnim Animator { get => animator; }
 
     public void SetPositionAndSnapToTile(Vector2 pos)

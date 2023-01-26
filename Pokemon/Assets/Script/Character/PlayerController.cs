@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnMoveOver()
     {
-        /*OverlapCircle只能回傳一種數組,OverlapCircleAll回傳一整組array*/
+        /*OverlapCircle只能回傳第一個數組,OverlapCircleAll回傳一整組array*/
         var triggerables =
         Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.offsetY), 0.2f, GameLayer.Instance.TriggerAbleLayers);
 
