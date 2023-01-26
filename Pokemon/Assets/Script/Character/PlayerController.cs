@@ -10,15 +10,14 @@ public class PlayerController : MonoBehaviour
     private Character character;
     /*產生一個委派 事件同於C# delegate*/
     /*Delegate就是 C++ pointer function*/
-    public event Action OnEncountered;      //草叢事件
-    public event Action<Collider2D> OnEnterTrainerView;//訓練家事件
+
     private Vector2 input;
 
     public Sprite Sprite { get => sprite; }
 
     public string Name { get => name; }
     /*腳色半徑扣除用於遇敵使用*/
-    const float offsetY =2.3f;
+    const float offsetY = 0.5f;
     private void Awake()
     {
         character = GetComponent<Character>();
@@ -67,34 +66,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnMoveOver()
     {
-        checkForEncounters();
-        CheckIfInTrainerView();
-    }
+        /*OverlapCircle只能回傳一種數組,OverlapCircleAll回傳一整組array*/
+        var triggerables =
+        Physics2D.OverlapCircleAll(transform.position - new Vector3(0, offsetY), 0.2f, GameLayer.Instance.TriggerAbleLayers);
 
-
-    //遇敵 Random 1~100 當小於10則遇到敵人,新增在遇敵後取消腳色動畫
-    private void checkForEncounters()
-    {
-        if (Physics2D.OverlapCircle(transform.position-new Vector3(0,offsetY), 0.2f, GameLayer.Instance.GrassLayer) != null)
+        foreach (var collider in triggerables)
         {
-            if (UnityEngine.Random.Range(1, 101) <= 10)
+            var ColliderTriggerAble = collider.GetComponent<IPlayerTriggerAble>();
+            if (ColliderTriggerAble != null)
             {
+                /*停止腳色移動動畫*/
                 character.Animator.IsMoving = false;
-                OnEncountered();
+                ColliderTriggerAble.OnPlayerTriggered(this);
+                break;
             }
         }
 
     }
-
-    private void CheckIfInTrainerView()
-    {
-        var collider = Physics2D.OverlapCircle(transform.position, 0.2f, GameLayer.Instance.FovLayer);
-
-        if (collider != null)
-        {
-            character.Animator.IsMoving = false;
-            OnEnterTrainerView?.Invoke(collider);
-        }
-    }
-
 }

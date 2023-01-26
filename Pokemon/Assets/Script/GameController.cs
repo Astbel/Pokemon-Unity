@@ -28,19 +28,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        playerController.OnEncountered += StartBattle;
+      
         battleSystem.OnBattleOver += EndBattle;
-
-        /*Trainer Battle*/
-        playerController.OnEnterTrainerView += (Collider2D trainerCollider) =>
-        {
-            var tranier = trainerCollider.GetComponentInParent<TrainerController>();
-            if (tranier != null)
-            {
-                state = GameState.Cutscene;
-                StartCoroutine(tranier.TriggerTrainerBattle(playerController));
-            }
-        };
 
         /*Lamda function*/
         DialogManger.Instance.OnShowDialog += () =>
@@ -58,7 +47,7 @@ public class GameController : MonoBehaviour
 
     }
 
-    void StartBattle()
+    public void StartBattle()
     {
         state = GameState.Battle;
         battleSystem.gameObject.SetActive(true);
@@ -88,6 +77,11 @@ public class GameController : MonoBehaviour
 
     }
 
+    public void OnEnterTrainerView(TrainerController trainer)
+    {
+        state = GameState.Cutscene;
+        StartCoroutine(trainer.TriggerTrainerBattle(playerController));
+    }
 
     void EndBattle(bool won)
     {
