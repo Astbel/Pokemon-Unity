@@ -10,14 +10,13 @@ public class PlayerController : MonoBehaviour
     private Character character;
     /*產生一個委派 事件同於C# delegate*/
     /*Delegate就是 C++ pointer function*/
-
+    public Character Character => character;
     private Vector2 input;
 
     public Sprite Sprite { get => sprite; }
 
     public string Name { get => name; }
-    /*腳色半徑扣除用於遇敵使用*/
-    const float offsetY = 0.5f;
+
     private void Awake()
     {
         character = GetComponent<Character>();
@@ -68,7 +67,7 @@ public class PlayerController : MonoBehaviour
     {
         /*OverlapCircle只能回傳一種數組,OverlapCircleAll回傳一整組array*/
         var triggerables =
-        Physics2D.OverlapCircleAll(transform.position - new Vector3(0, offsetY), 0.2f, GameLayer.Instance.TriggerAbleLayers);
+        Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.offsetY), 0.2f, GameLayer.Instance.TriggerAbleLayers);
 
         foreach (var collider in triggerables)
         {

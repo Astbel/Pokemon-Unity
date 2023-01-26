@@ -12,10 +12,19 @@ public class Character : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<CharacterAnim>();
+        SetPositionAndSnapToTile(transform.position);
     }
-
+    public float offsetY { get; private set; } = 0.5f;
     public CharacterAnim Animator { get => animator; }
 
+    public void SetPositionAndSnapToTile(Vector2 pos)
+    {
+        /*為了讓圖片對其中心 Ex當前座標2.3 ->floor後->2+0.5*/
+        pos.x = Mathf.Floor(pos.x) + 0.5f;
+        pos.y = Mathf.Floor(pos.x) + 0.5f + offsetY;
+
+        transform.position = pos;
+    }
 
     public IEnumerator Move(Vector2 moveVec, Action OnMoveOver = null)
     {
