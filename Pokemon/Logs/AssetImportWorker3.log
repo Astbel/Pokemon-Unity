@@ -1,0 +1,527 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.16f1 (4016570cf34f) revision 4200023'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'zh' Physical Memory: 16085 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Uinty2019\2021.3.16f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+C:/Users/Astbel/Desktop/Poke_unity/Pokemon
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+63173
+Successfully changed project path to: C:/Users/Astbel/Desktop/Poke_unity/Pokemon
+C:/Users/Astbel/Desktop/Poke_unity/Pokemon
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [7596] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 991813705 [EditorId] 991813705 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [7596] Host "[IP] 192.168.1.104 [Port] 0 [Flags] 2 [Guid] 991813705 [EditorId] 991813705 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 135.89 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.16f1 (4016570cf34f)
+[Subsystems] Discovering subsystems at path D:/Uinty2019/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Astbel/Desktop/Poke_unity/Pokemon/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6023 MB
+    Driver:   30.0.14.9709
+Initialize mono
+Mono path[0] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56004
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Uinty2019/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002290 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 125.78 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.806 seconds
+Domain Reload Profiling:
+	ReloadAssembly (806ms)
+		BeginReloadAssembly (70ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (625ms)
+			LoadAssemblies (69ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (105ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (437ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (126ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (270ms)
+				ProcessInitializeOnLoadMethodAttributes (35ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.008950 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 126.58 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.574 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1575ms)
+		BeginReloadAssembly (82ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1406ms)
+			LoadAssemblies (69ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (287ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (964ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (127ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (725ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.69 seconds
+Refreshing native plugins compatible for Editor in 1.52 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4089 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (229.0 KB). Loaded Objects now: 4544.
+Memory consumption went from 161.2 MB to 161.0 MB.
+Total: 2.890400 ms (FindLiveObjects: 0.283900 ms CreateObjectMapping: 0.098900 ms MarkObjects: 2.316100 ms  DeleteObjects: 0.190600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 137906.629600 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_3.asset
+  artifactKey: Guid(f8b68ad69bbaa9a44ac8280f58457a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_3.asset using Guid(f8b68ad69bbaa9a44ac8280f58457a69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6e4b06db23321290e960b34342d7354') in 0.136029 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_20.asset
+  artifactKey: Guid(a629371160bc33e40b81fc42a11e4a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_20.asset using Guid(a629371160bc33e40b81fc42a11e4a85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc76ce796b3dfab545051f3bc33fece0') in 0.022232 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_37.asset
+  artifactKey: Guid(260d19770543bb7479da5124c82f3dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_37.asset using Guid(260d19770543bb7479da5124c82f3dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5aed9f732fddad3c32eb472c78479f87') in 0.036918 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_24.asset
+  artifactKey: Guid(77ffaa5cd3ef9a54789746267320b9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_24.asset using Guid(77ffaa5cd3ef9a54789746267320b9b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e01dc029da6c5803468014ad40f54e1') in 0.007258 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_8.asset
+  artifactKey: Guid(f9cc86c5d944f954baafe6e4adf27388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_8.asset using Guid(f9cc86c5d944f954baafe6e4adf27388) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '769de5383feaaa249a012ca1fe0ff219') in 0.007917 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_15.asset
+  artifactKey: Guid(00655e169f1d9d747a14657058905b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_15.asset using Guid(00655e169f1d9d747a14657058905b32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46d77fd5d8a27d3811bb24f0c41da953') in 0.007325 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_27.asset
+  artifactKey: Guid(839f295613609f248b3ab4613159fa0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_27.asset using Guid(839f295613609f248b3ab4613159fa0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16394d75761b1b6022f62b86d0dbbe3d') in 0.007436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_5.asset
+  artifactKey: Guid(8a1a70e4fa70f654c8f615f8d0dc1809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_5.asset using Guid(8a1a70e4fa70f654c8f615f8d0dc1809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '852f95237962ea83ebebca69dcacfd98') in 0.006580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.373400 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_43.asset
+  artifactKey: Guid(25c4a331d7ebc704e85500843d12ec83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_43.asset using Guid(25c4a331d7ebc704e85500843d12ec83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa11acc1de83f939dfcc5785c6b6bbbe') in 0.012579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_44.asset
+  artifactKey: Guid(a6d60f105e327e74bb1b44acb1d5010b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_44.asset using Guid(a6d60f105e327e74bb1b44acb1d5010b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a882f1e0d6ced0d62ab157d150df9048') in 0.008962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.033288 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_54.asset
+  artifactKey: Guid(7ded99bbff861bf42bb2e7b265aa7106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_54.asset using Guid(7ded99bbff861bf42bb2e7b265aa7106) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c32b6443f95689de969c8fca0e4cafd') in 0.008976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_57.asset
+  artifactKey: Guid(8b7e3fbcd89763844933ed7a5fa43baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_57.asset using Guid(8b7e3fbcd89763844933ed7a5fa43baa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8600bc2da9fa6680ca3b7246b8f854a8') in 0.013523 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_56.asset
+  artifactKey: Guid(248b05f80168e0a4d937517ddd4b505a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_56.asset using Guid(248b05f80168e0a4d937517ddd4b505a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '515b7d95980afe73c507a9b0317c8c5e') in 0.008520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.539445 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_65.asset
+  artifactKey: Guid(9cf71cc9f3c36c94c85aadd26d5d918d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_65.asset using Guid(9cf71cc9f3c36c94c85aadd26d5d918d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fca303367548edde12f8ec65c1a47f7') in 0.009908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_72.asset
+  artifactKey: Guid(1743f4ecfc7d214459eb332c613d3b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_72.asset using Guid(1743f4ecfc7d214459eb332c613d3b7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22b044d06968043b05beeed13322c120') in 0.012878 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.062454 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_76.asset
+  artifactKey: Guid(d3a027e5815498542aca671a9dd69a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_76.asset using Guid(d3a027e5815498542aca671a9dd69a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '562dea48368bf26ba975e5652f9c286f') in 0.021257 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_79.asset
+  artifactKey: Guid(f46325bcb767e6a4e8ac0f9db0f008bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_79.asset using Guid(f46325bcb767e6a4e8ac0f9db0f008bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb07969a4133386443497978b9da08c') in 0.024016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_80.asset
+  artifactKey: Guid(40e8edc7ce4209c4b8bb209454b3109e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_80.asset using Guid(40e8edc7ce4209c4b8bb209454b3109e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a1f370f91f1f21ca28fde35a7cf8da') in 0.009615 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_82.asset
+  artifactKey: Guid(841bdde3030e25240aadb672a508b585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_82.asset using Guid(841bdde3030e25240aadb672a508b585) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f14296ed9a381a6fd7b5d782bde25da3') in 0.041305 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.259504 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_87.asset
+  artifactKey: Guid(4d531826929b57a4b9b051e0775ed907) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_87.asset using Guid(4d531826929b57a4b9b051e0775ed907) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f77743fade4658cb777924b7595ccb6e') in 0.023438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_91.asset
+  artifactKey: Guid(323ec28aa20f9df45836da93899ebbef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_91.asset using Guid(323ec28aa20f9df45836da93899ebbef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '472021c99e5ab307515e1cfb4fa9b4c3') in 0.021957 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_105.asset
+  artifactKey: Guid(84f8c63f27903574ebe2196d2d4a7f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_105.asset using Guid(84f8c63f27903574ebe2196d2d4a7f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cab65abe7801e8cc1100738873799763') in 0.015147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_101.asset
+  artifactKey: Guid(2df94ecb803bb3c4fae74cb79ede65dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_101.asset using Guid(2df94ecb803bb3c4fae74cb79ede65dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fe8679d4bf0628774053aa296e46037') in 0.011216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_99.asset
+  artifactKey: Guid(c638b5efa100e1943b71def16998cc06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_99.asset using Guid(c638b5efa100e1943b71def16998cc06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db526ae63c2c1db2a6f9c78a8349ea2e') in 0.029038 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_92.asset
+  artifactKey: Guid(68954c352e713b34abced54ca1e32f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_92.asset using Guid(68954c352e713b34abced54ca1e32f24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54f137fbdcd38159294d2cefe2e7ecf0') in 0.062465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.408860 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_109.asset
+  artifactKey: Guid(9b86bb9687d42b649a7afbb4e990d81d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_109.asset using Guid(9b86bb9687d42b649a7afbb4e990d81d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fecdd5dab21e4d921eec5bbd9686e9e2') in 0.008597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_113.asset
+  artifactKey: Guid(072b12ece99a07448a5c811b8cf71347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_113.asset using Guid(072b12ece99a07448a5c811b8cf71347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '836479aa609c9dceaa3733160396e574') in 0.007825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.004425 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_117.asset
+  artifactKey: Guid(4ef4cc356ea6b9542b5621e9fbc3c43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_117.asset using Guid(4ef4cc356ea6b9542b5621e9fbc3c43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31b905544eee17c85d31a41aec3ce11d') in 0.007267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_119.asset
+  artifactKey: Guid(6dd00e15ba5b81b45b3f404ed88d6edc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_119.asset using Guid(6dd00e15ba5b81b45b3f404ed88d6edc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8583bbf6367cb9f19170b6eff7ceb096') in 0.006548 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_124.asset
+  artifactKey: Guid(03a2ca1f9e5951b42a1226349782670a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_124.asset using Guid(03a2ca1f9e5951b42a1226349782670a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf9d67dffdc078f5320bf2f251de523') in 0.007302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_132.asset
+  artifactKey: Guid(7003a03d7a6cc6643a3dd75afa215051) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_132.asset using Guid(7003a03d7a6cc6643a3dd75afa215051) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60e60504d20d71579c354fbf59cd07b5') in 0.009183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_138.asset
+  artifactKey: Guid(63bb2d6ca425d7d469be301a20e9953d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_138.asset using Guid(63bb2d6ca425d7d469be301a20e9953d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7762323b90f10bca1d83370ca6029b') in 0.006789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_131.asset
+  artifactKey: Guid(55a75ddfedfb8214b8d3ba82431effe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_131.asset using Guid(55a75ddfedfb8214b8d3ba82431effe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '440e4eb358aee14b33f22c63001457e1') in 0.007702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.313941 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_142.asset
+  artifactKey: Guid(905b37ff54dc43948b532e4273533914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_142.asset using Guid(905b37ff54dc43948b532e4273533914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66767190bada9b457fa8f2e7cbcf904f') in 0.008148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_149.asset
+  artifactKey: Guid(bb8a6f25119dfef4a8ddbefab1f66e0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_149.asset using Guid(bb8a6f25119dfef4a8ddbefab1f66e0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8e1b66a8abfc5be712512952de99945') in 0.009457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003759 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_150.asset
+  artifactKey: Guid(18a25560fae59d34188e4b378b708ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_150.asset using Guid(18a25560fae59d34188e4b378b708ba0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0af98f43ef71d043bdbaa9293bbb20ea') in 0.006481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_158.asset
+  artifactKey: Guid(a2254bb3da46bbd4a88a65bc2ff84972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_158.asset using Guid(a2254bb3da46bbd4a88a65bc2ff84972) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31651b0d00a46edb69ce1dd3bca836ce') in 0.006914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_159.asset
+  artifactKey: Guid(9186add1938871347a60c62e455699f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_159.asset using Guid(9186add1938871347a60c62e455699f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebaa5a391da61da927d1ef814e00813b') in 0.006632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_167.asset
+  artifactKey: Guid(c0c44112b2506f941baf4641debad187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_167.asset using Guid(c0c44112b2506f941baf4641debad187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd8cd629a40a958c1ed1d4b400af970f') in 0.006651 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_169.asset
+  artifactKey: Guid(96e7d772769647940adb48fe9ef44c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_169.asset using Guid(96e7d772769647940adb48fe9ef44c37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49ce24835d71c44553f7e463912f5944') in 0.007641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_165.asset
+  artifactKey: Guid(d3b80d44a777eb746a016b0f15197f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_165.asset using Guid(d3b80d44a777eb746a016b0f15197f21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22197da88e410c76a2cb11ddf6087bf6') in 0.007496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.258885 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_175.asset
+  artifactKey: Guid(ffa76451d3fe66247b4a13f7586d6722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_175.asset using Guid(ffa76451d3fe66247b4a13f7586d6722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88a0f5e4bceaea2371f735cb3126e68f') in 0.008459 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_181.asset
+  artifactKey: Guid(14c173d8f421f3c43b8cf2a9bf1333ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_181.asset using Guid(14c173d8f421f3c43b8cf2a9bf1333ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4483cbf7d8730d4e7787bfd7e80bf4f4') in 0.008921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.003577 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_183.asset
+  artifactKey: Guid(8c115a8801325614584e96ab4451dc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_183.asset using Guid(8c115a8801325614584e96ab4451dc12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd20baf520aec35132eb991690f4fe18') in 0.006809 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_191.asset
+  artifactKey: Guid(310c7132478e5c54a92e8c1e7f737911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_191.asset using Guid(310c7132478e5c54a92e8c1e7f737911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4542ab42bd6e9350efdb14a0731d1eb') in 0.008309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_197.asset
+  artifactKey: Guid(5be4b064e74c130468a188f1e9120f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_197.asset using Guid(5be4b064e74c130468a188f1e9120f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d2f2874d0d46891c37c0c04eeed7469') in 0.007178 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_196.asset
+  artifactKey: Guid(d52200448bedbb544a0d5a54fef11fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_196.asset using Guid(d52200448bedbb544a0d5a54fef11fbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0bea6e47efb4b96392208167263fad9') in 0.007733 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_203.asset
+  artifactKey: Guid(3e00dfe59d930c2459488e800995c535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_203.asset using Guid(3e00dfe59d930c2459488e800995c535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3be8150d55781d1b955013d177d6ab46') in 0.009049 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_199.asset
+  artifactKey: Guid(2302058632aa83849baf019a5c1ee16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_199.asset using Guid(2302058632aa83849baf019a5c1ee16e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e46e5d86b58f50c101f1f54d42b540ad') in 0.007271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.200258 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_208.asset
+  artifactKey: Guid(1edd6ceba1260184f988b0b3d54a6538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_208.asset using Guid(1edd6ceba1260184f988b0b3d54a6538) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a74d0a60a031c205967560694c9f639') in 0.008919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_209.asset
+  artifactKey: Guid(7ba1c9d4286ab87408145bbe688072ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_209.asset using Guid(7ba1c9d4286ab87408145bbe688072ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39441a73c717204c472bc825137985b4') in 0.008454 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002913 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_216.asset
+  artifactKey: Guid(e5d1d89e6d94cb94085b059f44c04640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_216.asset using Guid(e5d1d89e6d94cb94085b059f44c04640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a068f7cfcfedfbea1d2db599a6606993') in 0.006963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_219.asset
+  artifactKey: Guid(b47e71be4b2349b4caac52e5c2995dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_219.asset using Guid(b47e71be4b2349b4caac52e5c2995dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d381eded6f40a1b86d7995608fc0ae1') in 0.006565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_233.asset
+  artifactKey: Guid(76a68bbebed8df0429e03c6e4dba7dd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_233.asset using Guid(76a68bbebed8df0429e03c6e4dba7dd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3d6f1a54c6ca7b52efa0a961d0920d2') in 0.008825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_235.asset
+  artifactKey: Guid(a7a561435df7cfe4498c659e4814e325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_235.asset using Guid(a7a561435df7cfe4498c659e4814e325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a76f65eb28be49edb2c53f4952c136f') in 0.007602 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_227.asset
+  artifactKey: Guid(3dc3880285ebe134d88b3b3e1fa38d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_227.asset using Guid(3dc3880285ebe134d88b3b3e1fa38d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6c686f1d935f2704c585e687451e04f') in 0.007642 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_248.asset
+  artifactKey: Guid(7653f257e4fdcd340ac49c77bfd637d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_248.asset using Guid(7653f257e4fdcd340ac49c77bfd637d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c5ca13e9637d57aee902e628cab191') in 0.008529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_224.asset
+  artifactKey: Guid(788f04fe1c74ed74aad359d36ff66210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_224.asset using Guid(788f04fe1c74ed74aad359d36ff66210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39f7aef7fadecc150eacdea930e5543a') in 0.006803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_241.asset
+  artifactKey: Guid(2324a91003614bb4fa71b932e603421f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_241.asset using Guid(2324a91003614bb4fa71b932e603421f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf067637e5c98cce3e2c18eb940c9a14') in 0.007759 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_230.asset
+  artifactKey: Guid(960a17fd19767a04ba0cad9b03322372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprite/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_230.asset using Guid(960a17fd19767a04ba0cad9b03322372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a1445df5ba0760d9acd18812c6e0a85') in 0.007692 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
