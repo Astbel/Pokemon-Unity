@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour, ISavable
@@ -83,14 +84,33 @@ public class PlayerController : MonoBehaviour, ISavable
     /*Save 紀錄需要有SerializeField才能被序列化,object在C#泛型可以回傳任意type*/
     public object CaptureState()
     {
-        /*紀錄腳色當前座標*/
-        float[] position = new float[] { transform.position.x, transform.position.y };
-        return position;
+        /*將要儲存的放進一個類別*/
+        var saveData = new PlayerSaveData()
+        {
+            position = new float[] { transform.position.x, transform.position.y },
+            /*用Linq的select將Party中所有的元素再轉成GetSaveData 類別最後再轉成List*/
+            pokemons = GetComponent<PokemonParty>().Pokemons.Select(p => p.GetSaveData()).ToList()
+        };
+
+        return saveData;
     }
     /*Load data*/
     public void RestoreState(object state)
     {
-        var position = (float[])state;
-        transform.position = new Vector3(position[0], position[1]);
+        var saveData = (PlayerSaveData)state;
+        var pos = saveData.position;
+        transform.position = new Vector3(pos[0], pos[1]);
+        /*讀取player隊伍*/
+        GetComponent<PokemonParty>().Pokemons=saveData.pokemons.Select(s => new Pokemon(s)).ToList();
     }
+}
+
+
+/*Class for save player data*/
+[Serializable]
+public class PlayerSaveData
+{
+    public float[] position;
+
+    public List<PokemonSaveData> pokemons;
 }

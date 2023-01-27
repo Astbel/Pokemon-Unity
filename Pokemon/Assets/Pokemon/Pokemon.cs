@@ -58,10 +58,8 @@ public class Pokemon
         }
         CalculateStat();
         HP = MaxHp;
-        ResetStatBoost();
-
         StatusChanges = new Queue<string>();
-
+        ResetStatBoost();
         Exp = Base.GetExpForLevel(Level);
 
         /*清除所有異常狀態*/
@@ -297,13 +295,43 @@ public class Pokemon
     {
         VolatileStatus = null;
     }
+    /*讀取資料*/
+    public Pokemon(PokemonSaveData saveData)
+    {
+        _base = PokemonDB.GetPokemonByName(saveData.name);
+        HP = saveData.hp;
+        level = saveData.level;
+        Exp = saveData.exp;
+        /*狀態部分回到ConditionDB的Dictionary去查找對應狀態*/
+        if (saveData.statusId != null)
+            Status = ConditionDB.Conditions[saveData.statusId.Value];
+        else
+            Status = null;
+        /*重新在陣列找move資料*/
+        Moves=saveData.moves.Select(s=>new Move(s)).ToList();
 
+        CalculateStat();
+        StatusChanges = new Queue<string>();
+        ResetStatBoost();
+        VolatileStatus = null;
+    }
+    /*將pokemon類轉成pokemonSaveData類別*/
+    public PokemonSaveData GetSaveData()
+    {
+        var saveData = new PokemonSaveData()
+        {
+            name = Base.Name,
+            hp = HP,
+            level = Level,
+            exp = Exp,
+            statusId = Status?.Id, //null判定如果是null回傳null
+            moves=Moves.Select(m=>m.GetSaveData()).ToList()
+        };
 
-
-
+        return saveData;
+    }
 
 }
-
 
 public class DamageDetails
 {
@@ -312,6 +340,15 @@ public class DamageDetails
     public float TypeEffectiveness { get; set; }
 
 }
-
-
+/*Pokemon 序列化要儲存資料只有Hp Exp Lv status*/
+[System.Serializable]
+public class PokemonSaveData
+{
+    public string name;
+    public int hp;
+    public int level;
+    public int exp;
+    public ConditionID? statusId;
+    public List<MoveSaveData> moves;
+}
 
