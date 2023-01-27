@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, ISavable
 {
     [SerializeField] string name;
     [SerializeField] Sprite sprite;
@@ -79,5 +79,18 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+    }
+    /*Save 紀錄需要有SerializeField才能被序列化,object在C#泛型可以回傳任意type*/
+    public object CaptureState()
+    {
+        /*紀錄腳色當前座標*/
+        float[] position = new float[] { transform.position.x, transform.position.y };
+        return position;
+    }
+    /*Load data*/
+    public void RestoreState(object state)
+    {
+        var position = (float[])state;
+        transform.position = new Vector3(position[0], position[1]);
     }
 }

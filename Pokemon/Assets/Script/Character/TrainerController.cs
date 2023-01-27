@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrainerController : MonoBehaviour, Interactable
+public class TrainerController : MonoBehaviour, Interactable, ISavable
 {
     [SerializeField] string name;
     [SerializeField] Sprite sprite;
@@ -11,6 +11,7 @@ public class TrainerController : MonoBehaviour, Interactable
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
 
+    /*回傳紀錄是否打贏*/
     bool battleLost = false;
     Character character;
 
@@ -95,6 +96,17 @@ public class TrainerController : MonoBehaviour, Interactable
 
         fov.transform.eulerAngles = new Vector3(0f, 0f, angle);
     }
+    /*遊戲紀錄存檔Trainer是否對戰過*/
+    public object CaptureState()
+    {
+        return battleLost;
+    }
 
+    public void RestoreState(object state)
+    {
+        battleLost = (bool)state;
 
+        if (battleLost)
+            fov.gameObject.SetActive(false);
+    }
 }

@@ -17,7 +17,7 @@ public class BattleHud : MonoBehaviour
     [SerializeField] Color slpColor;
     [SerializeField] Color parColor;
     [SerializeField] Color frzColor;
-
+    public int MaxLevel { get; private set; } = 100;
     Dictionary<ConditionID, Color> statusColors;
 
     Pokemon _pokemon;
@@ -68,6 +68,7 @@ public class BattleHud : MonoBehaviour
         if (expBar == null) return; /*敵人使用因為敵人物件為null*/
         float normalizedExp = GetNormalizedExp();
         expBar.transform.localScale = new Vector3(normalizedExp, 1, 1);
+
     }
     public IEnumerator SetExpSmooth(bool reset = false)
     {
@@ -82,6 +83,8 @@ public class BattleHud : MonoBehaviour
     {
         int currLevelExp = _pokemon.Base.GetExpForLevel(_pokemon.Level);
         int nextLevelExp = _pokemon.Base.GetExpForLevel(_pokemon.Level + 1);
+        /*pokemon滿等時經驗條不跑動*/
+        if (_pokemon.Level == MaxLevel) return 0f;
         /*標準化EXP*/
         float normalizedExp = (float)(_pokemon.Exp - currLevelExp) / (nextLevelExp - currLevelExp);
         return Mathf.Clamp01(normalizedExp);/*Exp Bar 最大是1所以限制Max為1*/

@@ -120,6 +120,15 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
+            /*測試存檔讀檔*/
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                SavingSystem.i.Save("SavingSolt1");
+            }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                SavingSystem.i.Load("SavingSolt1");
+            }
         }
         //player at battle
         else if (state == GameState.Battle)
@@ -130,7 +139,6 @@ public class GameController : MonoBehaviour
         {
             DialogManger.Instance.HandleUpdate();
         }
-
     }
 
     public void SetCurrentScene(SceneDetail currScene)
