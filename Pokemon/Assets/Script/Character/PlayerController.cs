@@ -62,10 +62,10 @@ public class PlayerController : MonoBehaviour
             collider.GetComponent<Interactable>()?.Interact(transform);//輸入腳色的方向
         }
     }
-
+    /*所有觸發事件*/
     private void OnMoveOver()
     {
-        /*OverlapCircle只能回傳第一個數組,OverlapCircleAll回傳一整組array*/
+        /*OverlapCircle只能回傳第一個數組,OverlapCircleAll能分別回傳對應的OPP*/
         var triggerables =
         Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.offsetY), 0.2f, GameLayer.Instance.TriggerAbleLayers);
 
@@ -74,8 +74,6 @@ public class PlayerController : MonoBehaviour
             var ColliderTriggerAble = collider.GetComponent<IPlayerTriggerAble>();
             if (ColliderTriggerAble != null)
             {
-                /*停止腳色移動動畫*/
-                character.Animator.IsMoving = false;
                 ColliderTriggerAble.OnPlayerTriggered(this);
                 break;
             }

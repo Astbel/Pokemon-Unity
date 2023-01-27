@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HomeTown.unity
+    path: Assets/Scenes/HomeTwon.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Village.unity
@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/House1.unity
     guid: c8f3c9a11ca70d84c94aa2103bfad282
+  - enabled: 1
+    path: Assets/Scenes/Route1.unity
+    guid: ccc73a50eea60fe47a1e6e6cfb2cd736
   m_configObjects: {}

@@ -14,14 +14,14 @@ public class Character : MonoBehaviour
         animator = GetComponent<CharacterAnim>();
         SetPositionAndSnapToTile(transform.position);
     }
-    public float offsetY { get; private set; } = 0.0f;
+    public float offsetY { get; private set; } = 0.3f;
     public CharacterAnim Animator { get => animator; }
 
     public void SetPositionAndSnapToTile(Vector2 pos)
     {
         /*為了讓圖片對其中心 Ex當前座標2.3 ->floor後->2+0.5*/
-        pos.x = Mathf.Floor(pos.x) + 0.5f;
-        pos.y = Mathf.Floor(pos.x) + 0.5f + offsetY;
+        pos.x = Mathf.Floor(pos.x) +0.5f;
+        pos.y = Mathf.Floor(pos.y) +0.5f+ offsetY;
 
         transform.position = pos;
     }

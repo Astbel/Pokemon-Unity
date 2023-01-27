@@ -19,6 +19,11 @@ public class GameController : MonoBehaviour
 
     GameState stateBeforePause;
     GameState state;
+
+    public SceneDetail CurrentScene { get; private set; }
+
+    public SceneDetail PrevScene { get; private set; }
+
     /*Game start init*/
     private void Awake()
     {
@@ -65,7 +70,8 @@ public class GameController : MonoBehaviour
         worldCamera.gameObject.SetActive(false);
 
         var playerParty = playerController.GetComponent<PokemonParty>();
-        var wildPokemon = FindObjectOfType<MapArea>().GetComponent<MapArea>().GetRandomWildPokemon();
+        /*由於切換場景的關西FindObjectOfType只會load第一章地圖,用CurrentScene來切換對應地圖遇到的怪物*/
+        var wildPokemon = CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon();
 
         var wildPokemonCopy = new Pokemon(wildPokemon.Base, wildPokemon.Level);
 
@@ -126,4 +132,11 @@ public class GameController : MonoBehaviour
         }
 
     }
+
+    public void SetCurrentScene(SceneDetail currScene)
+    {
+        PrevScene = CurrentScene;
+        CurrentScene = currScene;
+    }
+
 }
