@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog, Menu, Cutscene, Paused }
+public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused }
 
 /*
 判斷遊戲狀態目前為誰控制避免同時腳色移動
@@ -14,7 +15,8 @@ public class GameController : MonoBehaviour
     [SerializeField] PlayerController playerController;
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
-
+    [SerializeField] PartyScreen partyScreen;
+    // [SerializeField] InventoryUI inventoryUI;
     TrainerController trainer;
     MenuController menuController;
     GameState stateBeforePause;
@@ -38,7 +40,7 @@ public class GameController : MonoBehaviour
     {
 
         battleSystem.OnBattleOver += EndBattle;
-
+        partyScreen.Init();
         /*Lamda function*/
         DialogManger.Instance.OnShowDialog += () =>
         {
@@ -135,6 +137,17 @@ public class GameController : MonoBehaviour
                 menuController.OpenMenu();
                 state = GameState.Menu;
             }
+            /*開啟包包選單*/
+            // else if (state == GameState.Bag)
+            // {
+            //     Action onBack = () =>
+            //     {
+            //         inventoryUI.gameObject.SetActive(false);
+            //         state = GameState.FreeRoam;
+            //     };
+
+            //     inventoryUI.HandleUpdate(onBack);
+            // }
         }
         //player at battle
         else if (state == GameState.Battle)
@@ -149,6 +162,20 @@ public class GameController : MonoBehaviour
         {
             menuController.HandleUpdate();
         }
+        else if (state == GameState.PartyScreen)
+        {
+            Action onSelected = () =>
+            {
+
+            };
+            Action onBack = () =>
+            {
+                partyScreen.gameObject.SetActive(false);
+                state=GameState.FreeRoam;
+            };
+
+            partyScreen.HandleUpdate(onSelected,onBack);
+        }
     }
 
     public void SetCurrentScene(SceneDetail currScene)
@@ -159,25 +186,32 @@ public class GameController : MonoBehaviour
 
     void OnMenuSelect(int selectedItem)
     {
-        if (selectedItem==0)
+        if (selectedItem == 0)
         {
             //Pokemon
+            partyScreen.gameObject.SetActive(true);
+            partyScreen.SetPartyData(playerController.GetComponent<PokemonParty>().Pokemons);
+            state = GameState.PartyScreen;
         }
-        else if (selectedItem==1)
+        else if (selectedItem == 1)
         {
             //Bag
+            // inventoryUI.gameObject.SetActive(true);
+            // state = GameState.Bag;
         }
-        else if (selectedItem==2)
+        else if (selectedItem == 2)
         {
             //Save
-             SavingSystem.i.Save("SavingSolt1");
+            SavingSystem.i.Save("SavingSolt1");
+            state = GameState.FreeRoam;
         }
-        else if (selectedItem==3)
+        else if (selectedItem == 3)
         {
             //Load
             SavingSystem.i.Load("SavingSolt1");
+            state = GameState.FreeRoam;
         }
-        state=GameState.FreeRoam;
+
     }
 
 }

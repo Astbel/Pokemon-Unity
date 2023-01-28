@@ -22,10 +22,8 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] MoveSelectUI moveSelectUI;
     public event Action<bool> OnBattleOver;
     BattleState state;  //回合制狀態機
-    BattleState? prevState;  //回合制狀態機
     int currentAction; //選單變數偵測
     int currentMove; //技能選單變數偵測
-    int currentMember;//party 選單中變數
     /*確認是否為戰鬥狀態*/
     bool isTrainerBattle = false;
     bool aboutToUseChoice = true;
@@ -132,6 +130,7 @@ public class BattleSystem : MonoBehaviour
     //選單選擇戰鬥中其他Pokemon
     void OpenPartyScreen()
     {
+        partyScreen.CalledFrom = state;
         state = BattleState.PartySelection;
         /*回傳player的pokemon list*/
         partyScreen.SetPartyData(playerParty.Pokemons);
@@ -213,7 +212,7 @@ public class BattleSystem : MonoBehaviour
         {
             if (playerAction == BattleAction.SwitchPokemon)
             {
-                var selectedMember = playerParty.Pokemons[currentMember];
+                var selectedMember = partyScreen.SelectedMember;
                 state = BattleState.Busy;    /*狀態改為busy避免玩家一直A造成誤動作*/
                 yield return SwitchPokemon(selectedMember);
             }
@@ -550,7 +549,6 @@ public class BattleSystem : MonoBehaviour
             else if (currentAction == 2)
             {
                 //Party
-                prevState = state;
                 OpenPartyScreen();
             }
             else if (currentAction == 3)
@@ -618,31 +616,9 @@ public class BattleSystem : MonoBehaviour
     */
     void HandlePartySelection()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        Action onSelected = () =>
         {
-            ++currentMember;
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            --currentMember;
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            currentMember += 2;
-        }
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            currentMember -= 2;
-        }
-        /*限制選單賦值由於限制跟腳色技能樹有關所以參照玩家pokemon擁有技能上線做定義*/
-        currentMember = Math.Clamp(currentMember, 0, playerParty.Pokemons.Count - 1);
-
-        partyScreen.UpdateMemberSelection(currentMember);
-
-        /*選擇腳色*/
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            var selectedMember = playerParty.Pokemons[currentMember];
+            var selectedMember = partyScreen.SelectedMember;
             //不能選擇昏厥pokemon
             if (selectedMember.HP <= 0)
             {
@@ -658,20 +634,21 @@ public class BattleSystem : MonoBehaviour
             /*當選單結束時關閉選單*/
             partyScreen.gameObject.SetActive(false);
 
-            if (prevState == BattleState.ActionSelection)
+            if (partyScreen.CalledFrom == BattleState.ActionSelection)
             {
-                prevState = null;
                 StartCoroutine(RunTurns(BattleAction.SwitchPokemon));
             }
             else
             {
                 /*狀態改為busy避免玩家一直A造成誤動作*/
                 state = BattleState.Busy;
-                StartCoroutine(SwitchPokemon(selectedMember));
+                bool isTrainerAboutToUse = partyScreen.CalledFrom == BattleState.AboutToUse;
+                StartCoroutine(SwitchPokemon(selectedMember, isTrainerAboutToUse));
             }
-        }
-        /*返回鍵*/
-        else if (Input.GetKeyDown(KeyCode.X))
+            partyScreen.CalledFrom = null;
+        };
+
+        Action onBack = () =>
         {
             if (playerUnit.Pokemon.HP <= 0)
             {
@@ -680,14 +657,16 @@ public class BattleSystem : MonoBehaviour
             }
             partyScreen.gameObject.SetActive(false);
 
-            if (prevState == BattleState.AboutToUse)
+            if (partyScreen.CalledFrom == BattleState.AboutToUse)
             {
-                prevState = null;
                 StartCoroutine(SendNextPokemon());
             }
             else
                 ActionSelection();
-        }
+            partyScreen.CalledFrom = null;
+        };
+
+        partyScreen.HandleUpdate(onSelected,onBack);
     }
 
     /*替換pokemon*/
@@ -700,17 +679,15 @@ public class BattleSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            dialogBox.EnableChoiceBox(false);
             /*Yes 進入選擇畫面*/
             if (aboutToUseChoice == true)
             {
-                dialogBox.EnableChoiceBox(false);
-                prevState = BattleState.AboutToUse;
                 OpenPartyScreen();
             }
             /*NO 繼續戰鬥畫面*/
             else
             {
-                dialogBox.EnableChoiceBox(false);
                 StartCoroutine(SendNextPokemon());
             }
 
@@ -729,7 +706,7 @@ public class BattleSystem : MonoBehaviour
     1.只有HP>0才可以切換
     2.如果昏厥的話要再次比較哪知pokemon的基礎速度點高才決定誰先攻
     */
-    IEnumerator SwitchPokemon(Pokemon newPokemon)
+    IEnumerator SwitchPokemon(Pokemon newPokemon, bool isTrainerAboutToUse = false)
     {
         /*確認玩家pokemon是否HP大於0才播放切換*/
         if (playerUnit.Pokemon.HP > 0)
@@ -742,17 +719,11 @@ public class BattleSystem : MonoBehaviour
         playerUnit.Setup(newPokemon);
         dialogBox.SetMoveNames(newPokemon.Moves);
         yield return dialogBox.TypeDialog($"I Chose you {newPokemon.Base.Name}!.");
-        /*把狀態在此轉回RunningTurn,讓RunningTurn來決定誰是這回合先動作*/
-        if (prevState == null)
-        {
-            state = BattleState.RunningTurn;
-        }
-        else if (prevState == BattleState.AboutToUse)
-        {
-            prevState = null;
-            StartCoroutine(SendNextPokemon());
-        }
 
+        if (isTrainerAboutToUse)
+            StartCoroutine(SendNextPokemon());
+        else
+            state = BattleState.RunningTurn;
     }
 
     /*提升降低狀態Buff訊息*/
