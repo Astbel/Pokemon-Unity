@@ -9,14 +9,20 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] GameObject itemList;
     [SerializeField] ItemSlotUI itemSlotUI;
     [SerializeField] Image itemIcon;
-    [SerializeField] Text  itemDescription;
+    [SerializeField] Text itemDescription;
+    [SerializeField] Image upArrow;
+    [SerializeField] Image downArrow;
     int selectedItem = 0;
     Inventory inventory;
     List<ItemSlotUI> slotUIList;
+    RectTransform itemListRect;
+    /*包包軸限制轉動數*/
+    const int itemInViewport = 4;
     /*由於包包UI跟玩家是分開的所以用findobject來查詢玩家的物品*/
     private void Awake()
     {
         inventory = Inventory.GetInventory();
+        itemListRect = itemList.GetComponent<RectTransform>();
     }
 
     private void Start()
@@ -69,9 +75,25 @@ public class InventoryUI : MonoBehaviour
                 slotUIList[i].NameText.color = Color.black;
         }
 
-        var item =inventory.Slots[selectedItem].Item;
-        itemIcon.sprite=item.Icon;
-        itemDescription.text=item.Description;
+        var item = inventory.Slots[selectedItem].Item;
+        itemIcon.sprite = item.Icon;
+        itemDescription.text = item.Description;
+
+        HandleSrcolling();
     }
+
+    void HandleSrcolling()
+    {
+        float scrollPos = Mathf.Clamp(selectedItem - itemInViewport, 0, selectedItem) * slotUIList[0].Height;
+        /*包包選項時只有y軸移動*/
+        itemListRect.localPosition = new Vector2(itemListRect.localPosition.x, scrollPos);
+        /*包包箭頭介面*/
+        bool showUpArrow = selectedItem > itemInViewport;
+        upArrow.gameObject.SetActive(showUpArrow);
+        bool shodownpArrow = selectedItem + itemInViewport < slotUIList.Count;
+        downArrow.gameObject.SetActive(shodownpArrow);
+
+    }
+
 
 }

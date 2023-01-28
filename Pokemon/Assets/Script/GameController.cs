@@ -29,6 +29,10 @@ public class GameController : MonoBehaviour
     /*Game start init*/
     private void Awake()
     {
+        /*取消使用滑鼠*/
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        /**/
         Instance = this;
         PokemonDB.Init();
         MoveDB.Init();

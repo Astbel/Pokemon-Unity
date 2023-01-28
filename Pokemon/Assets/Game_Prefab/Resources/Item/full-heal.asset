@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8188370c5a824a4f9694124b56b2490, type: 3}
   m_Name: full-heal
   m_EditorClassIdentifier: 
-  name: burn-heal
-  description: Recover of a Pokemon from burn
-  icon: {fileID: 21300000, guid: 426d0940a68a30d4595f9ecb04c0cb7e, type: 3}
+  name: full-heal
+  description: Recover of a Pokemon from all status
+  icon: {fileID: 21300000, guid: acc0dd7799e9c8045a30e46f5499fe22, type: 3}
   hpAmount: 0
   restoreMaxHp: 0
   ppAmount: 0
   restoreMaxPP: 0
-  status: 2
-  recoverAllStatus: 0
+  status: 0
+  recoverAllStatus: 1
   reive: 0
   maxRevive: 0
