@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog, Cutscene, Paused }
+public enum GameState { FreeRoam, Battle, Dialog, Menu, Cutscene, Paused }
 
 /*
 判斷遊戲狀態目前為誰控制避免同時腳色移動
@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     [SerializeField] Camera worldCamera;
 
     TrainerController trainer;
-
+    MenuController menuController;
     GameState stateBeforePause;
     GameState state;
 
@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour
         PokemonDB.Init();
         MoveDB.Init();
         ConditionDB.Init();
+        menuController = GetComponent<MenuController>();
     }
 
     private void Start()
@@ -49,6 +50,12 @@ public class GameController : MonoBehaviour
             if (state == GameState.Dialog)
                 state = GameState.FreeRoam;
         };
+
+        menuController.closeMenuSelected += () =>
+        {
+            state = GameState.FreeRoam;
+        };
+        menuController.onMenuSelected += OnMenuSelect;
     }
     /*切換場景停止遊戲控制*/
     public void PausedGame(bool pause)
@@ -122,14 +129,11 @@ public class GameController : MonoBehaviour
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();
-            /*測試存檔讀檔*/
-            if (Input.GetKeyDown(KeyCode.S))
+            /*開啟選單*/
+            if (Input.GetKeyDown(KeyCode.Return))
             {
-                SavingSystem.i.Save("SavingSolt1");
-            }
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                SavingSystem.i.Load("SavingSolt1");
+                menuController.OpenMenu();
+                state = GameState.Menu;
             }
         }
         //player at battle
@@ -141,12 +145,39 @@ public class GameController : MonoBehaviour
         {
             DialogManger.Instance.HandleUpdate();
         }
+        else if (state == GameState.Menu)
+        {
+            menuController.HandleUpdate();
+        }
     }
 
     public void SetCurrentScene(SceneDetail currScene)
     {
         PrevScene = CurrentScene;
         CurrentScene = currScene;
+    }
+
+    void OnMenuSelect(int selectedItem)
+    {
+        if (selectedItem==0)
+        {
+            //Pokemon
+        }
+        else if (selectedItem==1)
+        {
+            //Bag
+        }
+        else if (selectedItem==2)
+        {
+            //Save
+             SavingSystem.i.Save("SavingSolt1");
+        }
+        else if (selectedItem==3)
+        {
+            //Load
+            SavingSystem.i.Load("SavingSolt1");
+        }
+        state=GameState.FreeRoam;
     }
 
 }

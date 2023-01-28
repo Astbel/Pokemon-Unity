@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class BattleDialogBox : MonoBehaviour
 {
     [SerializeField] int letterPerSecond;
-    [SerializeField] Color highlightedColor; //選單被選取時辨識的顏色
     [SerializeField] Text dialogText;
     /*選耽物件*/
     [SerializeField] GameObject actionSelector;
@@ -21,6 +20,13 @@ public class BattleDialogBox : MonoBehaviour
     [SerializeField] Text typeText;
     [SerializeField] Text yesText;
     [SerializeField] Text noText;
+
+    Color highlightedColor;
+
+    private void Start()
+    {
+        highlightedColor = GlobalSettings.i.HighhlightColor;
+    }
 
     public void SetDialog(string dialog)
     {
