@@ -16,7 +16,7 @@ public class GameController : MonoBehaviour
     [SerializeField] BattleSystem battleSystem;
     [SerializeField] Camera worldCamera;
     [SerializeField] PartyScreen partyScreen;
-    // [SerializeField] InventoryUI inventoryUI;
+    [SerializeField] InventoryUI inventoryUI;
     TrainerController trainer;
     MenuController menuController;
     GameState stateBeforePause;
@@ -137,17 +137,6 @@ public class GameController : MonoBehaviour
                 menuController.OpenMenu();
                 state = GameState.Menu;
             }
-            /*開啟包包選單*/
-            // else if (state == GameState.Bag)
-            // {
-            //     Action onBack = () =>
-            //     {
-            //         inventoryUI.gameObject.SetActive(false);
-            //         state = GameState.FreeRoam;
-            //     };
-
-            //     inventoryUI.HandleUpdate(onBack);
-            // }
         }
         //player at battle
         else if (state == GameState.Battle)
@@ -171,10 +160,21 @@ public class GameController : MonoBehaviour
             Action onBack = () =>
             {
                 partyScreen.gameObject.SetActive(false);
-                state=GameState.FreeRoam;
+                state = GameState.FreeRoam;
             };
 
-            partyScreen.HandleUpdate(onSelected,onBack);
+            partyScreen.HandleUpdate(onSelected, onBack);
+        }
+        /*開啟包包選單*/
+        else if (state == GameState.Bag)
+        {
+            Action onBack = () =>
+            {
+                inventoryUI.gameObject.SetActive(false);
+                state = GameState.FreeRoam;
+            };
+
+            inventoryUI.HandleUpdate(onBack);
         }
     }
 
@@ -196,8 +196,8 @@ public class GameController : MonoBehaviour
         else if (selectedItem == 1)
         {
             //Bag
-            // inventoryUI.gameObject.SetActive(true);
-            // state = GameState.Bag;
+            inventoryUI.gameObject.SetActive(true);
+            state = GameState.Bag;
         }
         else if (selectedItem == 2)
         {
