@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum InventoryUIState { ItemSelection, PartySelection, Busy }
+
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField] GameObject itemList;
@@ -12,10 +14,12 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] Text itemDescription;
     [SerializeField] Image upArrow;
     [SerializeField] Image downArrow;
+    [SerializeField] PartyScreen partyScreen;
     int selectedItem = 0;
     Inventory inventory;
     List<ItemSlotUI> slotUIList;
     RectTransform itemListRect;
+    InventoryUIState state;
     /*包包軸限制轉動數*/
     const int itemInViewport = 4;
     /*由於包包UI跟玩家是分開的所以用findobject來查詢玩家的物品*/
@@ -49,21 +53,38 @@ public class InventoryUI : MonoBehaviour
     }
     public void HandleUpdate(Action onBack)
     {
-        /*紀錄當前選擇*/
-        int prevSelection = selectedItem;
-        /*選擇部分*/
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-            ++selectedItem;
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
-            --selectedItem;
-        selectedItem = Mathf.Clamp(selectedItem, 0, inventory.Slots.Count - 1);
-        /*如果有跟新選擇才跟新選擇標籤顏色*/
-        if (prevSelection != selectedItem)
-            UpdateItemSelection();
+        if (state == InventoryUIState.ItemSelection)
+        {
+            /*紀錄當前選擇*/
+            int prevSelection = selectedItem;
+            /*選擇部分*/
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+                ++selectedItem;
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
+                --selectedItem;
+            selectedItem = Mathf.Clamp(selectedItem, 0, inventory.Slots.Count - 1);
+            /*如果有跟新選擇才跟新選擇標籤顏色*/
+            if (prevSelection != selectedItem)
+                UpdateItemSelection();
+            if (Input.GetKeyDown(KeyCode.Z))
+                OpenPartyScreen();
+            else if (Input.GetKeyDown(KeyCode.X))
+                onBack?.Invoke();
+        }
+        else if (state == InventoryUIState.PartySelection)
+        {
+            Action onSelected = () =>
+            {
 
+            };
 
-        if (Input.GetKeyDown(KeyCode.X))
-            onBack?.Invoke();
+            Action onBackPartyScreen = () =>
+           {
+                ClosePartyScreen();
+           };
+
+            partyScreen.HandleUpdate(onSelected,onBackPartyScreen);
+        }
     }
     void UpdateItemSelection()
     {
@@ -84,6 +105,9 @@ public class InventoryUI : MonoBehaviour
 
     void HandleSrcolling()
     {
+        /*如果道具小於這個數量就不需要顯示滾動軸*/
+        if(slotUIList.Count <=itemInViewport) return;
+
         float scrollPos = Mathf.Clamp(selectedItem - itemInViewport, 0, selectedItem) * slotUIList[0].Height;
         /*包包選項時只有y軸移動*/
         itemListRect.localPosition = new Vector2(itemListRect.localPosition.x, scrollPos);
@@ -94,6 +118,15 @@ public class InventoryUI : MonoBehaviour
         downArrow.gameObject.SetActive(shodownpArrow);
 
     }
-
+    void OpenPartyScreen()
+    {
+        state = InventoryUIState.PartySelection;
+        partyScreen.gameObject.SetActive(true);
+    }
+    void ClosePartyScreen()
+    {
+        state = InventoryUIState.ItemSelection;
+        partyScreen.gameObject.SetActive(false);
+    }
 
 }

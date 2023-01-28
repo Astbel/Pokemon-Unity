@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,9 @@ public class PokemonParty : MonoBehaviour
 {
     [SerializeField] List<Pokemon> pokemons;
     //回傳至給Party UI 來顯示
+
+    public event Action OnUpdated;
+
     public List<Pokemon> Pokemons { get { return pokemons; } set { pokemons = value; } }
 
     /*開始時為所有pokemon初始化狀態 初始化招式以及血量*/
@@ -32,11 +36,18 @@ public class PokemonParty : MonoBehaviour
         if (pokemons.Count < 6)
         {
             pokemons.Add(newPokemon);
+            OnUpdated?.Invoke();
         }
         else
         {
             /*Add a pc for implemented*/
         }
     }
+    /*宣告一個靜態method來獲得腳色隊伍*/
+    public static PokemonParty GetPlayerParty()
+    {
+       return FindObjectOfType<PlayerController>().GetComponent<PokemonParty>();
+    }
+
 
 }

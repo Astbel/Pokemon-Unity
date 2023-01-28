@@ -9,19 +9,26 @@ public class PartyScreen : MonoBehaviour
     [SerializeField] Text messageText;
     PartyMemberUI[] memberSlots;
     List<Pokemon> pokemons;
+    PokemonParty party;
     int selection = 0;
     public Pokemon SelectedMember => pokemons[selection];
     public BattleState? CalledFrom { get; set; }  //回合制狀態機
 
     /*Override 讓格子可以使用*/
+    /*用靜態方法在遊戲開始時就獲取玩家隊伍資料,但是只會初始化一次*/
     public void Init()
     {
         memberSlots = GetComponentsInChildren<PartyMemberUI>(true);
+
+        party = PokemonParty.GetPlayerParty();
+        SetPartyData();
+
+        party.OnUpdated +=SetPartyData;
     }
 
-    public void SetPartyData(List<Pokemon> pokemons)
+    public void SetPartyData()
     {
-        this.pokemons = pokemons;
+        pokemons=party.Pokemons;
 
         for (int i = 0; i < memberSlots.Length; i++)
         {
