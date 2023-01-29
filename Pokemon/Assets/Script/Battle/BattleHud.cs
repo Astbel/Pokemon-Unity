@@ -24,6 +24,12 @@ public class BattleHud : MonoBehaviour
 
     public void SetData(Pokemon pokemon)
     {
+        /*切換時後壁面沿用之前的狀態先取消訂閱事件*/
+        if (_pokemon != null)
+        {
+            _pokemon.OnStatusChanged -= SetStatusText;
+            _pokemon.OnHpChanged -= UpdateHP;
+        }
         _pokemon = pokemon;
         nameText.text = pokemon.Base.Name;
         SetLevel();
@@ -43,6 +49,7 @@ public class BattleHud : MonoBehaviour
 
         SetStatusText();
         _pokemon.OnStatusChanged += SetStatusText;
+        _pokemon.OnHpChanged += UpdateHP;
     }
     /*設定升級*/
     public void SetLevel()
@@ -89,18 +96,23 @@ public class BattleHud : MonoBehaviour
         float normalizedExp = (float)(_pokemon.Exp - currLevelExp) / (nextLevelExp - currLevelExp);
         return Mathf.Clamp01(normalizedExp);/*Exp Bar 最大是1所以限制Max為1*/
     }
+    public void UpdateHP()
+    {
+        StartCoroutine(UpdateHPAsync());
+    }
 
     //HP Bar Update
-    public IEnumerator UpdateHP()
+    public IEnumerator UpdateHPAsync()
     {
-        if (_pokemon.HpChanged)
-        {
-            yield return hpBar.SetHPSmooth((float)_pokemon.HP / _pokemon.MaxHp);
-            /*跟新顯示*/
-            ShowHPText.text = _pokemon.HP.ToString() + "/" + _pokemon.MaxHp.ToString();
-            _pokemon.HpChanged = false;
-        }
+        yield return hpBar.SetHPSmooth((float)_pokemon.HP / _pokemon.MaxHp);
+        /*跟新顯示*/
+        ShowHPText.text = _pokemon.HP.ToString() + "/" + _pokemon.MaxHp.ToString();
 
+    }
+
+    public IEnumerator WaitForHpUpdate()
+    {
+        yield return new WaitUntil(() => hpBar.IsUpdating == false);
     }
 
 }

@@ -30,8 +30,8 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         /*取消使用滑鼠*/
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Cursor.lockState = CursorLockMode.Locked;
+        // Cursor.visible = false;
         /**/
         Instance = this;
         PokemonDB.Init();
@@ -194,7 +194,6 @@ public class GameController : MonoBehaviour
         {
             //Pokemon
             partyScreen.gameObject.SetActive(true);
-            // partyScreen.SetPartyData(playerController.GetComponent<PokemonParty>().Pokemons);
             state = GameState.PartyScreen;
         }
         else if (selectedItem == 1)

@@ -24,8 +24,6 @@ public class Pokemon
     public Condition VolatileStatus { get; private set; }
     //用於顯示腳色Buff
     public Queue<string> StatusChanges { get; private set; } = new Queue<string>();
-    //計算傷害後 呼叫bool
-    public bool HpChanged { get; set; }
     //睡眠異常狀態計數
     public int StatusTime { get; set; }
     //混亂回合計數
@@ -223,13 +221,11 @@ public class Pokemon
     {
         HP = Mathf.Clamp(HP - damage, 0, MaxHp);
         OnHpChanged?.Invoke();
-        HpChanged = true;
     }
     public void InecreaseHP(int amount)
     {
         HP = Mathf.Clamp(HP + amount, 0, MaxHp);
         OnHpChanged?.Invoke();
-        HpChanged = true;
     }
 
     /*中毒燒傷呼叫使用語法需要再查明*/

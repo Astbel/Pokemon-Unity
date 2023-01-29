@@ -6,7 +6,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { Start, ActionSelection, MoveSelection, MoveForget, RunningTurn, Busy, PartySelection, AboutToUse, BattleOver }
+public enum BattleState { Start, Bag, ActionSelection, MoveSelection, MoveForget, RunningTurn, Busy, PartySelection, AboutToUse, BattleOver }
 public enum BattleAction { Move, SwitchPokemon, UseItem, Run }
 public class BattleSystem : MonoBehaviour
 {
@@ -20,6 +20,7 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] PartyScreen partyScreen;
     [SerializeField] GameObject pokeballSprite;
     [SerializeField] MoveSelectUI moveSelectUI;
+    [SerializeField] InventoryUI inventoryUI;
     public event Action<bool> OnBattleOver;
     BattleState state;  //回合制狀態機
     int currentAction; //選單變數偵測
@@ -134,7 +135,14 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.PartySelection;
         partyScreen.gameObject.SetActive(true);
     }
+    /*開啟包包*/
+    void OpenBag()
+    {
+        state = BattleState.Bag;
+        inventoryUI.gameObject.SetActive(true);
 
+
+    }
     /*選技能階段*/
     void MoveSelection()
     {
@@ -217,8 +225,9 @@ public class BattleSystem : MonoBehaviour
             //使用道具
             else if (playerAction == BattleAction.UseItem)
             {
+                /*玩家使用道具所以跳過玩家回合所以不執行*/
                 dialogBox.EnableActionSelector(false);
-                yield return ThrowPokeBall();
+                // yield return ThrowPokeBall();
             }
             /*逃跑*/
             else if (playerAction == BattleAction.Run)
@@ -245,7 +254,7 @@ public class BattleSystem : MonoBehaviour
         if (!canRunMove)
         {
             yield return ShowStatusChanges(sourceUnit.Pokemon);
-            yield return sourceUnit.Hud.UpdateHP();
+            yield return sourceUnit.Hud.WaitForHpUpdate();
             yield break;
         }
         /*狀態異常例如麻痺有可能可以放技能但還是要打印訊息出來*/
@@ -271,7 +280,7 @@ public class BattleSystem : MonoBehaviour
                 var damageDetails = targetUnit.Pokemon.TakeDamage(move, sourceUnit.Pokemon);
 
                 /*跟新Hp*/
-                yield return targetUnit.Hud.UpdateHP();
+                yield return targetUnit.Hud.WaitForHpUpdate();
                 yield return ShowDamageDetails(damageDetails);
             }
             /*招式異常狀態檢測,確認招式屬性是否大於0*/
@@ -330,7 +339,7 @@ public class BattleSystem : MonoBehaviour
         //中毒 燒傷會在每一回合觸發然後種異常狀態的pokemon有可能昏厥
         sourceUnit.Pokemon.OnAfterTurn();
         yield return ShowStatusChanges(sourceUnit.Pokemon);
-        yield return sourceUnit.Hud.UpdateHP();
+        yield return sourceUnit.Hud.WaitForHpUpdate();
         if (sourceUnit.Pokemon.HP <= 0)
         {
             yield return HandlePokemonFainted(sourceUnit);
@@ -483,6 +492,23 @@ public class BattleSystem : MonoBehaviour
         {
             HandleAboutToUse();
         }
+        else if (state == BattleState.Bag)
+        {
+            Action onBack = () =>
+            {
+                inventoryUI.gameObject.SetActive(false);
+                state = BattleState.ActionSelection;
+            };
+
+            Action onItemUsed = () =>
+            {
+                state = BattleState.Busy;
+                inventoryUI.gameObject.SetActive(false);
+                StartCoroutine(RunTurns(BattleAction.UseItem));
+            };
+
+            inventoryUI.HandleUpdate(onBack, onItemUsed);
+        }
         else if (state == BattleState.MoveForget)
         {
             Action<int> onMoveSelected = (moveIndex) =>
@@ -542,7 +568,8 @@ public class BattleSystem : MonoBehaviour
             else if (currentAction == 1)
             {
                 //Bag
-                StartCoroutine(RunTurns(BattleAction.UseItem));
+                // StartCoroutine(RunTurns(BattleAction.UseItem));
+                OpenBag();
             }
             else if (currentAction == 2)
             {
@@ -664,7 +691,7 @@ public class BattleSystem : MonoBehaviour
             partyScreen.CalledFrom = null;
         };
 
-        partyScreen.HandleUpdate(onSelected,onBack);
+        partyScreen.HandleUpdate(onSelected, onBack);
     }
 
     /*替換pokemon*/

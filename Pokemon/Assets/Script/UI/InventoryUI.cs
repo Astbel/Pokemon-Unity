@@ -15,6 +15,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] Image upArrow;
     [SerializeField] Image downArrow;
     [SerializeField] PartyScreen partyScreen;
+    Action onItemUsed;
     int selectedItem = 0;
     Inventory inventory;
     List<ItemSlotUI> slotUIList;
@@ -52,8 +53,14 @@ public class InventoryUI : MonoBehaviour
         }
         UpdateItemSelection();
     }
-    public void HandleUpdate(Action onBack)
+    /*道具事件新增兩個
+    onBack      關閉菜單
+    onItemUsed  使用過後
+    */
+    public void HandleUpdate(Action onBack, Action onItemUsed=null)
     {
+        this.onItemUsed = onItemUsed;
+
         /*開啟選單*/
         if (state == InventoryUIState.ItemSelection)
         {
@@ -101,6 +108,7 @@ public class InventoryUI : MonoBehaviour
         if (usedItem != null)
         {
             yield return DialogManger.Instance.ShowDialogText($"The player used {usedItem.Name}");
+            onItemUsed?.Invoke();
         }
         else
         {
