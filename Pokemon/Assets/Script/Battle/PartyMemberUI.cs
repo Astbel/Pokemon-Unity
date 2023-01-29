@@ -11,19 +11,28 @@ public class PartyMemberUI : MonoBehaviour
 
     Pokemon _pokemon;
 
-    public void SetData(Pokemon pokemon)
+    public void Init(Pokemon pokemon)
     {
         _pokemon = pokemon;
-        nameText.text = pokemon.Base.Name;
-        levelText.text = "Lv:" + pokemon.Level;
-        hpBar.SetHP((float)pokemon.HP / pokemon.MaxHp);
+        
+        UpdateData();
+
+        _pokemon.OnHpChanged +=UpdateData;
     }
+
+    void UpdateData()
+    {
+        nameText.text = _pokemon.Base.Name;
+        levelText.text = "Lv:" + _pokemon.Level;
+        hpBar.SetHP((float)_pokemon.HP / _pokemon.MaxHp);
+    }
+
 
     /*High light member*/
     public void SetSelected(bool selected)
     {
         if (selected)
-            nameText.color =GlobalSettings.i.HighhlightColor;
+            nameText.color = GlobalSettings.i.HighhlightColor;
         else
             nameText.color = Color.black;
     }

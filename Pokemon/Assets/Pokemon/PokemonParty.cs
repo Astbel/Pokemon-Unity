@@ -12,7 +12,11 @@ public class PokemonParty : MonoBehaviour
 
     public event Action OnUpdated;
 
-    public List<Pokemon> Pokemons { get { return pokemons; } set { pokemons = value; } }
+    public List<Pokemon> Pokemons
+    {
+        get { return pokemons; }
+        set { pokemons = value; OnUpdated?.Invoke(); }
+    }
 
     /*開始時為所有pokemon初始化狀態 初始化招式以及血量*/
     private void Start()
@@ -46,7 +50,7 @@ public class PokemonParty : MonoBehaviour
     /*宣告一個靜態method來獲得腳色隊伍*/
     public static PokemonParty GetPlayerParty()
     {
-       return FindObjectOfType<PlayerController>().GetComponent<PokemonParty>();
+        return FindObjectOfType<PlayerController>().GetComponent<PokemonParty>();
     }
 
 

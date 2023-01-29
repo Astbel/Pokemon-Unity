@@ -19,4 +19,19 @@ public class RecoveryItem : itemBase
     [SerializeField] bool maxRevive;
 
 
+    public override bool Use(Pokemon pokemon)
+    {
+        /*檢查是否為昏厥pokemon,且不能為滿血狀態*/
+        if (hpAmount > 0)
+        {
+            if(pokemon.HP==pokemon.MaxHp)
+                return false;
+
+            pokemon.InecreaseHP(hpAmount);    
+        }
+
+        return true;
+    }
+
+
 }

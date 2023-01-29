@@ -32,6 +32,7 @@ public class InventoryUI : MonoBehaviour
     private void Start()
     {
         UpdataItemList();
+        inventory.OnUpdated += UpdataItemList;
     }
 
     void UpdataItemList()
@@ -53,6 +54,7 @@ public class InventoryUI : MonoBehaviour
     }
     public void HandleUpdate(Action onBack)
     {
+        /*開啟選單*/
         if (state == InventoryUIState.ItemSelection)
         {
             /*紀錄當前選擇*/
@@ -66,26 +68,47 @@ public class InventoryUI : MonoBehaviour
             /*如果有跟新選擇才跟新選擇標籤顏色*/
             if (prevSelection != selectedItem)
                 UpdateItemSelection();
+
             if (Input.GetKeyDown(KeyCode.Z))
                 OpenPartyScreen();
+
             else if (Input.GetKeyDown(KeyCode.X))
                 onBack?.Invoke();
         }
+        /*開啟pokemon隊伍選單*/
         else if (state == InventoryUIState.PartySelection)
         {
             Action onSelected = () =>
             {
-
+                /*當被選用時使用道具在POKEMON*/
+                StartCoroutine(UseItem());
             };
 
             Action onBackPartyScreen = () =>
            {
-                ClosePartyScreen();
+               ClosePartyScreen();
            };
 
-            partyScreen.HandleUpdate(onSelected,onBackPartyScreen);
+            partyScreen.HandleUpdate(onSelected, onBackPartyScreen);
         }
     }
+    IEnumerator UseItem()
+    {
+        /*避免玩家按太多次Z造成道具重複使用*/
+        state = InventoryUIState.Busy;
+        /*var usedItem 返回使用道具*/
+        var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember);
+        if (usedItem != null)
+        {
+            yield return DialogManger.Instance.ShowDialogText($"The player used {usedItem.Name}");
+        }
+        else
+        {
+            yield return DialogManger.Instance.ShowDialogText($"It won't have any effect ! ");
+        }
+        ClosePartyScreen();
+    }
+
     void UpdateItemSelection()
     {
         for (int i = 0; i < slotUIList.Count; i++)
@@ -106,7 +129,7 @@ public class InventoryUI : MonoBehaviour
     void HandleSrcolling()
     {
         /*如果道具小於這個數量就不需要顯示滾動軸*/
-        if(slotUIList.Count <=itemInViewport) return;
+        if (slotUIList.Count <= itemInViewport) return;
 
         float scrollPos = Mathf.Clamp(selectedItem - itemInViewport, 0, selectedItem) * slotUIList[0].Height;
         /*包包選項時只有y軸移動*/
@@ -122,6 +145,7 @@ public class InventoryUI : MonoBehaviour
     {
         state = InventoryUIState.PartySelection;
         partyScreen.gameObject.SetActive(true);
+        // partyScreen.SetPartyData(playerController.GetComponent<PokemonParty>().Pokemons);
     }
     void ClosePartyScreen()
     {

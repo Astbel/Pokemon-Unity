@@ -21,6 +21,23 @@ public class DialogManger : MonoBehaviour
     {
         Instance = this;
     }
+    public IEnumerator ShowDialogText(string text, bool waitForInput = true)
+    {
+        IsShowing = true;
+        dialogBox.SetActive(true);
+
+        yield return TypeDialog(text);
+
+        /*等待玩家按Z才關閉對話框*/
+        if (waitForInput)
+        {
+            yield return new WaitUntil(()=>Input.GetKeyDown(KeyCode.Z));
+        }
+        dialogBox.SetActive(false);
+        IsShowing = false;
+    }
+
+
     public IEnumerator ShowDialog(Dialog dialog, Action onFinished = null)
     {
         /*等待對話框結束*/
@@ -31,7 +48,7 @@ public class DialogManger : MonoBehaviour
         IsShowing = true;
         this.dialog = dialog;
 
-        onDialogFinish=onFinished;/*判斷對話是否結束*/
+        onDialogFinish = onFinished;/*判斷對話是否結束*/
 
         dialogBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));

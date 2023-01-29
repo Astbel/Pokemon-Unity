@@ -12,7 +12,10 @@ public class itemBase : ScriptableObject
     public string Description => description;
     public Sprite Icon => icon;
 
-
+    public virtual bool Use(Pokemon pokemon)
+    {
+        return false;
+    }
 
 
 }

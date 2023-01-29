@@ -31,6 +31,7 @@ public class Pokemon
     //混亂回合計數
     public int VolatileStatusTime { get; set; }
     public event System.Action OnStatusChanged;
+    public event System.Action OnHpChanged;
     public Pokemon(PokemonBase pBase, int plevel)
     {
         _base = pBase;
@@ -213,16 +214,24 @@ public class Pokemon
         float d = a * move.Base.Power * ((float)attack / defense) + 2;
         int damage = Mathf.FloorToInt(d * modifiers);
         Debug.Log(damage);
-        UpdateHP(damage);
+        DecreaseHP(damage);
 
         return damageDetails;
     }
     /*跟新HP*/
-    public void UpdateHP(int damage)
+    public void DecreaseHP(int damage)
     {
         HP = Mathf.Clamp(HP - damage, 0, MaxHp);
+        OnHpChanged?.Invoke();
         HpChanged = true;
     }
+    public void InecreaseHP(int amount)
+    {
+        HP = Mathf.Clamp(HP + amount, 0, MaxHp);
+        OnHpChanged?.Invoke();
+        HpChanged = true;
+    }
+
     /*中毒燒傷呼叫使用語法需要再查明*/
     public void OnAfterTurn()
     {
@@ -308,7 +317,7 @@ public class Pokemon
         else
             Status = null;
         /*重新在陣列找move資料*/
-        Moves=saveData.moves.Select(s=>new Move(s)).ToList();
+        Moves = saveData.moves.Select(s => new Move(s)).ToList();
 
         CalculateStat();
         StatusChanges = new Queue<string>();
@@ -325,7 +334,7 @@ public class Pokemon
             level = Level,
             exp = Exp,
             statusId = Status?.Id, //null判定如果是null回傳null
-            moves=Moves.Select(m=>m.GetSaveData()).ToList()
+            moves = Moves.Select(m => m.GetSaveData()).ToList()
         };
 
         return saveData;
