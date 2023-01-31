@@ -6,9 +6,33 @@ using System.Linq;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] List<ItemSlot> slots;
+    [SerializeField] List<ItemSlot> pokeballslots;
+    [SerializeField] List<ItemSlot> tmSlots;
+
+    /*用來回傳List的型別*/
+    List<List<ItemSlot>> allSlots;
+
     /*事件用來跟新包包道具數量*/
     public event Action OnUpdated;
-    public List<ItemSlot> Slots => slots;
+   
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
+    private void Awake()
+    {
+        allSlots = new List<List<ItemSlot>>() { slots, pokeballslots, tmSlots };
+    }
+
+    public static List<string> ItemCategories { get; set; } = new List<string>()
+    {
+        "ITEMS"," POKEBALLS ","TMs & HMs"
+    };
+    /*回傳其中一種鞋別的slot*/
+    public List<ItemSlot> GetSlotByCategory(int categoryIndex)
+    {
+        return allSlots[categoryIndex];
+    }
+
     /*使用道具*/
     public itemBase UseItem(int ItemIndex, Pokemon selectedPokemon)
     {

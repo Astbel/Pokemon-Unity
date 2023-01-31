@@ -10,6 +10,7 @@ public class InventoryUI : MonoBehaviour
 {
     [SerializeField] GameObject itemList;
     [SerializeField] ItemSlotUI itemSlotUI;
+    [SerializeField] Text categoryText;
     [SerializeField] Image itemIcon;
     [SerializeField] Text itemDescription;
     [SerializeField] Image upArrow;
@@ -17,6 +18,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] PartyScreen partyScreen;
     Action onItemUsed;
     int selectedItem = 0;
+    int selectedCategory = 0;
     Inventory inventory;
     List<ItemSlotUI> slotUIList;
     RectTransform itemListRect;
@@ -44,7 +46,7 @@ public class InventoryUI : MonoBehaviour
         /*初始化list用來存放所有子類別物件*/
         slotUIList = new List<ItemSlotUI>();
         /*把所有物品實例化並加進list*/
-        foreach (var itemSlot in inventory.Slots)
+        foreach (var itemSlot in inventory.GetSlotByCategory(selectedCategory))
         {
             /*實例化物件給父類傳遞*/
             var slotUIobj = Instantiate(itemSlotUI, itemList.transform);
@@ -57,7 +59,7 @@ public class InventoryUI : MonoBehaviour
     onBack      關閉菜單
     onItemUsed  使用過後
     */
-    public void HandleUpdate(Action onBack, Action onItemUsed=null)
+    public void HandleUpdate(Action onBack, Action onItemUsed = null)
     {
         this.onItemUsed = onItemUsed;
 
@@ -66,15 +68,38 @@ public class InventoryUI : MonoBehaviour
         {
             /*紀錄當前選擇*/
             int prevSelection = selectedItem;
+            int prevCategory = selectedCategory;
             /*選擇部分*/
             if (Input.GetKeyDown(KeyCode.DownArrow))
                 ++selectedItem;
             else if (Input.GetKeyDown(KeyCode.UpArrow))
                 --selectedItem;
-            selectedItem = Mathf.Clamp(selectedItem, 0, inventory.Slots.Count - 1);
+            /*ITEM 類別切換*/
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+                ++selectedCategory;
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+                --selectedCategory;
+
+            /*項目類別旋轉*/
+            if (selectedCategory > Inventory.ItemCategories.Count - 1)
+                selectedCategory = 0;
+            else if (selectedCategory < 0)
+                selectedCategory = Inventory.ItemCategories.Count - 1;
+
+
+            selectedItem = Mathf.Clamp(selectedItem, 0, inventory.GetSlotByCategory(selectedCategory).Count - 1);
+            selectedCategory = Mathf.Clamp(selectedCategory, 0, Inventory.ItemCategories.Count - 1);
             /*如果有跟新選擇才跟新選擇標籤顏色*/
-            if (prevSelection != selectedItem)
+            if (prevCategory != selectedCategory)
+            {
+                ResetSelection();
+                categoryText.text = Inventory.ItemCategories[selectedCategory];
+                UpdataItemList();
+            }
+            else if (prevSelection != selectedItem)
+            {
                 UpdateItemSelection();
+            }
 
             if (Input.GetKeyDown(KeyCode.Z))
                 OpenPartyScreen();
@@ -119,6 +144,8 @@ public class InventoryUI : MonoBehaviour
 
     void UpdateItemSelection()
     {
+        var slots = inventory.GetSlotByCategory(selectedCategory);
+
         for (int i = 0; i < slotUIList.Count; i++)
         {
             if (i == selectedItem)
@@ -127,9 +154,14 @@ public class InventoryUI : MonoBehaviour
                 slotUIList[i].NameText.color = Color.black;
         }
 
-        var item = inventory.Slots[selectedItem].Item;
-        itemIcon.sprite = item.Icon;
-        itemDescription.text = item.Description;
+        selectedItem = Mathf.Clamp(selectedItem, 0, slots.Count - 1);
+
+        if (slots.Count > 0)
+        {
+            var item = slots[selectedItem].Item;
+            itemIcon.sprite = item.Icon;
+            itemDescription.text = item.Description;
+        }
 
         HandleSrcolling();
     }
@@ -149,6 +181,17 @@ public class InventoryUI : MonoBehaviour
         downArrow.gameObject.SetActive(shodownpArrow);
 
     }
+
+    void ResetSelection()
+    {
+        selectedItem = 0;
+        upArrow.gameObject.SetActive(false);
+        downArrow.gameObject.SetActive(false);
+
+        itemIcon.sprite = null;
+        itemDescription.text = "";
+    }
+
     void OpenPartyScreen()
     {
         state = InventoryUIState.PartySelection;
