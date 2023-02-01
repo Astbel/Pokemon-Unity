@@ -16,7 +16,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] Image upArrow;
     [SerializeField] Image downArrow;
     [SerializeField] PartyScreen partyScreen;
-    Action onItemUsed;
+    Action<itemBase> onItemUsed;
     int selectedItem = 0;
     int selectedCategory = 0;
     Inventory inventory;
@@ -59,7 +59,7 @@ public class InventoryUI : MonoBehaviour
     onBack      關閉菜單
     onItemUsed  使用過後
     */
-    public void HandleUpdate(Action onBack, Action onItemUsed = null)
+    public void HandleUpdate(Action onBack, Action<itemBase> onItemUsed = null)
     {
         this.onItemUsed = onItemUsed;
 
@@ -102,7 +102,7 @@ public class InventoryUI : MonoBehaviour
             }
 
             if (Input.GetKeyDown(KeyCode.Z))
-                OpenPartyScreen();
+                ItemSelected();
 
             else if (Input.GetKeyDown(KeyCode.X))
                 onBack?.Invoke();
@@ -124,6 +124,19 @@ public class InventoryUI : MonoBehaviour
             partyScreen.HandleUpdate(onSelected, onBackPartyScreen);
         }
     }
+
+    void ItemSelected()
+    {
+        if (selectedCategory == (int)ItemCategory.Pokeballs)
+        {
+            StartCoroutine(UseItem());
+        }
+        else
+        {
+            OpenPartyScreen();
+        }
+    }
+
     IEnumerator UseItem()
     {
         /*避免玩家按太多次Z造成道具重複使用*/
@@ -132,8 +145,9 @@ public class InventoryUI : MonoBehaviour
         var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedCategory);
         if (usedItem != null)
         {
-            yield return DialogManger.Instance.ShowDialogText($"The player used {usedItem.Name}");
-            onItemUsed?.Invoke();
+            if (!(usedItem is PokeBallItem))
+                yield return DialogManger.Instance.ShowDialogText($"The player used {usedItem.Name}");
+            onItemUsed?.Invoke(usedItem);
         }
         else
         {

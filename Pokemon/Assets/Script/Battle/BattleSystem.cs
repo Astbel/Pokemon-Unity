@@ -502,12 +502,9 @@ public class BattleSystem : MonoBehaviour
                 state = BattleState.ActionSelection;
             };
 
-            Action onItemUsed = () =>
+            Action<itemBase> onItemUsed = (itemBase usedItem) =>
             {
-                state = BattleState.Busy;
-                // inventoryUI.gameObject.SetActive(false);
-                inventoryUI.gameObject.SetActive(true);
-                StartCoroutine(RunTurns(BattleAction.UseItem));
+                StartCoroutine(OnItemUsed(usedItem));
             };
 
             inventoryUI.HandleUpdate(onBack, onItemUsed);
@@ -782,7 +779,7 @@ public class BattleSystem : MonoBehaviour
     }
 
     /*丟寶貝球*/
-    IEnumerator ThrowPokeBall()
+    IEnumerator ThrowPokeBall(PokeBallItem pokeBallItem)
     {
         state = BattleState.Busy;
         /*Trainer Battle 不能捕捉對方pokemon*/
@@ -793,11 +790,11 @@ public class BattleSystem : MonoBehaviour
             yield break;
         }
 
-        yield return dialogBox.TypeDialog($"{player.Name} used POKEBALL ! ");
+        yield return dialogBox.TypeDialog($"{player.Name} used {pokeBallItem.Name.ToUpper()} ! ");
 
         var pokeballObj = Instantiate(pokeballSprite, playerUnit.transform.position - new Vector3(2, 0), Quaternion.identity);
         var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
-
+        pokeball.sprite=pokeBallItem.Icon;
         //Pokeball丟動畫
         yield return pokeball.transform.DOJump(enemyUnit.transform.position + new Vector3(0, 5), 1f, 1, 1f).WaitForCompletion();
         //呼叫捕捉畫面
@@ -805,7 +802,7 @@ public class BattleSystem : MonoBehaviour
         //pokeball掉下
         yield return pokeball.transform.DOMoveY(enemyUnit.transform.position.y - 4f, 0.5f).WaitForCompletion();
 
-        int shakeCount = TryToCatchPokemon(enemyUnit.Pokemon);
+        int shakeCount = TryToCatchPokemon(enemyUnit.Pokemon,pokeBallItem);
         //pokeball搖動 z軸在2D只會有旋轉的效果運用條動Z軸來達到搖動效果
         for (int i = 0; i < Mathf.Min(shakeCount, 3); i++)
         {
@@ -843,10 +840,23 @@ public class BattleSystem : MonoBehaviour
         }
         Debug.Log(shakeCount);
     }
-    /*捕捉率來源Wiki*/
-    int TryToCatchPokemon(Pokemon pokemon)
+    IEnumerator OnItemUsed(itemBase usedItem)
     {
-        float a = (3 * pokemon.MaxHp - 2 * pokemon.HP) * pokemon.Base.CatchRate * ConditionDB.GetStatusBouns(pokemon.Status) / (3 * pokemon.MaxHp);
+        state = BattleState.Busy;
+        inventoryUI.gameObject.SetActive(false);
+        if (usedItem is PokeBallItem)
+        {
+            /*要把Item 的Pokeball轉型為pokeball class*/
+            yield return ThrowPokeBall((PokeBallItem)usedItem);
+        }
+        StartCoroutine(RunTurns(BattleAction.UseItem));
+    }
+
+
+    /*捕捉率來源Wiki*/
+    int TryToCatchPokemon(Pokemon pokemon,PokeBallItem pokeBallItem)
+    {
+        float a = (3 * pokemon.MaxHp - 2 * pokemon.HP) * pokemon.Base.CatchRate *pokeBallItem.CatchRateModfier* ConditionDB.GetStatusBouns(pokemon.Status) / (3 * pokemon.MaxHp);
 
         if (a >= 255)
             return 4;

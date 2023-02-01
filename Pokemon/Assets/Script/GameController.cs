@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     MenuController menuController;
     GameState stateBeforePause;
     GameState state;
+    public GameState State => state;
 
     public SceneDetail CurrentScene { get; private set; }
 

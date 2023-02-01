@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+
+public enum ItemCategory { Items, Pokeballs, Tms }
+
 public class Inventory : MonoBehaviour
 {
     [SerializeField] List<ItemSlot> slots;
@@ -41,7 +44,7 @@ public class Inventory : MonoBehaviour
         bool itemUsed = item.Use(selectedPokemon);
         if (itemUsed)
         {
-            RemoveItem(item,selectedCategory);
+            RemoveItem(item, selectedCategory);
             return item;
         }
 
