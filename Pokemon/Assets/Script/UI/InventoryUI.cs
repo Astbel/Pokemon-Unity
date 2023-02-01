@@ -129,7 +129,7 @@ public class InventoryUI : MonoBehaviour
         /*避免玩家按太多次Z造成道具重複使用*/
         state = InventoryUIState.Busy;
         /*var usedItem 返回使用道具*/
-        var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember);
+        var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedCategory);
         if (usedItem != null)
         {
             yield return DialogManger.Instance.ShowDialogText($"The player used {usedItem.Name}");
@@ -145,6 +145,7 @@ public class InventoryUI : MonoBehaviour
     void UpdateItemSelection()
     {
         var slots = inventory.GetSlotByCategory(selectedCategory);
+        selectedItem = Mathf.Clamp(selectedItem, 0, slots.Count - 1);
 
         for (int i = 0; i < slotUIList.Count; i++)
         {
@@ -153,9 +154,6 @@ public class InventoryUI : MonoBehaviour
             else
                 slotUIList[i].NameText.color = Color.black;
         }
-
-        selectedItem = Mathf.Clamp(selectedItem, 0, slots.Count - 1);
-
         if (slots.Count > 0)
         {
             var item = slots[selectedItem].Item;

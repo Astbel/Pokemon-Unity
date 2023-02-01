@@ -14,7 +14,7 @@ public class Inventory : MonoBehaviour
 
     /*事件用來跟新包包道具數量*/
     public event Action OnUpdated;
-   
+
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// </summary>
@@ -34,27 +34,29 @@ public class Inventory : MonoBehaviour
     }
 
     /*使用道具*/
-    public itemBase UseItem(int ItemIndex, Pokemon selectedPokemon)
+    public itemBase UseItem(int ItemIndex, Pokemon selectedPokemon, int selectedCategory)
     {
-        var item = slots[ItemIndex].Item;
+        var currentSlots = GetSlotByCategory(selectedCategory);
+        var item = currentSlots[ItemIndex].Item;
         bool itemUsed = item.Use(selectedPokemon);
         if (itemUsed)
         {
-            RemoveItem(item);
+            RemoveItem(item,selectedCategory);
             return item;
         }
 
         return null;
     }
 
-    public void RemoveItem(itemBase item)
+    public void RemoveItem(itemBase item, int selectedCategory)
     {
+        var currentSlots = GetSlotByCategory(selectedCategory);
         /*用linq去檢測是否為該道具*/
-        var itemSlot = slots.First(slots => slots.Item == item);
+        var itemSlot = currentSlots.First(slots => slots.Item == item);
         itemSlot.Count--;
         /*如果道具使用數為0移除該項目*/
         if (itemSlot.Count == 0)
-            slots.Remove(itemSlot);
+            currentSlots.Remove(itemSlot);
 
         OnUpdated?.Invoke();
     }

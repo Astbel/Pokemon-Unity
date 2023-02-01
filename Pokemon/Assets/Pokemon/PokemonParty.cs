@@ -18,6 +18,17 @@ public class PokemonParty : MonoBehaviour
         set { pokemons = value; OnUpdated?.Invoke(); }
     }
 
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
+    private void Awake()
+    {
+        foreach (var pokemon in pokemons)
+        {
+            pokemon.Init();
+        }
+    }
+
     /*開始時為所有pokemon初始化狀態 初始化招式以及血量*/
     private void Start()
     {

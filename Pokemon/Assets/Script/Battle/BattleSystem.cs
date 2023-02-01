@@ -118,6 +118,8 @@ public class BattleSystem : MonoBehaviour
         state = BattleState.BattleOver;
         //使用link來指向玩家所有pokemon來進行清除reset buff
         playerParty.Pokemons.ForEach(p => p.OnBattleOver());
+        playerUnit.Hud.ClearData();
+        enemyUnit.Hud.ClearData();
         OnBattleOver(won);
     }
 
@@ -503,7 +505,8 @@ public class BattleSystem : MonoBehaviour
             Action onItemUsed = () =>
             {
                 state = BattleState.Busy;
-                inventoryUI.gameObject.SetActive(false);
+                // inventoryUI.gameObject.SetActive(false);
+                inventoryUI.gameObject.SetActive(true);
                 StartCoroutine(RunTurns(BattleAction.UseItem));
             };
 
