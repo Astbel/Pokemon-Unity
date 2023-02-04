@@ -18,19 +18,24 @@ public class Move
     /*讀取*/
     public Move(MoveSaveData saveData)
     {
-       Base= MoveDB.GetPokemonByName(saveData.name);
-        PP=saveData.pp;
+        Base = MoveDB.GetPokemonByName(saveData.name);
+        PP = saveData.pp;
     }
     /*存取*/
     public MoveSaveData GetSaveData()
     {
-        var saveData =new MoveSaveData()
+        var saveData = new MoveSaveData()
         {
-            name=Base.Name,
-            pp=PP
+            name = Base.Name,
+            pp = PP
 
         };
         return saveData;
+    }
+
+    public void InecreasePP(int amount)
+    {
+        PP = Mathf.Clamp(PP + amount, 0, Base.PP);
     }
 }
 

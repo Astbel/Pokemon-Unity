@@ -35,22 +35,19 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     }
 
     //對話戰鬥
-    public void Interact(Transform initiator)
+    public IEnumerator Interact(Transform initiator)
     {
         /*面相玩家*/
         character.LookTowards(initiator.position);
 
         if (!battleLost)
         {
-            //show dialog
-            StartCoroutine(DialogManger.Instance.ShowDialog(dialog, () =>
-             {
-                 GameController.Instance.StartTrainerBattle(this);
-             }));
+            yield return DialogManger.Instance.ShowDialog(dialog);
+            GameController.Instance.StartTrainerBattle(this);
         }
         else
         {
-            StartCoroutine(DialogManger.Instance.ShowDialog(dialogAfterBattle));
+            yield return DialogManger.Instance.ShowDialog(dialogAfterBattle);
         }
 
     }
@@ -70,11 +67,8 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         yield return character.Move(moveVac);
 
         //show dialog
-        StartCoroutine(DialogManger.Instance.ShowDialog(dialog, () =>
-         {
-             GameController.Instance.StartTrainerBattle(this);
-         }));
-
+        yield return DialogManger.Instance.ShowDialog(dialog);
+        GameController.Instance.StartTrainerBattle(this);
     }
 
     public void BattleLost()

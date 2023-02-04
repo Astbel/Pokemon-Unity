@@ -47,10 +47,10 @@ public class PlayerController : MonoBehaviour, ISavable
         }
         character.HandleUpdate();
         if (Input.GetKeyDown(KeyCode.Z))
-            Interact();
+            StartCoroutine(Interact());
     }
 
-    void Interact()
+    IEnumerator Interact()
     {
         var facingDir = new Vector3(character.Animator.MoveX, character.Animator.MoveY);
         var interacPos = transform.position + facingDir;
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour, ISavable
         var collider = Physics2D.OverlapCircle(interacPos, 0.3f, GameLayer.Instance.InteractLayer);
         if (collider != null)
         {
-            collider.GetComponent<Interactable>()?.Interact(transform);//輸入腳色的方向
+            yield return collider.GetComponent<Interactable>()?.Interact(transform);//輸入腳色的方向
         }
     }
     /*所有觸發事件*/
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour, ISavable
         var pos = saveData.position;
         transform.position = new Vector3(pos[0], pos[1]);
         /*讀取player隊伍*/
-        GetComponent<PokemonParty>().Pokemons=saveData.pokemons.Select(s => new Pokemon(s)).ToList();
+        GetComponent<PokemonParty>().Pokemons = saveData.pokemons.Select(s => new Pokemon(s)).ToList();
     }
 }
 
