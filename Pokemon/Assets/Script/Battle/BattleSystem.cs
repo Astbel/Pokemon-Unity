@@ -409,7 +409,7 @@ public class BattleSystem : MonoBehaviour
                     if (playerUnit.Pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
                     {
                         /*當等級提升學習技能時也需要在招式選擇放入技能*/
-                        playerUnit.Pokemon.LearnMove(newMove);
+                        playerUnit.Pokemon.LearnMove(newMove.MoveBase);
                         yield return dialogBox.TypeDialog($"{playerUnit.Pokemon.Base.Name} learned {newMove.MoveBase.Name} !");
                         dialogBox.SetMoveNames(playerUnit.Pokemon.Moves);
                     }

@@ -13,12 +13,12 @@ public class DialogManger : MonoBehaviour
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
     public bool IsShowing { get; private set; }
- 
+
     private void Awake()
     {
         Instance = this;
     }
-    public IEnumerator ShowDialogText(string text, bool waitForInput = true)
+    public IEnumerator ShowDialogText(string text, bool waitForInput = true, bool autoClose = true)
     {
         IsShowing = true;
         dialogBox.SetActive(true);
@@ -30,10 +30,20 @@ public class DialogManger : MonoBehaviour
         {
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
         }
-        dialogBox.SetActive(false);
-        IsShowing = false;
+
+        if (autoClose)
+        {
+            CloseDialog();
+        }
+
     }
 
+    public void CloseDialog()
+    {
+        dialogBox.SetActive(false);
+        IsShowing = false;
+
+    }
 
     public IEnumerator ShowDialog(Dialog dialog)
     {
@@ -59,7 +69,7 @@ public class DialogManger : MonoBehaviour
     /*檢查對話框是否有第二行有的畫則顯示下一行*/
     public void HandleUpdate()
     {
-       
+
     }
 
     public IEnumerator TypeDialog(string line)

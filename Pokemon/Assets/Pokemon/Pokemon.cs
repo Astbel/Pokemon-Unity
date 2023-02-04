@@ -37,6 +37,11 @@ public class Pokemon
 
         Init();
     }
+    /*確認pokemon是否有該招式如果count大於0代表pokemon有學習該招式,回傳型別只是代表4個招式其中一個*/
+    public bool HasMove(MoveBase moveToCheck)
+    {
+        return Moves.Count(m => m.Base == moveToCheck) > 0;
+    }
 
 
     public void Init()
@@ -109,13 +114,13 @@ public class Pokemon
         return Base.LearnableMoves.Where(x => x.Level == level).FirstOrDefault();
     }
     /*學習招式*/
-    public void LearnMove(LearnableMove moveToLearn)
+    public void LearnMove(MoveBase moveToLearn)
     {
         /*當超過4個時候*/
         if (Moves.Count > PokemonBase.MaxNumOfMoves)
             return;
 
-        Moves.Add(new Move(moveToLearn.MoveBase));
+        Moves.Add(new Move(moveToLearn));
     }
 
     /*計算提升數值技能*/

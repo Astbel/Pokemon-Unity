@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Pokeball
   description: A ball to capture pokemons
   icon: {fileID: 21300000, guid: 0c82f934788cfad44a5025bb0a398442, type: 3}
+  catchRateModfier: 1
