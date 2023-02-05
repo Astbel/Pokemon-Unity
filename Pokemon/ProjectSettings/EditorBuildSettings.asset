@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/GamePlay.unity
+    guid: fbb762e632d515941998ae863fa1582c
+  - enabled: 1
     path: Assets/Scenes/HomeTwon.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

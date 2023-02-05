@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
     [SerializeField] InventoryUI inventoryUI;
     TrainerController trainer;
     MenuController menuController;
-    GameState stateBeforePause;
+    GameState prevState;
     GameState state;
     public GameState State => state;
 
@@ -49,13 +49,14 @@ public class GameController : MonoBehaviour
         /*Lamda function*/
         DialogManger.Instance.OnShowDialog += () =>
         {
+            prevState =state;
             state = GameState.Dialog;
         };
 
         DialogManger.Instance.OnCloseDialog += () =>
         {
             if (state == GameState.Dialog)
-                state = GameState.FreeRoam;
+                state = prevState;
         };
 
         menuController.closeMenuSelected += () =>
@@ -69,12 +70,12 @@ public class GameController : MonoBehaviour
     {
         if (pause)
         {
-            stateBeforePause = state;
+            prevState = state;
             state = GameState.Paused;
         }
         else
         {
-            state = stateBeforePause;
+            state = prevState;
 
         }
     }

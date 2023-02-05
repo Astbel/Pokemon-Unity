@@ -194,6 +194,7 @@ public class InventoryUI : MonoBehaviour
         }
         else
         {
+            /*確認當前類別是否為回覆類道具*/
             if (selectedCategory == (int)ItemCategory.Items)
                 yield return DialogManger.Instance.ShowDialogText($"It won't have any effect ! ");
         }

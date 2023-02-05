@@ -48,13 +48,36 @@ public class Inventory : MonoBehaviour
         bool itemUsed = item.Use(selectedPokemon);
         if (itemUsed)
         {
-            if(!item.IsReuseable)
+            if (!item.IsReuseable)
                 RemoveItem(item, selectedCategory);
-                
+
             return item;
         }
 
         return null;
+    }
+    public void AddItem(itemBase item, int count = 1)
+    {
+        /*回傳enum索引確認撿起道具類別*/
+        int category = (int)GetCategoryFromItem(item);
+        var currentSlots = GetSlotByCategory(category);
+        /*確認插槽當沒有匯回傳null*/
+        var itemSlot = currentSlots.FirstOrDefault(slots => slots.Item == item);
+        /*如果本身有則增加數量就好*/
+        if (itemSlot != null)
+        {
+            itemSlot.Count += count;
+        }
+        /*撿起時要擴充格子創建物件以及數量*/
+        else
+        {
+            currentSlots.Add(new ItemSlot()
+            {
+                Item = item,
+                Count = count
+            });
+        }
+        OnUpdated?.Invoke();
     }
 
     public void RemoveItem(itemBase item, int selectedCategory)
@@ -70,6 +93,18 @@ public class Inventory : MonoBehaviour
         OnUpdated?.Invoke();
     }
 
+    /*確認道具類別*/
+    ItemCategory GetCategoryFromItem(itemBase item)
+    {
+        if (item is RecoveryItem)
+            return ItemCategory.Items;
+        else if (item is PokeBallItem)
+            return ItemCategory.Pokeballs;
+        else
+            return ItemCategory.Tms;
+    }
+
+
     public static Inventory GetInventory()
     {
         return FindObjectOfType<PlayerController>().GetComponent<Inventory>();
@@ -83,7 +118,11 @@ public class ItemSlot
     [SerializeField] itemBase item;
     [SerializeField] int count;
 
-    public itemBase Item => item;
+    public itemBase Item
+    {
+        get => item;
+        set => item = value;
+    }
     public int Count
     {
         get => count;
