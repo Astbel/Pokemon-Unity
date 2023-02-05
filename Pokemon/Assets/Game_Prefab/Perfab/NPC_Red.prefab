@@ -363,6 +363,7 @@ MonoBehaviour:
     - ........
   exclamation: {fileID: 916088383}
   fov: {fileID: 233543499}
+  trainerAppearsClip: {fileID: 8300000, guid: d9ac393db18728a4197ac6c62776a1bb, type: 3}
 --- !u!114 &509972285
 MonoBehaviour:
   m_ObjectHideFlags: 0

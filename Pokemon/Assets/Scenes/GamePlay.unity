@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 1.4956207
       objectReference: {fileID: 0}
+    - target: {fileID: 4621427403994189371, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 53ee3e98f8744e3499d2b80a2bd8db21, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
 --- !u!1001 &96581254
@@ -436,6 +440,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 21.20689
       objectReference: {fileID: 0}
+    - target: {fileID: 4621427403994189371, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: c8a88765345d8bd4fa8d2b5b3b69a4e3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
 --- !u!1 &2025195881 stripped
@@ -465,10 +473,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4843489604157040588, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4843489605956123396, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: m_Name
       value: EssentialObjects
@@ -582,6 +586,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 3.244299
       objectReference: {fileID: 0}
+    - target: {fileID: 4621427403994189371, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
+      propertyPath: sceneMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 65b56cff95694a04494a8b9d6bff73cb, type: 3}
     - target: {fileID: 4621427403994189371, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: connectedScenes.Array.size
       value: 3

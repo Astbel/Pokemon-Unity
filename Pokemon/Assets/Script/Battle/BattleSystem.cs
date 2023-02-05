@@ -21,6 +21,15 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] GameObject pokeballSprite;
     [SerializeField] MoveSelectUI moveSelectUI;
     [SerializeField] InventoryUI inventoryUI;
+    /*BGM 配置*/
+    [Header("Audio")]
+    [SerializeField] AudioClip wildBattleMusic;
+    [SerializeField] AudioClip trainerBattleMusic;
+    // [SerializeField] AudioClip gymBattleMusic;
+    // [SerializeField] AudioClip eliteFourBattleMusic;
+    // [SerializeField] AudioClip champBattleMusic;
+    [SerializeField] AudioClip battleVictoryMusic;
+    /**/
     public event Action<bool> OnBattleOver;
     BattleState state;  //回合制狀態機
     int currentAction; //選單變數偵測
@@ -43,6 +52,8 @@ public class BattleSystem : MonoBehaviour
         player = playerParty.GetComponent<PlayerController>();
         isTrainerBattle = false;
 
+        AudioManager.i.PlayMusic(wildBattleMusic);
+
         StartCoroutine(SetUpBattle());
     }
 
@@ -55,6 +66,8 @@ public class BattleSystem : MonoBehaviour
 
         player = playerParty.GetComponent<PlayerController>();
         trainer = trainerParty.GetComponent<TrainerController>();
+
+        AudioManager.i.PlayMusic(trainerBattleMusic);
 
         StartCoroutine(SetUpBattle());
     }
@@ -387,6 +400,12 @@ public class BattleSystem : MonoBehaviour
 
         if (!faintedUnit.IsPlayerUnit)
         {
+            /*對戰贏的BGM,如果是訓練家則要確認是否都擊敗才撥放*/
+            bool battleWon = true;
+            if (isTrainerBattle)
+                battleWon = trainerParty.GetHealthyPokemon() == null;
+            if (battleWon)
+                AudioManager.i.PlayMusic(battleVictoryMusic);
             //Exp Gain
             int expYield = faintedUnit.Pokemon.Base.ExpYield;
             int enemyLevel = faintedUnit.Pokemon.Level;
@@ -794,7 +813,7 @@ public class BattleSystem : MonoBehaviour
 
         var pokeballObj = Instantiate(pokeballSprite, playerUnit.transform.position - new Vector3(2, 0), Quaternion.identity);
         var pokeball = pokeballObj.GetComponent<SpriteRenderer>();
-        pokeball.sprite=pokeBallItem.Icon;
+        pokeball.sprite = pokeBallItem.Icon;
         //Pokeball丟動畫
         yield return pokeball.transform.DOJump(enemyUnit.transform.position + new Vector3(0, 5), 1f, 1, 1f).WaitForCompletion();
         //呼叫捕捉畫面
@@ -802,7 +821,7 @@ public class BattleSystem : MonoBehaviour
         //pokeball掉下
         yield return pokeball.transform.DOMoveY(enemyUnit.transform.position.y - 4f, 0.5f).WaitForCompletion();
 
-        int shakeCount = TryToCatchPokemon(enemyUnit.Pokemon,pokeBallItem);
+        int shakeCount = TryToCatchPokemon(enemyUnit.Pokemon, pokeBallItem);
         //pokeball搖動 z軸在2D只會有旋轉的效果運用條動Z軸來達到搖動效果
         for (int i = 0; i < Mathf.Min(shakeCount, 3); i++)
         {
@@ -854,9 +873,9 @@ public class BattleSystem : MonoBehaviour
 
 
     /*捕捉率來源Wiki*/
-    int TryToCatchPokemon(Pokemon pokemon,PokeBallItem pokeBallItem)
+    int TryToCatchPokemon(Pokemon pokemon, PokeBallItem pokeBallItem)
     {
-        float a = (3 * pokemon.MaxHp - 2 * pokemon.HP) * pokemon.Base.CatchRate *pokeBallItem.CatchRateModfier* ConditionDB.GetStatusBouns(pokemon.Status) / (3 * pokemon.MaxHp);
+        float a = (3 * pokemon.MaxHp - 2 * pokemon.HP) * pokemon.Base.CatchRate * pokeBallItem.CatchRateModfier * ConditionDB.GetStatusBouns(pokemon.Status) / (3 * pokemon.MaxHp);
 
         if (a >= 255)
             return 4;

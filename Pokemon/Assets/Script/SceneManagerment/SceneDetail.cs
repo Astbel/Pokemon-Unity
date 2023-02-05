@@ -6,6 +6,7 @@ using System.Linq;
 public class SceneDetail : MonoBehaviour
 {
     [SerializeField] List<SceneDetail> connectedScenes;
+    [SerializeField] AudioClip sceneMusic;
 
     public bool isLoaded { get; private set; }
     List<SavableEntity> savableEntities;
@@ -17,6 +18,9 @@ public class SceneDetail : MonoBehaviour
 
             LoadScene();
             GameController.Instance.SetCurrentScene(this);
+            /*場景切換撥放音樂*/
+            if (sceneMusic != null)
+                AudioManager.i.PlayMusic(sceneMusic,fade:true);
             /*顯示連接旁邊的地圖*/
             foreach (var scene in connectedScenes)
             {
@@ -35,7 +39,7 @@ public class SceneDetail : MonoBehaviour
                         scene.UnLoadScene();
                 }
                 /*卸載非當前連結場景*/
-                if (!connectedScenes.Contains(preScene))  
+                if (!connectedScenes.Contains(preScene))
                     preScene.UnLoadScene();
             }
         }
@@ -77,4 +81,7 @@ public class SceneDetail : MonoBehaviour
 
         return saveAbleEntities;
     }
+
+    public AudioClip SceneMusic => sceneMusic;
+
 }
