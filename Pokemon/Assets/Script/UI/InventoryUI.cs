@@ -106,7 +106,7 @@ public class InventoryUI : MonoBehaviour
             }
 
             if (Input.GetKeyDown(KeyCode.Z))
-                ItemSelected();
+                StartCoroutine(ItemSelected());
 
             else if (Input.GetKeyDown(KeyCode.X))
                 onBack?.Invoke();
@@ -138,8 +138,32 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    void ItemSelected()
+    IEnumerator ItemSelected()
     {
+        state = InventoryUIState.Busy;
+        var item = inventory.GetItem(selectedItem, selectedCategory);
+        /*判斷在何處能使用道具*/
+        if (GameController.Instance.State == GameState.Battle)
+        {
+            //In Battle
+            if (!item.CanUseInBattle)
+            {
+                yield return DialogManger.Instance.ShowDialogText($"This Item can't use in battle ! ");
+                state = InventoryUIState.ItemSelection;
+                yield break;
+            }
+        }
+        else
+        {
+            //OutSide Battle
+            if (!item.CanUseOutsideBattle)
+            {
+                yield return DialogManger.Instance.ShowDialogText($"This Item can't use right now ! ");
+                state = InventoryUIState.ItemSelection;
+                yield break;
+            }
+        }
+
         if (selectedCategory == (int)ItemCategory.Pokeballs)
         {
             StartCoroutine(UseItem());
@@ -147,6 +171,8 @@ public class InventoryUI : MonoBehaviour
         else
         {
             OpenPartyScreen();
+            if(item is TMiItem)
+                partyScreen.ShowIfTmIsUsable(item as TMiItem);
         }
     }
 
@@ -154,6 +180,9 @@ public class InventoryUI : MonoBehaviour
     {
         /*避免玩家按太多次Z造成道具重複使用*/
         state = InventoryUIState.Busy;
+
+        yield return HandleTmItem();
+
         /*var usedItem 返回使用道具*/
         var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedCategory);
         if (usedItem != null)
@@ -179,6 +208,18 @@ public class InventoryUI : MonoBehaviour
             yield break;
         /*學習招式機*/
         var pokemon = partyScreen.SelectedMember;
+        /*確認是否已經學習該招式*/
+        if (pokemon.HasMove(tmItem.Move))
+        {
+            yield return DialogManger.Instance.ShowDialogText($" {pokemon.Base.Name} has already learned {tmItem.Move.Name}");
+            yield break;
+        }
+        if (!tmItem.CanBeTaught(pokemon))
+        {
+            yield return DialogManger.Instance.ShowDialogText($" {pokemon.Base.Name} can't learn {tmItem.Move.Name}");
+            yield break;
+        }
+        /*如果未達到最多技能時*/
         if (pokemon.Moves.Count < PokemonBase.MaxNumOfMoves)
         {
             pokemon.LearnMove(tmItem.Move);
@@ -263,6 +304,7 @@ public class InventoryUI : MonoBehaviour
     void ClosePartyScreen()
     {
         state = InventoryUIState.ItemSelection;
+        partyScreen.ClearMemberSlotMessages();
         partyScreen.gameObject.SetActive(false);
     }
 

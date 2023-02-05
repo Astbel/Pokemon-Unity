@@ -23,12 +23,12 @@ public class PartyScreen : MonoBehaviour
         party = PokemonParty.GetPlayerParty();
         SetPartyData();
 
-        party.OnUpdated +=SetPartyData;
+        party.OnUpdated += SetPartyData;
     }
 
     public void SetPartyData()
     {
-        pokemons=party.Pokemons;
+        pokemons = party.Pokemons;
 
         for (int i = 0; i < memberSlots.Length; i++)
         {
@@ -47,7 +47,7 @@ public class PartyScreen : MonoBehaviour
 
     public void UpdateMemberSelection(int selectedMember)
     {
-        for (int i = 0; i < pokemons.Count-1; i++)
+        for (int i = 0; i < pokemons.Count - 1; i++)
         {
             if (i == selectedMember)
                 memberSlots[i].SetSelected(true);
@@ -92,7 +92,24 @@ public class PartyScreen : MonoBehaviour
         }
     }
 
+    /*顯示是否可以學習招式機的UI*/
+    /*確認Player List中所有腳色那些可以學習並跟新UI message*/
+    public void ShowIfTmIsUsable(TMiItem tmItem)
+    {
+        for (int i = 0; i < pokemons.Count; i++)
+        {
+            string message = tmItem.CanBeTaught(pokemons[i]) ? "ABLE!" : "NOT ABLE!";
+            memberSlots[i].SetMessage(message);
+        }
+    }
 
+    public void ClearMemberSlotMessages()
+    {
+        for (int i = 0; i < pokemons.Count; i++)
+        {
+            memberSlots[i].SetMessage("");
+        }
+    }
 
 
     /*字串顯示*/

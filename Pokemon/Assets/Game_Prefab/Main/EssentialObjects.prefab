@@ -5476,6 +5476,8 @@ MonoBehaviour:
     count: 1
   - item: {fileID: 11400000, guid: 620ddda191d23884990a024afc929c27, type: 2}
     count: 1
+  - item: {fileID: 11400000, guid: c68463769a508d643a6e9698c68041f8, type: 2}
+    count: 1
 --- !u!4 &2533940119623783506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1932610810958338384, guid: 0915d5251b5404d4097ce73b863c5ae9, type: 3}

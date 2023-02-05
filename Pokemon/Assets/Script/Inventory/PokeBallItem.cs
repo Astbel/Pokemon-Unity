@@ -9,11 +9,10 @@ public class PokeBallItem : itemBase
 
     public override bool Use(Pokemon pokemon)
     {
-        if(GameController.Instance.State==GameState.Battle)
-            return true;
-        else
-            return false;
+        return true;
     }
+
+    public override bool CanUseOutsideBattle => false;
 
     public float CatchRateModfier => catchRateModfier;
 }

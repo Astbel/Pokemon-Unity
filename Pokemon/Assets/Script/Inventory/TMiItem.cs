@@ -6,6 +6,9 @@ using UnityEngine;
 public class TMiItem : itemBase
 {
     [SerializeField] MoveBase move;
+    [SerializeField] bool isHM;
+
+    public override string Name => base.Name + $": {move.Name} ";
 
     public override bool Use(Pokemon pokemon)
     {
@@ -13,6 +16,16 @@ public class TMiItem : itemBase
         return pokemon.HasMove(move);
     }
 
-    public MoveBase Move => move;
+    public bool CanBeTaught(Pokemon pokemon)
+    {
+      return  pokemon.Base.LearnAbleByItems.Contains(Move);
+    }
 
+    /*判斷是是不是HM招式*/
+    public override bool IsReuseable => isHM;
+
+    public override bool CanUseInBattle => false;
+
+    public MoveBase Move => move;
+    public bool IsHM => isHM;
 }

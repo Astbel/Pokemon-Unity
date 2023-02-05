@@ -26,8 +26,10 @@ public class PokemonBase : ScriptableObject
     [SerializeField] int catchRate;
     /*設定Pokemon學習最多招式數量*/
     public static int MaxNumOfMoves { get; set; } = 4;
+    /*通過升級才學習到的招式*/
     [SerializeField] List<LearnableMove> learnableMoves;
-
+    /*通過招式機學習技能*/
+    [SerializeField] List<MoveBase> learnAbleByItems;
     public int GetExpForLevel(int level)
     {
         if (grothRate == GrothRate.Fast)
@@ -119,6 +121,7 @@ public class PokemonBase : ScriptableObject
         get { return learnableMoves; }
     }
 
+    public List<MoveBase> LearnAbleByItems => learnAbleByItems;
 
 }
 /*
