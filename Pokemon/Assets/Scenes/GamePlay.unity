@@ -473,6 +473,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4843489605335918620, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: gymBattleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 44f6730a0edc9e74cb9a7ca26ca75987, type: 3}
+    - target: {fileID: 4843489605335918620, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: champBattleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: acbbf6f688f679041967040f8c842010, type: 3}
+    - target: {fileID: 4843489605335918620, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: trainerBattleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 372ff53900692c048b6a3c6e7c47f8a6, type: 3}
+    - target: {fileID: 4843489605335918620, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: eliteFourBattleMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c8b9917146a1444d81b15c969472e89, type: 3}
     - target: {fileID: 4843489605956123396, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: m_Name
       value: EssentialObjects

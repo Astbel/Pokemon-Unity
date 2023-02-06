@@ -25,9 +25,9 @@ public class BattleSystem : MonoBehaviour
     [Header("Audio")]
     [SerializeField] AudioClip wildBattleMusic;
     [SerializeField] AudioClip trainerBattleMusic;
-    // [SerializeField] AudioClip gymBattleMusic;
-    // [SerializeField] AudioClip eliteFourBattleMusic;
-    // [SerializeField] AudioClip champBattleMusic;
+    [SerializeField] AudioClip gymBattleMusic;
+    [SerializeField] AudioClip eliteFourBattleMusic;
+    [SerializeField] AudioClip champBattleMusic;
     [SerializeField] AudioClip battleVictoryMusic;
     /**/
     public event Action<bool> OnBattleOver;
@@ -67,9 +67,22 @@ public class BattleSystem : MonoBehaviour
         player = playerParty.GetComponent<PlayerController>();
         trainer = trainerParty.GetComponent<TrainerController>();
 
-        AudioManager.i.PlayMusic(trainerBattleMusic);
+        // AudioManager.i.PlayMusic(trainerBattleMusic);
+        Trainer_BGM_Select();
 
         StartCoroutine(SetUpBattle());
+    }
+    /*確認對戰是哪種類型對手來跟換BGM*/
+    void Trainer_BGM_Select()
+    {
+        if (trainer.Bgm_name == "trainer")
+            AudioManager.i.PlayMusic(trainerBattleMusic);
+        else if (trainer.Bgm_name == "gym")
+            AudioManager.i.PlayMusic(gymBattleMusic);
+        else if (trainer.Bgm_name == "eliteFour")
+            AudioManager.i.PlayMusic(eliteFourBattleMusic);
+        else if (trainer.Bgm_name == "champ")
+            AudioManager.i.PlayMusic(champBattleMusic);
     }
 
     /*

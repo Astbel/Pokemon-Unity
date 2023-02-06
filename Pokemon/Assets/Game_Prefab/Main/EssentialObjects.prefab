@@ -474,7 +474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 213.6, y: 42.6}
+  m_AnchoredPosition: {x: 216.5, y: 67.6}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4843489603912421288
@@ -3503,7 +3503,7 @@ MonoBehaviour:
   moveSelectUI: {fileID: 4843489605430902731}
   inventoryUI: {fileID: 3910390376426859028}
   wildBattleMusic: {fileID: 8300000, guid: cc1b35fd930fa934ea193289f8644cf8, type: 3}
-  trainerBattleMusic: {fileID: 8300000, guid: 372ff53900692c048b6a3c6e7c47f8a6, type: 3}
+  trainerBattleMusic: {fileID: 8300000, guid: acbbf6f688f679041967040f8c842010, type: 3}
   battleVictoryMusic: {fileID: 8300000, guid: 12f0e179c072aa744a2017773fb0d547, type: 3}
 --- !u!1 &4843489605367860423
 GameObject:
@@ -5934,6 +5934,10 @@ PrefabInstance:
     - target: {fileID: 6436998310068831477, guid: f7cb36c8edbf04c428cfceea7412179d, type: 3}
       propertyPath: m_Name
       value: EnemyHud
+      objectReference: {fileID: 0}
+    - target: {fileID: 6436998311152619599, guid: f7cb36c8edbf04c428cfceea7412179d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20.438995
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7cb36c8edbf04c428cfceea7412179d, type: 3}

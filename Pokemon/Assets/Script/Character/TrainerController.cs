@@ -11,7 +11,9 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     [SerializeField] GameObject exclamation;
     [SerializeField] GameObject fov;
     [SerializeField] AudioClip trainerAppearsClip;
-
+    /*回傳型別判斷對戰腳色來撥放對應BGM*/
+     [Header("Audio")]
+    [SerializeField] string bgm_name;
     /*回傳紀錄是否打贏*/
     bool battleLost = false;
     Character character;
@@ -19,6 +21,8 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     public Sprite Sprite { get => sprite; }
 
     public string Name { get => name; }
+
+    public string Bgm_name {get=>bgm_name;}
 
     private void Awake()
     {
