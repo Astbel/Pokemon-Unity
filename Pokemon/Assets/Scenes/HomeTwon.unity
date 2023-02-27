@@ -73222,6 +73222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     lines: []
+  questToStart: {fileID: 0}
   movementPattern:
   - {x: 0, y: 2}
   - {x: 0, y: -2}
@@ -73295,10 +73296,10 @@ PrefabInstance:
     - target: {fileID: 4017904627633731786, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
       propertyPath: item
       value: 
-      objectReference: {fileID: 11400000, guid: 174f6a4f7fcff4c49bbd4a2a54ab7c1b, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 4017904627633731786, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
       propertyPath: count
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4017904627633731786, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
       propertyPath: dialog.lines.Array.size
@@ -73312,6 +73313,10 @@ PrefabInstance:
       propertyPath: dialog.lines.Array.data[1]
       value: 'here you go '
       objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345563, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: questToStart
+      value: 
+      objectReference: {fileID: 11400000, guid: e4a519ce81d626f469cf5f444c1485a8, type: 2}
     - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -73373,6 +73378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 4207714635793913540, guid: 0bcec40c756c62c49989a9179a01d3d5, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c5929a63bf9e6440a1c950db9ed2e11, type: 2}
     - target: {fileID: 4207714635793913543, guid: 0bcec40c756c62c49989a9179a01d3d5, type: 3}
       propertyPath: m_RootOrder
       value: 6

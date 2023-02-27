@@ -49,7 +49,7 @@ public class Inventory : MonoBehaviour, ISavable
         if (itemUsed)
         {
             if (!item.IsReuseable)
-                RemoveItem(item, selectedCategory);
+                RemoveItem(item);
 
             return item;
         }
@@ -80,9 +80,11 @@ public class Inventory : MonoBehaviour, ISavable
         OnUpdated?.Invoke();
     }
 
-    public void RemoveItem(itemBase item, int selectedCategory)
+    public void RemoveItem(itemBase item)
     {
-        var currentSlots = GetSlotByCategory(selectedCategory);
+        /*回傳enum索引確認撿起道具類別*/
+        int category = (int)GetCategoryFromItem(item);
+        var currentSlots = GetSlotByCategory(category);
         /*用linq去檢測是否為該道具*/
         var itemSlot = currentSlots.First(slots => slots.Item == item);
         itemSlot.Count--;
@@ -91,6 +93,14 @@ public class Inventory : MonoBehaviour, ISavable
             currentSlots.Remove(itemSlot);
 
         OnUpdated?.Invoke();
+    }
+    /*用來確認物是否有該物品*/
+    public bool HasItem(itemBase item)
+    {
+        int category = (int)GetCategoryFromItem(item);
+        var currentSlots = GetSlotByCategory(category);
+        /*確認是否有該物件*/
+        return currentSlots.Exists(slot => slot.Item == item);
     }
 
     /*確認道具類別*/
@@ -125,11 +135,11 @@ public class Inventory : MonoBehaviour, ISavable
     /*LOAD後如果沒有重新配置則不會刷新List*/
     public void RestoreState(object state)
     {
-        var saveData=state as InventorySaveData;
+        var saveData = state as InventorySaveData;
 
-        slots=saveData.items.Select(i=>new ItemSlot(i)).ToList();
-        pokeballslots =saveData.pokeballs.Select(i=>new ItemSlot(i)).ToList();
-        tmSlots=saveData.tms.Select(i=>new ItemSlot(i)).ToList();
+        slots = saveData.items.Select(i => new ItemSlot(i)).ToList();
+        pokeballslots = saveData.pokeballs.Select(i => new ItemSlot(i)).ToList();
+        tmSlots = saveData.tms.Select(i => new ItemSlot(i)).ToList();
 
         allSlots = new List<List<ItemSlot>>() { slots, pokeballslots, tmSlots };
 
@@ -144,7 +154,7 @@ public class ItemSlot
     [SerializeField] itemBase item;
     [SerializeField] int count;
     /*默認*/
-    public ItemSlot(){}
+    public ItemSlot() { }
 
     /*Load & Saving 資料使用*/
     public ItemSlot(ItemSaveData saveData)

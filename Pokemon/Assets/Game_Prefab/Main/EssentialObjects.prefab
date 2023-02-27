@@ -5672,8 +5672,6 @@ MonoBehaviour:
     count: 10
   - item: {fileID: 11400000, guid: 3d19a73cb4c222d4e904e76e16d6499b, type: 2}
     count: 15
-  - item: {fileID: 11400000, guid: 0c5929a63bf9e6440a1c950db9ed2e11, type: 2}
-    count: 22
   - item: {fileID: 11400000, guid: f2daad85ec1ca724ca15fb77bb9980b0, type: 2}
     count: 17
   - item: {fileID: 11400000, guid: 73314782a070e894b9d09f0b658c6c3e, type: 2}

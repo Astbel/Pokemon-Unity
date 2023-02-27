@@ -5,14 +5,18 @@ using UnityEngine;
 public class NpcController : MonoBehaviour, Interactable
 {
     [SerializeField] Dialog dialog;
+    [SerializeField] QuestBase questToStart;
     [SerializeField] List<Vector2> movementPattern;//要移動的向量
     [SerializeField] float timeBetweenPattern;   //間格時間
     Character character;
-    ItemGiver itemGiver;
     int currentPattern = 0;
     float idleTimer = 0f;
     public enum NpcState { Idle, Walking, Dialog }
     NpcState state;
+    ItemGiver itemGiver;
+
+    Quest activeQuest;
+
     private void Awake()
     {
         character = GetComponent<Character>();
@@ -29,6 +33,25 @@ public class NpcController : MonoBehaviour, Interactable
             if (itemGiver != null && itemGiver.CanBeGiven())
             {
                 yield return itemGiver.GiveItem(initiator.GetComponent<PlayerController>());
+            }
+            else if (questToStart != null)
+            {
+                activeQuest = new Quest(questToStart);
+                yield return activeQuest.StartQuest();
+                questToStart =null; /*避免重複接取任務*/
+            }
+            else if(activeQuest!=null)
+            {
+                if(activeQuest.CanBeCompleted())
+                {
+                    /*initiator代表觸發人這邊觸發者是指player所以簽名帶入的也只會是player*/
+                    yield return activeQuest.CompleteQuest(initiator);
+                    activeQuest=null;
+                }
+                else
+                {
+                     yield return DialogManger.Instance.ShowDialog(activeQuest.Base.InProgressDialogue);
+                }
             }
             else
             {
