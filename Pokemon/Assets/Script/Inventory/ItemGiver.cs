@@ -18,9 +18,9 @@ public class ItemGiver : MonoBehaviour
 
         used = true;
 
-        string dialogText = $"{player.name} received {item.Name}";
+        string dialogText = $"{player.Name} received {item.Name}";
         if (count > 1)
-            dialogText = $"{player.name} received {count} {item.Name}";
+            dialogText = $"{player.Name} received {count} {item.Name}";
 
         yield return DialogManger.Instance.ShowDialogText(dialogText);
     }

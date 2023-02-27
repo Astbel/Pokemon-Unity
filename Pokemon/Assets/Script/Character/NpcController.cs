@@ -16,6 +16,7 @@ public class NpcController : MonoBehaviour, Interactable
     private void Awake()
     {
         character = GetComponent<Character>();
+        itemGiver = GetComponent<ItemGiver>();
     }
 
     public IEnumerator Interact(Transform initiator)
@@ -24,7 +25,7 @@ public class NpcController : MonoBehaviour, Interactable
         {
             state = NpcState.Dialog;
             character.LookTowards(initiator.position);
-
+            /*NPC的物品不為null*/
             if (itemGiver != null && itemGiver.CanBeGiven())
             {
                 yield return itemGiver.GiveItem(initiator.GetComponent<PlayerController>());
