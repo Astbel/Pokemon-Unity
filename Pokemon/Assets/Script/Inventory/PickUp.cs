@@ -18,8 +18,11 @@ public class PickUp : MonoBehaviour, Interactable, ISavable
         /*當撿起道具時不使用destroy因為要保存時如果是destory無法存取該狀態,所以直接關閉sprite以及boxCoilder*/
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<BoxCollider2D>().enabled = false;
+
+        string playerName = initiator.GetComponent<PlayerController>().Name;
+
         /*訊息顯示玩家撿起道具*/
-        yield return DialogManger.Instance.ShowDialogText($"Player found {item.Name}");
+        yield return DialogManger.Instance.ShowDialogText($"{playerName} found {item.Name}");
     }
 
     public object CaptureState()

@@ -8,6 +8,7 @@ public class NpcController : MonoBehaviour, Interactable
     [SerializeField] List<Vector2> movementPattern;//要移動的向量
     [SerializeField] float timeBetweenPattern;   //間格時間
     Character character;
+    ItemGiver itemGiver;
     int currentPattern = 0;
     float idleTimer = 0f;
     public enum NpcState { Idle, Walking, Dialog }
@@ -24,11 +25,18 @@ public class NpcController : MonoBehaviour, Interactable
             state = NpcState.Dialog;
             character.LookTowards(initiator.position);
 
-            yield return DialogManger.Instance.ShowDialog(dialog);
+            if (itemGiver != null && itemGiver.CanBeGiven())
+            {
+                yield return itemGiver.GiveItem(initiator.GetComponent<PlayerController>());
+            }
+            else
+            {
+                yield return DialogManger.Instance.ShowDialog(dialog);
+            }
 
-            idleTimer =0f;
-            state=NpcState.Idle;
-           
+            idleTimer = 0f;
+            state = NpcState.Idle;
+
         }
 
     }
