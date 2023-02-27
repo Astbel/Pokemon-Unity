@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +103,259 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 97
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a346150d52dd240971306490072e8f
+      internalID: 1295358988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6d4b9d4f99aaf4196b1d28ab194d68
+      internalID: 2081636999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 97
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d66000a9000c7644933fc3767a2759f
+      internalID: -169761668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 65
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.57440186, y: -0.5452672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7dbc4ede61068b4f9d776d623d53ba3
+      internalID: -548435399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_4
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 65
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.57440186, y: -0.5452672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3645a628c90dd2c47be06cab48ee5819
+      internalID: -2024299572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.57440186, y: -0.5452672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebec219309a0eed4aa8d61d1872a2a13
+      internalID: -1104996740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 33
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.57440186, y: -0.5452672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f5baa36d9de244db1253b3ef9358c8
+      internalID: 1515051296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_7
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 33
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.57440186, y: -0.5452672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e07f725a1b4e954e981826bd42dd281
+      internalID: 1607697654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_8
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 32
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.57440186, y: -0.5452672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7028860529d66d74c95fdfc2c971d787
+      internalID: -1293735287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_9
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 0
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.57440186, y: -0.5452672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a249cbd0f2075446a9034005de92036
+      internalID: -1910320448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.57440186, y: -0.5452672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc69c75fc7e9284b85423c6188d5921
+      internalID: 1902042196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DS DSi - Pokemon HeartGold SoulSilver - Profecess_11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.57440186, y: -0.5452672}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d9f7ee1c15cbd4e851051dbc1bb59b
+      internalID: 711538352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +366,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_4: -548435399
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_7: 1515051296
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_1: -1116321431
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_2: 2081636999
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_6: -1104996740
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_11: 1902042196
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_0: 1295358988
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_9: -1293735287
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_5: -2024299572
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_8: 1607697654
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_3: -169761668
+      DS DSi - Pokemon HeartGold SoulSilver - Profecess_10: -1910320448
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

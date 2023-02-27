@@ -10,6 +10,7 @@ public class GameLayer : MonoBehaviour
     [SerializeField] LayerMask playerLayer;
     [SerializeField] LayerMask fovLayer;//Trainer 觀測用BOX
     [SerializeField] LayerMask protalLayer;//Trainer 觀測用BOX
+    [SerializeField] LayerMask triggersLayer;
     public static GameLayer Instance { get; set; }
 
     private void Awake()
@@ -23,9 +24,9 @@ public class GameLayer : MonoBehaviour
     public LayerMask PlayerLayer { get => playerLayer; }
     public LayerMask FovLayer { get => fovLayer; }
     public LayerMask ProtalLayer { get => protalLayer; }
-    
+
     public LayerMask TriggerAbleLayers
     {
-        get => grassLayer | fovLayer | protalLayer;
+        get => grassLayer | fovLayer | protalLayer|triggersLayer;
     }
 }

@@ -1115,6 +1115,9 @@ MonoBehaviour:
   protalLayer:
     serializedVersion: 2
     m_Bits: 2048
+  triggersLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!114 &8953607286591438323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3504,6 +3507,9 @@ MonoBehaviour:
   inventoryUI: {fileID: 3910390376426859028}
   wildBattleMusic: {fileID: 8300000, guid: cc1b35fd930fa934ea193289f8644cf8, type: 3}
   trainerBattleMusic: {fileID: 8300000, guid: acbbf6f688f679041967040f8c842010, type: 3}
+  gymBattleMusic: {fileID: 0}
+  eliteFourBattleMusic: {fileID: 0}
+  champBattleMusic: {fileID: 0}
   battleVictoryMusic: {fileID: 8300000, guid: 12f0e179c072aa744a2017773fb0d547, type: 3}
 --- !u!1 &4843489605367860423
 GameObject:

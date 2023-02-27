@@ -12,7 +12,7 @@ public class LocationPortal : MonoBehaviour, IPlayerTriggerAble
     {
         fader = FindObjectOfType<Fader>();
     }
-
+     public bool TriggerRepeatedly => false;
     PlayerController player;
     public void OnPlayerTriggered(PlayerController player)
     {

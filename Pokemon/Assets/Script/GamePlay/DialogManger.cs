@@ -11,7 +11,7 @@ public class DialogManger : MonoBehaviour
     [SerializeField] int letterPerSecond;
     public static DialogManger Instance { get; private set; }
     public event Action OnShowDialog;
-    public event Action OnCloseDialog;
+    public event Action OnDialogFinished;
     public bool IsShowing { get; private set; }
 
     private void Awake()
@@ -36,14 +36,13 @@ public class DialogManger : MonoBehaviour
         {
             CloseDialog();
         }
-
+        OnDialogFinished?.Invoke();
     }
 
     public void CloseDialog()
     {
         dialogBox.SetActive(false);
         IsShowing = false;
-        OnCloseDialog?.Invoke();
     }
 
     public IEnumerator ShowDialog(Dialog dialog)
@@ -64,7 +63,7 @@ public class DialogManger : MonoBehaviour
 
         dialogBox.SetActive(false);
         IsShowing = false;
-        OnCloseDialog?.Invoke();
+        OnDialogFinished?.Invoke();
     }
 
     /*檢查對話框是否有第二行有的畫則顯示下一行*/

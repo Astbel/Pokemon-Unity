@@ -35,10 +35,12 @@ public class GameController : MonoBehaviour
         // Cursor.visible = false;
         /**/
         Instance = this;
+        menuController = GetComponent<MenuController>();
+
         PokemonDB.Init();
         MoveDB.Init();
         ConditionDB.Init();
-        menuController = GetComponent<MenuController>();
+        ItemDB.Init();
     }
 
     private void Start()
@@ -49,11 +51,11 @@ public class GameController : MonoBehaviour
         /*Lamda function*/
         DialogManger.Instance.OnShowDialog += () =>
         {
-            prevState =state;
+            prevState = state;
             state = GameState.Dialog;
         };
 
-        DialogManger.Instance.OnCloseDialog += () =>
+        DialogManger.Instance.OnDialogFinished += () =>
         {
             if (state == GameState.Dialog)
                 state = prevState;
@@ -132,7 +134,7 @@ public class GameController : MonoBehaviour
         /*確認是否進化*/
 
         /*結束戰鬥切換場景BGM*/
-        AudioManager.i.PlayMusic(CurrentScene.SceneMusic,fade:true);
+        AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
     }
 
     // Update is called once per frame

@@ -6,7 +6,7 @@ using System.Linq;
 
 public enum ItemCategory { Items, Pokeballs, Tms }
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, ISavable
 {
     [SerializeField] List<ItemSlot> slots;
     [SerializeField] List<ItemSlot> pokeballslots;
@@ -109,6 +109,32 @@ public class Inventory : MonoBehaviour
     {
         return FindObjectOfType<PlayerController>().GetComponent<Inventory>();
     }
+
+    public object CaptureState()
+    {
+        var saveData = new InventorySaveData()
+        {
+            /*將項目列表轉換為儲存列表*/
+            items = slots.Select(i => i.GetSaveData()).ToList(),
+            pokeballs = pokeballslots.Select(i => i.GetSaveData()).ToList(),
+            tms = tmSlots.Select(i => i.GetSaveData()).ToList(),
+        };
+
+        return saveData;
+    }
+    /*LOAD後如果沒有重新配置則不會刷新List*/
+    public void RestoreState(object state)
+    {
+        var saveData=state as InventorySaveData;
+
+        slots=saveData.items.Select(i=>new ItemSlot(i)).ToList();
+        pokeballslots =saveData.pokeballs.Select(i=>new ItemSlot(i)).ToList();
+        tmSlots=saveData.tms.Select(i=>new ItemSlot(i)).ToList();
+
+        allSlots = new List<List<ItemSlot>>() { slots, pokeballslots, tmSlots };
+
+        OnUpdated?.Invoke();
+    }
 }
 
 
@@ -117,6 +143,26 @@ public class ItemSlot
 {
     [SerializeField] itemBase item;
     [SerializeField] int count;
+    /*默認*/
+    public ItemSlot(){}
+
+    /*Load & Saving 資料使用*/
+    public ItemSlot(ItemSaveData saveData)
+    {
+        item = ItemDB.GetItemByName(saveData.name);
+        count = saveData.count;
+    }
+
+    public ItemSaveData GetSaveData()
+    {
+        var saveData = new ItemSaveData()
+        {
+            name = item.Name,
+            count = count
+        };
+
+        return saveData;
+    }
 
     public itemBase Item
     {
@@ -129,4 +175,19 @@ public class ItemSlot
         set => count = value;
     }
 
+}
+/*序列化要保存項目*/
+[Serializable]
+public class ItemSaveData
+{
+    public string name;
+    public int count;
+}
+
+[Serializable]
+public class InventorySaveData
+{
+    public List<ItemSaveData> items;
+    public List<ItemSaveData> pokeballs;
+    public List<ItemSaveData> tms;
 }

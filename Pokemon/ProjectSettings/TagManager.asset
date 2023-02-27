@@ -17,7 +17,7 @@ TagManager:
   - Player
   - FovLayer
   - PortalLyaer
-  - 
+  - Trigger
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: ForeGround
     uniqueID: 3329695861
+    locked: 0
+  - name: Door
+    uniqueID: 740211739
     locked: 0
   - name: SoildObject
     uniqueID: 696178787

@@ -14,8 +14,8 @@ public class EssentialObjectSpqwner : MonoBehaviour
         {
             //If there is a grid then spawn at it's center
             /*調整玩家起點位置*/
-            var spawnPos = new Vector3(0, -70, 0);
-
+            var spawnPos = new Vector3(0, 25, 0);
+            
             var grid = FindObjectOfType<Grid>();
             if (grid != null)
                 spawnPos = grid.transform.position;

@@ -63,24 +63,36 @@ public class PlayerController : MonoBehaviour, ISavable
             yield return collider.GetComponent<Interactable>()?.Interact(transform);//輸入腳色的方向
         }
     }
-    /*所有觸發事件*/
+    IPlayerTriggerAble currentlyInTrigger;
+    /*所有觸發事件Layer 腳本中設定是否可以重複觸發,如果是可重複觸發則再次觸發否則break出去*/
     private void OnMoveOver()
     {
         /*OverlapCircle只能回傳第一個數組,OverlapCircleAll能分別回傳對應的OPP*/
         var triggerables =
         Physics2D.OverlapCircleAll(transform.position - new Vector3(0, character.offsetY), 0.2f, GameLayer.Instance.TriggerAbleLayers);
 
+        IPlayerTriggerAble ColliderTriggerAble = null;
+
         foreach (var collider in triggerables)
         {
-            var ColliderTriggerAble = collider.GetComponent<IPlayerTriggerAble>();
+            ColliderTriggerAble = collider.GetComponent<IPlayerTriggerAble>();
             if (ColliderTriggerAble != null)
             {
+                /*部分事件觸發避免重複確認boolean,如果設定上false則break出去不在次觸發*/
+                if (ColliderTriggerAble == currentlyInTrigger && !ColliderTriggerAble.TriggerRepeatedly)
+                    break;
+
                 ColliderTriggerAble.OnPlayerTriggered(this);
+                currentlyInTrigger = ColliderTriggerAble;
                 break;
             }
         }
+        /*count當前沒有可以觸發對象*/
+        if (triggerables.Count() == 0 || ColliderTriggerAble != currentlyInTrigger)
+            currentlyInTrigger = null;
 
     }
+
     /*Save 紀錄需要有SerializeField才能被序列化,object在C#泛型可以回傳任意type*/
     public object CaptureState()
     {
