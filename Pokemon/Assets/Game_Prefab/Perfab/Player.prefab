@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 229252717
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 7152930139536384079, guid: 3111f23cd57d2be48b2ee6bac4a23588, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -118,13 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62d7ffae1695d9247879fdabf459b1d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pokemons:
-  - _base: {fileID: 11400000, guid: 47a1375f21420e64289bc864261ac388, type: 2}
-    level: 10
-  - _base: {fileID: 11400000, guid: 192f6dc8ed9c0df40a7b1d54503d70d2, type: 2}
-    level: 10
-  - _base: {fileID: 11400000, guid: f7f66d56ae92a24469a08e101413d01b, type: 2}
-    level: 10
+  pokemons: []
 --- !u!114 &8849527588394594753
 MonoBehaviour:
   m_ObjectHideFlags: 0

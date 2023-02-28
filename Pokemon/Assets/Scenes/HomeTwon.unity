@@ -243,6 +243,118 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &448235759
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4017904627633731786, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017904627633731786, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: count
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017904627633731786, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017904627633731786, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: dialog.lines.Array.data[0]
+      value: Hey poor guys needs some pokeball
+      objectReference: {fileID: 0}
+    - target: {fileID: 4017904627633731786, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: dialog.lines.Array.data[1]
+      value: 'here you go '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266763537243832049, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: uniqueId
+      value: 7c5945e6-0bcc-4e0d-b804-b9eaf0e6feb5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345563, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: questToStart
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345563, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: questToComplete
+      value: 
+      objectReference: {fileID: 11400000, guid: 386ff22ac87a83347af3ccceab295850, type: 2}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 25.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345566, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288385024393345634, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+      propertyPath: m_Name
+      value: NPC_Pokemon
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+--- !u!1 &448235760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7288385024393345634, guid: 96953e5e5cff2a548984532b6985f967, type: 3}
+  m_PrefabInstance: {fileID: 448235759}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &448235761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448235760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6414cc2a818c010438ba8588ae5e855d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pokemonToGive:
+    _base: {fileID: 11400000, guid: fb1657ce943f67c4eb5ac41fe7303f11, type: 2}
+    level: 5
+  dialog:
+    lines:
+    - here's some pokemon
 --- !u!1001 &509972281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73223,6 +73335,7 @@ MonoBehaviour:
   dialog:
     lines: []
   questToStart: {fileID: 0}
+  questToComplete: {fileID: 0}
   movementPattern:
   - {x: 0, y: 2}
   - {x: 0, y: -2}

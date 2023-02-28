@@ -2,32 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemGiver : MonoBehaviour, ISavable
+public class PokemonGiver : MonoBehaviour,ISavable
 {
-    [SerializeField] itemBase item;
-    [SerializeField] int count = 1;
+    [SerializeField] Pokemon pokemonToGive;
     [SerializeField] Dialog dialog;
 
     bool used = false;
 
-    public IEnumerator GiveItem(PlayerController player)
+    public IEnumerator GivePokemon(PlayerController player)
     {
         yield return DialogManger.Instance.ShowDialog(dialog);
 
-        player.GetComponent<Inventory>().AddItem(item, count);
+        pokemonToGive.Init();
+        player.GetComponent<PokemonParty>().AddPokemon(pokemonToGive);
 
         used = true;
 
-        string dialogText = $"{player.Name} received {item.Name}";
-        if (count > 1)
-            dialogText = $"{player.Name} received {count} {item.Name}";
+        string dialogText = $"{player.Name} received {pokemonToGive.Base.Name}";
 
         yield return DialogManger.Instance.ShowDialogText(dialogText);
     }
     /*確認是否可以使用以及是否存在*/
     public bool CanBeGiven()
     {
-        return item != null && count > 0 && !used;
+        return pokemonToGive != null && !used;
     }
 
     public object CaptureState()
@@ -39,4 +37,5 @@ public class ItemGiver : MonoBehaviour, ISavable
     {
         used = (bool)state;
     }
+
 }

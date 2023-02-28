@@ -474,6 +474,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: pokemons.Array.data[0]._base
       value: 
       objectReference: {fileID: 11400000, guid: f7f66d56ae92a24469a08e101413d01b, type: 2}
