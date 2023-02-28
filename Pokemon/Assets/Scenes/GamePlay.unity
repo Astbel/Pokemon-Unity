@@ -492,15 +492,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: pokemons.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: pokemons.Array.data[0]._base
       value: 
-      objectReference: {fileID: 11400000, guid: f7f66d56ae92a24469a08e101413d01b, type: 2}
+      objectReference: {fileID: 11400000, guid: 58b1b22fd1bfb48429c140ad1eec6e7b, type: 2}
     - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: pokemons.Array.data[0].level
-      value: 90
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: pokemons.Array.data[1]._base

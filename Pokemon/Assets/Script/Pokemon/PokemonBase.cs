@@ -24,6 +24,8 @@ public class PokemonBase : ScriptableObject
     [SerializeField] GrothRate grothRate;
     [SerializeField] int expYield;
     [SerializeField] int catchRate;
+    /*進化*/
+    [SerializeField] List<Evolution> evolutions;
     /*設定Pokemon學習最多招式數量*/
     public static int MaxNumOfMoves { get; set; } = 4;
     /*通過升級才學習到的招式*/
@@ -123,6 +125,8 @@ public class PokemonBase : ScriptableObject
 
     public List<MoveBase> LearnAbleByItems => learnAbleByItems;
 
+    public List<Evolution> Evolutions => evolutions;
+
 }
 /*
 為了在inspectior上配置幾等學習技能所以要新增System.Serializable
@@ -143,6 +147,17 @@ public class LearnableMove
     }
 
 }
+[System.Serializable]
+public class Evolution
+{
+    [SerializeField] PokemonBase evolevsInto;
+    [SerializeField] int requiredLevel;
+
+    public PokemonBase EvolvesInto => evolevsInto;
+
+    public int RequiredLevel => requiredLevel;
+}
+
 /*Exp 成長率*/
 public enum GrothRate
 {

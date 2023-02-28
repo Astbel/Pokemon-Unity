@@ -130,11 +130,12 @@ public class GameController : MonoBehaviour
         state = GameState.FreeRoam;
         battleSystem.gameObject.SetActive(false);
         worldCamera.gameObject.SetActive(true);
-
-        /*確認是否進化*/
-
         /*結束戰鬥切換場景BGM*/
         AudioManager.i.PlayMusic(CurrentScene.SceneMusic, fade: true);
+
+        /*確認是否進化*/
+        var playerParty = playerController.GetComponent<PokemonParty>();
+        StartCoroutine(playerParty.CheckForEvolutions());
     }
 
     // Update is called once per frame

@@ -14,7 +14,7 @@ public class QuestObject : MonoBehaviour
     {
         questList = QuestList.GetQuestList();
         /*當訂閱觸發後調用update跟新*/
-        questList.OnUpdated +=UpdateObjectStatus;
+        questList.OnUpdated += UpdateObjectStatus;
 
         UpdateObjectStatus();
     }
@@ -22,7 +22,7 @@ public class QuestObject : MonoBehaviour
 
     private void OnDestroy()
     {
-       questList.OnUpdated -=UpdateObjectStatus;
+        questList.OnUpdated -= UpdateObjectStatus;
     }
 
     /*檢測所有子類別是否enable*/
@@ -33,7 +33,12 @@ public class QuestObject : MonoBehaviour
             foreach (Transform child in transform)
             {
                 if (OnStart == ObjectAction.Enable)
+                {
                     child.gameObject.SetActive(true);
+                    var savable = child.GetComponent<SavableEntity>();
+                    if(savable!=null)
+                        SavingSystem.i.RestoreEntity(savable);
+                }
                 else if (OnStart == ObjectAction.Disable)
                     child.gameObject.SetActive(false);
             }
@@ -43,7 +48,13 @@ public class QuestObject : MonoBehaviour
             foreach (Transform child in transform)
             {
                 if (OnComplete == ObjectAction.Enable)
+                {
                     child.gameObject.SetActive(true);
+                    var savable = child.GetComponent<SavableEntity>();
+                    if(savable!=null)
+                        SavingSystem.i.RestoreEntity(savable);
+                }
+                    
                 else if (OnComplete == ObjectAction.Disable)
                     child.gameObject.SetActive(false);
             }

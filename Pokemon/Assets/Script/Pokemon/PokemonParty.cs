@@ -63,6 +63,17 @@ public class PokemonParty : MonoBehaviour
     {
         return FindObjectOfType<PlayerController>().GetComponent<PokemonParty>();
     }
-
-
+    /*進化方法確認隊伍中是否有達到進化條件*/
+    public IEnumerator CheckForEvolutions()
+    {
+        foreach (var pokemon in pokemons)
+        {
+            var evoultion = pokemon.CheckForEvolution();
+            if (evoultion != null)
+            {
+                yield return DialogManger.Instance.ShowDialogText($"{pokemon.Base.Name} evolved into {evoultion.EvolvesInto.Name}");
+                pokemon.Evolve(evoultion);
+            }
+        }
+    }
 }

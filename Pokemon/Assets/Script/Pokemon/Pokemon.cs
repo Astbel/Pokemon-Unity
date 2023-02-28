@@ -160,6 +160,17 @@ public class Pokemon
         }
     }
 
+    public Evolution CheckForEvolution()
+    {
+        return Base.Evolutions.FirstOrDefault(e => e.RequiredLevel == level);
+    }
+
+    public void Evolve(Evolution evolution)
+    {
+        _base=evolution.EvolvesInto;
+        CalculateStat();
+    }
+
 
     public int Attack
     {
