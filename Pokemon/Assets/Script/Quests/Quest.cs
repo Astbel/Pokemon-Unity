@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Quest
 {
     public QuestBase Base { get; private set; }
@@ -11,12 +12,16 @@ public class Quest
     {
         Base = _base;
     }
-
+    /*開始完成都放入鍊表*/
     public IEnumerator StartQuest()
     {
         Status = QuestStatus.Started;
 
         yield return DialogManger.Instance.ShowDialog(Base.StartDialogue);
+
+        var questList = QuestList.GetQuestList();
+
+        questList.AddQuest(this);
     }
 
     public IEnumerator CompleteQuest(Transform player)
@@ -37,6 +42,10 @@ public class Quest
             string playerName = player.GetComponent<PlayerController>().Name;
             yield return DialogManger.Instance.ShowDialogText($"{playerName} received {Base.RewardItem.Name}");
         }
+
+        var questList = QuestList.GetQuestList();
+
+        questList.AddQuest(this);
     }
 
     /*用來確認任務是否完成*/
