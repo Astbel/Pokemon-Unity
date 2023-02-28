@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
         /**/
         Instance = this;
         menuController = GetComponent<MenuController>();
-
+        QuestDB.Init();
         PokemonDB.Init();
         MoveDB.Init();
         ConditionDB.Init();

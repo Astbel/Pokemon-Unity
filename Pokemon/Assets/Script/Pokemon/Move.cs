@@ -18,7 +18,7 @@ public class Move
     /*讀取*/
     public Move(MoveSaveData saveData)
     {
-        Base = MoveDB.GetPokemonByName(saveData.name);
+        Base = MoveDB.GetObjectByName(saveData.name);
         PP = saveData.pp;
     }
     /*存取*/
@@ -26,7 +26,7 @@ public class Move
     {
         var saveData = new MoveSaveData()
         {
-            name = Base.Name,
+            name = Base.name,
             pp = PP
 
         };
