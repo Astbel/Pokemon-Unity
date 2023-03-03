@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     MenuController menuController;
     GameState prevState;
     GameState state;
+    GameState stateBeforeEvolution;
+
     public GameState State => state;
 
     public SceneDetail CurrentScene { get; private set; }
@@ -66,9 +68,17 @@ public class GameController : MonoBehaviour
             state = GameState.FreeRoam;
         };
         menuController.onMenuSelected += OnMenuSelect;
-        /*進化事件*/
-        EvolutionManager.i.OnStartEvolution += () => state = GameState.Evolution;
-        EvolutionManager.i.OnCompleteEvolution += () => state = GameState.FreeRoam;
+        /*進化事件新增儲存狀態因為在使用進化石會有卡住狀態的問題*/
+        EvolutionManager.i.OnStartEvolution += () =>
+         {
+            stateBeforeEvolution =state;
+            state = GameState.Evolution;
+         };
+        EvolutionManager.i.OnCompleteEvolution += () => 
+        {
+            partyScreen.SetPartyData();
+            state = stateBeforeEvolution;
+        };
     }
     /*切換場景停止遊戲控制*/
     public void PausedGame(bool pause)
@@ -129,6 +139,8 @@ public class GameController : MonoBehaviour
             trainer.BattleLost();
             trainer = null;
         }
+
+        partyScreen.SetPartyData();
 
         state = GameState.FreeRoam;
         battleSystem.gameObject.SetActive(false);

@@ -152,10 +152,12 @@ public class Evolution
 {
     [SerializeField] PokemonBase evolevsInto;
     [SerializeField] int requiredLevel;
-
+    [SerializeField] EvolutionItem requiredItem;
     public PokemonBase EvolvesInto => evolevsInto;
 
     public int RequiredLevel => requiredLevel;
+
+    public EvolutionItem RequiredItem => requiredItem;
 }
 
 /*Exp 成長率*/

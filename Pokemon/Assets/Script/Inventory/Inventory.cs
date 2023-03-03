@@ -103,10 +103,10 @@ public class Inventory : MonoBehaviour, ISavable
         return currentSlots.Exists(slot => slot.Item == item);
     }
 
-    /*確認道具類別*/
+    /*確認道具類別並儲存在該項目中*/
     ItemCategory GetCategoryFromItem(itemBase item)
     {
-        if (item is RecoveryItem)
+        if (item is RecoveryItem||item is EvolutionItem)
             return ItemCategory.Items;
         else if (item is PokeBallItem)
             return ItemCategory.Pokeballs;

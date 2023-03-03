@@ -79,9 +79,11 @@ public class Pokemon
         Stats.Add(Stat.SpAttack, Mathf.FloorToInt((Base.SpAttack * Level) / 100f) + 5);
         Stats.Add(Stat.SpDefense, Mathf.FloorToInt((Base.SpDefense * Level) / 100f) + 5);
         Stats.Add(Stat.Speed, Mathf.FloorToInt((Base.Speed * Level) / 100f) + 5);
-
+        /*進化時候會有掉HP的現象*/
+        int oldMaxHP = MaxHp;
         MaxHp = Mathf.FloorToInt((Base.MaxHp * Level) / 100f) + 10 + Level;
-
+        /*補正HP*/
+        HP += MaxHp - oldMaxHP;
     }
     /*清除狀態*/
     void ResetStatBoost()
@@ -104,6 +106,7 @@ public class Pokemon
         if (Exp > Base.GetExpForLevel(level + 1))
         {
             ++level;
+            CalculateStat();
             return true;
         }
         return false;
@@ -162,12 +165,18 @@ public class Pokemon
 
     public Evolution CheckForEvolution()
     {
-        return Base.Evolutions.FirstOrDefault(e => e.RequiredLevel == level);
+        return Base.Evolutions.FirstOrDefault(e => e.RequiredLevel <= level);
+    }
+
+    /*函數多載*/
+    public Evolution CheckForEvolution(itemBase item)
+    {
+        return Base.Evolutions.FirstOrDefault(e => e.RequiredItem == item);
     }
 
     public void Evolve(Evolution evolution)
     {
-        _base=evolution.EvolvesInto;
+        _base = evolution.EvolvesInto;
         CalculateStat();
     }
 

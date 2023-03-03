@@ -171,7 +171,7 @@ public class InventoryUI : MonoBehaviour
         else
         {
             OpenPartyScreen();
-            if(item is TMiItem)
+            if (item is TMiItem)
                 partyScreen.ShowIfTmIsUsable(item as TMiItem);
         }
     }
@@ -182,6 +182,25 @@ public class InventoryUI : MonoBehaviour
         state = InventoryUIState.Busy;
 
         yield return HandleTmItem();
+        /*進化石種類確認物品,以及種類*/
+        var item = inventory.GetItem(selectedItem, selectedCategory);
+        var pokemon = partyScreen.SelectedMember;
+        /*進化石事件*/
+        if (item is EvolutionItem)
+        {
+            var evolution = pokemon.CheckForEvolution(item);
+            if (evolution != null)
+            {
+                yield return EvolutionManager.i.Evolve(pokemon, evolution);
+            }
+            /*如果沒有效果則跳出協成*/
+            else
+            {
+                yield return DialogManger.Instance.ShowDialogText($"It won't have any effect ! ");
+                ClosePartyScreen();
+                yield break;
+            }
+        }
 
         /*var usedItem 返回使用道具*/
         var usedItem = inventory.UseItem(selectedItem, partyScreen.SelectedMember, selectedCategory);
