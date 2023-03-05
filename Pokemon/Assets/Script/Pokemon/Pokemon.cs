@@ -82,8 +82,9 @@ public class Pokemon
         /*進化時候會有掉HP的現象*/
         int oldMaxHP = MaxHp;
         MaxHp = Mathf.FloorToInt((Base.MaxHp * Level) / 100f) + 10 + Level;
-        /*補正HP*/
-        HP += MaxHp - oldMaxHP;
+        /*補正HP,新增判斷當load時會造成overflow這邊做補正只有當oldHP有值時才做計算*/
+        if (oldMaxHP != 0)
+            HP += MaxHp - oldMaxHP;
     }
     /*清除狀態*/
     void ResetStatBoost()
@@ -180,6 +181,11 @@ public class Pokemon
         CalculateStat();
     }
 
+    public void Heal()
+    {
+        HP = MaxHp;
+        OnHpChanged?.Invoke();
+    }
 
     public int Attack
     {

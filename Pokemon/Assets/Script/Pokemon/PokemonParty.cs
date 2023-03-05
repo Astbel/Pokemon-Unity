@@ -75,4 +75,10 @@ public class PokemonParty : MonoBehaviour
             }
         }
     }
+    /*為了讓靜態函式可以在外部被呼叫委派這邊會直接做一個method,這個method是用來跟新隊伍狀態*/
+    public void PartyUpdated()
+    {
+        OnUpdated?.Invoke();
+    }
+
 }

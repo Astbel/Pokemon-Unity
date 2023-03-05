@@ -473,22 +473,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: pokemons.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: pokemons.Array.data[1]._base
-      value: 
-      objectReference: {fileID: 11400000, guid: be14a6d6231d5fb42997bd6d8e9874e9, type: 2}
-    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: pokemons.Array.data[1].level
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4843489605335918618, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4843489605956123396, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: m_Name
       value: EssentialObjects
@@ -536,30 +520,6 @@ PrefabInstance:
     - target: {fileID: 4843489605956123399, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8953607286591522190, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: slots.Array.data[7].item
-      value: 
-      objectReference: {fileID: 11400000, guid: c2e3e6fd8928e2445a54340d7d88ee65, type: 2}
-    - target: {fileID: 8953607286591522190, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: slots.Array.data[8].item
-      value: 
-      objectReference: {fileID: 11400000, guid: 673595b5e5436df488bd0866b9e848b9, type: 2}
-    - target: {fileID: 8953607286591522190, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: slots.Array.data[9].item
-      value: 
-      objectReference: {fileID: 11400000, guid: 64cae0ec1fda3c3459f5cc97872b386b, type: 2}
-    - target: {fileID: 8953607286591522190, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: slots.Array.data[7].count
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8953607286591522190, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: slots.Array.data[8].count
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8953607286591522190, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
-      propertyPath: slots.Array.data[9].count
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}

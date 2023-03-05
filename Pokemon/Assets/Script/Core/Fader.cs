@@ -6,10 +6,12 @@ using UnityEngine.UI;
 /*切換場景的動畫*/
 public class Fader : MonoBehaviour
 {
+    public static Fader i { get; private set; }
     Image image;
 
     private void Awake()
     {
+        i = this;
         image = GetComponent<Image>();
 
     }
