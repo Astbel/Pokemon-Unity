@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution }
+public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution,statusUI }
 
 /*
 判斷遊戲狀態目前為誰控制避免同時腳色移動
@@ -184,7 +184,7 @@ public class GameController : MonoBehaviour
         {
             Action onSelected = () =>
             {
-
+                state=GameState.statusUI;
             };
             Action onBack = () =>
             {

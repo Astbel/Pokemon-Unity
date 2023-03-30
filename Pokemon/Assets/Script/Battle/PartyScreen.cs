@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PartyScreen : MonoBehaviour
 {
+    [SerializeField] StatusUI statusUI;
     [SerializeField] Text messageText;
     PartyMemberUI[] memberSlots;
     List<Pokemon> pokemons;
@@ -80,16 +81,20 @@ public class PartyScreen : MonoBehaviour
         if (selection != prevSelection)
             UpdateMemberSelection(selection);
 
-        /*選擇腳色*/
+        /*開啟Status介面視窗*/
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            onSelected?.Invoke();
+            /*呼叫Status Box*/
+            statusUI.gameObject.SetActive(true);
+            // onSelected?.Invoke();
         }
         /*返回鍵*/
         else if (Input.GetKeyDown(KeyCode.X))
         {
+            statusUI.gameObject.SetActive(false);
             onBack?.Invoke();
         }
+        statusUI.HandleUpdate(onSelected, onBack);
     }
 
     /*顯示是否可以學習招式機的UI*/
