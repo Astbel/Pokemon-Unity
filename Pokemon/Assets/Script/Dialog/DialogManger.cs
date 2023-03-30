@@ -25,6 +25,8 @@ public class DialogManger : MonoBehaviour
         IsShowing = true;
         dialogBox.SetActive(true);
 
+        AudioManager.i.PlaySfx(AudioID.UISelect);
+
         yield return TypeDialog(text);
 
         /*等待玩家按Z才關閉對話框*/
@@ -59,13 +61,14 @@ public class DialogManger : MonoBehaviour
         /*修正顯示訊息,以及等待玩家按下Z才顯示下一段*/
         foreach (var line in dialog.Lines)
         {
+            AudioManager.i.PlaySfx(AudioID.UISelect);
             yield return TypeDialog(line);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Z));
         }
 
         if (choices != null && choices.Count > 1)
         {
-            yield return choiceBox.ShowChoices(choices,onChoiceSelected);
+            yield return choiceBox.ShowChoices(choices, onChoiceSelected);
         }
 
         dialogBox.SetActive(false);

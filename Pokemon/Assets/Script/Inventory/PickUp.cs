@@ -20,7 +20,7 @@ public class PickUp : MonoBehaviour, Interactable, ISavable
         GetComponent<BoxCollider2D>().enabled = false;
 
         string playerName = initiator.GetComponent<PlayerController>().Name;
-
+        AudioManager.i.PlaySfx(AudioID.ItemObtained, pauseMusic: true);
         /*訊息顯示玩家撿起道具*/
         yield return DialogManger.Instance.ShowDialogText($"{playerName} found {item.Name}");
     }

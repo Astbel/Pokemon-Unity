@@ -29,6 +29,7 @@ public class ChoiceBox : MonoBehaviour
         {
             var choiceTextObj = Instantiate(choiceTextPrefab, transform);
             choiceTextObj.TextField.text = choice;
+            choiceTexts.Add(choiceTextObj);
         }
 
         yield return new WaitUntil(() => choiceSelected == true);

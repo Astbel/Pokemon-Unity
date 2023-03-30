@@ -295,8 +295,13 @@ public class BattleSystem : MonoBehaviour
         {
             /*攻擊動畫以及敵人受傷動畫*/
             sourceUnit.PlayAttackAnimation();
+            AudioManager.i.PlaySfx(move.Base.Sound);
+
             yield return new WaitForSeconds(1f);
+
             targetUnit.PlayHitAnimation();
+            AudioManager.i.PlaySfx(AudioID.Hit);
+
             /*判斷是否是status技能還是傷害技能*/
             if (move.Base.Category == MoveCategory.Status)
             {

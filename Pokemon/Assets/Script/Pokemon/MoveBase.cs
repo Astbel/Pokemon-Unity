@@ -22,7 +22,7 @@ public class MoveBase : ScriptableObject
     [SerializeField] MoveEffects effects;
     [SerializeField] MoveTarget target;
     [SerializeField] List<SecondaryEffects> secondaryEffects;
-
+    [SerializeField] AudioClip sound;
     public string Name
     {
         get { return name; }
@@ -59,6 +59,8 @@ public class MoveBase : ScriptableObject
     public MoveEffects Effects { get { return effects; } }
     public MoveTarget Target { get { return target; } }
     public MoveCategory Category { get { return category; } }
+
+    public AudioClip Sound => sound;
 }
 
 public enum MoveTarget
