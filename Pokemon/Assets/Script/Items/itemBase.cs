@@ -7,10 +7,14 @@ public class itemBase : ScriptableObject
     [SerializeField] string name;
     [SerializeField] string description;
     [SerializeField] Sprite icon;
+    [SerializeField] float price;
+    [SerializeField] bool isSellable;
     /*虛擬化讓他可以複寫*/
     public virtual string Name => name;
     public string Description => description;
     public Sprite Icon => icon;
+    public float Price=>price;
+    public bool IsSellable=>isSellable;
 
     public virtual bool Use(Pokemon pokemon)
     {

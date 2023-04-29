@@ -85,16 +85,16 @@ public class PartyScreen : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             /*呼叫Status Box*/
-            statusUI.gameObject.SetActive(true);
-            // onSelected?.Invoke();
+            // statusUI.gameObject.SetActive(true);
+            onSelected?.Invoke();
         }
         /*返回鍵*/
         else if (Input.GetKeyDown(KeyCode.X))
         {
-            statusUI.gameObject.SetActive(false);
+            // statusUI.gameObject.SetActive(false);
             onBack?.Invoke();
         }
-        statusUI.HandleUpdate(onSelected, onBack);
+        // statusUI.HandleUpdate(onSelected, onBack);
     }
 
     /*顯示是否可以學習招式機的UI*/

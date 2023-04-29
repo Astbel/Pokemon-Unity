@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution,statusUI }
+public enum GameState { FreeRoam, Battle, Dialog, Menu, PartyScreen, Bag, Cutscene, Paused, Evolution, statusUI, Shop }
 
 /*
 判斷遊戲狀態目前為誰控制避免同時腳色移動
@@ -71,14 +71,18 @@ public class GameController : MonoBehaviour
         /*進化事件新增儲存狀態因為在使用進化石會有卡住狀態的問題*/
         EvolutionManager.i.OnStartEvolution += () =>
          {
-            stateBeforeEvolution =state;
-            state = GameState.Evolution;
+             stateBeforeEvolution = state;
+             state = GameState.Evolution;
          };
-        EvolutionManager.i.OnCompleteEvolution += () => 
+        EvolutionManager.i.OnCompleteEvolution += () =>
         {
             partyScreen.SetPartyData();
             state = stateBeforeEvolution;
         };
+        /*商店事件*/
+        ShopController.i.OnStartShopping += () => state = GameState.Shop;
+        ShopController.i.OnFinishShopping += () => state = GameState.FreeRoam;
+
     }
     /*切換場景停止遊戲控制*/
     public void PausedGame(bool pause)
@@ -184,7 +188,7 @@ public class GameController : MonoBehaviour
         {
             Action onSelected = () =>
             {
-                state=GameState.statusUI;
+                // state=GameState.statusUI;
             };
             Action onBack = () =>
             {
@@ -204,6 +208,11 @@ public class GameController : MonoBehaviour
             };
 
             inventoryUI.HandleUpdate(onBack);
+        }
+        /*商店販賣事件*/
+        else if (state == GameState.Shop)
+        {
+            ShopController.i.HandleUpdate();
         }
     }
 

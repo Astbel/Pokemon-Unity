@@ -180,11 +180,12 @@ public class Pokemon
         _base = evolution.EvolvesInto;
         CalculateStat();
     }
-
+    /*寶可夢中心回覆 HP和狀態異常*/
     public void Heal()
     {
         HP = MaxHp;
         OnHpChanged?.Invoke();
+        CureStatus();
     }
 
     public int Attack

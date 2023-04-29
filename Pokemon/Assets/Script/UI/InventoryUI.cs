@@ -142,6 +142,13 @@ public class InventoryUI : MonoBehaviour
     {
         state = InventoryUIState.Busy;
         var item = inventory.GetItem(selectedItem, selectedCategory);
+        /*商店販售狀態模式下*/
+        if (GameController.Instance.State==GameState.Shop)
+        {
+            onItemUsed?.Invoke(item);
+            state=InventoryUIState.ItemSelection;
+            yield break;
+        }
         /*判斷在何處能使用道具*/
         if (GameController.Instance.State == GameState.Battle)
         {
