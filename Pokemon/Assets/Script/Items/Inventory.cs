@@ -80,14 +80,28 @@ public class Inventory : MonoBehaviour, ISavable
         OnUpdated?.Invoke();
     }
 
-    public void RemoveItem(itemBase item)
+    public int GetItemCount(itemBase item)
+    {
+        /*回傳enum索引確認撿起道具類別*/
+        int category = (int)GetCategoryFromItem(item);
+        var currentSlots = GetSlotByCategory(category);
+        /*確認插槽當沒有匯回傳null*/
+        var itemSlot = currentSlots.FirstOrDefault(slots => slots.Item == item);
+
+        if (itemSlot != null)
+            return itemSlot.Count;
+        else
+            return 0;
+    }
+
+    public void RemoveItem(itemBase item, int countToRemove=1)
     {
         /*回傳enum索引確認撿起道具類別*/
         int category = (int)GetCategoryFromItem(item);
         var currentSlots = GetSlotByCategory(category);
         /*用linq去檢測是否為該道具*/
         var itemSlot = currentSlots.First(slots => slots.Item == item);
-        itemSlot.Count--;
+        itemSlot.Count -= countToRemove;
         /*如果道具使用數為0移除該項目*/
         if (itemSlot.Count == 0)
             currentSlots.Remove(itemSlot);
@@ -106,7 +120,7 @@ public class Inventory : MonoBehaviour, ISavable
     /*確認道具類別並儲存在該項目中*/
     ItemCategory GetCategoryFromItem(itemBase item)
     {
-        if (item is RecoveryItem||item is EvolutionItem)
+        if (item is RecoveryItem || item is EvolutionItem)
             return ItemCategory.Items;
         else if (item is PokeBallItem)
             return ItemCategory.Pokeballs;

@@ -9,6 +9,7 @@ public class ShopController : MonoBehaviour
 {
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] WalletUI walletUI;
+    [SerializeField] CountSeletorUI countSeletorUI;
     public event Action OnStartShopping;
     public event Action OnFinishShopping;
     Inventory inventory;
@@ -21,7 +22,7 @@ public class ShopController : MonoBehaviour
     }
     private void Start()
     {
-        inventory=Inventory.GetInventory();
+        inventory = Inventory.GetInventory();
     }
     int selectedChoice = 0;
     public IEnumerator StartTrading(Merchant merchant)
@@ -88,16 +89,33 @@ public class ShopController : MonoBehaviour
 
         float SellingPrice = Mathf.Round(item.Price / 2);
 
+        int countToSell = 1;
+        /*包包回傳道具數量*/
+        int itemCount = inventory.GetItemCount(item);
+        /*NPC詢問要販售多少數量*/
+        if (itemCount > 1)
+        {
+            yield return DialogManger.Instance.ShowDialogText($"How many would you like to sell?"
+            , waitForInput: false, autoClose: false);
+
+            yield return countSeletorUI.ShowSelector(itemCount, SellingPrice,
+            (selectedCount) => countToSell = selectedCount);
+
+            DialogManger.Instance.CloseDialog();
+        }
+
+        SellingPrice = SellingPrice * countToSell;
+
         /*NPC 店員顯示販賣對話選項*/
         yield return DialogManger.Instance.ShowDialogText($"The price for the item will be {SellingPrice} ,Would u like to sell it?",
         waitForInput: false,
         choices: new List<string>() { "YES", "No" },
         onChoiceSelected: choiceIndex => selectedChoice = choiceIndex);
 
-        if (selectedChoice==0)
+        if (selectedChoice == 0)
         {
             //Sell Item
-            inventory.RemoveItem(item);
+            inventory.RemoveItem(item, countToSell);
             //需要增加變數給玩家當作金錢
             Wallet.i.AddMoney(SellingPrice);
             //販售對話顯示
@@ -106,6 +124,6 @@ public class ShopController : MonoBehaviour
 
         walletUI.Close();
 
-        state=ShopState.Selling;
+        state = ShopState.Selling;
     }
 }
