@@ -15,3 +15,5 @@ MonoBehaviour:
   name: Fire Stone
   description: 
   icon: {fileID: 21300000, guid: 133c0d46a6e7c754c8f1652b382c84ca, type: 3}
+  price: 3000
+  isSellable: 1

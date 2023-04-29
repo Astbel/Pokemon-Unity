@@ -15,6 +15,8 @@ MonoBehaviour:
   name: 'SuperPotion '
   description: Recover of a Pokemon by 50 points
   icon: {fileID: 21300000, guid: c7d36b4952f230a4182c81b99ecff675, type: 3}
+  price: 800
+  isSellable: 1
   hpAmount: 50
   restoreMaxHp: 0
   ppAmount: 0

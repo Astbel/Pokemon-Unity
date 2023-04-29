@@ -8,6 +8,7 @@ public enum ShopState { Menu, Buying, Selling, Busy }
 public class ShopController : MonoBehaviour
 {
     [SerializeField] InventoryUI inventoryUI;
+    [SerializeField] WalletUI walletUI;
     public event Action OnStartShopping;
     public event Action OnFinishShopping;
     Inventory inventory;
@@ -83,6 +84,8 @@ public class ShopController : MonoBehaviour
             state = ShopState.Selling;
             yield break;
         }
+        walletUI.Show();
+
         float SellingPrice = Mathf.Round(item.Price / 2);
 
         /*NPC 店員顯示販賣對話選項*/
@@ -96,10 +99,13 @@ public class ShopController : MonoBehaviour
             //Sell Item
             inventory.RemoveItem(item);
             //需要增加變數給玩家當作金錢
-
+            Wallet.i.AddMoney(SellingPrice);
             //販售對話顯示
             yield return DialogManger.Instance.ShowDialogText($"Turned over {item.Name} and received {SellingPrice} !");
         }
+
+        walletUI.Close();
+
         state=ShopState.Selling;
     }
 }

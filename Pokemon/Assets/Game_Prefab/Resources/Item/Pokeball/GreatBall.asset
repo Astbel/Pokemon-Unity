@@ -15,3 +15,6 @@ MonoBehaviour:
   name: GreatBall
   description: A ball Higher catch rate to capture pokemons
   icon: {fileID: 21300000, guid: 32a628fe7fb2f804da75576e938d9199, type: 3}
+  price: 800
+  isSellable: 1
+  catchRateModfier: 1

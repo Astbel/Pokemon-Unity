@@ -15,6 +15,8 @@ MonoBehaviour:
   name: full-heal
   description: Recover of a Pokemon from all status
   icon: {fileID: 21300000, guid: acc0dd7799e9c8045a30e46f5499fe22, type: 3}
+  price: 5000
+  isSellable: 1
   hpAmount: 0
   restoreMaxHp: 0
   ppAmount: 0

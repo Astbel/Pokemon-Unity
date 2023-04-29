@@ -15,6 +15,8 @@ MonoBehaviour:
   name: 'MaxEhter '
   description: Recover of a Pokemon PP in full
   icon: {fileID: 21300000, guid: c3514c5855e81e24cab4a88e0854da0e, type: 3}
+  price: 3000
+  isSellable: 1
   hpAmount: 0
   restoreMaxHp: 0
   ppAmount: 0

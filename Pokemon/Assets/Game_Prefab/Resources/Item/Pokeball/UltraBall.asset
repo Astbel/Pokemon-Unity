@@ -15,3 +15,6 @@ MonoBehaviour:
   name: UltraBall
   description: A ball Higher catch rate to capture pokemons
   icon: {fileID: 21300000, guid: 2b7f47c851be40444bd2df4610a41ef5, type: 3}
+  price: 1200
+  isSellable: 1
+  catchRateModfier: 1
