@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class ShopUI : MonoBehaviour
     [SerializeField] Image upArrow;
     [SerializeField] Image downArrow;
 
+    Action<itemBase> onItemSelected;
+    Action onBack;
     int selectedItem;
     RectTransform itemListRect;
     List<itemBase> availableItems;
@@ -23,12 +26,22 @@ public class ShopUI : MonoBehaviour
         itemListRect = itemList.GetComponent<RectTransform>();
     }
 
-    public void Show(List<itemBase> availableItems)
+    public void Show(List<itemBase> availableItems,
+        Action<itemBase> onItemSelected, Action onBack)
     {
         this.availableItems = availableItems;
+        this.onItemSelected = onItemSelected;
+        this.onBack = onBack;
+
         gameObject.SetActive(true);
         UpdataItemList();
     }
+
+    public void Close()
+    {
+        gameObject.SetActive(false);
+    }
+
 
     public void HandleUpdate()
     {
@@ -42,6 +55,11 @@ public class ShopUI : MonoBehaviour
 
         if (selectedItem != prevSelection)
             UpdateItemSelection();
+
+        if (Input.GetKeyDown(KeyCode.Z))
+            onItemSelected?.Invoke(availableItems[selectedItem]);
+        else if (Input.GetKeyDown(KeyCode.X))
+            onBack?.Invoke();
     }
 
     void UpdataItemList()

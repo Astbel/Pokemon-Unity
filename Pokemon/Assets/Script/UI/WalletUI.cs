@@ -28,5 +28,4 @@ public class WalletUI : MonoBehaviour
         moneyTxt.text = "$" + Wallet.i.Money;
     }
 
-
 }
