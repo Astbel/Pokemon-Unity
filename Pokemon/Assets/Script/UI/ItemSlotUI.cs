@@ -24,8 +24,13 @@ public class ItemSlotUI : MonoBehaviour
         nameText.text = itemSlot.Item.Name;
         countText.text = $"X {itemSlot.Count}";
     }
-
-
+    /*商店販賣*/
+    public void SetNameAndPrice(itemBase item)
+    {
+         rectTransform=GetComponent<RectTransform>();
+        nameText.text = item.Name;
+        countText.text = $"$ {item.Price}";
+    }
 
 
 

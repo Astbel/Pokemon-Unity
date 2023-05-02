@@ -10,11 +10,14 @@ public class ShopController : MonoBehaviour
     [SerializeField] InventoryUI inventoryUI;
     [SerializeField] WalletUI walletUI;
     [SerializeField] CountSeletorUI countSeletorUI;
+    [SerializeField] ShopUI shopUI;
     public event Action OnStartShopping;
     public event Action OnFinishShopping;
     Inventory inventory;
     /*商店狀態機*/
     ShopState state;
+    Merchant merchant;
+
     public static ShopController i { get; private set; }
     private void Awake()
     {
@@ -27,6 +30,7 @@ public class ShopController : MonoBehaviour
     int selectedChoice = 0;
     public IEnumerator StartTrading(Merchant merchant)
     {
+        this.merchant = merchant;
         OnStartShopping?.Invoke();
         yield return StartMenuState();
 
@@ -45,6 +49,9 @@ public class ShopController : MonoBehaviour
         if (selectedChoice == 0)
         {
             //Buy
+            state = ShopState.Buying;
+            walletUI.Show();
+            shopUI.Show(merchant.AvailableItems);
         }
         else if (selectedChoice == 1)
         {
@@ -66,6 +73,10 @@ public class ShopController : MonoBehaviour
         if (state == ShopState.Selling)
         {
             inventoryUI.HandleUpdate(onBackFromSelling, (selectedItem) => StartCoroutine(SellItem(selectedItem)));
+        }
+        else if(state ==ShopState.Buying)
+        {
+            shopUI.HandleUpdate();
         }
     }
     /*退出販售狀態*/
