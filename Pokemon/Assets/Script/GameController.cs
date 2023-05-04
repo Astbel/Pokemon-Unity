@@ -248,6 +248,10 @@ public class GameController : MonoBehaviour
             SavingSystem.i.Load("SavingSolt1");
             state = GameState.FreeRoam;
         }
+        else if (selectedItem == 4)
+        {
+            Application.Quit();
+        }
 
     }
 
