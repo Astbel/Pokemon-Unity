@@ -3508,6 +3508,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4843489604239496798, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: ledgeLayer.m_Bits
+      value: 8192
+      objectReference: {fileID: 0}
     - target: {fileID: 4843489604630769049, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: m_RootOrder
       value: 4

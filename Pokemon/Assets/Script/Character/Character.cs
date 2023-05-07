@@ -20,8 +20,8 @@ public class Character : MonoBehaviour
     public void SetPositionAndSnapToTile(Vector2 pos)
     {
         /*為了讓圖片對其中心 Ex當前座標2.3 ->floor後->2+0.5*/
-        pos.x = Mathf.Floor(pos.x) +0.5f;
-        pos.y = Mathf.Floor(pos.y) +0.5f+ offsetY;
+        pos.x = Mathf.Floor(pos.x) + 0.5f;
+        pos.y = Mathf.Floor(pos.y) + 0.5f + offsetY;
 
         transform.position = pos;
     }
@@ -34,6 +34,14 @@ public class Character : MonoBehaviour
         var targetPos = transform.position;
         targetPos.x += moveVec.x;
         targetPos.y += moveVec.y;
+        //檢測玩家附近是否有柵欄可以跳躍
+        var ledge =CheckForLedge(targetPos);
+        if(ledge!=null)
+        {
+            //當執行跳躍時直接結束後面的函數
+            if(ledge.TryToJump(this,moveVec))
+                yield break;
+        }
 
         /*如果不能走過從協程break出來*/
         if (!IsPathClear(targetPos))
@@ -82,7 +90,11 @@ public class Character : MonoBehaviour
         }
         return true;
     }
-
+    Ledge CheckForLedge(Vector3 targetPos)
+    {
+        var colider = Physics2D.OverlapCircle(targetPos, 0.15f, GameLayer.Instance.LedgeLayer);
+        return colider?.GetComponent<Ledge>();
+    }
     /*NPC 對話轉向玩家檢測X和Y軸*/
     /*                                1      */
     /*NPC方向只能看四個軸其中一種  -1   0   1  */
