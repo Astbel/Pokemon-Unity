@@ -7,10 +7,13 @@ using UnityEngine;
 public class MapArea : MonoBehaviour
 {
     [SerializeField] List<PokemonEncounterRecord> wildPokemons;
-
-    private void Start()
+    //totalChance 為了可以被調用宣告成SerializeField ,為了Insoector不要看到而hide起來
+    [HideInInspector]
+    [SerializeField] int totalChance = 0;
+    //驗證是否遇敵機率是否滿足100
+    private void OnValidate()
     {
-        int totalChance = 0;
+        totalChance = 0;
         foreach (var record in wildPokemons)
         {
             record.chanceLower = totalChance;
@@ -18,6 +21,11 @@ public class MapArea : MonoBehaviour
 
             totalChance = totalChance + record.chanceRate;
         }
+    }
+
+    private void Start()
+    {
+       
     }
 
     /*開始時為所有pokemon初始化狀態 初始化招式以及血量*/
