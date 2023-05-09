@@ -396,10 +396,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wildPokemons:
-  - pokemon: {fileID: 0}
-    levelRange: {x: 0, y: 0}
-    chanceRate: 0
-  totalChance: 0
+  - pokemon: {fileID: 11400000, guid: 07dbb54323f6167448fe694264bec773, type: 2}
+    levelRange: {x: 5, y: 8}
+    chanceRate: 25
+  - pokemon: {fileID: 11400000, guid: be14a6d6231d5fb42997bd6d8e9874e9, type: 2}
+    levelRange: {x: 5, y: 8}
+    chanceRate: 25
+  - pokemon: {fileID: 11400000, guid: 47a1375f21420e64289bc864261ac388, type: 2}
+    levelRange: {x: 5, y: 8}
+    chanceRate: 25
+  - pokemon: {fileID: 11400000, guid: 11cc9c452f032f34e8413ad844177cee, type: 2}
+    levelRange: {x: 5, y: 8}
+    chanceRate: 25
+  totalChance: 100
 --- !u!114 &1853022535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4621427403994189371, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}

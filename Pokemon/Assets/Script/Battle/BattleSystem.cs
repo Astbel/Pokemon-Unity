@@ -51,9 +51,6 @@ public class BattleSystem : MonoBehaviour
         this.wildPokemon = wildPokemon;
         player = playerParty.GetComponent<PlayerController>();
         isTrainerBattle = false;
-
-        AudioManager.i.PlayMusic(wildBattleMusic);
-
         StartCoroutine(SetUpBattle());
     }
 
@@ -68,7 +65,7 @@ public class BattleSystem : MonoBehaviour
         trainer = trainerParty.GetComponent<TrainerController>();
 
         // AudioManager.i.PlayMusic(trainerBattleMusic);
-        Trainer_BGM_Select();
+        // Trainer_BGM_Select();
 
         StartCoroutine(SetUpBattle());
     }
@@ -91,6 +88,7 @@ public class BattleSystem : MonoBehaviour
     */
     public IEnumerator SetUpBattle()
     {
+         AudioManager.i.PlayMusic(wildBattleMusic);
         playerUnit.Clear();
         enemyUnit.Clear();
         if (!isTrainerBattle)
@@ -107,6 +105,7 @@ public class BattleSystem : MonoBehaviour
         else
         {
             /*Tranier Battle*/
+            Trainer_BGM_Select();
             //disable both pokemon image
             playerUnit.gameObject.SetActive(false);
             enemyUnit.gameObject.SetActive(false);

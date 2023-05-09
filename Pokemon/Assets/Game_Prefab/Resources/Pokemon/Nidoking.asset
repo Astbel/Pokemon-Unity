@@ -27,6 +27,7 @@ MonoBehaviour:
   grothRate: 1
   expYield: 253
   catchRate: 160
+  evolutions: []
   learnableMoves:
   - moveBase: {fileID: 11400000, guid: e2063f3280c0d7d4f8e4c93e8d27aef8, type: 2}
     level: 1
@@ -38,3 +39,5 @@ MonoBehaviour:
     level: 10
   - moveBase: {fileID: 11400000, guid: 14e9dbc34010a3f418df2ee47a4bbe30, type: 2}
     level: 13
+  learnAbleByItems:
+  - {fileID: 11400000, guid: c467019133527934ea4f28219aa537f6, type: 2}

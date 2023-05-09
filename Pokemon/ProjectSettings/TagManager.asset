@@ -53,7 +53,7 @@ TagManager:
   - name: Door
     uniqueID: 740211739
     locked: 0
-  - name: Player
+  - name: Objects
     uniqueID: 229252717
     locked: 0
   - name: Battle

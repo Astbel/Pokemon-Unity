@@ -15,7 +15,7 @@ C:/Users/Astbel/Desktop/Poke_unity/Pokemon
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-50424
+54196
 Successfully changed project path to: C:/Users/Astbel/Desktop/Poke_unity/Pokemon
 C:/Users/Astbel/Desktop/Poke_unity/Pokemon
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/Astbel/Desktop/Poke_unity/Pokemon
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [1205272] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2132850704 [EditorId] 2132850704 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [101804] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2269163811 [EditorId] 2269163811 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [1205272] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2132850704 [EditorId] 2132850704 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [101804] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 2269163811 [EditorId] 2269163811 [Version] 1048832 [Id] WindowsEditor(7,MSI) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 149.39 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 150.58 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.16f1 (4016570cf34f)
 [Subsystems] Discovering subsystems at path D:/Uinty2019/2021.3.16f1/Editor/Data/Resources/UnitySubsystems
@@ -67,929 +67,89 @@ Initialize mono
 Mono path[0] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Uinty2019/2021.3.16f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56168
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56252
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Uinty2019/2021.3.16f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002163 seconds.
+Registered in 0.003195 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 176.14 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 152.29 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.731 seconds
+- Completed reload, in  0.715 seconds
 Domain Reload Profiling:
-	ReloadAssembly (731ms)
-		BeginReloadAssembly (71ms)
+	ReloadAssembly (716ms)
+		BeginReloadAssembly (62ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (562ms)
-			LoadAssemblies (70ms)
+		EndReloadAssembly (551ms)
+			LoadAssemblies (60ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (107ms)
+			SetupTypeCache (90ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (389ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (388ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (176ms)
-				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (152ms)
-				ProcessInitializeOnLoadMethodAttributes (50ms)
+				RefreshPlugins (152ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (168ms)
+				ProcessInitializeOnLoadMethodAttributes (59ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007597 seconds.
+Registered in 0.013347 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 118.99 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 148.09 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.060 seconds
+- Completed reload, in  1.268 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1061ms)
-		BeginReloadAssembly (88ms)
+	ReloadAssembly (1269ms)
+		BeginReloadAssembly (117ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (870ms)
-			LoadAssemblies (72ms)
+			CreateAndSetChildDomain (26ms)
+		EndReloadAssembly (1033ms)
+			LoadAssemblies (102ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (214ms)
+			SetupTypeCache (290ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (480ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (532ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (119ms)
-				BeforeProcessingInitializeOnLoad (87ms)
-				ProcessInitializeOnLoadAttributes (231ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
-				AfterProcessingInitializeOnLoad (3ms)
+				RefreshPlugins (148ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (241ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.70 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4132 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 46 unused Assets / (229.3 KB). Loaded Objects now: 4587.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 3.709900 ms (FindLiveObjects: 0.316100 ms CreateObjectMapping: 0.148500 ms MarkObjects: 3.076600 ms  DeleteObjects: 0.167500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009130 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.95 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.970 seconds
-Domain Reload Profiling:
-	ReloadAssembly (971ms)
-		BeginReloadAssembly (117ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (37ms)
-		EndReloadAssembly (754ms)
-			LoadAssemblies (78ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (237ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (344ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (81ms)
-				ProcessInitializeOnLoadAttributes (207ms)
-				ProcessInitializeOnLoadMethodAttributes (40ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.50 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4127 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.7 KB). Loaded Objects now: 4590.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 2.782700 ms (FindLiveObjects: 0.265300 ms CreateObjectMapping: 0.138600 ms MarkObjects: 2.243500 ms  DeleteObjects: 0.134500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006886 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.28 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.003 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1004ms)
-		BeginReloadAssembly (121ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (38ms)
-		EndReloadAssembly (788ms)
-			LoadAssemblies (85ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (236ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (53ms)
-			SetupLoadedEditorAssemblies (353ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (78ms)
-				ProcessInitializeOnLoadAttributes (212ms)
-				ProcessInitializeOnLoadMethodAttributes (42ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.85 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4127 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.7 KB). Loaded Objects now: 4593.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 2.987100 ms (FindLiveObjects: 0.294500 ms CreateObjectMapping: 0.129600 ms MarkObjects: 2.426700 ms  DeleteObjects: 0.135300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010550 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.49 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.998 seconds
-Domain Reload Profiling:
-	ReloadAssembly (999ms)
-		BeginReloadAssembly (128ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (40ms)
-		EndReloadAssembly (779ms)
-			LoadAssemblies (87ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (242ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (349ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (80ms)
-				ProcessInitializeOnLoadAttributes (208ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.66 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4127 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (196.8 KB). Loaded Objects now: 4596.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 3.061700 ms (FindLiveObjects: 0.259800 ms CreateObjectMapping: 0.134500 ms MarkObjects: 2.518100 ms  DeleteObjects: 0.148000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008334 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.64 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.998 seconds
-Domain Reload Profiling:
-	ReloadAssembly (998ms)
-		BeginReloadAssembly (119ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (40ms)
-		EndReloadAssembly (796ms)
-			LoadAssemblies (82ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (249ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (56ms)
-			SetupLoadedEditorAssemblies (343ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (77ms)
-				ProcessInitializeOnLoadAttributes (209ms)
-				ProcessInitializeOnLoadMethodAttributes (41ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.88 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4127 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.7 KB). Loaded Objects now: 4599.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 3.128900 ms (FindLiveObjects: 0.254300 ms CreateObjectMapping: 0.112600 ms MarkObjects: 2.601800 ms  DeleteObjects: 0.159300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009749 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.09 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.052 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1052ms)
-		BeginReloadAssembly (133ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (38ms)
-		EndReloadAssembly (830ms)
-			LoadAssemblies (91ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (241ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (56ms)
-			SetupLoadedEditorAssemblies (381ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (79ms)
-				ProcessInitializeOnLoadAttributes (222ms)
-				ProcessInitializeOnLoadMethodAttributes (62ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (1ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.88 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4127 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.5 KB). Loaded Objects now: 4602.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 3.944600 ms (FindLiveObjects: 0.477500 ms CreateObjectMapping: 0.194900 ms MarkObjects: 3.116300 ms  DeleteObjects: 0.154500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007966 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.935 seconds
-Domain Reload Profiling:
-	ReloadAssembly (935ms)
-		BeginReloadAssembly (118ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (35ms)
-		EndReloadAssembly (730ms)
-			LoadAssemblies (87ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (225ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (327ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (75ms)
-				ProcessInitializeOnLoadAttributes (205ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.23 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4127 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.5 KB). Loaded Objects now: 4605.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 3.101000 ms (FindLiveObjects: 0.322400 ms CreateObjectMapping: 0.253800 ms MarkObjects: 2.348700 ms  DeleteObjects: 0.175400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012517 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.31 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.908 seconds
-Domain Reload Profiling:
-	ReloadAssembly (909ms)
-		BeginReloadAssembly (146ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (45ms)
-		EndReloadAssembly (666ms)
-			LoadAssemblies (97ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (208ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (39ms)
-			SetupLoadedEditorAssemblies (289ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (177ms)
-				ProcessInitializeOnLoadMethodAttributes (35ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.07 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4127 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (196.7 KB). Loaded Objects now: 4608.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 3.485300 ms (FindLiveObjects: 0.426500 ms CreateObjectMapping: 0.105700 ms MarkObjects: 2.783200 ms  DeleteObjects: 0.169000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009570 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.66 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.074 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1075ms)
-		BeginReloadAssembly (158ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (48ms)
-		EndReloadAssembly (824ms)
-			LoadAssemblies (104ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (271ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (55ms)
-			SetupLoadedEditorAssemblies (349ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (95ms)
-				ProcessInitializeOnLoadAttributes (195ms)
-				ProcessInitializeOnLoadMethodAttributes (39ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.35 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.5 KB). Loaded Objects now: 4612.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 2.980100 ms (FindLiveObjects: 0.255900 ms CreateObjectMapping: 0.095300 ms MarkObjects: 2.490700 ms  DeleteObjects: 0.137200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007163 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.04 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.959 seconds
-Domain Reload Profiling:
-	ReloadAssembly (959ms)
-		BeginReloadAssembly (145ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (715ms)
-			LoadAssemblies (104ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (208ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (302ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (71ms)
-				ProcessInitializeOnLoadAttributes (177ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.22 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.6 KB). Loaded Objects now: 4615.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 2.803100 ms (FindLiveObjects: 0.239100 ms CreateObjectMapping: 0.202000 ms MarkObjects: 2.215100 ms  DeleteObjects: 0.146000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008013 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.26 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.925 seconds
-Domain Reload Profiling:
-	ReloadAssembly (925ms)
-		BeginReloadAssembly (136ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (42ms)
-		EndReloadAssembly (698ms)
-			LoadAssemblies (92ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (230ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (302ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (67ms)
-				ProcessInitializeOnLoadAttributes (175ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.49 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.5 KB). Loaded Objects now: 4618.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 3.505300 ms (FindLiveObjects: 0.364000 ms CreateObjectMapping: 0.203400 ms MarkObjects: 2.708000 ms  DeleteObjects: 0.228900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011647 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.19 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.040 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1041ms)
-		BeginReloadAssembly (136ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (40ms)
-		EndReloadAssembly (800ms)
-			LoadAssemblies (100ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (253ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (353ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (81ms)
-				ProcessInitializeOnLoadAttributes (209ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.37 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (196.5 KB). Loaded Objects now: 4621.
-Memory consumption went from 162.3 MB to 162.1 MB.
-Total: 2.989100 ms (FindLiveObjects: 0.264700 ms CreateObjectMapping: 0.110900 ms MarkObjects: 2.437800 ms  DeleteObjects: 0.174600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007153 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.904 seconds
-Domain Reload Profiling:
-	ReloadAssembly (905ms)
-		BeginReloadAssembly (149ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (650ms)
-			LoadAssemblies (92ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (200ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (293ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (62ms)
-				ProcessInitializeOnLoadAttributes (180ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.06 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.8 KB). Loaded Objects now: 4624.
-Memory consumption went from 162.3 MB to 162.2 MB.
-Total: 2.939200 ms (FindLiveObjects: 0.336600 ms CreateObjectMapping: 0.215800 ms MarkObjects: 2.259700 ms  DeleteObjects: 0.126400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008604 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.60 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.016 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1017ms)
-		BeginReloadAssembly (124ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (38ms)
-		EndReloadAssembly (798ms)
-			LoadAssemblies (82ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (242ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (47ms)
-			SetupLoadedEditorAssemblies (379ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (93ms)
-				ProcessInitializeOnLoadAttributes (220ms)
-				ProcessInitializeOnLoadMethodAttributes (51ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.91 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.5 KB). Loaded Objects now: 4627.
-Memory consumption went from 162.3 MB to 162.2 MB.
-Total: 4.721200 ms (FindLiveObjects: 0.384200 ms CreateObjectMapping: 0.299600 ms MarkObjects: 3.678100 ms  DeleteObjects: 0.357400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009740 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.941 seconds
-Domain Reload Profiling:
-	ReloadAssembly (942ms)
-		BeginReloadAssembly (114ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (34ms)
-		EndReloadAssembly (749ms)
-			LoadAssemblies (80ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (237ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (331ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (73ms)
-				ProcessInitializeOnLoadAttributes (205ms)
-				ProcessInitializeOnLoadMethodAttributes (37ms)
-				AfterProcessingInitializeOnLoad (5ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.14 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (196.9 KB). Loaded Objects now: 4630.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 2.794500 ms (FindLiveObjects: 0.313200 ms CreateObjectMapping: 0.160300 ms MarkObjects: 2.145100 ms  DeleteObjects: 0.174700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.013050 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
 Refreshing native plugins compatible for Editor in 1.32 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.845 seconds
-Domain Reload Profiling:
-	ReloadAssembly (845ms)
-		BeginReloadAssembly (108ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (663ms)
-			LoadAssemblies (74ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (202ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (300ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (73ms)
-				ProcessInitializeOnLoadAttributes (179ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.94 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.5 KB). Loaded Objects now: 4633.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 3.140000 ms (FindLiveObjects: 0.282600 ms CreateObjectMapping: 0.134200 ms MarkObjects: 2.570500 ms  DeleteObjects: 0.151200 ms)
+Unloading 4133 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 46 unused Assets / (229.1 KB). Loaded Objects now: 4588.
+Memory consumption went from 162.3 MB to 162.1 MB.
+Total: 4.136600 ms (FindLiveObjects: 0.353500 ms CreateObjectMapping: 0.236000 ms MarkObjects: 2.814300 ms  DeleteObjects: 0.732000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -1002,618 +162,726 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010490 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.43 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.925 seconds
-Domain Reload Profiling:
-	ReloadAssembly (925ms)
-		BeginReloadAssembly (134ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (683ms)
-			LoadAssemblies (91ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (228ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (284ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (66ms)
-				ProcessInitializeOnLoadAttributes (171ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (6ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.89 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.6 KB). Loaded Objects now: 4636.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 3.430000 ms (FindLiveObjects: 0.311000 ms CreateObjectMapping: 0.179200 ms MarkObjects: 2.760900 ms  DeleteObjects: 0.177900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 2022921.933123 seconds.
+  path: Assets/Scenes/House1.unity
+  artifactKey: Guid(c8f3c9a11ca70d84c94aa2103bfad282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/House1.unity using Guid(c8f3c9a11ca70d84c94aa2103bfad282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '291d7c740aecda734a90e5fdfde5aba4') in 0.008381 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.017490 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.51 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.000 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1001ms)
-		BeginReloadAssembly (145ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (45ms)
-		EndReloadAssembly (761ms)
-			LoadAssemblies (96ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (249ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (326ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (69ms)
-				ProcessInitializeOnLoadAttributes (196ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.83 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (196.6 KB). Loaded Objects now: 4639.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 3.310000 ms (FindLiveObjects: 0.340000 ms CreateObjectMapping: 0.236700 ms MarkObjects: 2.573500 ms  DeleteObjects: 0.158500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 731.362691 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_44.asset
+  artifactKey: Guid(5937b68658cc317439e29cadb86c68c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_44.asset using Guid(5937b68658cc317439e29cadb86c68c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd55ce9ac098e79e5faf6bdd8da571a5') in 0.581050 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009360 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.60 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.932 seconds
-Domain Reload Profiling:
-	ReloadAssembly (933ms)
-		BeginReloadAssembly (110ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (37ms)
-		EndReloadAssembly (728ms)
-			LoadAssemblies (70ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (217ms)
-			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (333ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (78ms)
-				ProcessInitializeOnLoadAttributes (214ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.96 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.9 KB). Loaded Objects now: 4642.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 3.127600 ms (FindLiveObjects: 0.305800 ms CreateObjectMapping: 0.147800 ms MarkObjects: 2.537300 ms  DeleteObjects: 0.135600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_47.asset
+  artifactKey: Guid(2d072ce0b40eaa14bbe1af09d40e22ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_47.asset using Guid(2d072ce0b40eaa14bbe1af09d40e22ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aae83088c9076d73ef768b0058c44cac') in 0.015114 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.012867 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.25 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.981 seconds
-Domain Reload Profiling:
-	ReloadAssembly (982ms)
-		BeginReloadAssembly (127ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (35ms)
-		EndReloadAssembly (757ms)
-			LoadAssemblies (84ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (241ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (339ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (81ms)
-				ProcessInitializeOnLoadAttributes (208ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.04 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.6 KB). Loaded Objects now: 4645.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 2.686100 ms (FindLiveObjects: 0.264100 ms CreateObjectMapping: 0.143000 ms MarkObjects: 2.137200 ms  DeleteObjects: 0.141000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_51.asset
+  artifactKey: Guid(c195ace55273c124b8bdeb69db714f2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_51.asset using Guid(c195ace55273c124b8bdeb69db714f2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f4af2c80069ee8c353cdc7aaafbc8b7') in 0.012528 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.008510 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.26 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.866 seconds
-Domain Reload Profiling:
-	ReloadAssembly (866ms)
-		BeginReloadAssembly (112ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (32ms)
-		EndReloadAssembly (660ms)
-			LoadAssemblies (79ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (204ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (287ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (71ms)
-				ProcessInitializeOnLoadAttributes (166ms)
-				ProcessInitializeOnLoadMethodAttributes (35ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.06 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.7 KB). Loaded Objects now: 4648.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 3.888400 ms (FindLiveObjects: 0.477600 ms CreateObjectMapping: 0.564200 ms MarkObjects: 2.676600 ms  DeleteObjects: 0.168700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_50.asset
+  artifactKey: Guid(d7d3293159e69914785fe3529e37d85e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_50.asset using Guid(d7d3293159e69914785fe3529e37d85e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '738b6645633ca8db5e3a3eeb89cccb6c') in 0.013207 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010660 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.38 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.073 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1074ms)
-		BeginReloadAssembly (159ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (47ms)
-		EndReloadAssembly (791ms)
-			LoadAssemblies (111ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (272ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (326ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (10ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (80ms)
-				ProcessInitializeOnLoadAttributes (198ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.98 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (196.7 KB). Loaded Objects now: 4651.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 3.304300 ms (FindLiveObjects: 0.348200 ms CreateObjectMapping: 0.144300 ms MarkObjects: 2.666200 ms  DeleteObjects: 0.144600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_58.asset
+  artifactKey: Guid(beed9d8babb12184bbcbd20a5f52d3d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_58.asset using Guid(beed9d8babb12184bbcbd20a5f52d3d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b25a5c8dfb3a6d8344806fa0bf67c4c') in 0.011971 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011638 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.49 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.864 seconds
-Domain Reload Profiling:
-	ReloadAssembly (865ms)
-		BeginReloadAssembly (106ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (684ms)
-			LoadAssemblies (72ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (223ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (43ms)
-			SetupLoadedEditorAssemblies (296ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (188ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.82 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.7 KB). Loaded Objects now: 4654.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 3.801300 ms (FindLiveObjects: 0.305200 ms CreateObjectMapping: 0.181100 ms MarkObjects: 3.121300 ms  DeleteObjects: 0.192700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_52.asset
+  artifactKey: Guid(597f74f2d93ce114bbbd9d95fffa85e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_52.asset using Guid(597f74f2d93ce114bbbd9d95fffa85e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16192a702513ab736e5661d38e6bc12c') in 0.011253 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011960 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.03 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.939 seconds
-Domain Reload Profiling:
-	ReloadAssembly (940ms)
-		BeginReloadAssembly (119ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (722ms)
-			LoadAssemblies (76ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (224ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (331ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (77ms)
-				ProcessInitializeOnLoadAttributes (206ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.83 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.5 KB). Loaded Objects now: 4657.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 2.903200 ms (FindLiveObjects: 0.250900 ms CreateObjectMapping: 0.099900 ms MarkObjects: 2.421800 ms  DeleteObjects: 0.128900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_56.asset
+  artifactKey: Guid(4ed825a98bb2beb4194d608c6cfd1b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_56.asset using Guid(4ed825a98bb2beb4194d608c6cfd1b6b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23bf3957bacdf142626d4fbcf1822db7') in 0.010959 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007398 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.01 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.898 seconds
-Domain Reload Profiling:
-	ReloadAssembly (898ms)
-		BeginReloadAssembly (124ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (680ms)
-			LoadAssemblies (86ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (204ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (303ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (73ms)
-				ProcessInitializeOnLoadAttributes (181ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.79 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.4 KB). Loaded Objects now: 4660.
-Memory consumption went from 162.4 MB to 162.2 MB.
-Total: 3.196100 ms (FindLiveObjects: 0.255600 ms CreateObjectMapping: 0.101900 ms MarkObjects: 2.653100 ms  DeleteObjects: 0.184300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_46.asset
+  artifactKey: Guid(53a6d959ddb269643b7fd68866487338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_46.asset using Guid(53a6d959ddb269643b7fd68866487338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e006b5e8675c769b48d98b35530961a1') in 0.011247 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011817 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.50 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.275 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1276ms)
-		BeginReloadAssembly (155ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (47ms)
-		EndReloadAssembly (1012ms)
-			LoadAssemblies (147ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (352ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (46ms)
-			SetupLoadedEditorAssemblies (417ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (70ms)
-				ProcessInitializeOnLoadAttributes (280ms)
-				ProcessInitializeOnLoadMethodAttributes (49ms)
-				AfterProcessingInitializeOnLoad (4ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.81 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.6 KB). Loaded Objects now: 4663.
-Memory consumption went from 162.4 MB to 162.3 MB.
-Total: 4.021400 ms (FindLiveObjects: 0.265200 ms CreateObjectMapping: 0.108400 ms MarkObjects: 3.456200 ms  DeleteObjects: 0.190700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_59.asset
+  artifactKey: Guid(6bce3ae72e476854884ab91b53b5bbea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_59.asset using Guid(6bce3ae72e476854884ab91b53b5bbea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1959309c0d53f1442f2ba745e5a888ed') in 0.011296 seconds 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.009788 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\Astbel\Desktop\Poke_unity\Pokemon\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.001 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1002ms)
-		BeginReloadAssembly (158ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (740ms)
-			LoadAssemblies (100ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (241ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (312ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (201ms)
-				ProcessInitializeOnLoadMethodAttributes (32ms)
-				AfterProcessingInitializeOnLoad (3ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.11 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4128 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 33 unused Assets / (195.7 KB). Loaded Objects now: 4666.
-Memory consumption went from 162.5 MB to 162.3 MB.
-Total: 2.941400 ms (FindLiveObjects: 0.262600 ms CreateObjectMapping: 0.103900 ms MarkObjects: 2.385700 ms  DeleteObjects: 0.188200 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 0.285156 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_62.asset
+  artifactKey: Guid(ac7da0a19c003784a945eee50debf32c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_62.asset using Guid(ac7da0a19c003784a945eee50debf32c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b273d94d2465bdaa28beeebdcc152b2b') in 0.010058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_64.asset
+  artifactKey: Guid(b51fa216340e7b24aa6dff650083741f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_64.asset using Guid(b51fa216340e7b24aa6dff650083741f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '654cb40886c97225f22f0e43b09999d8') in 0.011265 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_65.asset
+  artifactKey: Guid(80b6754a28f980c44860e280107fd1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_65.asset using Guid(80b6754a28f980c44860e280107fd1ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd30f66ec5d261c5933ecd84cb1bc1704') in 0.013649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_67.asset
+  artifactKey: Guid(630660c9c0b52054080c06845a437fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_67.asset using Guid(630660c9c0b52054080c06845a437fce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc5dbd6d05feaadea6417aeaff153d3c') in 0.012289 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000121 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_66.asset
+  artifactKey: Guid(c72de197e9e20a242838eebe061b92be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_66.asset using Guid(c72de197e9e20a242838eebe061b92be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39a776878a1830159043b15469df05c7') in 0.013323 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.252529 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_73.asset
+  artifactKey: Guid(0104c9fdb3a6b0e46acc1904d64decc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_73.asset using Guid(0104c9fdb3a6b0e46acc1904d64decc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a513f153689e68bfc56b1413f9caa49e') in 0.012098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_80.asset
+  artifactKey: Guid(f3ffe25602682914994ea41641d64070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_80.asset using Guid(f3ffe25602682914994ea41641d64070) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5386d7c8c8db56c64a83248f4fb66a9d') in 0.012912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_82.asset
+  artifactKey: Guid(560b5aad39b3021479d4dda47b7b6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_82.asset using Guid(560b5aad39b3021479d4dda47b7b6d6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f66bc310b0e1578a20800aef8ed5ebf5') in 0.013090 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_76.asset
+  artifactKey: Guid(5e5042d70e4ad294da4126a1b39d9424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_76.asset using Guid(5e5042d70e4ad294da4126a1b39d9424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5e47b43c6b0e0ccef943b96e468b22e') in 0.014215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_91.asset
+  artifactKey: Guid(ecb811b346ea99b41ac0d7dc96206ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_91.asset using Guid(ecb811b346ea99b41ac0d7dc96206ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49f16643afcbf6ea0c4fcd375a4b0471') in 0.013777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_81.asset
+  artifactKey: Guid(d598c2a420ca2944cb45d64d22c65287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_81.asset using Guid(d598c2a420ca2944cb45d64d22c65287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06788dda5068b20f231cc877bcacadd7') in 0.012856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_85.asset
+  artifactKey: Guid(8b5d03ef52eb92d4080c969212d90ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_85.asset using Guid(8b5d03ef52eb92d4080c969212d90ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3406aa3daafbeea515714e6f2e6a33d1') in 0.010361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_90.asset
+  artifactKey: Guid(9c197a67eb1d9ef48a8bf02097f52e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_90.asset using Guid(9c197a67eb1d9ef48a8bf02097f52e7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40da431a28ae8973bc0e97f343be4fbd') in 0.010896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_78.asset
+  artifactKey: Guid(3502360125d6f5d42877d1d66a2d1d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_78.asset using Guid(3502360125d6f5d42877d1d66a2d1d9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f9f404a8949e472bf9509f052081906') in 0.011869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_89.asset
+  artifactKey: Guid(5b11a3e1a69a92c41b1055e6f5318e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_89.asset using Guid(5b11a3e1a69a92c41b1055e6f5318e7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f486d3a60d250da94ae41406fde552f1') in 0.011481 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_87.asset
+  artifactKey: Guid(7fba167a43d970c4db971f672f0ed3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_87.asset using Guid(7fba167a43d970c4db971f672f0ed3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2c5e27c7cbfe9a4c5772688c28ab628') in 0.010767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.116963 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_95.asset
+  artifactKey: Guid(4bad7b5727d70ae4e9016c14fd37db56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_95.asset using Guid(4bad7b5727d70ae4e9016c14fd37db56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a64d48ea2dc942c39d7c32618a45ad12') in 0.010822 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_103.asset
+  artifactKey: Guid(ac6e82cb976745d4bbb862f0e67482cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_103.asset using Guid(ac6e82cb976745d4bbb862f0e67482cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b633358f9db7cae9ae920de461f12137') in 0.011969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_96.asset
+  artifactKey: Guid(219d7a4c1473269499cfd718061970f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_96.asset using Guid(219d7a4c1473269499cfd718061970f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '404519e2f11fe225aa58aecaf42d696f') in 0.012386 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_109.asset
+  artifactKey: Guid(0844ed175e3456748af7cdeaf635429d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_109.asset using Guid(0844ed175e3456748af7cdeaf635429d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6dd10862a283aab981659a045d02bf') in 0.012067 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_121.asset
+  artifactKey: Guid(3820740585d3f6d47a25a6b9c9d3257b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_121.asset using Guid(3820740585d3f6d47a25a6b9c9d3257b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfea3e355996c55d567e92d7edfb4f3f') in 0.011343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_116.asset
+  artifactKey: Guid(2d9cd6f8e40387f429fcb2133f4a5fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_116.asset using Guid(2d9cd6f8e40387f429fcb2133f4a5fba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7db1540ece033da719e60de664158e41') in 0.012010 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_111.asset
+  artifactKey: Guid(16f67efd59137d7439cbedeb4179bf02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_111.asset using Guid(16f67efd59137d7439cbedeb4179bf02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c67dfa33dfe6d7aec97074f272045129') in 0.011561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_113.asset
+  artifactKey: Guid(102ac9351bdce8b45ad91a9d3ef05564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_113.asset using Guid(102ac9351bdce8b45ad91a9d3ef05564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3695e64551884027e143ea64bfc7500') in 0.013161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_98.asset
+  artifactKey: Guid(0da3c83b392c5324d9a68e188b6317b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_98.asset using Guid(0da3c83b392c5324d9a68e188b6317b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33700caa8cabb9385dce11e1f75ec6ee') in 0.011645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_122.asset
+  artifactKey: Guid(bfd367407136b3e4f9e0c8012483b157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_122.asset using Guid(bfd367407136b3e4f9e0c8012483b157) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '484e60a22d68117649458034a135565d') in 0.011618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_107.asset
+  artifactKey: Guid(89d1bb444e3d75d4389ab861185a7ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_107.asset using Guid(89d1bb444e3d75d4389ab861185a7ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '148b7e57c49773e1f194fd6c226b6ef7') in 0.010847 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_108.asset
+  artifactKey: Guid(0a9360c60f3fdbb46ab19319729be68f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_108.asset using Guid(0a9360c60f3fdbb46ab19319729be68f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '463be2551af7e067410bccdf81e425a4') in 0.011204 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_126.asset
+  artifactKey: Guid(2b712ca2393668c4d8b297ca86cdd5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_126.asset using Guid(2b712ca2393668c4d8b297ca86cdd5bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92563d070ce64a158974511bd41fd31d') in 0.011894 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_102.asset
+  artifactKey: Guid(9989a867bc9e8484fb63c46da3edbd51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_102.asset using Guid(9989a867bc9e8484fb63c46da3edbd51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '227c65907d04385d43983391289f28ec') in 0.012950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_110.asset
+  artifactKey: Guid(d168df8c128be8b4eb6fd5917bef3129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_110.asset using Guid(d168df8c128be8b4eb6fd5917bef3129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab6a1dbd25e85557c9783f96a060bc76') in 0.010607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_105.asset
+  artifactKey: Guid(932315e68c83f8a40ac3ccbe4b11e7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_105.asset using Guid(932315e68c83f8a40ac3ccbe4b11e7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81a6176c2b7e8c041d17663b6a97d669') in 0.011844 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_124.asset
+  artifactKey: Guid(da555ec4512d6aa41932f245a86edbd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_124.asset using Guid(da555ec4512d6aa41932f245a86edbd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad3559f2ae8edcf346c70f97ed4f9d13') in 0.010110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.034974 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_128.asset
+  artifactKey: Guid(667e01ba21800d04cb5d70b7b112e9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_128.asset using Guid(667e01ba21800d04cb5d70b7b112e9c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3b8c5648760551378d16feedefd3192') in 0.011419 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_131.asset
+  artifactKey: Guid(f9d6bfff65c3c5140aa2ec779dd2860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_131.asset using Guid(f9d6bfff65c3c5140aa2ec779dd2860e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab623c207706093eb0fbe9374e4cf52d') in 0.012711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_137.asset
+  artifactKey: Guid(5d4787a63305aa74f8d558288dc537f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_137.asset using Guid(5d4787a63305aa74f8d558288dc537f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f73340d4fe63bb5134ee8f6d70b7f84') in 0.012301 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_143.asset
+  artifactKey: Guid(63db8a8773a1b444db07628bfef506a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_143.asset using Guid(63db8a8773a1b444db07628bfef506a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afcac64fab1375f7ec3efaaafa75a68e') in 0.011242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_156.asset
+  artifactKey: Guid(32493e59de2f6854e801d40d9453eb10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_156.asset using Guid(32493e59de2f6854e801d40d9453eb10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4fdb107803cc7feefdc592178dafead') in 0.011641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_140.asset
+  artifactKey: Guid(9e2a49c492ae0e446aac88b06e3835a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_140.asset using Guid(9e2a49c492ae0e446aac88b06e3835a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68867194838677b5aae65138b58da4fc') in 0.011660 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_147.asset
+  artifactKey: Guid(8e7cd7be2c60b274ca550509a16622ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_147.asset using Guid(8e7cd7be2c60b274ca550509a16622ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '493c82aa856d9c8b91dea03916646052') in 0.010633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_141.asset
+  artifactKey: Guid(9487456ad7653874d86c98507fa592f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_141.asset using Guid(9487456ad7653874d86c98507fa592f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be88dd35aa7c2705af311746f0e49ea0') in 0.011805 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_158.asset
+  artifactKey: Guid(6fcde7811e95847488662d3bbd3581dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_158.asset using Guid(6fcde7811e95847488662d3bbd3581dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83aabcbfa87c4d2569ef0d9773e5c007') in 0.011185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_146.asset
+  artifactKey: Guid(864825f1c9750f4459b663fb3a4003a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_146.asset using Guid(864825f1c9750f4459b663fb3a4003a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f7907d2b2c93e11713cb2afa288f407') in 0.011739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_129.asset
+  artifactKey: Guid(d324ef14888c1864487d2d94bd6c559c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_129.asset using Guid(d324ef14888c1864487d2d94bd6c559c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18f6d6adad0efbef346989535dc199fe') in 0.012366 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_155.asset
+  artifactKey: Guid(0b918db42e39cf745bc43eb5aa0cc160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_155.asset using Guid(0b918db42e39cf745bc43eb5aa0cc160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95e7181a76c2abeb433a28f578fbb013') in 0.012161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_149.asset
+  artifactKey: Guid(f6b69c32b4c013a49b5af523fa39a455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_149.asset using Guid(f6b69c32b4c013a49b5af523fa39a455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f515291218713866766e281e9ddd4528') in 0.012889 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_130.asset
+  artifactKey: Guid(4cf25ba793e37404cab4a05d53245e1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_130.asset using Guid(4cf25ba793e37404cab4a05d53245e1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a5e6274bebdf987be6e81a82cab4c71') in 0.010828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_133.asset
+  artifactKey: Guid(ba7d7f2819d57bb4b9b37be44338f35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_133.asset using Guid(ba7d7f2819d57bb4b9b37be44338f35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70f4c74dff0f99c9d2e3fd926ca50f60') in 0.012863 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_145.asset
+  artifactKey: Guid(a4457105ecbc79d4eb7a32d6c8c02600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_145.asset using Guid(a4457105ecbc79d4eb7a32d6c8c02600) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7cbdfc38f1001488d2f09c86630d5bf') in 0.012299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_157.asset
+  artifactKey: Guid(48c79f94fc3c4d0418b58e051aac0104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_157.asset using Guid(48c79f94fc3c4d0418b58e051aac0104) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cafdd8352cd0f8a74afc9834c33dd95') in 0.012293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.066253 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_161.asset
+  artifactKey: Guid(5830c065a5cb00d4186afed0e8416440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_161.asset using Guid(5830c065a5cb00d4186afed0e8416440) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12148e26c84bc37e3c8d68a4710b9e4d') in 0.014420 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_170.asset
+  artifactKey: Guid(166a826a59a290c4ea2ebd7c52a36ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_170.asset using Guid(166a826a59a290c4ea2ebd7c52a36ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c56ed394535a7e74629e99e027f69a5') in 0.013199 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_167.asset
+  artifactKey: Guid(b7aa2fd06c1445e45b4e3a9f424e3689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_167.asset using Guid(b7aa2fd06c1445e45b4e3a9f424e3689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e3b2b41a60e27c2916fb01c174fe03f') in 0.013760 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_165.asset
+  artifactKey: Guid(794c10a1901d38342b51ff01cfff8272) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_165.asset using Guid(794c10a1901d38342b51ff01cfff8272) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2845b1bc7fa5c22412cbb54914a10999') in 0.018538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_164.asset
+  artifactKey: Guid(f08926162880c444fbf61de975da50f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_164.asset using Guid(f08926162880c444fbf61de975da50f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfdc19d9d8590f20462e814d5fd5957b') in 0.015383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.378679 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_172.asset
+  artifactKey: Guid(bf73ecbf7d6e0a44bba12d7381176303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_172.asset using Guid(bf73ecbf7d6e0a44bba12d7381176303) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '746ed8f1de6996dd93aafccdc799bd52') in 0.016538 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_173.asset
+  artifactKey: Guid(8487be78915568d4c996585b92697178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_173.asset using Guid(8487be78915568d4c996585b92697178) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8398ac19ee482f1c7b906fe0984a2808') in 0.014006 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_179.asset
+  artifactKey: Guid(e5542f038c7fc7a4ba76b706794b9e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_179.asset using Guid(e5542f038c7fc7a4ba76b706794b9e75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a15b8afcf7dfe18b2d9396c68b38c603') in 0.013784 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_189.asset
+  artifactKey: Guid(c8ed0060a1ad4fc4f9ce2e6d26d690fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_189.asset using Guid(c8ed0060a1ad4fc4f9ce2e6d26d690fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddbeef73471ac7b6df5ed60beb1edde2') in 0.012205 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_182.asset
+  artifactKey: Guid(bc7b0aeb397352449895563a8dfcb918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_182.asset using Guid(bc7b0aeb397352449895563a8dfcb918) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8421392dda287f21c30c09103977f38') in 0.015807 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_198.asset
+  artifactKey: Guid(4d6be566d41f6d74492f2d236eac1549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_198.asset using Guid(4d6be566d41f6d74492f2d236eac1549) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5a1cf9dbf91e6237e11ea6ee8ed6b33') in 0.015977 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_200.asset
+  artifactKey: Guid(36c4164a79f072c4fbbb81d35c196ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_200.asset using Guid(36c4164a79f072c4fbbb81d35c196ceb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20a9c599a76629bc17c6b83b9bb28fc0') in 0.016550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_185.asset
+  artifactKey: Guid(bd001575710a22448a2d438f02443a8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_185.asset using Guid(bd001575710a22448a2d438f02443a8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5269c3540f2b53d9404197dab5781241') in 0.014846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_196.asset
+  artifactKey: Guid(ca822e57eab2ee7499494ff1acdf90fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_196.asset using Guid(ca822e57eab2ee7499494ff1acdf90fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '512226312b64c55cafbfa98bc3266242') in 0.015659 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_201.asset
+  artifactKey: Guid(1e65ab5ce666fd04eb56ac78ea28ce86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_201.asset using Guid(1e65ab5ce666fd04eb56ac78ea28ce86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9d8ef0030cfc85a6f514682c2673f3f') in 0.016693 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_184.asset
+  artifactKey: Guid(378579f38e7c7e74db9b4e563a0c0708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_184.asset using Guid(378579f38e7c7e74db9b4e563a0c0708) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4efd8b75f78aa9e2a6e7b3900d08d0e9') in 0.011668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_174.asset
+  artifactKey: Guid(7ed5beaac89e0f44fa8fbc07c3a07afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_174.asset using Guid(7ed5beaac89e0f44fa8fbc07c3a07afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f420f7d5224af14e868ec23b196a839') in 0.010815 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_177.asset
+  artifactKey: Guid(b66f2d1213fd7f3409449c681a3bae40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_177.asset using Guid(b66f2d1213fd7f3409449c681a3bae40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5787c1521e5dae7614925c6aac2f66b0') in 0.012306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_197.asset
+  artifactKey: Guid(c780584603f794c48a6f6d7ba7bcc72d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_197.asset using Guid(c780584603f794c48a6f6d7ba7bcc72d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd09a4ab040727c359bee39833313a4ca') in 0.011297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_203.asset
+  artifactKey: Guid(37225b4d01fc5ae41a653a1e2775404c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_203.asset using Guid(37225b4d01fc5ae41a653a1e2775404c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41e7f72ff93b12dd08b5a3b575a2824e') in 0.012688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_187.asset
+  artifactKey: Guid(1a1082f6d2aebee4ebd157022d9f2282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_187.asset using Guid(1a1082f6d2aebee4ebd157022d9f2282) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3dbb46dc2e6381958fc64b90ca859a1') in 0.013637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.018382 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_205.asset
+  artifactKey: Guid(e507ce5311bc4f44d95ead4e3c9f68fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_205.asset using Guid(e507ce5311bc4f44d95ead4e3c9f68fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5213f54fbb8303a963de0e1394f525f') in 0.014668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_209.asset
+  artifactKey: Guid(db9267cf56092fc4ca1a03cb0eeb1363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_209.asset using Guid(db9267cf56092fc4ca1a03cb0eeb1363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90d62555bf6e7c51e7f3254ba9a0c4ff') in 0.013813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_217.asset
+  artifactKey: Guid(9a6f799e5ee1de142ae7f01952fb2b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_217.asset using Guid(9a6f799e5ee1de142ae7f01952fb2b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '155abe50d1e4ac5bce9d75d0642c88b7') in 0.011550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_234.asset
+  artifactKey: Guid(178b362f115b5a44c9ea976adef9bb72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_234.asset using Guid(178b362f115b5a44c9ea976adef9bb72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '964bb9ed53133db32af2c27fcbdacfe7') in 0.010513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_226.asset
+  artifactKey: Guid(40c6b315455f5af43a4393f1884bae5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_226.asset using Guid(40c6b315455f5af43a4393f1884bae5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49e6c2a6ec1be337828a8d4093f07eb7') in 0.011973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_239.asset
+  artifactKey: Guid(d95a4d827c8708840af7694a6d353d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_239.asset using Guid(d95a4d827c8708840af7694a6d353d86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d34d6c239434e66e9d1749e582adbd2') in 0.011404 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_206.asset
+  artifactKey: Guid(6f4773d70a8e2c14aa8298afd358ebfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_206.asset using Guid(6f4773d70a8e2c14aa8298afd358ebfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3377b7ce4ef235fc375853520a867ef7') in 0.012137 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_245.asset
+  artifactKey: Guid(4aeb80aac2901ea46bc82844bdac252f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_245.asset using Guid(4aeb80aac2901ea46bc82844bdac252f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83694be123434c034137657d43a1cca1') in 0.012219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_223.asset
+  artifactKey: Guid(8c52943e2dc5be64aa7b7a81cff47f39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_223.asset using Guid(8c52943e2dc5be64aa7b7a81cff47f39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '382b6f4c63148ca201879fa29ff004b7') in 0.012633 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_221.asset
+  artifactKey: Guid(f2b6e12eab185f44d99445ebdf94a2cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_221.asset using Guid(f2b6e12eab185f44d99445ebdf94a2cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51b33fab24e2727a5f4fe3a8e5b34e90') in 0.013213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_212.asset
+  artifactKey: Guid(985dbbd2502b0fe44b05e742be40da98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_212.asset using Guid(985dbbd2502b0fe44b05e742be40da98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2ef7b1816f0aef97f2d67fafc09d3d5') in 0.013724 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_243.asset
+  artifactKey: Guid(8bc3baec1e4bf124e8a0ad13625c57bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_243.asset using Guid(8bc3baec1e4bf124e8a0ad13625c57bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d0443ca8a76f96c59b22839e9e73d50') in 0.013237 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_213.asset
+  artifactKey: Guid(e75c5505ed8d1c04aa4c2514f8c14a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_213.asset using Guid(e75c5505ed8d1c04aa4c2514f8c14a96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '436c7858a6ca20788fd2f3d7f595451b') in 0.012812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_235.asset
+  artifactKey: Guid(0f1738b760c848842a7eb7beacc31077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_235.asset using Guid(0f1738b760c848842a7eb7beacc31077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2c7fa0d84ac7bb5064f9113e10a2ece') in 0.011860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_224.asset
+  artifactKey: Guid(e2a77684e3cb9994780c0942ae772c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_224.asset using Guid(e2a77684e3cb9994780c0942ae772c82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbcb6dbb4cab12201170d95c3c4177bd') in 0.012031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_247.asset
+  artifactKey: Guid(d1372607a780959428a1ede8fc2da4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_247.asset using Guid(d1372607a780959428a1ede8fc2da4c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be171ab1d4b5bcb9b6098b47288aceb7') in 0.012299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_246.asset
+  artifactKey: Guid(1e8e1f469230c4d4281bf934b61663ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_246.asset using Guid(1e8e1f469230c4d4281bf934b61663ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e43bb29557ad0a09d2c438370e959dd') in 0.012764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_214.asset
+  artifactKey: Guid(7ed4ef7910a63324dbc18d08506045c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_214.asset using Guid(7ed4ef7910a63324dbc18d08506045c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab35bd544c0ac51edc3a7fe234764f3') in 0.015054 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_242.asset
+  artifactKey: Guid(b8f2d64dae6dbce4aa3e82560eb1a526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_242.asset using Guid(b8f2d64dae6dbce4aa3e82560eb1a526) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b56d3a880fc965f5c3431badfaceba9') in 0.013402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_229.asset
+  artifactKey: Guid(1ef870a46aadc8b4ea9573c94def8be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_229.asset using Guid(1ef870a46aadc8b4ea9573c94def8be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63a4aa409ebd11fc524360816bbdb31a') in 0.012986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_227.asset
+  artifactKey: Guid(5c3bc38c09cd4864bbcad2f65d25a287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_227.asset using Guid(5c3bc38c09cd4864bbcad2f65d25a287) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1d5e9ade7cb3819f0fada7a47a4a6c1') in 0.012202 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_256.asset
+  artifactKey: Guid(24cb298404e15af47965ce8f4cb7b488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_256.asset using Guid(24cb298404e15af47965ce8f4cb7b488) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6d2d21b07377acfaaba2566f0507232') in 0.011892 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_252.asset
+  artifactKey: Guid(d4279807b7339a44c95f2f256b18265b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_252.asset using Guid(d4279807b7339a44c95f2f256b18265b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd56920cf14172347335c8e9a3e5307ac') in 0.013405 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_265.asset
+  artifactKey: Guid(96412d2596923cb4ab11cf9f13305860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_265.asset using Guid(96412d2596923cb4ab11cf9f13305860) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae242f96e2f52ad2d2363adb5f40b90f') in 0.010842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_268.asset
+  artifactKey: Guid(22ad3dcccd0289f4182cc0ddb46d3f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_268.asset using Guid(22ad3dcccd0289f4182cc0ddb46d3f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50a9f9043d48b44488cb9332222e64b1') in 0.012915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_273.asset
+  artifactKey: Guid(9d8f71e309d6c46419b065fe98671169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_273.asset using Guid(9d8f71e309d6c46419b065fe98671169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53d9f6433adfbd2e6e69cee32cdd8eda') in 0.014643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_277.asset
+  artifactKey: Guid(daceccf97dc5f7c4bb6a0b324ecb850d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_277.asset using Guid(daceccf97dc5f7c4bb6a0b324ecb850d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19f19e6fd807cccddc9d44ec75885d38') in 0.015326 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_272.asset
+  artifactKey: Guid(589de94580c2a55489f10ba00d8456bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_272.asset using Guid(589de94580c2a55489f10ba00d8456bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b25b8b152bc2cea3420aa549ccdcbe0') in 0.013630 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_264.asset
+  artifactKey: Guid(1abcaa365848b3347aa4adea6ab98045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_264.asset using Guid(1abcaa365848b3347aa4adea6ab98045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9d3ced87875d178605386ce74944fc3') in 0.014598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_260.asset
+  artifactKey: Guid(30058852a78de284eb23b38122c32634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_260.asset using Guid(30058852a78de284eb23b38122c32634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d7f5c477fbd433ce0742f4f1825cb51') in 0.012482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_276.asset
+  artifactKey: Guid(996deb20e9347f94aa9a495eae9523e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_276.asset using Guid(996deb20e9347f94aa9a495eae9523e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff7a1c05eec9bd86d0179ddc276b024a') in 0.013814 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_253.asset
+  artifactKey: Guid(58674750c559c2140b20b69ab0df39bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_253.asset using Guid(58674750c559c2140b20b69ab0df39bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca4a3077f67fa0438c4633d4ef793587') in 0.014031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_269.asset
+  artifactKey: Guid(86054a4d8478c204d92838e48b4d4f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_269.asset using Guid(86054a4d8478c204d92838e48b4d4f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c85df31ea9fd5e15b08b9ba4a6b891be') in 0.011523 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_270.asset
+  artifactKey: Guid(f79bc5ad3e826644ebc7cfcda3d64165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_270.asset using Guid(f79bc5ad3e826644ebc7cfcda3d64165) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eebe140ff612bf105a00487e54dd944d') in 0.011835 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_280.asset
+  artifactKey: Guid(a1f8cd6e2d303224c923c4b7ddf44d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_280.asset using Guid(a1f8cd6e2d303224c923c4b7ddf44d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '636897a2c69d17d7acf1065239440e15') in 0.013110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_255.asset
+  artifactKey: Guid(01e39025bd845474e9e557657026e043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_255.asset using Guid(01e39025bd845474e9e557657026e043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '816bb90deba8e95d444b1f51333086e3') in 0.012146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_271.asset
+  artifactKey: Guid(c3e2dbab9b13f8b46ae2b7f159a1f3b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_271.asset using Guid(c3e2dbab9b13f8b46ae2b7f159a1f3b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f64789364572ed646ad2c470e122027') in 0.013275 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_278.asset
+  artifactKey: Guid(302dc2065e8766a47b6d27cf231a9d1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_278.asset using Guid(302dc2065e8766a47b6d27cf231a9d1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5046d23b28364b89c544dd93d3ab5068') in 0.012715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_218.asset
+  artifactKey: Guid(868d559e81b5ef74b93049e7797e7040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TileMap/Game Boy Advance - Pokemon FireRed LeafGreen - Tileset 1_218.asset using Guid(868d559e81b5ef74b93049e7797e7040) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb5f4597f78e3c37a3f7438867bc7abe') in 0.011841 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
