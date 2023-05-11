@@ -35,17 +35,22 @@ public class Character : MonoBehaviour
         targetPos.x += moveVec.x;
         targetPos.y += moveVec.y;
         //檢測玩家附近是否有柵欄可以跳躍
-        var ledge =CheckForLedge(targetPos);
-        if(ledge!=null)
+        var ledge = CheckForLedge(targetPos);
+        if (ledge != null)
         {
             //當執行跳躍時直接結束後面的函數
-            if(ledge.TryToJump(this,moveVec))
+            if (ledge.TryToJump(this, moveVec))
                 yield break;
         }
 
         /*如果不能走過從協程break出來*/
         if (!IsPathClear(targetPos))
             yield break;
+
+        /*判斷是否是衝浪狀態如果不是則回到跑步模式*/
+        if (animator.IsSurfing && Physics2D.OverlapCircle(targetPos, 0.3f, GameLayer.Instance.WaterLayer) == null)
+            animator.IsSurfing = false;
+
 
         IsMoving = true;
 
@@ -71,9 +76,10 @@ public class Character : MonoBehaviour
     {
         var diff = targetPos - transform.position;/*計算距離*/
         var direction = diff.normalized;/*向量位置*/
-
-        if (Physics2D.BoxCast(transform.position + direction, new Vector2(0.2f, 0.2f), 0f, direction, diff.magnitude - 1,
-            GameLayer.Instance.SolidLayer | GameLayer.Instance.InteractLayer | GameLayer.Instance.PlayerLayer) == true)
+        var collisionLayer = GameLayer.Instance.SolidLayer | GameLayer.Instance.InteractLayer | GameLayer.Instance.PlayerLayer;
+        if (!animator.IsSurfing)
+            collisionLayer = collisionLayer | GameLayer.Instance.WaterLayer;
+        if (Physics2D.BoxCast(transform.position + direction, new Vector2(0.2f, 0.2f), 0f, direction, diff.magnitude - 1, collisionLayer) == true)
             return false;
         else
             return true;

@@ -2032,6 +2032,42 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.data[0]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: c08830702136df04cb3e4109a3eae11c, type: 2}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.data[0].level
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.data[1]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: 47a1375f21420e64289bc864261ac388, type: 2}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.data[1].level
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.data[2]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: 192f6dc8ed9c0df40a7b1d54503d70d2, type: 2}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.data[2].level
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.data[3]._base
+      value: 
+      objectReference: {fileID: 11400000, guid: f7f66d56ae92a24469a08e101413d01b, type: 2}
+    - target: {fileID: 2533940119623783501, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: pokemons.Array.data[3].level
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2537467631554519002, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3524,10 +3560,34 @@ PrefabInstance:
       propertyPath: ledgeLayer.m_Bits
       value: 8192
       objectReference: {fileID: 0}
+    - target: {fileID: 4843489604239496798, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: waterLayer.m_Bits
+      value: 16400
+      objectReference: {fileID: 0}
     - target: {fileID: 4843489604630769049, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4843489605821824195, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: SurftSprite.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843489605821824195, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: SurftSprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 1988408294, guid: 0e9821001fb3da444a4bc15ad93c8e61, type: 3}
+    - target: {fileID: 4843489605821824195, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: SurftSprite.Array.data[1]
+      value: 
+      objectReference: {fileID: 375312988, guid: 0e9821001fb3da444a4bc15ad93c8e61, type: 3}
+    - target: {fileID: 4843489605821824195, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: SurftSprite.Array.data[2]
+      value: 
+      objectReference: {fileID: 669634233, guid: 0e9821001fb3da444a4bc15ad93c8e61, type: 3}
+    - target: {fileID: 4843489605821824195, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
+      propertyPath: SurftSprite.Array.data[3]
+      value: 
+      objectReference: {fileID: 1674248422, guid: 0e9821001fb3da444a4bc15ad93c8e61, type: 3}
     - target: {fileID: 4843489605821824195, guid: a48206c42ad1ae141a39567cab43ff38, type: 3}
       propertyPath: walkUpSprite.Array.data[1]
       value: 

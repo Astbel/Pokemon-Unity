@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour, ISavable
 
         //Debug.DrawLine(transform.position, interacPos, Color.red, 0.5f);
         /*檢測附近半圓內是否有InteractableLayer*/
-        var collider = Physics2D.OverlapCircle(interacPos, 0.3f, GameLayer.Instance.InteractLayer);
+        var collider = Physics2D.OverlapCircle(interacPos, 0.3f, GameLayer.Instance.InteractLayer|GameLayer.Instance.WaterLayer);
         if (collider != null)
         {
             yield return collider.GetComponent<Interactable>()?.Interact(transform);//輸入腳色的方向
