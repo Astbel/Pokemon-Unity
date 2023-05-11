@@ -46,7 +46,9 @@ public class Character : MonoBehaviour
         /*如果不能走過從協程break出來*/
         if (!IsPathClear(targetPos))
             yield break;
-
+         /*跑步模式*/
+        if(Input.GetKeyDown(KeyCode.X))
+            move_speed=15;
         /*判斷是否是衝浪狀態如果不是則回到跑步模式*/
         if (animator.IsSurfing && Physics2D.OverlapCircle(targetPos, 0.3f, GameLayer.Instance.WaterLayer) == null)
             animator.IsSurfing = false;
