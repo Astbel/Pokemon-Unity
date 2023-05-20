@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public enum BattleState { Start, Bag, ActionSelection, MoveSelection, MoveForget, RunningTurn, Busy, PartySelection, AboutToUse, BattleOver }
 public enum BattleAction { Move, SwitchPokemon, UseItem, Run }
 
-public enum BattleTrigger {LongGrass,Water}
+public enum BattleTrigger { LongGrass, Water }
 public class BattleSystem : MonoBehaviour
 {
     /*Trainer Player */
@@ -31,6 +31,11 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] AudioClip eliteFourBattleMusic;
     [SerializeField] AudioClip champBattleMusic;
     [SerializeField] AudioClip battleVictoryMusic;
+    /*戰鬥背景*/
+    [Header("BackgroundImage")]
+    [SerializeField] Image backgroundImage;
+    [SerializeField] Sprite grassBackground;
+    [SerializeField] Sprite waterBackground;
     /**/
     public event Action<bool> OnBattleOver;
     BattleState state;  //回合制狀態機
@@ -47,16 +52,22 @@ public class BattleSystem : MonoBehaviour
     PlayerController player;
     TrainerController trainer;
     MoveBase moveToLearn;
-    public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon)
+
+    BattleTrigger battleTrigger;
+
+    public void StartBattle(PokemonParty playerParty, Pokemon wildPokemon,
+        BattleTrigger trigger = BattleTrigger.LongGrass)
     {
         this.playerParty = playerParty;
         this.wildPokemon = wildPokemon;
         player = playerParty.GetComponent<PlayerController>();
         isTrainerBattle = false;
+        battleTrigger = trigger;
         StartCoroutine(SetUpBattle());
     }
 
-    public void StartTrainerBattle(PokemonParty playerParty, PokemonParty trainerParty)
+    public void StartTrainerBattle(PokemonParty playerParty, PokemonParty trainerParty,
+        BattleTrigger trigger = BattleTrigger.LongGrass)
     {
         this.playerParty = playerParty;
         this.trainerParty = trainerParty;
@@ -65,7 +76,7 @@ public class BattleSystem : MonoBehaviour
 
         player = playerParty.GetComponent<PlayerController>();
         trainer = trainerParty.GetComponent<TrainerController>();
-
+        battleTrigger = trigger;
         // AudioManager.i.PlayMusic(trainerBattleMusic);
         // Trainer_BGM_Select();
 
@@ -90,9 +101,12 @@ public class BattleSystem : MonoBehaviour
     */
     public IEnumerator SetUpBattle()
     {
-         AudioManager.i.PlayMusic(wildBattleMusic);
+        AudioManager.i.PlayMusic(wildBattleMusic);
         playerUnit.Clear();
         enemyUnit.Clear();
+        /*根據狀態去設置戰鬥場地*/
+        backgroundImage.sprite=(battleTrigger==BattleTrigger.LongGrass)?grassBackground:waterBackground;
+
         if (!isTrainerBattle)
         {
             /*Wild Pokemon Battle*/

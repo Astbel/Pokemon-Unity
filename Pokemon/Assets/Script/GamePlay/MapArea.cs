@@ -16,31 +16,43 @@ public class MapArea : MonoBehaviour
     //驗證是否遇敵機率是否滿足100
     private void OnValidate()
     {
-        //草叢
-        totalChance = 0;
-        foreach (var record in wildPokemons)
-        {
-            record.chanceLower = totalChance;
-            record.chanceUpper = totalChance + record.chanceRate;
-
-            totalChance = totalChance + record.chanceRate;
-        }
-        //水
-        totalChance_Water = 0;
-        foreach (var record in wildPokemonsInWater)
-        {
-            record.chanceLower = totalChance_Water;
-            record.chanceUpper = totalChance_Water + record.chanceRate;
-
-            totalChance_Water = totalChance_Water + record.chanceRate;
-        }
+       CalculateChancePercetage();
     }
 
     private void Start()
     {
-
+        CalculateChancePercetage();
     }
 
+    void CalculateChancePercetage()
+    {
+        totalChance = -1;
+        totalChance_Water = -1;
+        //草叢
+        if (wildPokemons.Count > 0)
+        {
+            totalChance = 0;
+            foreach (var record in wildPokemons)
+            {
+                record.chanceLower = totalChance;
+                record.chanceUpper = totalChance + record.chanceRate;
+
+                totalChance = totalChance + record.chanceRate;
+            }
+        }
+        //水
+        if (wildPokemonsInWater.Count > 0)
+        {
+            totalChance_Water = 0;
+            foreach (var record in wildPokemonsInWater)
+            {
+                record.chanceLower = totalChance_Water;
+                record.chanceUpper = totalChance_Water + record.chanceRate;
+
+                totalChance_Water = totalChance_Water + record.chanceRate;
+            }
+        }
+    }
     /*開始時為所有pokemon初始化狀態 初始化招式以及血量*/
     public Pokemon GetRandomWildPokemon(BattleTrigger trigger)
     {
