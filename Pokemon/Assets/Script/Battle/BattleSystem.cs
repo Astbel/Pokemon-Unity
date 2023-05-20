@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public enum BattleState { Start, Bag, ActionSelection, MoveSelection, MoveForget, RunningTurn, Busy, PartySelection, AboutToUse, BattleOver }
 public enum BattleAction { Move, SwitchPokemon, UseItem, Run }
+
+public enum BattleTrigger {LongGrass,Water}
 public class BattleSystem : MonoBehaviour
 {
     /*Trainer Player */

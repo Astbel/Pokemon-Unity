@@ -99,7 +99,7 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void StartBattle()
+    public void StartBattle(BattleTrigger trigger)
     {
         state = GameState.Battle;
         battleSystem.gameObject.SetActive(true);
@@ -107,7 +107,7 @@ public class GameController : MonoBehaviour
 
         var playerParty = playerController.GetComponent<PokemonParty>();
         /*由於切換場景的關西FindObjectOfType只會load第一章地圖,用CurrentScene來切換對應地圖遇到的怪物*/
-        var wildPokemon = CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon();
+        var wildPokemon = CurrentScene.GetComponent<MapArea>().GetRandomWildPokemon(trigger);
 
         var wildPokemonCopy = new Pokemon(wildPokemon.Base, wildPokemon.Level);
 

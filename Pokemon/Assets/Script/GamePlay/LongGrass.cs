@@ -14,7 +14,7 @@ public class LongGrass : MonoBehaviour, IPlayerTriggerAble
         if (Time.time - lastEncounterTime >= EncounterCooldown && UnityEngine.Random.Range(1, 101) <= 10)
         {
             player.Character.Animator.IsMoving = false;
-            GameController.Instance.StartBattle();
+            GameController.Instance.StartBattle(BattleTrigger.LongGrass);
 
             lastEncounterTime = Time.time;
         }

@@ -30,6 +30,6 @@ public class GameLayer : MonoBehaviour
     public LayerMask WaterLayer => waterLayer;
     public LayerMask TriggerAbleLayers
     {
-        get => grassLayer | fovLayer | protalLayer | triggersLayer;
+        get => grassLayer | WaterLayer | fovLayer | protalLayer | triggersLayer;
     }
 }
