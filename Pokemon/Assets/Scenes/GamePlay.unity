@@ -235,11 +235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189369, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.4
+      value: -59.1
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189369, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.1
+      value: -2.7
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189369, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -275,19 +275,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189370, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: m_Size.x
-      value: 24.015793
+      value: 24.064945
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189370, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: m_Size.y
-      value: 14.914734
+      value: 15.1113405
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189370, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: m_Offset.x
-      value: 19.947784
+      value: 20.168966
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189370, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: m_Offset.y
-      value: -6.914466
+      value: -7.4059834
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189371, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: connectedScenes.Array.size
@@ -424,7 +424,7 @@ MonoBehaviour:
     chanceRate: 25
   wildPokemonsInWater: []
   totalChance: 100
-  totalChance_Water: 0
+  totalChance_Water: -1
 --- !u!114 &1853022535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4621427403994189371, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
@@ -536,7 +536,7 @@ MonoBehaviour:
     chanceRate: 0
   wildPokemonsInWater: []
   totalChance: 0
-  totalChance_Water: 0
+  totalChance_Water: -1
 --- !u!114 &2026499001 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2228272498075684576, guid: 019967c0f60ec5c48a07021ea1d2208f, type: 3}
@@ -6882,11 +6882,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189370, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: m_Size.y
-      value: 91.71948
+      value: 92.37807
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189370, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: m_Offset.y
-      value: 3.244299
+      value: 3.5735912
       objectReference: {fileID: 0}
     - target: {fileID: 4621427403994189371, guid: 0fb854f58b0275f44b316c472afe04dd, type: 3}
       propertyPath: sceneMusic
