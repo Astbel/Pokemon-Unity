@@ -24,6 +24,9 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
 
     public string Bgm_name {get=>bgm_name;}
 
+    /*標籤用來設定是否為訓練家或是館主或是四大天王以及冠軍*/
+    [SerializeField] bool isNormalTrainer;
+
     private void Awake()
     {
         character = GetComponent<Character>();
@@ -37,6 +40,11 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
     private void Update()
     {
         character.HandleUpdate();
+        //
+        if (isNormalTrainer!=true)
+        {
+            fov.gameObject.SetActive(false);
+        }
     }
 
     //對話戰鬥
@@ -57,7 +65,7 @@ public class TrainerController : MonoBehaviour, Interactable, ISavable
         }
 
     }
-
+    //一般訓練家
     public IEnumerator TriggerTrainerBattle(PlayerController player)
     {
         AudioManager.i.PlayMusic(trainerAppearsClip);
